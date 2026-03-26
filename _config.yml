@@ -9,41 +9,27 @@ email: jessielijc@outlook.com
 github_username: jessielijc 
 description: "B.Eng. in Robotics Engineering @ SUSTech"
 
+# 核心路径：确保样式能加载
 url: https://jessielijc.github.io
 baseurl: ""
 
 # -----------------------------------------------------------------------------
-# 主题显示设置
+# 插件设置（移除了报错的 jekyll-3rd-party-libraries）
+# -----------------------------------------------------------------------------
+plugins:
+  - jekyll-archives-v2
+  - jekyll-feed
+  - jekyll-sitemap
+  - jemoji
+  - jekyll-link-attributes
+
+# -----------------------------------------------------------------------------
+# 显示与布局设置
 # -----------------------------------------------------------------------------
 navbar_fixed: true
 footer_fixed: true
 max_width: 930px
 enable_darkmode: true
-
-# -----------------------------------------------------------------------------
-# 重点：修复报错的核心部分
-# 这里必须保留，插件才能运行
-# -----------------------------------------------------------------------------
-third_party_libraries:
-  download: false
-  bootstrap-table:
-    version: "1.22.4"
-  chartjs:
-    version: "4.4.1"
-  jquery:
-    version: "3.6.0"
-  mathjax:
-    version: "3.2.2"
-
-# -----------------------------------------------------------------------------
-# 插件设置
-# -----------------------------------------------------------------------------
-plugins:
-  - jekyll-3rd-party-libraries # 就是这个插件在报错，现在我们给了它数据
-  - jekyll-archives-v2
-  - jekyll-feed
-  - jekyll-sitemap
-  - jemoji
 
 # -----------------------------------------------------------------------------
 # Jekyll 编译设置
@@ -57,5 +43,6 @@ exclude:
   - Gemfile.lock
   - vendor
   - README.md
+  - LICENSE
 sass:
   style: compressed
