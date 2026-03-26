@@ -1,194 +1,29 @@
 # -----------------------------------------------------------------------------
-# Site settings
+# 基础信息设置
 # -----------------------------------------------------------------------------
-
-title: blank # the website title (if blank, full name will be used instead)
+title: blank
 first_name: Jiacan
 middle_name: ""
 last_name: Li
-contact_note: 
 email: jessielijc@outlook.com
 github_username: jessielijc 
 description: "B.Eng. in Robotics Engineering @ SUSTech"
-footer_text: >
-  Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
-  Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
-keywords: jekyll, robotics, exoskeleton, deep-learning, SUSTech # add your own keywords or leave empty
-lang: en # the language of your site
-icon: favicon.png
 
-url: https://jessielijc.github.io # 必须是你自己的域名
-baseurl: "" # 根目录必须为空字符串
-last_updated: true 
-back_to_top: true 
+url: https://jessielijc.github.io
+baseurl: ""
 
 # -----------------------------------------------------------------------------
-# Theme
+# 主题显示设置
 # -----------------------------------------------------------------------------
-
-repo_theme_light: default 
-repo_theme_dark: dark 
-repo_trophies:
-  enabled: true
-  theme_light: flat 
-  theme_dark: gitdimmed 
-
-external_services:
-  github_readme_stats_url: https://github-readme-stats.vercel.app
-  github_profile_trophy_url: https://github-profile-trophy.vercel.app
-
-# -----------------------------------------------------------------------------
-# Layout
-# -----------------------------------------------------------------------------
-
 navbar_fixed: true
 footer_fixed: true
-search_enabled: true
-socials_in_search: true
-posts_in_search: true
-bib_search: true
 max_width: 930px
+enable_darkmode: true
 
 # -----------------------------------------------------------------------------
-# Blog
+# 重点：修复报错的核心部分
+# 这里必须保留，插件才能运行
 # -----------------------------------------------------------------------------
-
-blog_name: Jiacan Li's Blog
-blog_description: Robotics, Deep Learning, and Life.
-permalink: /blog/:year/:title/
-lsi: false 
-
-pagination:
-  enabled: true
-
-related_blog_posts:
-  enabled: true
-  max_related: 5
-
-# -----------------------------------------------------------------------------
-# Collections
-# -----------------------------------------------------------------------------
-
-collections:
-  books:
-    output: true
-  news:
-    defaults:
-      layout: post
-    output: true
-  projects:
-    output: true
-  teachings:
-    output: true
-
-# -----------------------------------------------------------------------------
-# Jekyll settings
-# -----------------------------------------------------------------------------
-
-markdown: kramdown
-highlighter: rouge
-kramdown:
-  input: GFM
-  syntax_highlighter_opts:
-    css_class: "highlight"
-    span:
-      line_numbers: false
-    block:
-      line_numbers: false
-      start_line: 1
-
-include: ["_pages", "_scripts"]
-exclude:
-  - bin/
-  - CONTRIBUTING.md
-  - CUSTOMIZE.md
-  - Dockerfile
-  - FAQ.md
-  - Gemfile
-  - Gemfile.lock
-  - INSTALL.md
-  - LICENSE
-  - README.md
-  - vendor
-keep_files:
-  - CNAME
-  - .nojekyll
-
-plugins:
-  - jekyll-3rd-party-libraries
-  - jekyll-archives-v2
-  - jekyll-cache-bust
-  - jekyll-email-protect
-  - jekyll-feed
-  - jekyll-get-json
-  - jekyll-imagemagick
-  - jekyll-jupyter-notebook
-  - jekyll-link-attributes
-  - jekyll-minifier
-  - jekyll-paginate-v2
-  - jekyll-regex-replace
-  - jekyll/scholar
-  - jekyll-sitemap
-  - jekyll-socials
-  - jekyll-tabs
-  - jekyll-terser
-  - jekyll-toc
-  - jekyll-twitter-plugin
-  - jemoji
-
-sass:
-  style: compressed
-
-# -----------------------------------------------------------------------------
-# Jekyll Scholar (学术排版核心设置)
-# -----------------------------------------------------------------------------
-
-scholar:
-  last_name: [Li]  # 只要论文里姓 Li，就会自动加粗
-  first_name: [Jiacan, J.]
-  style: apa
-  locale: en
-  source: /_bibliography/
-  bibliography: papers.bib
-  bibliography_template: bib
-  bibtex_filters: [latex, smallcaps, superscript]
-  replace_strings: true
-  join_strings: true
-  details_dir: bibliography
-  details_link: Details
-  query: "@*"
-  group_by: year
-  group_order: descending
-
-enable_publication_badges:
-  altmetric: true 
-  dimensions: true 
-  google_scholar: true 
-
-enable_publication_thumbnails: true
-
-# -----------------------------------------------------------------------------
-# Responsive Images & Optional Features
-# -----------------------------------------------------------------------------
-
-imagemagick:
-  enabled: true 
-  widths: [480, 800, 1400]
-  input_directories: ["assets/img/"]
-  input_formats: [".jpg", ".jpeg", ".png", ".gif"]
-  output_formats:
-    webp: "-auto-orient -quality 85"
-
-lazy_loading_images: true 
-enable_darkmode: true 
-enable_masonry: true 
-enable_math: true 
-enable_progressbar: true 
-
-# -----------------------------------------------------------------------------
-# Third Party Libraries
-# -----------------------------------------------------------------------------
-
 third_party_libraries:
   download: false
   bootstrap-table:
@@ -201,19 +36,26 @@ third_party_libraries:
     version: "3.2.2"
 
 # -----------------------------------------------------------------------------
-# Resume / JSON Data
+# 插件设置
 # -----------------------------------------------------------------------------
+plugins:
+  - jekyll-3rd-party-libraries # 就是这个插件在报错，现在我们给了它数据
+  - jekyll-archives-v2
+  - jekyll-feed
+  - jekyll-sitemap
+  - jemoji
 
-jekyll_get_json:
-  - data: resume
-    json: assets/json/resume.json 
-
-jsonresume:
-  - basics
-  - work
-  - education
-  - publications
-  - projects
-  - volunteer
-  - awards
-  - skills
+# -----------------------------------------------------------------------------
+# Jekyll 编译设置
+# -----------------------------------------------------------------------------
+markdown: kramdown
+highlighter: rouge
+include: ["_pages", "_scripts"]
+exclude:
+  - bin/
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - README.md
+sass:
+  style: compressed
