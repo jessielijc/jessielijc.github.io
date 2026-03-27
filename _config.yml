@@ -1,20 +1,18 @@
 # -----------------------------------------------------------------------------
-# 基础信息设置
+# Jiacan Li - 个人网站核心配置
 # -----------------------------------------------------------------------------
-title: blank
+title: Jiacan Li
 first_name: Jiacan
-middle_name: ""
 last_name: Li
 email: jessielijc@outlook.com
-github_username: jessielijc 
 description: "B.Eng. in Robotics Engineering @ SUSTech"
 
-# 核心路径：确保样式能加载
+# ！！！强制修正路径！！！
 url: https://jessielijc.github.io
 baseurl: ""
 
 # -----------------------------------------------------------------------------
-# 插件设置（移除了报错的 jekyll-3rd-party-libraries）
+# 插件设置：把那个报错的插件 (jekyll-3rd-party-libraries) 删掉
 # -----------------------------------------------------------------------------
 plugins:
   - jekyll-archives-v2
@@ -24,16 +22,20 @@ plugins:
   - jekyll-link-attributes
 
 # -----------------------------------------------------------------------------
-# 显示与布局设置
+# 必须保留的基础结构 (即使是空的也要有，防止其他代码报错)
 # -----------------------------------------------------------------------------
 navbar_fixed: true
 footer_fixed: true
 max_width: 930px
 enable_darkmode: true
 
-# -----------------------------------------------------------------------------
-# Jekyll 编译设置
-# -----------------------------------------------------------------------------
+collections:
+  news:
+    output: true
+  projects:
+    output: true
+
+# 编译设置
 markdown: kramdown
 highlighter: rouge
 include: ["_pages", "_scripts"]
@@ -43,6 +45,5 @@ exclude:
   - Gemfile.lock
   - vendor
   - README.md
-  - LICENSE
 sass:
   style: compressed
