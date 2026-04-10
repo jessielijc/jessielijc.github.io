@@ -24,6 +24,6 @@ My research interests primarily lie in **Reinforcement Learning, Embodied AI, an
 
 Currently, I am working on deep learning-based gait prediction and unified exoskeleton control for stroke rehabilitation. Previously, I interned at AIHISUN Ltd. as an R&D Robotics Engineer, where I developed multi-sensor fusion pipelines (LiDAR, Depth Camera, IMU) for autonomous navigation in GPS-denied environments. 
 
-My academic journey is marked by a GPA of 3.76/4.0 (Top 8%), multiple national awards including the **National First Prize at the ROBOCON China Championship**, and several patents. Beyond research, I am a certified AHA HeartSaver and actively serve as the Director of the Organization Department at SUSTech Red Cross.
+My academic journey is marked by a GPA of 3.76/4.0, multiple national awards including the **National First Prize at the ROBOCON China Championship**, and several patents. Beyond research, I am a certified AHA HeartSaver and actively serve as the Director of the Organization Department at SUSTech Red Cross.
 
 Feel free to reach out via [email](mailto:jessielijc@outlook.com) for academic communication or potential collaborations!
