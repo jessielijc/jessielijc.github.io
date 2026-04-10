@@ -1,5 +1,5 @@
 ---
-layout: cv
+layout: page
 title: CV
 permalink: /cv/
 nav: true
@@ -7,6 +7,8 @@ nav_order: 5
 cv_pdf: Jiacan_Li_CV.pdf # 我们会在下一步上传这个 PDF
 description: "A detailed overview of my academic and research journey."
 ---
+<a href="{{ page.cv_pdf | prepend: 'assets/pdf/' | relative_url}}" target="_blank" rel="noopener noreferrer" class="float-right" style="font-size: 2rem; color: var(--global-theme-color);"><i class="fas fa-file-pdf"></i></a>
+
 
 ## 🎓 Education
 
