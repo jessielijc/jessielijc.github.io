@@ -228,6 +228,8 @@ plugins:
   - jekyll-toc
   - jekyll-twitter-plugin
   - jemoji
+  - jekyll-get-json  # 👉 就是少了这一行！！！
+  - jekyll/scholar   # 👉 顺手加上这个，后面做论文页面要用
 
 # Sitemap settings
 defaults:
