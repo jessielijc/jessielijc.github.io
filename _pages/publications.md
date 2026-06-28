@@ -34,8 +34,8 @@ nav_order: 2
           <span class="patent-type">Invention Patent</span>
           <span class="patent-status">Published</span>
         </div>
-        <h3>A Control Method, System, Electronic Device, and Computer Program Product for Exoskeleton Path Planning</h3>
-        <p class="patent-authors">Chenglong Fu, Xinying Li, Fufeng Xiong, Xiaohe Qian, Yanchen Wu, <strong>Jiacan Li</strong></p>
+        <h3>A Control Method, System, Electronic Device, and Computer Program Product for Exoskeleton Control</h3>
+        <p class="patent-authors">Chenglong Fu, Xinying Li, Jingfeng Xiong, Xiaohe Yu, Yanchen Wu, <strong>Jiacan Li</strong></p>
         <div class="patent-grid">
           <div>
             <span class="label">Applicant</span>
@@ -64,7 +64,7 @@ nav_order: 2
           <span class="patent-status">Published</span>
         </div>
         <h3>A Control Method, Apparatus, Electronic Device, and Storage Medium</h3>
-        <p class="patent-authors">Chenglong Fu, Fufeng Xiong, <strong>Jiacan Li</strong>, Chuheng Chen, Yanchen Wu, Xinying Li, Youran Hao, Yaochan Xu</p>
+        <p class="patent-authors">Chenglong Fu, Jingfeng Xiong, <strong>Jiacan Li</strong>, Chuheng Chen, Yanchen Wu, Xinying Li, Youran Xi, Yaojin Xu</p>
         <div class="patent-grid">
           <div>
             <span class="label">Applicant</span>
@@ -93,7 +93,7 @@ nav_order: 2
           <span class="patent-status">Published</span>
         </div>
         <h3>A Control Method for a Resistive Exoskeleton Mechanism, a Resistive Exoskeleton Mechanism, and a Low-Level Controller</h3>
-        <p class="patent-authors">Chenglong Fu, Shiquan Yu, Yuquan Leng, Yishan Wang, Xinying Li, <strong>Jiacan Li</strong>, Wenbing Zhuang, Fufeng Xiong</p>
+        <p class="patent-authors">Chenglong Fu, Shiquan Yu, Yuquan Leng, Guangshan Wang, Xinying Li, <strong>Jiacan Li</strong>, Wenbing Zhuang, Jingfeng Xiong</p>
         <div class="patent-grid">
           <div>
             <span class="label">Applicant</span>
