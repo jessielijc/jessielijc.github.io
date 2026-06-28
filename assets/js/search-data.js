@@ -11,7 +11,7 @@ ninja.data = [{
     },
   },{id: "nav-publications",
           title: "publications",
-          description: "Selected publications, patents, and intellectual property.",
+          description: "Selected research outputs, patents, and intellectual property.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/publications/";
