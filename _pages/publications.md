@@ -3,6 +3,7 @@ layout: page
 permalink: /publications/
 title: publications
 description: Selected research outputs, patents, and intellectual property.
+hide_title: true
 nav: true
 nav_order: 2
 ---
@@ -52,7 +53,7 @@ nav_order: 2
         </div>
       </div>
       <div class="patent-actions">
-        <a class="patent-btn" href="https://cn.oversea.cnki.net/Kns55/brief/result.aspx?dbprefix=SCPD_XX" target="_blank" rel="external nofollow noopener">CNKI Patent Search</a>
+        <a class="patent-btn" href="https://kns.cnki.net/kns8s/AdvSearch?dbcode=SCOD" target="_blank" rel="external nofollow noopener">CNKI Patent Search</a>
       </div>
     </article>
 
@@ -81,7 +82,7 @@ nav_order: 2
         </div>
       </div>
       <div class="patent-actions">
-        <a class="patent-btn" href="https://cn.oversea.cnki.net/Kns55/brief/result.aspx?dbprefix=SCPD_XX" target="_blank" rel="external nofollow noopener">CNKI Patent Search</a>
+        <a class="patent-btn" href="https://kns.cnki.net/kns8s/AdvSearch?dbcode=SCOD" target="_blank" rel="external nofollow noopener">CNKI Patent Search</a>
       </div>
     </article>
 
@@ -110,14 +111,14 @@ nav_order: 2
         </div>
       </div>
       <div class="patent-actions">
-        <a class="patent-btn" href="https://cn.oversea.cnki.net/Kns55/brief/result.aspx?dbprefix=SCPD_XX" target="_blank" rel="external nofollow noopener">CNKI Patent Search</a>
+        <a class="patent-btn" href="https://kns.cnki.net/kns8s/AdvSearch?dbcode=SCOD" target="_blank" rel="external nofollow noopener">CNKI Patent Search</a>
       </div>
     </article>
 
   </div>
 
   <p class="patent-note">
-    Note: CNKI may require selecting the patent database before searching by title. The links above open the CNKI patent search portal.
+    Note: The CNKI buttons open the advanced search page with the patent database selected. If CNKI resets the filter, choose the patent database and search by the Chinese patent title.
   </p>
 </section>
 
