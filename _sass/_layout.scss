@@ -44,6 +44,36 @@ body.sticky-bottom-footer {
 // Main content flows naturally through container-mt-5 and Bootstrap grid classes
 // See _layouts/default.liquid and _includes/projects.liquid for examples
 
+.projects .card {
+  overflow: hidden;
+  border-radius: 0.8rem;
+}
+
+.projects .card-img-top {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  object-position: center;
+  border-bottom: 1px solid var(--global-divider-color);
+}
+
+.projects .card-body {
+  padding: 1rem 1.1rem 1.1rem;
+}
+
+.projects .card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.45rem;
+}
+
+.projects .card-text {
+  color: var(--global-text-color-light);
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
 .about-hero {
   border: 1px solid var(--global-divider-color);
   border-radius: 1.15rem;
