@@ -15,7 +15,7 @@ profile:
 
 news: false
 selected_papers: false
-social: true
+social: false
 ---
 
 <section class="about-hero">
