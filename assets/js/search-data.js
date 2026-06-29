@@ -18,7 +18,7 @@ ninja.data = [{
           },
         },{id: "nav-projects",
           title: "projects",
-          description: "A growing collection of your cool projects.",
+          description: "Selected robotics, SLAM, and embodied AI projects.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/projects/";
@@ -383,14 +383,14 @@ ninja.data = [{
             },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
           title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
           description: "",
-          section: "News",},{id: "projects-project-1",
-          title: 'project 1',
-          description: "with background image",
+          section: "News",},{id: "projects-ros-2-omni-bot",
+          title: 'ROS 2 Omni-Bot',
+          description: "Fully autonomous mobile manipulation with gesture control, voice interaction, SLAM, navigation, and visual grasping.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
-            },},{id: "projects-project-2",
-          title: 'project 2',
-          description: "a project with a background image and giscus comments",
+            },},{id: "projects-splatslam",
+          title: 'SplatSLAM',
+          description: "Dense 3D reconstruction from monocular video via learning-based SLAM and Gaussian Splatting.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/2_project/";
             },},{id: "projects-project-3-with-very-long-name",
