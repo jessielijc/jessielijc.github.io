@@ -44,6 +44,166 @@ body.sticky-bottom-footer {
 // Main content flows naturally through container-mt-5 and Bootstrap grid classes
 // See _layouts/default.liquid and _includes/projects.liquid for examples
 
+.about-hero {
+  border: 1px solid var(--global-divider-color);
+  border-radius: 1.15rem;
+  background: linear-gradient(135deg, rgba(177, 78, 118, 0.1), rgba(177, 78, 118, 0.02));
+  margin: 0.75rem 0 1.5rem;
+  padding: 1.45rem 1.6rem;
+
+  h2 {
+    color: var(--global-text-color);
+    font-size: clamp(1.45rem, 3vw, 2rem);
+    font-weight: 700;
+    letter-spacing: -0.035em;
+    line-height: 1.15;
+    margin: 0 0 0.8rem;
+  }
+
+  p {
+    color: var(--global-text-color-light);
+    font-size: 1rem;
+    line-height: 1.68;
+    margin: 0;
+    max-width: 760px;
+  }
+}
+
+.about-eyebrow {
+  color: var(--global-theme-color);
+  font-size: 0.74rem;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.35rem;
+  text-transform: uppercase;
+}
+
+.about-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-top: 1rem;
+
+  span {
+    border: 1px solid rgba(177, 78, 118, 0.35);
+    border-radius: 999px;
+    color: var(--global-theme-color);
+    background: rgba(177, 78, 118, 0.06);
+    font-size: 0.78rem;
+    font-weight: 650;
+    padding: 0.28rem 0.65rem;
+  }
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.9rem;
+  margin: 1.25rem 0 1.75rem;
+}
+
+.about-card {
+  border: 1px solid var(--global-divider-color);
+  border-radius: 0.95rem;
+  background: var(--global-card-bg-color);
+  padding: 1rem 1.05rem;
+  box-shadow: 0 0.35rem 1.2rem rgba(0, 0, 0, 0.035);
+
+  .metric {
+    color: var(--global-theme-color);
+    display: block;
+    font-size: 1.45rem;
+    font-weight: 750;
+    letter-spacing: -0.03em;
+    line-height: 1;
+    margin-bottom: 0.4rem;
+  }
+
+  h3 {
+    color: var(--global-text-color);
+    font-size: 0.98rem;
+    font-weight: 700;
+    margin: 0 0 0.35rem;
+  }
+
+  p {
+    color: var(--global-text-color-light);
+    font-size: 0.88rem;
+    line-height: 1.55;
+    margin: 0;
+  }
+}
+
+.about-section {
+  margin: 1.7rem 0;
+
+  h2 {
+    color: var(--global-text-color);
+    font-size: 1.35rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.85rem;
+  }
+}
+
+.focus-list {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.focus-item {
+  border-left: 4px solid var(--global-theme-color);
+  border-radius: 0.8rem;
+  background: rgba(127, 127, 127, 0.035);
+  padding: 0.85rem 1rem;
+
+  strong {
+    color: var(--global-text-color);
+    display: block;
+    margin-bottom: 0.2rem;
+  }
+
+  span {
+    color: var(--global-text-color-light);
+    font-size: 0.92rem;
+    line-height: 1.55;
+  }
+}
+
+.timeline-card {
+  border: 1px solid var(--global-divider-color);
+  border-radius: 0.95rem;
+  padding: 1rem 1.1rem;
+  margin-bottom: 0.8rem;
+
+  h3 {
+    color: var(--global-text-color);
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+  }
+
+  .meta {
+    color: var(--global-theme-color);
+    font-size: 0.82rem;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+  }
+
+  p {
+    color: var(--global-text-color-light);
+    font-size: 0.9rem;
+    line-height: 1.58;
+    margin: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /******************************************************************************
  * Publications
  ******************************************************************************/
