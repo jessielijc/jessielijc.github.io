@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: Robotics Engineering · Embodied AI · Exoskeleton Control
+subtitle:
 
 profile:
   align: right
@@ -19,17 +19,20 @@ social: false
 ---
 
 <section class="about-hero">
-  <p class="about-eyebrow">Hello, I am Jessie</p>
-  <h2>Building intelligent robotic systems for mobility, autonomy, and human-centered assistance.</h2>
+  <p class="about-eyebrow">Hi, I am Jessie</p>
+  <h2>Exploring intelligent robotics through human augmentation, rehabilitation, and embodied autonomy.</h2>
   <p>
-    I am an undergraduate student in <strong>Robotics Engineering</strong> at <strong>Southern University of Science and Technology (SUSTech)</strong>. My work sits at the intersection of robot learning, embodied intelligence, exoskeleton control, and autonomous navigation.
+    I am an undergraduate student in <strong>Robotics Engineering</strong> at <strong>Southern University of Science and Technology (SUSTech)</strong>.
+  </p>
+  <p>
+    At SUSTech, I work with <strong>Prof. Chenglong Fu</strong> in the
+    <a href="https://www.harlab.site/" target="_blank" rel="external noopener"><strong>Human Augmentation and Rehabilitation Laboratory (HAR Lab)</strong></a>,
+    where I contribute to research on intelligent robotic systems for human augmentation and rehabilitation. I also conduct research in <strong>Prof. Xingyu Liu’s</strong> laboratory at the <strong>National University of Singapore (NUS)</strong>, expanding my experience through collaboration across research environments.
   </p>
   <div class="about-tags">
-    <span>Reinforcement Learning</span>
-    <span>Embodied AI</span>
-    <span>Autonomous UAV Navigation</span>
-    <span>Exoskeleton Control</span>
-    <span>Human-Robot Interaction</span>
+    <span>SUSTech</span>
+    <span>HAR Lab</span>
+    <span>National University of Singapore</span>
   </div>
 </section>
 
