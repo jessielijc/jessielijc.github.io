@@ -93,7 +93,7 @@ nav_order: 2
         </div>
       </div>
       <div class="patent-actions">
-        <a class="patent-btn" href="https://patents.google.com/?q=%22Control+methods%2c+devices%2c+electronic+equipment+and+storage+media%22&amp;inventor=Jiacan+Li&amp;assignee=Southern+University+of+Science+and+Technology&amp;country=CN" target="_blank" rel="external nofollow noopener">Search patent</a>
+        <a class="patent-btn" href="https://patents.google.com/patent/CN121081241B/en" target="_blank" rel="external nofollow noopener">View patent</a>
       </div>
     </article>
 
@@ -122,7 +122,7 @@ nav_order: 2
         </div>
       </div>
       <div class="patent-actions">
-        <a class="patent-btn" href="https://patents.google.com/?q=%22Resistance+exoskeleton+mechanism+control+method%2c+resistance+exoskeleton+mechanism+and+bottom+controller%22&amp;inventor=Jiacan+Li&amp;assignee=Southern+University+of+Science+and+Technology&amp;country=CN" target="_blank" rel="external nofollow noopener">Search patent</a>
+        <a class="patent-btn" href="https://patents.google.com/patent/CN120459594A/en" target="_blank" rel="external nofollow noopener">View patent</a>
       </div>
     </article>
   </div>
