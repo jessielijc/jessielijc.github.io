@@ -11,18 +11,13 @@ nav_order: 2
 <!-- _pages/publications.md -->
 
 <section class="publication-hero">
-  <p class="eyebrow">Research Output</p>
   <h1>Publications & Patents</h1>
-  <p>
-    A selected record of my scholarly work and intellectual property in robotics, exoskeleton systems, control methods, and assistive technologies.
-  </p>
 </section>
 
 <section class="scholarly-publications">
   <div class="section-heading refined">
     <div>
-      <p class="eyebrow">Academic Publications</p>
-      <h2>Scholarly Publications</h2>
+      <h2>Publications</h2>
     </div>
   </div>
 
