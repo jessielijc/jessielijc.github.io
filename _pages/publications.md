@@ -18,13 +18,24 @@ nav_order: 2
   </p>
 </section>
 
+<section class="scholarly-publications">
+  <div class="section-heading refined">
+    <div>
+      <p class="eyebrow">Academic Publications</p>
+      <h2>Scholarly Publications</h2>
+    </div>
+  </div>
+
+  <div class="publications">
+    {% bibliography %}
+  </div>
+</section>
+
 <section class="patents-section">
   <div class="section-heading refined">
     <div>
-      <p class="eyebrow">Intellectual Property</p>
       <h2>Patents</h2>
     </div>
-    <p>Published invention patents filed by Southern University of Science and Technology.</p>
   </div>
 
   <div class="patent-list refined">
@@ -35,7 +46,7 @@ nav_order: 2
           <span class="patent-type">Invention Patent</span>
           <span class="patent-status">Published</span>
         </div>
-        <h3>A Control Method, System, Electronic Device, and Computer Program Product for Exoskeleton Control</h3>
+        <h3>An exoskeleton control method, system, electronic equipment and computer program product</h3>
         <p class="patent-authors">Chenglong Fu, Xinying Li, Jingfeng Xiong, Xiaohe Yu, Yanchen Wu, <strong>Jiacan Li</strong></p>
         <div class="patent-grid">
           <div>
@@ -53,7 +64,7 @@ nav_order: 2
         </div>
       </div>
       <div class="patent-actions">
-        <a class="patent-btn" href="https://kns.cnki.net/kns8s/AdvSearch?dbcode=SCOD" target="_blank" rel="external nofollow noopener">CNKI Patent Search</a>
+        <a class="patent-btn" href="https://patents.google.com/patent/CN121733493A/en" target="_blank" rel="external nofollow noopener">View patent</a>
       </div>
     </article>
 
@@ -64,7 +75,7 @@ nav_order: 2
           <span class="patent-type">Invention Patent</span>
           <span class="patent-status">Published</span>
         </div>
-        <h3>A Control Method, Apparatus, Electronic Device, and Storage Medium</h3>
+        <h3>Control methods, devices, electronic equipment and storage media</h3>
         <p class="patent-authors">Chenglong Fu, Jingfeng Xiong, <strong>Jiacan Li</strong>, Chuheng Chen, Yanchen Wu, Xinying Li, Youran Xi, Yaojin Xu</p>
         <div class="patent-grid">
           <div>
@@ -82,7 +93,7 @@ nav_order: 2
         </div>
       </div>
       <div class="patent-actions">
-        <a class="patent-btn" href="https://kns.cnki.net/kns8s/AdvSearch?dbcode=SCOD" target="_blank" rel="external nofollow noopener">CNKI Patent Search</a>
+        <a class="patent-btn" href="https://patents.google.com/?q=%22Control+methods%2c+devices%2c+electronic+equipment+and+storage+media%22&amp;inventor=Jiacan+Li&amp;assignee=Southern+University+of+Science+and+Technology&amp;country=CN" target="_blank" rel="external nofollow noopener">Search patent</a>
       </div>
     </article>
 
@@ -93,7 +104,7 @@ nav_order: 2
           <span class="patent-type">Invention Patent</span>
           <span class="patent-status">Published</span>
         </div>
-        <h3>A Control Method for a Resistive Exoskeleton Mechanism, a Resistive Exoskeleton Mechanism, and a Low-Level Controller</h3>
+        <h3>Resistance exoskeleton mechanism control method, resistance exoskeleton mechanism and bottom controller</h3>
         <p class="patent-authors">Chenglong Fu, Shiquan Yu, Yuquan Leng, Guangshan Wang, Xinying Li, <strong>Jiacan Li</strong>, Wenbing Zhuang, Jingfeng Xiong</p>
         <div class="patent-grid">
           <div>
@@ -111,30 +122,8 @@ nav_order: 2
         </div>
       </div>
       <div class="patent-actions">
-        <a class="patent-btn" href="https://kns.cnki.net/kns8s/AdvSearch?dbcode=SCOD" target="_blank" rel="external nofollow noopener">CNKI Patent Search</a>
+        <a class="patent-btn" href="https://patents.google.com/?q=%22Resistance+exoskeleton+mechanism+control+method%2c+resistance+exoskeleton+mechanism+and+bottom+controller%22&amp;inventor=Jiacan+Li&amp;assignee=Southern+University+of+Science+and+Technology&amp;country=CN" target="_blank" rel="external nofollow noopener">Search patent</a>
       </div>
     </article>
-
-  </div>
-
-  <p class="patent-note">
-    Note: The CNKI buttons open the advanced search page with the patent database selected. If CNKI resets the filter, choose the patent database and search by the Chinese patent title.
-  </p>
-</section>
-
-<section class="scholarly-publications">
-  <div class="section-heading refined">
-    <div>
-      <p class="eyebrow">Academic Publications</p>
-      <h2>Scholarly Publications</h2>
-    </div>
-  </div>
-
-  <!-- Bibsearch Feature -->
-
-{% include bib_search.liquid %}
-
-  <div class="publications">
-    {% bibliography %}
   </div>
 </section>
