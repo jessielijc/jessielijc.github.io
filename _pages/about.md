@@ -19,7 +19,7 @@ social: false
   <p class="about-eyebrow">Hi, I am Jessie</p>
   <p>
     I am an undergraduate student in Robotics Engineering at the
-    <a href="https://www.sustech.edu.cn/en/" target="_blank" rel="external noopener">Southern University of Science and Technology (SUSTech)</a>.
+    <a href="https://www.sustech.edu.cn/en/" target="_blank" rel="external noopener">Southern University of Science and Technology (SUSTech)</a>.<br>
     I work with Prof. Chenglong Fu in the
     <a href="https://www.harlab.site/" target="_blank" rel="external noopener">Human Augmentation and Rehabilitation Laboratory (HAR Lab)</a>.
   </p>
