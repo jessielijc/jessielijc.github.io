@@ -8,10 +8,7 @@ profile:
   align: right
   image: jessie.jpg
   image_circular: false
-  more_info: >
-    <p><strong>B.Eng. in Robotics Engineering</strong></p>
-    <p>Southern University of Science and Technology</p>
-    <p>Shenzhen, China</p>
+  more_info:
 
 news: false
 selected_papers: false
