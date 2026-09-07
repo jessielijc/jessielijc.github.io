@@ -73,7 +73,7 @@ nav_order: 2
       <div class="patent-content">
         <div class="patent-meta">
           <span class="patent-type">Invention Patent</span>
-          <span class="patent-status">Published</span>
+          <span class="patent-status">Authorized</span>
         </div>
         <h3>Control methods, devices, electronic equipment and storage media</h3>
         <p class="patent-authors">Chenglong Fu, Jingfeng Xiong, <strong>Jiacan Li</strong>, Chuheng Chen, Yanchen Wu, Xinying Li, Youran Xi, Yaojin Xu</p>
@@ -87,13 +87,13 @@ nav_order: 2
             <span>2025-08-12</span>
           </div>
           <div>
-            <span class="label">Published</span>
-            <span>2025-12-09</span>
+            <span class="label">Authorized</span>
+            <span>2026-08-07</span>
           </div>
         </div>
       </div>
       <div class="patent-actions">
-        <a class="patent-btn" href="https://patents.google.com/patent/CN121081241B/en" target="_blank" rel="external nofollow noopener">View patent</a>
+        <a class="patent-btn" href="https://patents.google.com/patent/CN121081241A/zh" target="_blank" rel="external nofollow noopener">View patent</a>
       </div>
     </article>
 
