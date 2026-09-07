@@ -20,20 +20,17 @@ social: false
 
 <section class="about-hero">
   <p class="about-eyebrow">Hi, I am Jessie</p>
-  <h2>Exploring intelligent robotics through human augmentation, rehabilitation, and embodied autonomy.</h2>
   <p>
-    I am an undergraduate student in <strong>Robotics Engineering</strong> at <strong>Southern University of Science and Technology (SUSTech)</strong>.
+    I am an undergraduate student in Robotics Engineering at the
+    <a href="https://www.sustech.edu.cn/en/" target="_blank" rel="external noopener">Southern University of Science and Technology (SUSTech)</a>.
+    I work with Prof. Chenglong Fu in the
+    <a href="https://www.harlab.site/" target="_blank" rel="external noopener">Human Augmentation and Rehabilitation Laboratory (HAR Lab)</a>.
   </p>
   <p>
-    At SUSTech, I work with <strong>Prof. Chenglong Fu</strong> in the
-    <a href="https://www.harlab.site/" target="_blank" rel="external noopener"><strong>Human Augmentation and Rehabilitation Laboratory (HAR Lab)</strong></a>,
-    where I contribute to research on intelligent robotic systems for human augmentation and rehabilitation. I also conduct research in <strong>Prof. Xingyu Liu’s</strong> laboratory at the <strong>National University of Singapore (NUS)</strong>, expanding my experience through collaboration across research environments.
+    I also conduct research at the
+    <a href="https://www.nus.edu.sg/" target="_blank" rel="external noopener">National University of Singapore (NUS)</a>,
+    where I work with Prof. Xingyu Liu.
   </p>
-  <div class="about-tags">
-    <span>SUSTech</span>
-    <span>HAR Lab</span>
-    <span>National University of Singapore</span>
-  </div>
 </section>
 
 <div class="about-grid">
