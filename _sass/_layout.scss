@@ -41,44 +41,6 @@ body.sticky-bottom-footer {
   }
 }
 
-.post article > .profile {
-  box-sizing: border-box;
-  background: var(--global-card-bg-color);
-  border: 1px solid var(--global-divider-color);
-  border-radius: 1.35rem;
-  box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.07);
-  margin-left: 1.5rem;
-  margin-top: 0.75rem;
-  overflow: hidden;
-  padding: 0.6rem 0.6rem 0.7rem;
-  width: 28.5%;
-}
-
-.post article > .profile .more-info {
-  font-family: inherit;
-  margin: 0.7rem 0 0.2rem;
-  padding: 0 0.35rem;
-  text-align: center;
-
-  .profile-details {
-    line-height: 1.45;
-    min-width: 0;
-  }
-
-  p {
-    display: block;
-    font-size: 0.8rem;
-    line-height: 1.4;
-    margin: 0 0 0.38rem;
-    overflow-wrap: anywhere;
-  }
-
-  a {
-    overflow-wrap: anywhere;
-    word-break: break-word;
-  }
-}
-
 .about-page-shell .post-header .post-title {
   font-size: clamp(2rem, 4vw, 2.35rem);
   font-weight: 800;
@@ -230,10 +192,14 @@ body.sticky-bottom-footer {
 }
 
 .about-hero {
+  align-items: stretch;
   border: 1px solid var(--global-divider-color);
   border-radius: 1.35rem;
   background: linear-gradient(135deg, rgba(177, 78, 118, 0.11), rgba(177, 78, 118, 0.025) 72%);
   box-shadow: 0 0.65rem 1.8rem rgba(0, 0, 0, 0.045);
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: minmax(0, 1fr) minmax(220px, 29%);
   margin: 0.75rem 0 1.65rem;
   padding: 1.65rem 1.75rem;
 
@@ -246,7 +212,7 @@ body.sticky-bottom-footer {
     margin: 0 0 1rem;
   }
 
-  p {
+  .about-hero-copy > p {
     color: var(--global-text-color);
     font-size: 1.05rem;
     hyphens: none;
@@ -257,13 +223,56 @@ body.sticky-bottom-footer {
     text-justify: inter-word;
   }
 
-  p + p {
+  .about-hero-copy > p + p {
     margin-top: 1rem;
   }
 
   a {
     color: var(--global-theme-color);
     font-weight: inherit;
+  }
+}
+
+.about-profile-card {
+  align-self: stretch;
+  background: var(--global-card-bg-color);
+  border: 1px solid var(--global-divider-color);
+  border-radius: 1.1rem;
+  box-shadow: 0 0.55rem 1.4rem rgba(0, 0, 0, 0.065);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 0;
+  overflow: hidden;
+  padding: 0.6rem 0.6rem 0.75rem;
+
+  img {
+    border-radius: 0.85rem;
+    display: block;
+    height: 160px;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .profile-details {
+    line-height: 1.4;
+    min-width: 0;
+    padding: 0.65rem 0.35rem 0;
+    text-align: center;
+  }
+
+  p {
+    color: var(--global-text-color);
+    font-size: 0.8rem;
+    line-height: 1.4;
+    margin: 0 0 0.38rem;
+    overflow-wrap: anywhere;
+  }
+
+  a {
+    color: var(--global-theme-color);
+    overflow-wrap: anywhere;
+    word-break: break-word;
   }
 }
 
@@ -494,17 +503,11 @@ body.sticky-bottom-footer {
 }
 
 @media (max-width: 768px) {
-  .post article > .profile {
-    float: none !important;
-    margin: 0 auto 1.5rem;
-    max-width: 25rem;
-    width: 100%;
-  }
-
   .about-grid {
     grid-template-columns: 1fr;
   }
 
+  .about-hero,
   .focus-list,
   .phd-opportunity {
     grid-template-columns: 1fr;
@@ -519,6 +522,15 @@ body.sticky-bottom-footer {
   .about-hero p,
   .phd-opportunity p {
     text-align: left;
+  }
+
+  .about-profile-card {
+    width: 100%;
+
+    img {
+      height: auto;
+      max-height: 330px;
+    }
   }
 
   .phd-opportunity .phd-actions {

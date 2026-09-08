@@ -4,35 +4,34 @@ title: About
 permalink: /
 subtitle:
 
-profile:
-  align: right
-  image: jessie.jpg
-  image_circular: false
-  more_info: >
-    <div class="profile-details">
-      <p>2023–present, B.Eng. in Robotics Engineering</p>
-      <p>Southern University of Science and Technology</p>
-      <p><a href="mailto:lijc2023@mail.sustech.edu.cn">lijc2023@mail.sustech.edu.cn</a></p>
-    </div>
-
 news: false
 selected_papers: false
 social: false
 ---
 
 <section class="about-hero">
-  <h2 class="about-intro-title">Hi, I am Jessie</h2>
-  <p>
-    I am an undergraduate student in Robotics Engineering at the
-    <a href="https://www.sustech.edu.cn/en/" target="_blank" rel="external noopener">Southern University of Science and Technology (SUSTech)</a>.<br>
-    I work with Prof. Chenglong Fu in the
-    <a href="https://www.harlab.site/" target="_blank" rel="external noopener">Human Augmentation and Rehabilitation Laboratory (HAR Lab)</a>.
-  </p>
-  <p>
-    I also conduct research at the
-    <a href="https://www.nus.edu.sg/" target="_blank" rel="external noopener">National University of Singapore (NUS)</a>,
-    where I work with Prof. Xingyu Liu.
-  </p>
+  <div class="about-hero-copy">
+    <h2 class="about-intro-title">Hi, I am Jessie</h2>
+    <p>
+      I am an undergraduate student in Robotics Engineering at the
+      <a href="https://www.sustech.edu.cn/en/" target="_blank" rel="external noopener">Southern University of Science and Technology (SUSTech)</a>.<br>
+      I work with Prof. Chenglong Fu in the
+      <a href="https://www.harlab.site/" target="_blank" rel="external noopener">Human Augmentation and Rehabilitation Laboratory (HAR Lab)</a>.
+    </p>
+    <p>
+      I also conduct research at the
+      <a href="https://www.nus.edu.sg/" target="_blank" rel="external noopener">National University of Singapore (NUS)</a>,
+      where I work with Prof. Xingyu Liu.
+    </p>
+  </div>
+  <aside class="about-profile-card">
+    <img src="{{ '/assets/img/jessie.jpg' | relative_url }}" alt="Jiacan Li">
+    <div class="profile-details">
+      <p>2023–present, B.Eng. in Robotics Engineering</p>
+      <p>Southern University of Science and Technology</p>
+      <p><a href="mailto:lijc2023@mail.sustech.edu.cn">lijc2023@mail.sustech.edu.cn</a></p>
+    </div>
+  </aside>
 </section>
 
 <div class="about-grid">
