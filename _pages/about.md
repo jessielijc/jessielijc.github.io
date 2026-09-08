@@ -54,8 +54,8 @@ social: false
   <p class="section-intro">My research focuses on intelligent robotic systems that interact naturally and effectively with people and the physical world.</p>
   <div class="focus-list">
     <div class="focus-item">
-      <h3>Robot Learning & Embodied AI</h3>
-      <span>Learning-based decision making and perception-action systems for robots operating in complex physical environments.</span>
+      <h3>Tactile Sensing for Dexterous Grasping</h3>
+      <span>Investigating how tactile feedback influences dexterous-hand grasping and developing more stable, adaptive, and generalizable grasping strategies.</span>
     </div>
     <div class="focus-item">
       <h3>Exoskeleton Control for Rehabilitation</h3>
