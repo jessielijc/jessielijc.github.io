@@ -48,14 +48,16 @@ body.sticky-bottom-footer {
   border-radius: 1.35rem;
   box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.07);
   margin-left: 1.5rem;
+  margin-top: 0.75rem;
   overflow: hidden;
-  padding: 0.8rem 0.8rem 1rem;
+  padding: 0.6rem 0.6rem 0.7rem;
+  width: 28.5%;
 }
 
 .post article > .profile .more-info {
   font-family: inherit;
-  margin: 1rem 0 0.6rem;
-  padding: 0 0.55rem;
+  margin: 0.7rem 0 0.2rem;
+  padding: 0 0.35rem;
   text-align: center;
 
   .profile-details {
@@ -65,9 +67,9 @@ body.sticky-bottom-footer {
 
   p {
     display: block;
-    font-size: 0.9rem;
-    line-height: 1.5;
-    margin: 0 0 0.55rem;
+    font-size: 0.8rem;
+    line-height: 1.4;
+    margin: 0 0 0.38rem;
     overflow-wrap: anywhere;
   }
 
