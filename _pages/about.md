@@ -8,7 +8,13 @@ profile:
   align: right
   image: jessie.jpg
   image_circular: false
-  more_info:
+  more_info: >
+    <div class="profile-details">
+      <p class="profile-name">Jiacan Li</p>
+      <p>2023–present, B.Eng. in Robotics Engineering</p>
+      <p>Southern University of Science and Technology</p>
+      <p><a href="mailto:jessielijc@outlook.com">jessielijc@outlook.com</a></p>
+    </div>
 
 news: false
 selected_papers: false

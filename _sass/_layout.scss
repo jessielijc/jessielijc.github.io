@@ -37,6 +37,29 @@ body.sticky-bottom-footer {
 .profile {
   img {
     width: 100%;
+    border-radius: 1.25rem !important;
+  }
+}
+
+.post article > .profile .more-info {
+  font-family: inherit;
+  margin-top: 0.9rem;
+  text-align: center;
+
+  .profile-details {
+    line-height: 1.45;
+  }
+
+  p {
+    display: block;
+    margin: 0 0 0.35rem;
+  }
+
+  .profile-name {
+    color: var(--global-text-color);
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 0.55rem;
   }
 }
 
@@ -93,9 +116,12 @@ body.sticky-bottom-footer {
   p {
     color: var(--global-text-color);
     font-size: 1.3rem;
+    hyphens: auto;
     line-height: 1.72;
     margin: 0;
     max-width: 760px;
+    text-align: justify;
+    text-justify: inter-word;
   }
 
   p + p {
