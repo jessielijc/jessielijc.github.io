@@ -175,6 +175,7 @@ body.sticky-bottom-footer {
 }
 
 .about-grid {
+  clear: both;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
