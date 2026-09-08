@@ -10,7 +10,6 @@ profile:
   image_circular: false
   more_info: >
     <div class="profile-details">
-      <p class="profile-name">Jiacan Li</p>
       <p>2023–present, B.Eng. in Robotics Engineering</p>
       <p>Southern University of Science and Technology</p>
       <p><a href="mailto:jessielijc@outlook.com">jessielijc@outlook.com</a></p>
@@ -22,7 +21,7 @@ social: false
 ---
 
 <section class="about-hero">
-  <p class="about-eyebrow">Hi, I am Jessie</p>
+  <h2 class="about-intro-title">Hi, I am Jessie</h2>
   <p>
     I am an undergraduate student in Robotics Engineering at the
     <a href="https://www.sustech.edu.cn/en/" target="_blank" rel="external noopener">Southern University of Science and Technology (SUSTech)</a>.<br>
@@ -57,15 +56,15 @@ social: false
   <p class="section-intro">My research focuses on intelligent robotic systems that interact naturally and effectively with people and the physical world.</p>
   <div class="focus-list">
     <div class="focus-item">
-      <strong>Robot Learning & Embodied AI</strong>
+      <h3>Robot Learning & Embodied AI</h3>
       <span>Learning-based decision making and perception-action systems for robots operating in complex physical environments.</span>
     </div>
     <div class="focus-item">
-      <strong>Exoskeleton Control for Rehabilitation</strong>
+      <h3>Exoskeleton Control for Rehabilitation</h3>
       <span>Deep learning-based gait prediction and unified control strategies for stroke rehabilitation and mobility assistance.</span>
     </div>
     <div class="focus-item">
-      <strong>Autonomous Navigation in GPS-denied Environments</strong>
+      <h3>Autonomous Navigation in GPS-denied Environments</h3>
       <span>Multi-sensor fusion pipelines involving LiDAR, depth camera, and IMU for robust robotic navigation.</span>
     </div>
   </div>
