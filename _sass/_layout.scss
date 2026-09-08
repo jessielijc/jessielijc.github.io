@@ -264,44 +264,50 @@ body.sticky-bottom-footer {
 }
 
 .phd-opportunity {
+  clear: both;
   margin: 2.2rem 0 1.7rem;
-  padding: 0.2rem 0;
+  padding: 0;
+  width: 100%;
 
   h2 {
     color: var(--global-text-color);
-    font-size: clamp(1.5rem, 3vw, 2rem);
-    font-weight: 750;
+    font-size: clamp(1.65rem, 3vw, 2.1rem);
+    font-weight: 800;
     letter-spacing: -0.035em;
-    margin: 0 0 0.55rem;
+    line-height: 1.2;
+    margin: 0 0 0.7rem;
   }
 
   p {
     color: var(--global-text-color);
-    font-size: 1.05rem;
+    font-size: 1.2rem;
     line-height: 1.7;
     margin: 0;
-    max-width: 820px;
+    max-width: none;
+    text-align: justify;
+    text-justify: inter-word;
   }
 }
 
-.phd-actions {
+.phd-opportunity .phd-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.8rem;
-  margin-top: 1.25rem;
+  gap: 1rem;
+  margin-top: 1.4rem;
 }
 
-.phd-btn {
+.phd-opportunity .phd-actions .phd-btn {
   align-items: center;
-  border: 1px solid var(--global-text-color);
-  border-radius: 0.2rem;
+  border: 2px solid var(--global-text-color);
+  border-radius: 0.4rem;
   color: var(--global-text-color);
   display: inline-flex;
-  font-size: 0.8rem;
-  font-weight: 650;
+  font-size: 0.85rem;
+  font-weight: 700;
   justify-content: center;
   min-width: 8.5rem;
-  padding: 0.55rem 1.1rem;
+  padding: 0.65rem 1.2rem;
+  text-decoration: none;
   text-transform: uppercase;
   transition: 0.2s ease;
 
