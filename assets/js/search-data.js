@@ -398,6 +398,11 @@ ninja.data = [{
           description: "a project that redirects to another website",
           section: "Projects",handler: () => {
               window.location.href = "/projects/3_project/";
+            },},{id: "projects-6-dof-robotic-sketching-amp-3d-projection",
+          title: '6-DOF Robotic Sketching &amp;amp; 3D Projection',
+          description: "A closed-loop robotic drawing system combining computer vision, analytical inverse kinematics, and compliant hardware for planar and 3D surfaces.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/3_robotic_sketching/";
             },},{id: "projects-project-4",
           title: 'project 4',
           description: "another without an image",
