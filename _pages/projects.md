@@ -4,6 +4,7 @@ title: projects
 permalink: /projects/
 description: Selected robotics, SLAM, and embodied AI projects.
 hide_title: true
+page_class: projects-page
 nav: true
 nav_order: 3
 display_categories: [featured]

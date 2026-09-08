@@ -8,7 +8,7 @@ layout: default
   </style>
 {% endif %}
 
-<div class="post">
+<div class="post content-page-shell{% if page.page_class %} {{ page.page_class }}{% endif %}">
   {% unless page.hide_title %}
     <header class="post-header">
       <h1 class="post-title">{{ page.title }}</h1>

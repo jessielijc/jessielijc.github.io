@@ -4,6 +4,7 @@ permalink: /publications/
 title: publications
 description: Selected research outputs, patents, and intellectual property.
 hide_title: true
+page_class: publications-page
 nav: true
 nav_order: 2
 ---

@@ -6,23 +6,24 @@
 
 .publication-hero {
   border: 1px solid var(--global-divider-color);
-  border-radius: 1.1rem;
-  background: linear-gradient(135deg, rgba(177, 78, 118, 0.09), rgba(177, 78, 118, 0.015));
-  margin: 1.5rem 0 2rem;
-  padding: 1.6rem 1.8rem;
+  border-radius: 1.35rem;
+  background: linear-gradient(135deg, rgba(177, 78, 118, 0.11), rgba(177, 78, 118, 0.025) 72%);
+  box-shadow: 0 0.65rem 1.8rem rgba(0, 0, 0, 0.045);
+  margin: 0.75rem 0 1.75rem;
+  padding: 1.55rem 1.75rem;
 
   h1 {
     color: var(--global-text-color);
-    font-size: clamp(1.9rem, 4vw, 2.65rem);
-    font-weight: 650;
+    font-size: clamp(2rem, 4vw, 2.35rem);
+    font-weight: 800;
     letter-spacing: -0.035em;
     line-height: 1.08;
-    margin: 0.1rem 0 0.75rem;
+    margin: 0;
   }
 
   p:not(.eyebrow) {
     color: var(--global-text-color-light);
-    font-size: 1.02rem;
+    font-size: 1.05rem;
     line-height: 1.65;
     max-width: 760px;
     margin: 0;
@@ -31,10 +32,10 @@
 
 .eyebrow {
   color: var(--global-theme-color);
-  font-size: 0.76rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  margin-bottom: 0.2rem;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  margin-bottom: 0.55rem;
   text-transform: uppercase;
 }
 
@@ -49,8 +50,8 @@
 
   h2 {
     color: var(--global-text-color);
-    font-size: 1.45rem;
-    font-weight: 650;
+    font-size: 1.65rem;
+    font-weight: 800;
     letter-spacing: -0.02em;
     margin: 0;
   }
@@ -98,8 +99,8 @@
 
   h3 {
     color: var(--global-text-color);
-    font-size: 1.03rem;
-    font-weight: 650;
+    font-size: 1rem;
+    font-weight: 700;
     letter-spacing: -0.01em;
     line-height: 1.42;
     margin: 0.45rem 0 0.45rem;
@@ -155,7 +156,7 @@
 
 .patent-authors {
   color: var(--global-text-color-light);
-  font-size: 0.9rem;
+  font-size: 1rem;
   line-height: 1.5;
   margin: 0 0 0.75rem;
 
@@ -180,7 +181,7 @@
   span {
     display: block;
     color: var(--global-text-color);
-    font-size: 0.84rem;
+    font-size: 0.92rem;
     line-height: 1.35;
   }
 
@@ -296,7 +297,12 @@
     margin-top: 0;
 
     li {
+      background: var(--global-card-bg-color);
+      border: 1px solid var(--global-divider-color);
+      border-radius: 1.05rem;
+      box-shadow: 0 0.4rem 1.3rem rgba(0, 0, 0, 0.035);
       margin-bottom: 1rem;
+      padding: 1.15rem 1.25rem;
 
       .preview {
         display: inline-block;
@@ -327,10 +333,18 @@
       }
 
       .title {
-        font-weight: bolder;
+        color: var(--global-text-color);
+        font-size: 1.1rem;
+        font-weight: 700;
+        line-height: 1.4;
+        margin-bottom: 0.35rem;
       }
 
       .author {
+        color: var(--global-text-color-light);
+        font-size: 1rem;
+        line-height: 1.55;
+
         a {
           border-bottom: 1px dashed var(--global-theme-color);
 
@@ -358,6 +372,8 @@
       }
 
       .links {
+        margin-top: 0.7rem;
+
         a.btn {
           color: var(--global-text-color);
           border: 1px solid var(--global-text-color);
@@ -366,6 +382,9 @@
           padding-top: 0.25rem;
           padding-bottom: 0.25rem;
           margin-left: 0;
+          border-radius: 0.4rem;
+          font-size: 0.82rem;
+          font-weight: 700;
 
           &:hover {
             color: var(--global-theme-color);
