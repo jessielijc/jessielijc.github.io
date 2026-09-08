@@ -14,14 +14,13 @@ social: false
     <h2 class="about-intro-title">Hi, I am Jessie</h2>
     <p>
       I am an undergraduate student in Robotics Engineering at the
-      <a href="https://www.sustech.edu.cn/en/" target="_blank" rel="external noopener">Southern University of Science and Technology (SUSTech)</a>.<br>
-      I work with Prof. Chenglong Fu in the
+      <a href="https://www.sustech.edu.cn/en/" target="_blank" rel="external noopener">Southern University of Science and Technology (SUSTech)</a>.<br>I work with Prof. Chenglong Fu in the
       <a href="https://www.harlab.site/" target="_blank" rel="external noopener">Human Augmentation and Rehabilitation Laboratory (HAR Lab)</a>.
     </p>
     <p>
-      I also conduct research at the
+      Since June 2026, I have also been a Visiting Research Student at the
       <a href="https://www.nus.edu.sg/" target="_blank" rel="external noopener">National University of Singapore (NUS)</a>,
-      where I work with Prof. Xingyu Liu.
+      where I conduct research under the supervision of Prof. Xingyu Liu.
     </p>
   </div>
   <aside class="about-profile-card">
