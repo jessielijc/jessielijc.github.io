@@ -429,8 +429,11 @@ body.sticky-bottom-footer {
   border: 1px solid var(--global-divider-color);
   border-radius: 1.1rem;
   background: var(--global-card-bg-color);
-  min-height: 7.3rem;
-  padding: 1.25rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 5.6rem;
+  padding: 0.8rem 1.1rem;
   box-shadow: 0 0.45rem 1.4rem rgba(0, 0, 0, 0.04);
   text-align: center;
 
@@ -441,7 +444,7 @@ body.sticky-bottom-footer {
     font-weight: 800;
     letter-spacing: -0.03em;
     line-height: 1;
-    margin-bottom: 0.65rem;
+    margin-bottom: 0.45rem;
   }
 
   h3 {
