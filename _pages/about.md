@@ -67,28 +67,13 @@ social: false
   </div>
 </section>
 
-<section class="about-section">
-  <p class="about-eyebrow">Experience & Service</p>
-  <h2>Selected highlights</h2>
-  <div class="timeline-card">
-    <h3>R&D Robotics Engineer Intern · AIHISUN Ltd.</h3>
-    <div class="meta">Autonomous navigation · Multi-sensor fusion</div>
-    <p>Developed perception and navigation pipelines using LiDAR, depth camera, and IMU for robotic systems operating in GPS-denied environments.</p>
-  </div>
-  <div class="timeline-card">
-    <h3>Exoskeleton Control Research</h3>
-    <div class="meta">Gait prediction · Rehabilitation robotics</div>
-    <p>Currently working on learning-based gait prediction and control systems for stroke rehabilitation-oriented exoskeleton platforms.</p>
-  </div>
-  <div class="timeline-card">
-    <h3>SUSTech Red Cross · Organization Department</h3>
-    <div class="meta">Volunteer service · AHA HeartSaver</div>
-    <p>Serve as Director of the Organization Department and participate in first-aid education, emergency response awareness, and public-service activities.</p>
-  </div>
-</section>
-
-<section class="about-section">
+<section class="phd-opportunity">
+  <h2>Seeking Fall 2027 PhD Opportunities</h2>
   <p>
-    I am always open to academic communication, research collaboration, and opportunities related to robotics, embodied AI, and human-centered intelligent systems. Feel free to reach out via <a href="mailto:jessielijc@outlook.com">email</a>.
+    I am actively seeking PhD opportunities starting in Fall 2027, with research interests in robotics, embodied intelligence, and human-centered intelligent systems. I would be delighted to connect with prospective supervisors and collaborators whose work aligns with these areas—please feel free to get in touch.
   </p>
+  <div class="phd-actions">
+    <a class="phd-btn" href="{{ '/assets/pdf/Jiacan_Li_CV.pdf' | relative_url }}" target="_blank">Download CV</a>
+    <a class="phd-btn" href="mailto:jessielijc@outlook.com">Email Me</a>
+  </div>
 </section>
