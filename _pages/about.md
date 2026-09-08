@@ -12,7 +12,7 @@ profile:
     <div class="profile-details">
       <p>2023–present, B.Eng. in Robotics Engineering</p>
       <p>Southern University of Science and Technology</p>
-      <p><a href="mailto:jessielijc@outlook.com">jessielijc@outlook.com</a></p>
+      <p><a href="mailto:lijc2023@mail.sustech.edu.cn">lijc2023@mail.sustech.edu.cn</a></p>
     </div>
 
 news: false
@@ -80,6 +80,6 @@ social: false
   </div>
   <div class="phd-actions">
     <a class="phd-btn" href="{{ '/assets/pdf/Jiacan_Li_CV.pdf' | relative_url }}" target="_blank">Download CV</a>
-    <a class="phd-btn" href="mailto:jessielijc@outlook.com">Email Me</a>
+    <a class="phd-btn" href="mailto:lijc2023@mail.sustech.edu.cn">Email Me</a>
   </div>
 </section>
