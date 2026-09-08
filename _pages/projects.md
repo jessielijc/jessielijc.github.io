@@ -7,7 +7,7 @@ hide_title: true
 nav: true
 nav_order: 3
 display_categories: [featured]
-horizontal: false
+horizontal: true
 ---
 
 <section class="project-hero-card">
@@ -18,14 +18,14 @@ horizontal: false
   </p>
 </section>
 
-<div class="projects">
+<div class="projects projects-vertical">
   {% if site.enable_project_categories and page.display_categories %}
     {% for category in page.display_categories %}
       {% assign categorized_projects = site.projects | where: "category", category %}
       {% assign sorted_projects = categorized_projects | sort: "importance" %}
       {% if page.horizontal %}
         <div class="container">
-          <div class="row row-cols-1 row-cols-md-2">
+          <div class="row row-cols-1">
             {% for project in sorted_projects %}
               {% include projects_horizontal.liquid %}
             {% endfor %}
@@ -50,7 +50,7 @@ horizontal: false
         </div>
       </div>
     {% else %}
-      <div class="row row-cols-1 row-cols-md-2">
+      <div class="row row-cols-1">
         {% for project in sorted_projects %}
           {% include projects.liquid %}
         {% endfor %}

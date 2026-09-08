@@ -110,6 +110,110 @@ body.sticky-bottom-footer {
   line-height: 1.55;
 }
 
+.projects-vertical {
+  margin-top: 1.6rem;
+
+  > .container {
+    max-width: none;
+    padding: 0;
+  }
+
+  .row {
+    margin: 0;
+  }
+
+  .col {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 0 0 1.5rem;
+  }
+
+  .card {
+    border: 1px solid var(--global-divider-color);
+    border-radius: 1.1rem;
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.045);
+    overflow: hidden;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+
+    &:hover {
+      border-color: rgba(177, 78, 118, 0.4);
+      box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.075);
+      transform: translateY(-2px);
+    }
+
+    > .row {
+      align-items: stretch;
+      display: grid;
+      grid-template-columns: minmax(240px, 31%) minmax(0, 1fr);
+    }
+
+    > .row > div {
+      flex: none;
+      max-width: none;
+      width: auto;
+    }
+  }
+
+  figure,
+  picture {
+    display: block;
+    height: 100%;
+    margin: 0;
+  }
+
+  .card-img {
+    display: block;
+    height: 100%;
+    min-height: 205px;
+    object-fit: cover;
+    padding: 0;
+    width: 100%;
+  }
+
+  .card-body {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    padding: 1.55rem 1.75rem;
+  }
+
+  .card-title {
+    color: var(--global-theme-color);
+    font-size: clamp(1.3rem, 2.5vw, 1.65rem);
+    font-weight: 800;
+    line-height: 1.25;
+    margin-bottom: 0.65rem;
+  }
+
+  .card-text {
+    color: var(--global-text-color-light);
+    font-size: 1.02rem;
+    line-height: 1.65;
+    margin-bottom: 0;
+  }
+
+  .github-icon {
+    margin-top: 0.8rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .projects-vertical .card > .row {
+    grid-template-columns: 1fr;
+  }
+
+  .projects-vertical .card-img {
+    height: 220px;
+    min-height: 0;
+  }
+
+  .projects-vertical .card-body {
+    padding: 1.25rem 1.3rem 1.4rem;
+  }
+}
+
 .about-hero {
   border: 1px solid var(--global-divider-color);
   border-radius: 1.35rem;
