@@ -54,6 +54,7 @@ social: false
 <section class="about-section">
   <p class="about-eyebrow">Research Interests</p>
   <h2>What I work on</h2>
+  <p class="section-intro">My research focuses on intelligent robotic systems that interact naturally and effectively with people and the physical world.</p>
   <div class="focus-list">
     <div class="focus-item">
       <strong>Robot Learning & Embodied AI</strong>
@@ -71,10 +72,13 @@ social: false
 </section>
 
 <section class="phd-opportunity">
-  <h2>Seeking Fall 2027 PhD Opportunities</h2>
-  <p>
-    I am actively seeking PhD opportunities starting in Fall 2027, with research interests in robotics, embodied intelligence, and human-centered intelligent systems. I would be delighted to connect with prospective supervisors and collaborators whose work aligns with these areas—please feel free to get in touch.
-  </p>
+  <div class="phd-copy">
+    <p class="about-eyebrow">Let's Connect</p>
+    <h2>Seeking Fall 2027 PhD Opportunities</h2>
+    <p>
+      I am actively seeking PhD opportunities starting in Fall 2027, with research interests in robotics, embodied intelligence, and human-centered intelligent systems. I would be delighted to connect with prospective supervisors and collaborators whose work aligns with these areas—please feel free to get in touch.
+    </p>
+  </div>
   <div class="phd-actions">
     <a class="phd-btn" href="{{ '/assets/pdf/Jiacan_Li_CV.pdf' | relative_url }}" target="_blank">Download CV</a>
     <a class="phd-btn" href="mailto:jessielijc@outlook.com">Email Me</a>

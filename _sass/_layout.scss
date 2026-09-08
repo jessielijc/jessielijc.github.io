@@ -41,9 +41,20 @@ body.sticky-bottom-footer {
   }
 }
 
+.post article > .profile {
+  background: var(--global-card-bg-color);
+  border: 1px solid var(--global-divider-color);
+  border-radius: 1.35rem;
+  box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.07);
+  margin-left: 1.5rem;
+  overflow: hidden;
+  padding: 0.8rem;
+}
+
 .post article > .profile .more-info {
   font-family: inherit;
-  margin-top: 0.9rem;
+  margin: 1rem 0 0.35rem;
+  padding: 0 0.55rem;
   text-align: center;
 
   .profile-details {
@@ -52,7 +63,9 @@ body.sticky-bottom-footer {
 
   p {
     display: block;
-    margin: 0 0 0.35rem;
+    font-size: 0.92rem;
+    line-height: 1.45;
+    margin: 0 0 0.45rem;
   }
 
   .profile-name {
@@ -99,10 +112,11 @@ body.sticky-bottom-footer {
 
 .about-hero {
   border: 1px solid var(--global-divider-color);
-  border-radius: 1.15rem;
-  background: linear-gradient(135deg, rgba(177, 78, 118, 0.1), rgba(177, 78, 118, 0.02));
-  margin: 0.75rem 0 1.5rem;
-  padding: 1.45rem 1.6rem;
+  border-radius: 1.35rem;
+  background: linear-gradient(135deg, rgba(177, 78, 118, 0.11), rgba(177, 78, 118, 0.025) 72%);
+  box-shadow: 0 0.65rem 1.8rem rgba(0, 0, 0, 0.045);
+  margin: 0.75rem 0 1.65rem;
+  padding: 1.65rem 1.75rem;
 
   h2 {
     color: var(--global-text-color);
@@ -115,9 +129,9 @@ body.sticky-bottom-footer {
 
   p {
     color: var(--global-text-color);
-    font-size: 1.3rem;
-    hyphens: auto;
-    line-height: 1.72;
+    font-size: clamp(1.08rem, 1.7vw, 1.25rem);
+    hyphens: none;
+    line-height: 1.75;
     margin: 0;
     max-width: 760px;
     text-align: justify;
@@ -136,10 +150,10 @@ body.sticky-bottom-footer {
 
 .about-eyebrow {
   color: var(--global-theme-color);
-  font-size: 1rem;
-  font-weight: 750;
-  letter-spacing: 0.08em;
-  margin-bottom: 0.35rem;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  margin-bottom: 0.55rem;
   text-transform: uppercase;
 }
 
@@ -163,25 +177,27 @@ body.sticky-bottom-footer {
 .about-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0.9rem;
-  margin: 1.25rem 0 1.75rem;
+  gap: 1rem;
+  margin: 1.4rem 0 2rem;
 }
 
 .about-card {
   border: 1px solid var(--global-divider-color);
-  border-radius: 0.95rem;
+  border-radius: 1.1rem;
   background: var(--global-card-bg-color);
-  padding: 1rem 1.05rem;
-  box-shadow: 0 0.35rem 1.2rem rgba(0, 0, 0, 0.035);
+  min-height: 7.3rem;
+  padding: 1.25rem 1.1rem;
+  box-shadow: 0 0.45rem 1.4rem rgba(0, 0, 0, 0.04);
+  text-align: center;
 
   .metric {
     color: var(--global-theme-color);
     display: block;
-    font-size: 1.45rem;
-    font-weight: 750;
+    font-size: 1.65rem;
+    font-weight: 800;
     letter-spacing: -0.03em;
     line-height: 1;
-    margin-bottom: 0.4rem;
+    margin-bottom: 0.65rem;
   }
 
   h3 {
@@ -200,32 +216,50 @@ body.sticky-bottom-footer {
 }
 
 .about-section {
-  margin: 1.7rem 0;
+  background: var(--global-card-bg-color);
+  border: 1px solid var(--global-divider-color);
+  border-radius: 1.35rem;
+  box-shadow: 0 0.65rem 1.8rem rgba(0, 0, 0, 0.045);
+  clear: both;
+  margin: 2rem 0;
+  padding: 1.55rem 1.65rem 1.65rem;
 
   h2 {
     color: var(--global-text-color);
-    font-size: 1.35rem;
-    font-weight: 700;
+    font-size: 1.65rem;
+    font-weight: 800;
     letter-spacing: -0.02em;
     margin-bottom: 0.85rem;
   }
 }
 
+.section-intro {
+  color: var(--global-text-color-light);
+  font-size: 1rem;
+  line-height: 1.65;
+  margin: -0.25rem 0 1.2rem;
+  max-width: 760px;
+}
+
 .focus-list {
   display: grid;
-  gap: 0.75rem;
+  gap: 0.9rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .focus-item {
-  border-left: 4px solid var(--global-theme-color);
-  border-radius: 0.8rem;
-  background: rgba(127, 127, 127, 0.035);
-  padding: 0.85rem 1rem;
+  background: rgba(127, 127, 127, 0.025);
+  border: 1px solid var(--global-divider-color);
+  border-radius: 0.9rem;
+  border-top: 4px solid var(--global-theme-color);
+  padding: 1.05rem 1rem 1.1rem;
 
   strong {
     color: var(--global-text-color);
     display: block;
-    margin-bottom: 0.2rem;
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-bottom: 0.5rem;
   }
 
   span {
@@ -264,14 +298,21 @@ body.sticky-bottom-footer {
 }
 
 .phd-opportunity {
+  align-items: center;
+  background: linear-gradient(135deg, rgba(177, 78, 118, 0.12), rgba(177, 78, 118, 0.035));
+  border: 1px solid rgba(177, 78, 118, 0.3);
+  border-radius: 1.35rem;
   clear: both;
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: minmax(0, 1fr) auto;
   margin: 2.2rem 0 1.7rem;
-  padding: 0;
+  padding: 1.65rem 1.75rem;
   width: 100%;
 
   h2 {
     color: var(--global-text-color);
-    font-size: clamp(1.65rem, 3vw, 2.1rem);
+    font-size: clamp(1.55rem, 3vw, 2rem);
     font-weight: 800;
     letter-spacing: -0.035em;
     line-height: 1.2;
@@ -280,7 +321,7 @@ body.sticky-bottom-footer {
 
   p {
     color: var(--global-text-color);
-    font-size: 1.2rem;
+    font-size: 1.08rem;
     line-height: 1.7;
     margin: 0;
     max-width: none;
@@ -292,8 +333,9 @@ body.sticky-bottom-footer {
 .phd-opportunity .phd-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
-  margin-top: 1.4rem;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 0;
 }
 
 .phd-opportunity .phd-actions .phd-btn {
@@ -320,8 +362,35 @@ body.sticky-bottom-footer {
 }
 
 @media (max-width: 768px) {
+  .post article > .profile {
+    float: none !important;
+    margin: 0 auto 1.5rem;
+    max-width: 25rem;
+    width: 100%;
+  }
+
   .about-grid {
     grid-template-columns: 1fr;
+  }
+
+  .focus-list,
+  .phd-opportunity {
+    grid-template-columns: 1fr;
+  }
+
+  .about-hero,
+  .about-section,
+  .phd-opportunity {
+    padding: 1.3rem 1.2rem;
+  }
+
+  .about-hero p,
+  .phd-opportunity p {
+    text-align: left;
+  }
+
+  .phd-opportunity .phd-actions {
+    flex-direction: row;
   }
 }
 
