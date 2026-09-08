@@ -32,19 +32,16 @@ social: false
 
 <div class="about-grid">
   <div class="about-card">
-    <span class="metric">3.76/4.0</span>
+    <span class="metric">3.79/4.0</span>
     <h3>Academic Standing</h3>
-    <p>Strong academic record in Robotics Engineering with hands-on research and engineering experience.</p>
   </div>
   <div class="about-card">
     <span class="metric">National 1st</span>
     <h3>ROBOCON China</h3>
-    <p>National First Prize at the ROBOCON China Championship through collaborative robotic system development.</p>
   </div>
   <div class="about-card">
     <span class="metric">3+</span>
     <h3>Patents</h3>
-    <p>Published invention patents related to exoskeleton control, robotic systems, and electronic devices.</p>
   </div>
 </div>
 
