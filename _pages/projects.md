@@ -12,11 +12,7 @@ horizontal: true
 ---
 
 <section class="project-hero-card">
-  <p class="about-eyebrow">Selected Work</p>
   <h2>Projects</h2>
-  <p>
-    A curated collection of robotics and 3D reconstruction projects, including autonomous mobile manipulation, gesture and voice interaction, SLAM, and Gaussian Splatting.
-  </p>
 </section>
 
 <div class="projects projects-vertical">
