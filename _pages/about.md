@@ -88,5 +88,6 @@ social: false
     <h1>Publications & Patents</h1>
   </div>
 
-  {% include publications_content.liquid %}
+{% include publications_content.liquid %}
+
 </section>
