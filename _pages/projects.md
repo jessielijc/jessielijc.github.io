@@ -12,7 +12,7 @@ horizontal: true
 ---
 
 <section class="project-hero-card">
-  <h2>Projects</h2>
+  <h1>Projects</h1>
 </section>
 
 <div class="projects projects-vertical">

@@ -31,17 +31,44 @@
 }
 
 .about-publications {
-  border-top: 1px solid var(--global-divider-color);
-  margin-top: 3rem;
-  padding-top: 2.25rem;
+  background: var(--global-card-bg-color);
+  border: 1px solid var(--global-divider-color);
+  border-radius: 1.35rem;
+  box-shadow: 0 0.65rem 1.8rem rgba(0, 0, 0, 0.045);
+  margin: 2rem 0 1.7rem;
+  padding: 1.55rem 1.65rem 1.65rem;
   scroll-margin-top: 5.5rem;
 
   .publication-hero {
-    margin-top: 0;
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid var(--global-divider-color);
+    border-radius: 0;
+    box-shadow: none;
+    margin: 0 0 1.3rem;
+    padding: 0 0 1rem;
+
+    h1 {
+      font-size: 1.65rem;
+      letter-spacing: -0.02em;
+      line-height: 1.25;
+    }
   }
 
   .scholarly-publications {
-    margin-top: 2rem;
+    margin-top: 0;
+  }
+
+  .section-heading.refined {
+    margin-top: 1.4rem;
+  }
+
+  .publications {
+    margin-top: 1.25rem;
+  }
+
+  .patents-section {
+    margin-bottom: 0;
   }
 }
 
@@ -252,6 +279,10 @@
 }
 
 @media (max-width: 768px) {
+  .about-publications {
+    padding: 1.3rem 1.2rem;
+  }
+
   .section-heading.refined {
     display: block;
 
