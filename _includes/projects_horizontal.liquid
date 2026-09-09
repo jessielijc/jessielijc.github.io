@@ -8,7 +8,7 @@
 
 <div class="col mb-4">
   <div class="card h-100 hoverable">
-    <div class="row no-gutters">
+    <div class="row no-gutters{% unless project.img %} project-no-image{% endunless %}">
       {% if project.img %}
         <div class="project-thumb-col">
           <a class="project-card-link" href="{{ project_url }}" {{ project_link_attributes }}>
