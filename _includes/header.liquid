@@ -107,6 +107,9 @@
                   {%- else -%}
                     {%- assign url = p.url -%}
                   {%- endif %}
+                  {% if p.title == 'publications' %}
+                    {% assign url = '/#publications' %}
+                  {% endif %}
                   <a class="nav-link" href="{{ url | relative_url }}">
                     {{- p.title }}
                     {% if page.url contains p.url %}

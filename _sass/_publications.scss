@@ -30,6 +30,21 @@
   }
 }
 
+.about-publications {
+  border-top: 1px solid var(--global-divider-color);
+  margin-top: 3rem;
+  padding-top: 2.25rem;
+  scroll-margin-top: 5.5rem;
+
+  .publication-hero {
+    margin-top: 0;
+  }
+
+  .scholarly-publications {
+    margin-top: 2rem;
+  }
+}
+
 .eyebrow {
   color: var(--global-theme-color);
   font-size: 0.82rem;

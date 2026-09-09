@@ -43,7 +43,7 @@ social: false
     <h3>ROBOCON China</h3>
   </div>
   <div class="about-card">
-    <span class="metric">3+</span>
+    <span class="metric">3</span>
     <h3>Patents</h3>
   </div>
 </div>
@@ -80,4 +80,13 @@ social: false
     <a class="phd-btn" href="{{ '/assets/pdf/Jiacan_Li_CV.pdf' | relative_url }}" target="_blank">Download CV</a>
     <a class="phd-btn" href="mailto:lijc2023@mail.sustech.edu.cn">Email Me</a>
   </div>
+</section>
+
+<section id="publications" class="about-publications">
+  <div class="publication-hero">
+    <p class="about-eyebrow">Research Output</p>
+    <h1>Publications & Patents</h1>
+  </div>
+
+  {% include publications_content.liquid %}
 </section>
