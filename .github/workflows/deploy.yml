@@ -7,6 +7,12 @@ on:
       - main
     paths:
       - "assets/**"
+      - "components/**"
+      - "frontend/**"
+      - "lib/**"
+      - "package*.json"
+      - "*.config.*"
+      - "tsconfig.json"
       - "_sass/**"
       - "_scripts/**"
       - "**.bib"
@@ -36,6 +42,12 @@ on:
       - main
     paths:
       - "assets/**"
+      - "components/**"
+      - "frontend/**"
+      - "lib/**"
+      - "package*.json"
+      - "*.config.*"
+      - "tsconfig.json"
       - "_sass/**"
       - "_scripts/**"
       - "**.bib"
@@ -71,6 +83,15 @@ jobs:
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+      - name: Build About React component
+        run: |
+          npm ci
+          npm run build
       - name: Setup Ruby 💎
         uses: ruby/setup-ruby@v1
         with:
