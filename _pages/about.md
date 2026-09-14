@@ -11,7 +11,9 @@ social: false
 
 <section class="about-hero">
   <div class="about-hero-copy">
-    <h2 class="about-intro-title">Hi, I am Jessie</h2>
+    <div id="about-title-loop" class="react-island about-intro-title">
+      <h2>Hi, I'm Jessie</h2>
+    </div>
     <p>
       I am an undergraduate student majoring in Robotics Engineering at the
       <a href="https://www.sustech.edu.cn/en/" target="_blank" rel="external noopener">Southern University of Science and Technology (SUSTech)</a>. I work with Prof. Chenglong Fu in the
@@ -48,7 +50,7 @@ social: false
   </div>
 </div>
 
-<section id="about-spline" aria-labelledby="robotics-scene-title">
+<section id="about-spline" class="react-island" aria-labelledby="robotics-scene-title">
   <div class="about-section">
     <p class="about-eyebrow">Robotics · In motion</p>
     <h2 id="robotics-scene-title">Intelligence that meets the real world.</h2>
