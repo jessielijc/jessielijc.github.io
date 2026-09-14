@@ -1,0 +1,154 @@
+@tailwind components;
+@tailwind utilities;
+
+#about-spline {
+  margin: 2rem 0;
+  scroll-margin-top: 6rem;
+}
+#about-spline *,
+#about-spline *::before,
+#about-spline *::after {
+  box-sizing: border-box;
+}
+#about-spline .robotics-card {
+  border: 1px solid var(--global-divider-color);
+  border-radius: 1.35rem;
+  background: linear-gradient(120deg, rgba(177, 78, 118, 0.085), transparent 65%), var(--global-card-bg-color);
+  color: var(--global-text-color);
+  box-shadow: 0 0.65rem 1.8rem rgba(0, 0, 0, 0.045);
+}
+#about-spline .robotics-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  min-height: 350px;
+}
+#about-spline .robotics-copy {
+  padding: 2rem 0 2rem 1.75rem;
+}
+#about-spline h2 {
+  color: var(--global-text-color);
+  font-size: clamp(1.65rem, 2.8vw, 2.25rem);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 1.2;
+  margin: 0.1rem 0 1rem;
+}
+#about-spline .robotics-description {
+  color: var(--global-text-color-light);
+  font-size: 1rem;
+  line-height: 1.75;
+  max-width: 23rem;
+  margin: 0 0 1.35rem;
+}
+#about-spline .robotics-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  align-self: flex-start;
+  color: var(--global-theme-color);
+  font-weight: 650;
+  font-size: 0.9rem;
+}
+#about-spline .robotics-visual {
+  min-width: 0;
+  height: 350px;
+  overflow: hidden;
+  background: radial-gradient(ellipse at center, rgba(177, 78, 118, 0.12), transparent 70%);
+}
+#about-spline .scene-container {
+  height: 100%;
+  width: 100%;
+}
+#about-spline canvas {
+  display: block;
+}
+#about-spline .scene-spotlight {
+  background: radial-gradient(circle, rgba(177, 78, 118, 0.12), transparent 72%);
+  transition: opacity 0.2s;
+}
+#about-spline .scene-status {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  color: var(--global-text-color-light);
+  font-size: 0.85rem;
+  padding: 1rem;
+  text-align: center;
+}
+#about-spline .scene-status p {
+  margin: 0;
+}
+#about-spline button {
+  font: inherit;
+  color: var(--global-theme-color);
+  background: var(--global-card-bg-color);
+  border: 1px solid var(--global-divider-color);
+  border-radius: 999px;
+  padding: 0.35rem 0.65rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+#about-spline button:focus-visible,
+#about-spline a:focus-visible {
+  outline: 2px solid var(--global-theme-color);
+  outline-offset: 4px;
+}
+#about-spline .scene-toolbar {
+  position: absolute;
+  left: 1rem;
+  bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.68rem;
+  color: var(--global-text-color-light);
+}
+#about-spline .scene-toolbar > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+#about-spline .loader {
+  height: 22px;
+  width: 22px;
+  border: 2px solid rgba(177, 78, 118, 0.2);
+  border-top-color: var(--global-theme-color);
+  border-radius: 50%;
+  animation: scene-spin 1s linear infinite;
+}
+@keyframes scene-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+#research-interests {
+  scroll-margin-top: 6rem;
+}
+@media (max-width: 767px) {
+  #about-spline .robotics-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  #about-spline .robotics-copy {
+    padding: 1.5rem 1.4rem 0.25rem;
+  }
+  #about-spline .robotics-visual {
+    height: 310px;
+  }
+  #about-spline .robotics-description {
+    max-width: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  #about-spline .loader {
+    animation: none;
+  }
+  #about-spline .scene-spotlight {
+    display: none;
+  }
+}
