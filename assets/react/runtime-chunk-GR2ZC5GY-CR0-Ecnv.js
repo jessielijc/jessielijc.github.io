@@ -1,0 +1,1 @@
+function t(n){if(n.component){let o=n.component.instances.indexOf(n);o>=0&&n.component.instances.splice(o,1);for(let o of n.children)e.is(o)&&t(o)}}import{b as e}from"./runtime-chunk-HHRA6K3Y--9JB1DOx.js";export{t};

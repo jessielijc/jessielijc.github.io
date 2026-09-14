@@ -1,0 +1,1 @@
+function t(n,t){e.set(n,t)}function n(n){return e.get(n)}function r(){return e}function a(n,t){i.set(n,t)}function o(n){return i.get(n)}function c(n,t){let e=`${t}:${n}`;s.has(e)||s.add(e)}var e=new Map,i=new Map,s=new Set;export{t as a,a as i,r as n,o,c as r,n as t};

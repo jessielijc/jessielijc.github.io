@@ -1,0 +1,1 @@
+function t(t,n){e.set(t,n)}function n(t){return e.get(t)}var e=new Map,r=class{constructor(t){this.eventContext=t,this.domEventsNeeded=new Set,this.hasVideoAction=!1}connect(){}disconnect(){}dispose(){this.disconnect(),this.eventContext=void 0}};export{n,r,t};
