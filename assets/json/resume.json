@@ -14,7 +14,7 @@
       "countryCode": "CN",
       "region": "Guangdong"
     },
-    "profiles":[
+    "profiles": [
       {
         "network": "GitHub",
         "username": "jessielijc",
@@ -22,7 +22,7 @@
       }
     ]
   },
-  "education":[
+  "education": [
     {
       "institution": "Southern University of Science and Technology (SUSTech)",
       "url": "https://www.sustech.edu.cn/en/",
@@ -30,21 +30,16 @@
       "studyType": "B.Eng.",
       "startDate": "2023-09-01",
       "score": "GPA: 3.79/4.0 (Weighted Avg: 90.64/100)",
-      "courses":[
-        "Robot Operating System (99)",
-        "Robot Modeling and Control (95)",
-        "Machine Learning for Engineering (97)",
-        "Mechanical Design (97)"
-      ]
+      "courses": ["Robot Operating System (99)", "Robot Modeling and Control (95)", "Machine Learning for Engineering (97)", "Mechanical Design (97)"]
     }
   ],
-  "work":[
+  "work": [
     {
       "name": "Stroke Rehabilitation Exoskeletons",
       "position": "Research Experience",
       "startDate": "2026-01-01",
       "summary": "Designed and developed a lower-limb exoskeleton system specifically tailored for stroke patients’ gait rehabilitation.",
-      "highlights":[
+      "highlights": [
         "Developed and deployed a deep learning-based gait prediction framework predicting real-time kinematic states.",
         "Patent: Co-inventor of An Exoskeleton Control Method... (Published, Student 5th Author)."
       ]
@@ -54,7 +49,7 @@
       "position": "Research Experience",
       "startDate": "2025-05-01",
       "summary": "Developed a novel data-driven unified control framework utilizing deep neural networks to forecast human motion intentions.",
-      "highlights":[
+      "highlights": [
         "Deployed a lightweight model on embedded hardware for real-time inference.",
         "Patent: Co-inventor of Control Method, Device, Electronic Equipment... (Published, Student 2nd Author)."
       ]
@@ -67,12 +62,12 @@
       "summary": "Developed a human-in-the-loop Bayesian optimization algorithm to personalize assistive torque profiles in real time based on human metabolic cost."
     }
   ],
-  "projects":[
+  "projects": [
     {
       "name": "Autonomous Navigation & Inspection System",
       "startDate": "2026-03-01",
       "summary": "R&D Internship at AIHISUN Ltd.",
-      "highlights":[
+      "highlights": [
         "Collaborated with the R&D team to develop a multi-sensor fusion pipeline (Depth Camera, LiDAR, IMU) for autonomous navigation in GPS-denied confined spaces."
       ]
     },
@@ -80,13 +75,13 @@
       "name": "ROS2-Based Mobile Manipulator with Multimodal HRI",
       "startDate": "2026-01-01",
       "summary": "Designed a differential mobile chassis equipped with a 3-DOF robotic arm.",
-      "highlights":[
+      "highlights": [
         "Implemented autonomous mapping and navigation via SLAM Toolbox and Nav2.",
         "Developed an HRI system integrating Vosk and MediaPipe to coordinate and execute complex task sequences."
       ]
     }
   ],
-  "awards":[
+  "awards": [
     {
       "title": "National First Prize (Operation Challenge)",
       "date": "2024-01-01",
@@ -104,31 +99,19 @@
       "awarder": "SUSTech (Awarded Twice: 2024, 2025)"
     }
   ],
-  "skills":[
+  "skills": [
     {
       "name": "Technical",
       "level": "Advanced",
-      "keywords":[
-        "Python",
-        "MATLAB",
-        "C++",
-        "PyTorch",
-        "ROS / ROS 2"
-      ]
+      "keywords": ["Python", "MATLAB", "C++", "PyTorch", "ROS / ROS 2"]
     },
     {
       "name": "Academic Tools",
       "level": "Proficient",
-      "keywords":[
-        "Solidworks",
-        "AutoCAD",
-        "Arduino",
-        "OriginPro",
-        "LaTeX"
-      ]
+      "keywords": ["Solidworks", "AutoCAD", "Arduino", "OriginPro", "LaTeX"]
     }
   ],
-  "certificates":[
+  "certificates": [
     {
       "name": "AHA HeartSaver®",
       "date": "2024-01-01",
@@ -140,7 +123,7 @@
       "issuer": "SUSTech Red Cross"
     }
   ],
-  "languages":[
+  "languages": [
     {
       "language": "English",
       "fluency": "TOEFL 97 (R26, L25, S22, W24), CET-4 & 6"

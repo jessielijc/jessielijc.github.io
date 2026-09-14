@@ -1,6 +1,45 @@
 @tailwind components;
 @tailwind utilities;
 
+#about-title-loop {
+  min-height: 2.15rem;
+}
+#about-title-loop h2 {
+  color: var(--global-text-color);
+  font: inherit;
+  margin: 0;
+}
+#about-title-loop .about-text-loop {
+  color: var(--global-text-color);
+  flex-wrap: nowrap;
+  font-size: 1.65rem;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  line-height: 1.25;
+  max-width: 100%;
+}
+#about-title-loop .about-text-loop > span {
+  margin-right: 0.45rem;
+}
+#about-title-loop .about-rotating-text {
+  background-image: linear-gradient(90deg, var(--global-theme-color), color-mix(in srgb, var(--global-theme-color), #6f4ee8 38%));
+}
+#about-title-loop .about-loop-highlight {
+  background: linear-gradient(90deg, transparent, rgba(177, 78, 118, 0.08), rgba(177, 78, 118, 0.16));
+}
+#about-title-loop .about-loop-cursor {
+  background: var(--global-theme-color);
+  border-radius: 999px;
+  margin-left: 0.12rem;
+  width: 2px;
+}
+
+@media (max-width: 575px) {
+  #about-title-loop .about-text-loop {
+    font-size: clamp(1.25rem, 5.5vw, 1.55rem);
+  }
+}
+
 #about-spline {
   margin: 2rem 0;
   scroll-margin-top: 6rem;
@@ -11,8 +50,8 @@
   box-sizing: border-box;
 }
 #about-spline .robotics-card {
-  border: 1px solid var(--global-divider-color);
-  border-radius: 1.35rem;
+  border: 1px solid var(--global-divider-color) !important;
+  border-radius: 1.35rem !important;
   background: linear-gradient(120deg, rgba(177, 78, 118, 0.085), transparent 65%), var(--global-card-bg-color);
   color: var(--global-text-color);
   box-shadow: 0 0.65rem 1.8rem rgba(0, 0, 0, 0.045);
@@ -86,7 +125,7 @@
   font: inherit;
   color: var(--global-theme-color);
   background: var(--global-card-bg-color);
-  border: 1px solid var(--global-divider-color);
+  border: 1px solid var(--global-divider-color) !important;
   border-radius: 999px;
   padding: 0.35rem 0.65rem;
   cursor: pointer;

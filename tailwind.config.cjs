@@ -1,6 +1,6 @@
 module.exports = {
   content: ["./components/**/*.tsx", "./frontend/**/*.tsx"],
-  important: "#about-spline",
+  important: ".react-island",
   corePlugins: { preflight: false },
   theme: {
     extend: {
