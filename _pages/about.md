@@ -48,7 +48,17 @@ social: false
   </div>
 </div>
 
-<section class="about-section">
+<section id="about-spline" aria-labelledby="robotics-scene-title">
+  <div class="about-section">
+    <p class="about-eyebrow">Robotics · In motion</p>
+    <h2 id="robotics-scene-title">Intelligence that meets the real world.</h2>
+    <p>Exploring how robots sense, learn, and interact — with people and the world around them.</p>
+    <a href="#research-interests">Explore my research</a>
+  </div>
+</section>
+<script type="module" src="{{ '/assets/react/about.js' | relative_url }}"></script>
+
+<section id="research-interests" class="about-section">
   <p class="about-eyebrow">Research Interests</p>
   <h2>What I work on</h2>
   <p class="section-intro">My research focuses on intelligent robotic systems that interact naturally and effectively with people and the physical world.</p>
