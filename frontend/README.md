@@ -22,6 +22,7 @@ Generated assets in `assets/react/` are intentionally ignored by Git.
 ## File locations
 
 - `components/ui/`: SplineScene (`splite.tsx`), Spotlight, Card, and adapted demo.
+- `components/ui/text-loop.tsx`: reusable animated heading; the About copy is in `text-loop-demo.tsx`.
 - `frontend/about.tsx`: mounts the component only when #about-spline exists.
 - `frontend/styles.css`: component styles, using existing site's color variables.
 - `lib/utils.ts`: shadcn class merging utility.
