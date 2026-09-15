@@ -70,6 +70,10 @@
   .patents-section {
     margin-bottom: 0;
   }
+
+  .honors-section {
+    margin-bottom: 0;
+  }
 }
 
 .eyebrow {
@@ -274,6 +278,100 @@
   padding: 0.75rem 0.9rem;
 }
 
+.honors-section {
+  margin-bottom: 2.75rem;
+}
+
+.honors-list.refined {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.honor-card.refined {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 1rem;
+  align-items: start;
+  border: 1px solid var(--global-divider-color);
+  border-left: 4px solid var(--global-theme-color);
+  border-radius: 0.95rem;
+  background: var(--global-card-bg-color);
+  padding: 1.05rem 1.15rem;
+  box-shadow: 0 0.35rem 1.2rem rgba(0, 0, 0, 0.035);
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+
+  &:hover {
+    border-color: rgba(177, 78, 118, 0.55);
+    box-shadow: 0 0.7rem 1.6rem rgba(0, 0, 0, 0.075);
+    transform: translateY(-2px);
+  }
+
+  h3 {
+    color: var(--global-text-color);
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    line-height: 1.42;
+    margin: 0.45rem 0 0.55rem;
+  }
+}
+
+.honor-year {
+  display: grid;
+  place-items: center;
+  min-width: 3.4rem;
+  height: 2.25rem;
+  border-radius: 0.7rem;
+  color: var(--global-theme-color);
+  background: rgba(177, 78, 118, 0.1);
+  font-size: 0.78rem;
+  font-weight: 750;
+}
+
+.honor-content {
+  min-width: 0;
+}
+
+.honor-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.honor-type {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  color: var(--global-card-bg-color);
+  background: var(--global-theme-color);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 0.17rem 0.5rem;
+  text-transform: uppercase;
+}
+
+.honor-awards {
+  color: var(--global-text-color-light);
+  font-size: 0.92rem;
+  line-height: 1.55;
+  margin: 0;
+  padding-left: 1.15rem;
+
+  li + li {
+    margin-top: 0.22rem;
+  }
+
+  strong {
+    color: var(--global-text-color);
+    font-weight: 750;
+  }
+}
+
 .scholarly-publications {
   margin-top: 2.5rem;
 }
@@ -307,6 +405,15 @@
 
   .patent-actions {
     justify-content: flex-start;
+  }
+
+  .honor-card.refined {
+    grid-template-columns: 1fr;
+  }
+
+  .honor-year {
+    width: fit-content;
+    padding: 0 0.7rem;
   }
 }
 
