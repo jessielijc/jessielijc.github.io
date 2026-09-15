@@ -312,6 +312,71 @@ body.sticky-bottom-footer {
   }
 }
 
+#site-grid-spotlight {
+  color: var(--global-theme-color);
+  inset: 0;
+  isolation: isolate;
+  overflow: hidden;
+  pointer-events: none;
+  position: fixed;
+  z-index: 0;
+
+  .site-grid-spotlight-canvas,
+  .site-grid-spotlight-pattern {
+    height: 100%;
+    inset: 0;
+    position: absolute;
+    width: 100%;
+  }
+
+  .site-grid-spotlight-pattern {
+    mask-image: radial-gradient(circle at center, black 5%, transparent 78%);
+    opacity: 0.055;
+
+    path {
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 0.7;
+    }
+
+    pattern rect {
+      fill: currentColor;
+      opacity: 0.55;
+    }
+  }
+
+  .site-grid-spotlight-glow {
+    background: radial-gradient(circle, color-mix(in srgb, var(--global-theme-color), transparent 65%) 0%, transparent 72%);
+    border-radius: 999px;
+    filter: blur(18px);
+    pointer-events: none;
+    position: absolute;
+  }
+}
+
+body > .container[role="main"],
+body > .post.distill,
+body > footer {
+  position: relative;
+  z-index: 1;
+}
+
+html[data-theme="dark"] #site-grid-spotlight .site-grid-spotlight-pattern {
+  opacity: 0.075;
+}
+
+@media (pointer: coarse), (prefers-reduced-motion: reduce) {
+  #site-grid-spotlight .site-grid-spotlight-glow {
+    display: none;
+  }
+}
+
+@media print {
+  #site-grid-spotlight {
+    display: none;
+  }
+}
+
 .about-hero {
   align-items: stretch;
   border: 1px solid var(--global-divider-color);
