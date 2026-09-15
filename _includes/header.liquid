@@ -47,12 +47,12 @@
           {% endfor %}
 
           <!-- About -->
-          <li class="nav-item {% if page.permalink == '/' %}active{% endif %}">
-            <a class="nav-link" href="{{ '/' | relative_url }}">
+          <li id="nav-item-about" class="nav-item {% if page.permalink == '/' %}active{% endif %}">
+            <a id="nav-link-about" class="nav-link" href="{{ '/' | relative_url }}">
               {{- about_title }}
-              {% if page.permalink == '/' %}
-                <span class="sr-only">(current)</span>
-              {% endif %}
+              <span class="sr-only nav-current-marker">
+                {%- if page.permalink == '/' %}(current){% endif -%}
+              </span>
             </a>
           </li>
 
@@ -99,7 +99,12 @@
                 </li>
               {% else %}
                 {% assign parent_link = p.permalink | remove: 'index.html' %}
-                <li class="nav-item {% if page.url contains parent_link %}active{% endif %}">
+                <li
+                  {% if p.title == 'publications' %}
+                    id="nav-item-publications"
+                  {% endif %}
+                  class="nav-item {% if page.url contains parent_link %}active{% endif %}"
+                >
                   {%- if p.permalink contains '://' -%}
                     {%- assign url = p.permalink -%}
                   {%- elsif p.permalink contains '/blog/' -%}
@@ -110,9 +115,19 @@
                   {% if p.title == 'publications' %}
                     {% assign url = '/#publications' %}
                   {% endif %}
-                  <a class="nav-link" href="{{ url | relative_url }}">
+                  <a
+                    {% if p.title == 'publications' %}
+                      id="nav-link-publications"
+                    {% endif %}
+                    class="nav-link"
+                    href="{{ url | relative_url }}"
+                  >
                     {{- p.title }}
-                    {% if page.url contains p.url %}
+                    {% if p.title == 'publications' %}
+                      <span class="sr-only nav-current-marker">
+                        {%- if page.url contains p.url %}(current){% endif -%}
+                      </span>
+                    {% elsif page.url contains p.url %}
                       <span class="sr-only">(current)</span>
                     {% endif %}
                   </a>
