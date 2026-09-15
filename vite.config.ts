@@ -8,8 +8,11 @@ export default defineConfig({
     emptyOutDir: true,
     cssCodeSplit: false,
     rollupOptions: {
-      input: "frontend/about.tsx",
-      output: { entryFileNames: "about.js", chunkFileNames: "[name]-[hash].js", assetFileNames: "about.[ext]" },
+      input: {
+        about: "frontend/about.tsx",
+        "site-effects": "frontend/site-effects.tsx",
+      },
+      output: { entryFileNames: "[name].js", chunkFileNames: "[name]-[hash].js", assetFileNames: "about.[ext]" },
     },
   },
 });
