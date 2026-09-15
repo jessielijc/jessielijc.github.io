@@ -2,8 +2,13 @@
 import { useRef, useState, useEffect } from "react";
 import { motion, useSpring, useTransform, useReducedMotion, type SpringOptions } from "framer-motion";
 import { cn } from "@/lib/utils";
-type SpotlightProps = { className?: string; size?: number; springOptions?: SpringOptions };
-export function Spotlight({ className, size = 280, springOptions = { bounce: 0 } }: SpotlightProps) {
+type SpotlightProps = {
+  className?: string;
+  size?: number;
+  springOptions?: SpringOptions;
+  trackViewport?: boolean;
+};
+export function Spotlight({ className, size = 280, springOptions = { bounce: 0 }, trackViewport = false }: SpotlightProps) {
   const ref = useRef<HTMLDivElement>(null);
   const [hovered, setHovered] = useState(false);
   const reducedMotion = useReducedMotion();
@@ -16,19 +21,22 @@ export function Spotlight({ className, size = 280, springOptions = { bounce: 0 }
     if (!parent || reducedMotion) return;
     const move = (event: PointerEvent) => {
       if (event.pointerType === "touch") return;
-      const box = parent.getBoundingClientRect();
+      const box = trackViewport ? { left: 0, top: 0 } : parent.getBoundingClientRect();
       x.set(event.clientX - box.left);
       y.set(event.clientY - box.top);
       setHovered(true);
     };
     const leave = () => setHovered(false);
-    parent.addEventListener("pointermove", move);
-    parent.addEventListener("pointerleave", leave);
+    const target: HTMLElement | Window = trackViewport ? window : parent;
+    target.addEventListener("pointermove", move as EventListener);
+    target.addEventListener("pointerleave", leave);
+    if (trackViewport) window.addEventListener("blur", leave);
     return () => {
-      parent.removeEventListener("pointermove", move);
-      parent.removeEventListener("pointerleave", leave);
+      target.removeEventListener("pointermove", move as EventListener);
+      target.removeEventListener("pointerleave", leave);
+      if (trackViewport) window.removeEventListener("blur", leave);
     };
-  }, [x, y, reducedMotion]);
+  }, [x, y, reducedMotion, trackViewport]);
   return (
     <motion.div
       ref={ref}
