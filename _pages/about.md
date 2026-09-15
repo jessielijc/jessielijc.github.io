@@ -35,6 +35,10 @@ social: false
   </aside>
 </section>
 
+{% comment %}
+Temporarily hidden: About metrics cards.
+Remove this Liquid comment wrapper to restore the entire block.
+
 <div class="about-grid">
   <div class="about-card">
     <span class="metric">3.79/4.0</span>
@@ -49,6 +53,11 @@ social: false
     <h3>Patents</h3>
   </div>
 </div>
+{% endcomment %}
+
+{% comment %}
+Temporarily hidden: interactive 3D robotics scene.
+Remove this Liquid comment wrapper to restore the scene and its script.
 
 <section id="about-spline" class="react-island" aria-labelledby="robotics-scene-title">
   <div class="about-section">
@@ -59,6 +68,7 @@ social: false
   </div>
 </section>
 <script type="module" src="{{ '/assets/react/about.js' | relative_url | bust_file_cache }}"></script>
+{% endcomment %}
 
 <section id="research-interests" class="about-section">
   <p class="about-eyebrow">Research Interests</p>
