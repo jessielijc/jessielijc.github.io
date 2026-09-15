@@ -16,13 +16,13 @@ social: false
     </div>
     <p>
       I am an undergraduate student majoring in Robotics Engineering at the
-      <a href="https://www.sustech.edu.cn/en/" target="_blank" rel="external noopener">Southern University of Science and Technology (SUSTech)</a>. I work with Prof. Chenglong Fu in the
+      <a href="https://www.sustech.edu.cn/en/" target="_blank" rel="external noopener">Southern University of Science and Technology (SUSTech)</a>. I work with <a href="https://www.sustech.edu.cn/en/faculties/fuchenglong.html" target="_blank" rel="external noopener">Prof. Chenglong Fu</a> in the
       <a href="https://www.harlab.site/" target="_blank" rel="external noopener">Human Augmentation and Rehabilitation Laboratory (HAR Lab)</a>.
     </p>
     <p>
       Since June 2026, I have also been a visiting research student at the
       <a href="https://www.nus.edu.sg/" target="_blank" rel="external noopener">National University of Singapore (NUS)</a>,
-      where I conduct research under the supervision of Prof. Xingyu Liu.
+      where I conduct research under the supervision of <a href="https://cde.nus.edu.sg/ece/staff/liu-xingyu/" target="_blank" rel="external noopener">Prof. Xingyu Liu</a>.
     </p>
   </div>
   <aside class="about-profile-card">
@@ -58,7 +58,7 @@ social: false
     <a href="#research-interests">Explore my research</a>
   </div>
 </section>
-<script type="module" src="{{ '/assets/react/about.js' | relative_url }}"></script>
+<script type="module" src="{{ '/assets/react/about.js' | relative_url | bust_file_cache }}"></script>
 
 <section id="research-interests" class="about-section">
   <p class="about-eyebrow">Research Interests</p>
