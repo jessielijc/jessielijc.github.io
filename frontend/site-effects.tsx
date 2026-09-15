@@ -5,7 +5,7 @@ import { Spotlight } from "@/components/ui/spotlight";
 function GridPatternSpotlight() {
   return (
     <div className="site-grid-spotlight-canvas" aria-hidden="true">
-      <Spotlight className="site-grid-spotlight-glow" size={360} springOptions={{ bounce: 0, damping: 30, stiffness: 180 }} trackViewport />
+      <Spotlight className="site-grid-spotlight-glow" size={90} springOptions={{ bounce: 0, damping: 30, stiffness: 180 }} trackViewport />
       <svg className="site-grid-spotlight-pattern" focusable="false">
         <defs>
           <pattern id="site-grid-pattern" width="24" height="24" patternUnits="userSpaceOnUse">
