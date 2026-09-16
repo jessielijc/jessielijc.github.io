@@ -95,7 +95,7 @@ Remove this Liquid comment wrapper to restore the scene and its script.
     <p class="about-eyebrow">Let's Connect</p>
     <h2>Seeking Fall 2027 PhD Opportunities</h2>
     <p>
-      I am actively seeking PhD opportunities starting in Fall 2027, with research interests in robotics, embodied intelligence, and human-centered intelligent systems. I would be delighted to connect with prospective supervisors and collaborators whose work aligns with these areas—please feel free to get in touch.
+      I am actively seeking PhD opportunities starting in Fall 2027, with research interests in dexterous robotic hands, embodied intelligence, computer vision, and UAV navigation algorithms. I would be delighted to connect with prospective supervisors and collaborators whose work aligns with these areas—please feel free to get in touch.
     </p>
   </div>
   <div class="phd-actions">
