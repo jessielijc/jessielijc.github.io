@@ -26,7 +26,14 @@ social: false
     </p>
   </div>
   <aside class="about-profile-card">
-    <img src="{{ '/assets/img/jessie.jpg' | relative_url }}" alt="Jiacan Li">
+    <img
+      src="{{ '/assets/img/jessie.webp' | relative_url }}"
+      alt="Jiacan Li"
+      width="1200"
+      height="800"
+      decoding="async"
+      fetchpriority="high"
+    >
     <div class="profile-details">
       <p>2023–present, B.Eng. in Robotics Engineering</p>
       <p>Southern University of Science and Technology</p>
