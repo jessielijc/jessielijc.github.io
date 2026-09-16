@@ -289,9 +289,12 @@
 
 .honor-card.refined {
   display: grid;
-  grid-template-columns: minmax(240px, 0.9fr) minmax(0, 1.25fr);
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.25fr);
   gap: 1.25rem;
   align-items: start;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
   border: 1px solid var(--global-divider-color);
   border-left: 4px solid var(--global-theme-color);
   border-radius: 0.95rem;
@@ -324,10 +327,13 @@
   border: 1px solid var(--global-divider-color);
   border-radius: 0.8rem;
   margin: 0;
+  min-width: 0;
   overflow: hidden;
 
   img {
+    display: block;
     width: 100%;
+    max-width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
