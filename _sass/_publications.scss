@@ -289,8 +289,8 @@
 
 .honor-card.refined {
   display: grid;
-  grid-template-columns: auto minmax(0, 1fr);
-  gap: 1rem;
+  grid-template-columns: minmax(240px, 0.9fr) minmax(0, 1.25fr);
+  gap: 1.25rem;
   align-items: start;
   border: 1px solid var(--global-divider-color);
   border-left: 4px solid var(--global-theme-color);
@@ -319,16 +319,32 @@
   }
 }
 
+.honor-photo {
+  aspect-ratio: 4 / 3;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 0.8rem;
+  margin: 0;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
 .honor-year {
-  display: grid;
-  place-items: center;
-  min-width: 3.4rem;
-  height: 2.25rem;
-  border-radius: 0.7rem;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
   color: var(--global-theme-color);
   background: rgba(177, 78, 118, 0.1);
-  font-size: 0.78rem;
+  border: 1px solid rgba(177, 78, 118, 0.25);
+  font-size: 0.68rem;
   font-weight: 750;
+  letter-spacing: 0.04em;
+  padding: 0.17rem 0.55rem;
 }
 
 .honor-content {
@@ -355,6 +371,13 @@
   text-transform: uppercase;
 }
 
+.honor-description {
+  color: var(--global-text-color-light);
+  font-size: 0.92rem;
+  line-height: 1.6;
+  margin: 0 0 0.75rem;
+}
+
 .honor-awards {
   color: var(--global-text-color-light);
   font-size: 0.92rem;
@@ -369,6 +392,132 @@
   strong {
     color: var(--global-text-color);
     font-weight: 750;
+  }
+}
+
+.award-disclosure {
+  grid-column: 1 / -1;
+  border-top: 1px solid var(--global-divider-color);
+  padding-top: 0.9rem;
+
+  summary {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    border: 1px solid var(--global-theme-color);
+    border-radius: 999px;
+    color: var(--global-theme-color);
+    cursor: pointer;
+    font-size: 0.78rem;
+    font-weight: 750;
+    line-height: 1;
+    margin-left: auto;
+    padding: 0.58rem 0.82rem;
+    transition:
+      background-color 0.2s ease,
+      color 0.2s ease;
+
+    &::marker,
+    &::-webkit-details-marker {
+      display: none;
+      content: "";
+    }
+
+    &::after {
+      content: "+";
+      font-size: 1rem;
+      line-height: 0.7;
+      margin-left: 0.45rem;
+    }
+
+    &:hover {
+      background: var(--global-theme-color);
+      color: var(--global-card-bg-color);
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--global-theme-color);
+      outline-offset: 3px;
+    }
+  }
+
+  .hide-label {
+    display: none;
+  }
+
+  &[open] {
+    summary {
+      margin-bottom: 1rem;
+
+      &::after {
+        content: "−";
+      }
+    }
+
+    .show-label {
+      display: none;
+    }
+
+    .hide-label {
+      display: inline;
+    }
+  }
+}
+
+.award-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.9rem;
+}
+
+.award-certificate {
+  border: 1px solid var(--global-divider-color);
+  border-radius: 0.8rem;
+  background: rgba(127, 127, 127, 0.035);
+  margin: 0;
+  overflow: hidden;
+
+  a {
+    display: block;
+    text-decoration: none;
+
+    &:focus-visible {
+      outline: 2px solid var(--global-theme-color);
+      outline-offset: -3px;
+    }
+  }
+
+  figcaption {
+    border-top: 1px solid var(--global-divider-color);
+    color: var(--global-text-color);
+    font-size: 0.78rem;
+    font-weight: 650;
+    line-height: 1.4;
+    padding: 0.65rem 0.75rem;
+  }
+}
+
+.award-image-frame {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 4 / 3;
+  background: #f7f3ea;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.2s ease;
+  }
+
+  &:hover img:not(.award-image-rotated) {
+    transform: scale(1.02);
+  }
+
+  .award-image-rotated {
+    width: 75%;
+    transform: rotate(-90deg) scale(1.28);
   }
 }
 
@@ -411,9 +560,14 @@
     grid-template-columns: 1fr;
   }
 
-  .honor-year {
-    width: fit-content;
-    padding: 0 0.7rem;
+  .award-disclosure {
+    summary {
+      margin-left: 0;
+    }
+  }
+
+  .award-gallery {
+    grid-template-columns: 1fr;
   }
 }
 
