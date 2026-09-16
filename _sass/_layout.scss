@@ -347,10 +347,17 @@ body.sticky-bottom-footer {
 
   .site-grid-spotlight-glow {
     background: radial-gradient(circle, color-mix(in srgb, var(--global-theme-color), transparent 65%) 0%, transparent 72%);
+    backface-visibility: hidden;
     border-radius: 999px;
+    contain: layout;
     filter: blur(18px);
+    height: 90px;
+    opacity: 0;
     pointer-events: none;
     position: absolute;
+    transition: opacity 0.2s ease;
+    width: 90px;
+    will-change: transform, opacity;
   }
 }
 
