@@ -385,7 +385,7 @@ html[data-theme="dark"] #site-grid-spotlight .site-grid-spotlight-pattern {
   box-shadow: 0 0.65rem 1.8rem rgba(0, 0, 0, 0.045);
   display: grid;
   gap: 1.5rem;
-  grid-template-columns: minmax(0, 1fr) minmax(255px, 32%);
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 36%);
   margin: 0.75rem 0 1.65rem;
   padding: 1.65rem 1.75rem;
 
@@ -430,12 +430,12 @@ html[data-theme="dark"] #site-grid-spotlight .site-grid-spotlight-pattern {
   justify-content: space-between;
   min-width: 0;
   overflow: hidden;
-  padding: 0.45rem 0.45rem 0.7rem;
+  padding: 0.55rem 0.55rem 0.8rem;
 
   img {
     border-radius: 0.85rem;
     display: block;
-    height: 200px;
+    height: 245px;
     object-fit: cover;
     width: 100%;
   }
@@ -443,13 +443,13 @@ html[data-theme="dark"] #site-grid-spotlight .site-grid-spotlight-pattern {
   .profile-details {
     line-height: 1.4;
     min-width: 0;
-    padding: 0.65rem 0.35rem 0;
+    padding: 0.75rem 0.35rem 0;
     text-align: center;
   }
 
   p {
     color: var(--global-text-color);
-    font-size: 0.7rem;
+    font-size: 0.74rem;
     line-height: 1.4;
     margin: 0 0 0.38rem;
     overflow-wrap: anywhere;
