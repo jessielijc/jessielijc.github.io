@@ -10,28 +10,37 @@ type SpotlightProps = {
 };
 export function Spotlight({ className, size = 280, springOptions = { bounce: 0 }, trackViewport = false }: SpotlightProps) {
   const ref = useRef<HTMLDivElement>(null);
+  const frame = useRef<number | null>(null);
+  const nextPosition = useRef({ x: 0, y: 0 });
   const [hovered, setHovered] = useState(false);
   const reducedMotion = useReducedMotion();
   const x = useSpring(0, springOptions),
     y = useSpring(0, springOptions);
-  const left = useTransform(x, (value) => value - size / 2);
-  const top = useTransform(y, (value) => value - size / 2);
+  const translateX = useTransform(x, (value) => value - size / 2);
+  const translateY = useTransform(y, (value) => value - size / 2);
   useEffect(() => {
     const parent = ref.current?.parentElement;
     if (!parent || reducedMotion) return;
     const move = (event: PointerEvent) => {
       if (event.pointerType === "touch") return;
       const box = trackViewport ? { left: 0, top: 0 } : parent.getBoundingClientRect();
-      x.set(event.clientX - box.left);
-      y.set(event.clientY - box.top);
+      nextPosition.current = { x: event.clientX - box.left, y: event.clientY - box.top };
+      if (frame.current === null) {
+        frame.current = window.requestAnimationFrame(() => {
+          x.set(nextPosition.current.x);
+          y.set(nextPosition.current.y);
+          frame.current = null;
+        });
+      }
       setHovered(true);
     };
     const leave = () => setHovered(false);
     const target: HTMLElement | Window = trackViewport ? window : parent;
-    target.addEventListener("pointermove", move as EventListener);
+    target.addEventListener("pointermove", move as EventListener, { passive: true });
     target.addEventListener("pointerleave", leave);
     if (trackViewport) window.addEventListener("blur", leave);
     return () => {
+      if (frame.current !== null) window.cancelAnimationFrame(frame.current);
       target.removeEventListener("pointermove", move as EventListener);
       target.removeEventListener("pointerleave", leave);
       if (trackViewport) window.removeEventListener("blur", leave);
@@ -42,7 +51,7 @@ export function Spotlight({ className, size = 280, springOptions = { bounce: 0 }
       ref={ref}
       aria-hidden="true"
       className={cn("scene-spotlight pointer-events-none absolute rounded-full", className)}
-      style={{ width: size, height: size, left, top, opacity: hovered && !reducedMotion ? 1 : 0 }}
+      style={{ width: size, height: size, x: translateX, y: translateY, opacity: hovered && !reducedMotion ? 1 : 0 }}
     />
   );
 }
