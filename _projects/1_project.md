@@ -25,7 +25,7 @@ github: https://github.com/jessielijc/ROS2-Autonomous-Robot-Project
 </div>
 
 <div class="project-actions">
-  <a class="project-link-btn" href="https://github.com/jessielijc/ROS2-Autonomous-Robot-Project" target="_blank" rel="external nofollow noopener">GitHub Repository</a>
+  <a class="project-link-btn flow-button" href="https://github.com/jessielijc/ROS2-Autonomous-Robot-Project" target="_blank" rel="external nofollow noopener">GitHub Repository</a>
 </div>
 
 <div class="project-showcase">
