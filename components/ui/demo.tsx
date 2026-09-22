@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import { ArrowUpRight, MoveUpRight, Pause, Play } from "lucide-react";
+import { ArrowUpRight, MoveUpRight } from "lucide-react";
+import { FlowButton } from "@/components/ui/flow-button";
 import { SplineScene } from "@/components/ui/splite";
 import { Card } from "@/components/ui/card";
 import { Spotlight } from "@/components/ui/spotlight";
@@ -45,20 +46,14 @@ export function SplineSceneBasic() {
           ) : (
             <div className="scene-status">
               <p>Explore the interactive 3D scene.</p>
-              <button type="button" onClick={() => setActive(true)}>
-                <Play size={16} aria-hidden="true" /> Load 3D scene
-              </button>
+              <FlowButton text="Load 3D scene" onClick={() => setActive(true)} />
             </div>
           )}
           <div className="scene-toolbar">
             <span>
               <MoveUpRight size={13} aria-hidden="true" /> Interactive 3D
             </span>
-            {active && (
-              <button type="button" onClick={() => setActive(false)} aria-label="Pause 3D scene">
-                <Pause size={14} aria-hidden="true" /> Pause
-              </button>
-            )}
+            {active && <FlowButton text="Pause" className="px-6 py-2 text-xs" onClick={() => setActive(false)} aria-label="Pause 3D scene" />}
           </div>
         </div>
       </div>

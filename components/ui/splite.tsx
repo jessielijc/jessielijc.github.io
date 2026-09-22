@@ -1,5 +1,6 @@
 "use client";
 import { Component, Suspense, lazy, useState, type ReactNode } from "react";
+import { FlowButton } from "@/components/ui/flow-button";
 const Spline = lazy(() => import("@splinetool/react-spline"));
 
 interface SplineSceneProps {
@@ -17,9 +18,7 @@ class SceneBoundary extends Component<{ children: ReactNode }, { failed: boolean
       return (
         <div className="scene-status" role="status">
           <p>The 3D scene is unavailable right now.</p>
-          <button type="button" onClick={() => this.setState({ failed: false })}>
-            Try again
-          </button>
+          <FlowButton text="Try again" onClick={() => this.setState({ failed: false })} />
         </div>
       );
     return this.props.children;
