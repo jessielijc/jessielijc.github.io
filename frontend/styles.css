@@ -121,7 +121,7 @@
 #about-spline .scene-status p {
   margin: 0;
 }
-#about-spline button {
+#about-spline button:not(.flow-button-react) {
   font: inherit;
   color: var(--global-theme-color);
   background: var(--global-card-bg-color);
