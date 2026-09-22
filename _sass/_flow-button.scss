@@ -1,0 +1,129 @@
+.flow-button,
+.publications .btn {
+  align-items: center;
+  background-color: transparent;
+  background-image: radial-gradient(circle, var(--global-theme-color) 0 68%, transparent 70%);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 0 0;
+  border: 1.5px solid var(--global-theme-color);
+  border-radius: 999px;
+  color: var(--global-theme-color);
+  cursor: pointer;
+  display: inline-flex;
+  font-weight: 700;
+  gap: 0.35rem;
+  isolation: isolate;
+  justify-content: center;
+  overflow: hidden;
+  padding-left: 2.05rem;
+  padding-right: 2.05rem;
+  position: relative;
+  text-decoration: none;
+  text-indent: -0.42rem;
+  transition:
+    background-size 0.8s cubic-bezier(0.19, 1, 0.22, 1),
+    border-color 0.6s cubic-bezier(0.23, 1, 0.32, 1),
+    border-radius 0.6s cubic-bezier(0.23, 1, 0.32, 1),
+    color 0.35s ease,
+    text-indent 0.8s ease-out,
+    transform 0.2s ease;
+
+  &::before,
+  &::after {
+    color: currentColor;
+    content: "→";
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1;
+    position: absolute;
+    text-indent: 0;
+    top: 50%;
+    transform: translateY(-52%);
+    transition:
+      left 0.8s cubic-bezier(0.34, 1.56, 0.64, 1),
+      right 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  &::before {
+    left: -1.5rem;
+  }
+
+  &::after {
+    right: 0.78rem;
+  }
+
+  &:hover,
+  &:focus-visible {
+    background-size: 220px 220px;
+    border-color: transparent;
+    border-radius: 0.75rem;
+    color: #fff;
+    text-decoration: none;
+    text-indent: 0.42rem;
+
+    &::before {
+      left: 0.78rem;
+    }
+
+    &::after {
+      right: -1.5rem;
+    }
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--global-theme-color);
+    outline-offset: 3px;
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+.publications .btn {
+  min-width: 4.8rem;
+}
+
+.phd-opportunity .phd-actions .phd-btn.flow-button,
+.award-disclosure summary.flow-button {
+  background-color: transparent;
+  border: 1.5px solid var(--global-theme-color);
+  border-radius: 999px;
+  color: var(--global-theme-color);
+  padding-left: 2.05rem;
+  padding-right: 2.05rem;
+  transition:
+    background-size 0.8s cubic-bezier(0.19, 1, 0.22, 1),
+    border-color 0.6s cubic-bezier(0.23, 1, 0.32, 1),
+    border-radius 0.6s cubic-bezier(0.23, 1, 0.32, 1),
+    color 0.35s ease,
+    text-indent 0.8s ease-out,
+    transform 0.2s ease;
+}
+
+.phd-opportunity .phd-actions .phd-btn.flow-button:hover,
+.phd-opportunity .phd-actions .phd-btn.flow-button:focus-visible,
+.award-disclosure summary.flow-button:hover,
+.award-disclosure summary.flow-button:focus-visible {
+  background-color: transparent;
+  border-color: transparent;
+  border-radius: 0.75rem;
+  color: #fff;
+}
+
+.award-disclosure[open] > summary.flow-button::after {
+  content: "←";
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .flow-button,
+  .publications .btn {
+    transition-duration: 0.01ms;
+
+    &::before,
+    &::after {
+      transition-duration: 0.01ms;
+    }
+  }
+}
