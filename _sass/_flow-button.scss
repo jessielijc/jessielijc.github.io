@@ -88,10 +88,6 @@
 .phd-opportunity .phd-actions .phd-btn.flow-button,
 .award-disclosure summary.flow-button {
   background-color: transparent;
-  background-image: radial-gradient(circle, var(--global-theme-color) 0 68%, transparent 70%);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 0 0;
   border: 1.5px solid var(--global-theme-color);
   border-radius: 999px;
   color: var(--global-theme-color);
@@ -111,9 +107,18 @@
 .award-disclosure summary.flow-button:hover,
 .award-disclosure summary.flow-button:focus-visible {
   background-color: transparent;
+  background-image: radial-gradient(circle, var(--global-theme-color) 0 68%, transparent 70%);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 220px 220px;
   border-color: transparent;
   border-radius: 0.75rem;
   color: #fff;
+}
+
+.award-disclosure summary.flow-button::after {
+  content: "→";
+  margin-left: 0;
 }
 
 .award-disclosure[open] > summary.flow-button::after {
