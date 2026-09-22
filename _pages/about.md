@@ -106,8 +106,8 @@ Remove this Liquid comment wrapper to restore the scene and its script.
     </p>
   </div>
   <div class="phd-actions">
-    <a class="phd-btn" href="{{ '/assets/pdf/Jiacan_Li_CV.pdf' | relative_url }}" target="_blank">Download CV</a>
-    <a class="phd-btn" href="mailto:lijc2023@mail.sustech.edu.cn">Email Me</a>
+    <a class="phd-btn flow-button" href="{{ '/assets/pdf/Jiacan_Li_CV.pdf' | relative_url }}" target="_blank">Download CV</a>
+    <a class="phd-btn flow-button" href="mailto:lijc2023@mail.sustech.edu.cn">Email Me</a>
   </div>
 </section>
 
