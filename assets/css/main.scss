@@ -28,6 +28,8 @@
 @use "utilities";
 @use "flow-button";
 
+// Update this entrypoint when shared button styles change so browsers receive the latest compiled CSS.
+
 // Other specialized styles
 @use "distill";
 @use "cv";
