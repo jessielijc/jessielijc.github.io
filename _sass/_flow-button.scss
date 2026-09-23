@@ -102,6 +102,12 @@
     transform 0.2s ease;
 }
 
+.phd-opportunity .phd-actions .phd-btn.flow-button {
+  box-sizing: border-box;
+  flex: 0 0 9.75rem;
+  inline-size: 9.75rem;
+}
+
 .phd-opportunity .phd-actions .phd-btn.flow-button:hover,
 .phd-opportunity .phd-actions .phd-btn.flow-button:focus-visible,
 .award-disclosure summary.flow-button:hover,
