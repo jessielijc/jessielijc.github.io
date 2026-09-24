@@ -423,9 +423,9 @@ ninja.data = [{
           description: "with background image",
           section: "Projects",handler: () => {
               window.location.href = "/projects/7_project/";
-            },},{id: "projects-project-8",
-          title: 'project 8',
-          description: "an other project with a background image and giscus comments",
+            },},{id: "projects-beat-wrist-blood-pressure-monitor",
+          title: 'BEAT Wrist Blood Pressure Monitor',
+          description: "Posture-independent wrist blood pressure monitoring with barometric-inertial elevation tracking and hydrostatic compensation.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/8_project/";
             },},{id: "projects-project-9",
