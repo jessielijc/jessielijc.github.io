@@ -15,8 +15,8 @@ social: false
       <h2>Hi, I'm Jessie</h2>
     </div>
     <p>
-      I am an undergraduate student majoring in Robotics Engineering at the
-      <a href="https://www.sustech.edu.cn/en/" target="_blank" rel="external noopener">Southern University of Science and Technology (SUSTech)</a>. I work with <a href="https://www.sustech.edu.cn/en/faculties/fuchenglong.html" target="_blank" rel="external noopener">Prof. Chenglong Fu</a> in the
+      Since 2023, I have been pursuing a B.Eng. in Robotics Engineering at the
+      <a href="https://www.sustech.edu.cn/en/" target="_blank" rel="external noopener">Southern University of Science and Technology (SUSTech)</a>, where I conduct research with <a href="https://www.sustech.edu.cn/en/faculties/fuchenglong.html" target="_blank" rel="external noopener">Prof. Chenglong Fu</a> in the
       <a href="https://www.harlab.site/" target="_blank" rel="external noopener">Human Augmentation and Rehabilitation Laboratory (HAR Lab)</a>.
     </p>
     <p>
@@ -35,9 +35,7 @@ social: false
       fetchpriority="high"
     >
     <div class="profile-details">
-      <p>2023–present, B.Eng. in Robotics Engineering</p>
-      <p>Southern University of Science and Technology</p>
-      <p><a href="mailto:lijc2023@mail.sustech.edu.cn">lijc2023@mail.sustech.edu.cn</a></p>
+      <p class="profile-email"><a href="mailto:lijc2023@mail.sustech.edu.cn">lijc2023@mail.sustech.edu.cn</a></p>
     </div>
   </aside>
 </section>
