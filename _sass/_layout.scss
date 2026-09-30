@@ -280,6 +280,7 @@ body.sticky-bottom-footer {
     box-shadow: 0 0.4rem 1.3rem rgba(0, 0, 0, 0.04);
     height: 230px;
     overflow: hidden;
+    padding: 1.25rem;
     transition:
       border-color 0.2s ease,
       box-shadow 0.2s ease,
@@ -294,7 +295,8 @@ body.sticky-bottom-footer {
     > .row {
       align-items: stretch;
       display: grid;
-      grid-template-columns: 230px minmax(0, 1fr);
+      gap: 1.25rem;
+      grid-template-columns: minmax(230px, 300px) minmax(0, 1fr);
       height: 100%;
     }
 
@@ -322,13 +324,18 @@ body.sticky-bottom-footer {
   }
 
   .project-thumb-col {
-    height: 230px;
+    align-self: center;
+    aspect-ratio: 16 / 10;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 0.8rem;
+    height: auto;
+    max-width: 300px;
     overflow: hidden;
-    width: 230px;
+    width: 100%;
   }
 
   .card-img {
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 16 / 10;
     display: block;
     height: 100%;
     min-height: 0;
@@ -344,21 +351,21 @@ body.sticky-bottom-footer {
     flex-direction: column;
     height: 100%;
     justify-content: center;
-    padding: 1.55rem 1.75rem;
+    padding: 0.35rem 0.5rem;
   }
 
   .card-title {
     color: var(--global-text-color);
-    font-size: 1.1rem;
-    font-weight: 750;
-    line-height: 1.4;
-    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.42;
+    margin-bottom: 0.45rem;
   }
 
   .card-text {
     color: var(--global-text-color-light);
     font-size: 1rem;
-    line-height: 1.65;
+    line-height: 1.5;
     margin-bottom: 0;
   }
 
@@ -374,6 +381,7 @@ body.sticky-bottom-footer {
 
   .projects-vertical .card {
     height: auto;
+    padding: 1rem;
   }
 
   .projects-vertical .card > .row {
@@ -382,20 +390,20 @@ body.sticky-bottom-footer {
   }
 
   .projects-vertical .project-thumb-col {
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 16 / 10;
     height: auto;
     width: 100%;
   }
 
   .projects-vertical .card-img {
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 16 / 10;
     height: auto;
     min-height: 0;
   }
 
   .projects-vertical .card-body {
-    height: 220px;
-    padding: 1.25rem 1.3rem 1.4rem;
+    height: 210px;
+    padding: 1.25rem 0.3rem 0.3rem;
   }
 }
 
