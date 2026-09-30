@@ -48,6 +48,7 @@ html[data-theme="dark"] body {
 .publication-card,
 .patent-card,
 .award-card,
+.projects-board,
 .projects .card,
 .project-hero-card,
 .project-detail-section,
@@ -246,8 +247,17 @@ body.sticky-bottom-footer {
   line-height: 1.55;
 }
 
+.projects-board {
+  background: var(--global-card-bg-color);
+  border: 1px solid var(--global-divider-color);
+  border-radius: 1.35rem;
+  box-shadow: 0 0.65rem 1.8rem rgba(0, 0, 0, 0.045);
+  margin: 0 0 2rem;
+  padding: 1.35rem;
+}
+
 .projects-vertical {
-  margin-top: 1.25rem;
+  margin-top: 0;
 
   > .container {
     max-width: none;
@@ -348,6 +358,10 @@ body.sticky-bottom-footer {
 }
 
 @media (max-width: 767px) {
+  .projects-board {
+    padding: 1rem;
+  }
+
   .projects-vertical .card > .row {
     grid-template-columns: 1fr;
   }
