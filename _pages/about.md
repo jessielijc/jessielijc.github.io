@@ -112,7 +112,7 @@ Remove this Liquid comment wrapper to restore the scene and its script.
 <section id="publications" class="about-publications">
   <div class="publication-hero">
     <p class="about-eyebrow">Research Output</p>
-    <h1>Publications & Patents</h1>
+    <h1>Publications, Patents & Awards</h1>
   </div>
 
 {% include publications_content.liquid %}

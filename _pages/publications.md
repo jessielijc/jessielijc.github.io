@@ -12,7 +12,7 @@ nav_order: 2
 <!-- _pages/publications.md -->
 
 <section class="publication-hero">
-  <h1>Publications & Patents</h1>
+  <h1>Publications, Patents & Awards</h1>
 </section>
 
 {% include publications_content.liquid %}
