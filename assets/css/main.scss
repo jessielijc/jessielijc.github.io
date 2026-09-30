@@ -40,3 +40,67 @@
 @use "font-awesome/brands";
 @use "font-awesome/solid";
 @use "font-awesome/regular";
+
+// Keep card typography consistent across every page while giving the wider
+// desktop layout a clearer visual hierarchy.
+:root {
+  --site-card-h1-size: clamp(2.25rem, 3.4vw, 2.6rem);
+  --site-card-h2-size: 1.85rem;
+  --site-card-h3-size: 1.15rem;
+  --site-card-body-size: 1.08rem;
+}
+
+:is(
+    .about-hero,
+    .about-section,
+    .about-publications,
+    .phd-opportunity,
+    .content-page-shell > .post-header,
+    .content-hero,
+    .content-section-card,
+    .publication-hero,
+    .publication-card,
+    .patent-card,
+    .award-card,
+    .projects-board,
+    .projects .card,
+    .project-hero-card,
+    .project-detail-section,
+    .cv-page-shell
+  ) {
+  h1 {
+    font-size: var(--site-card-h1-size) !important;
+    font-weight: 800 !important;
+    line-height: 1.12 !important;
+  }
+
+  h2 {
+    font-size: var(--site-card-h2-size) !important;
+    font-weight: 800 !important;
+    line-height: 1.22 !important;
+  }
+
+  h3 {
+    font-size: var(--site-card-h3-size) !important;
+    font-weight: 700 !important;
+    line-height: 1.4 !important;
+  }
+
+  p:not(.about-eyebrow):not(.page-eyebrow):not(.eyebrow),
+  li {
+    font-size: var(--site-card-body-size) !important;
+  }
+}
+
+.focus-item > span {
+  font-size: var(--site-card-body-size) !important;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --site-card-h1-size: 2rem;
+    --site-card-h2-size: 1.55rem;
+    --site-card-h3-size: 1.08rem;
+    --site-card-body-size: 1rem;
+  }
+}
