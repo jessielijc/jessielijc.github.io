@@ -4,6 +4,14 @@
 
 @use "variables" as v;
 
+// Give the wider desktop card layout a modest, proportional type lift.
+// Mobile keeps the default 16px root size so compact layouts remain balanced.
+@media (min-width: 769px) {
+  html {
+    font-size: 17px;
+  }
+}
+
 body {
   padding-bottom: 70px;
   color: var(--global-text-color);
@@ -505,6 +513,12 @@ html[data-theme="dark"] #site-grid-spotlight .site-grid-spotlight-pattern {
     margin: 0 0 0.38rem;
     overflow-wrap: anywhere;
     white-space: nowrap;
+  }
+
+  .profile-email {
+    font-size: 0.95rem;
+    font-weight: 650;
+    margin: 0;
   }
 
   a {

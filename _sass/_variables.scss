@@ -48,5 +48,6 @@ $back-to-top-diameter: 40px;
 $back-to-top-height: $back-to-top-diameter;
 $back-to-top-width: $back-to-top-diameter;
 
-// Max width default
-$max-content-width: 930px !default;
+// Max width default. Keep the academic cards comfortably wide on desktop
+// while Bootstrap's fluid gutters continue to protect smaller viewports.
+$max-content-width: 1120px !default;
