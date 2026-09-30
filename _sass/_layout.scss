@@ -8,6 +8,11 @@ body {
   padding-bottom: 70px;
   color: var(--global-text-color);
   background-color: var(--global-bg-color);
+  background-image: linear-gradient(rgba(10, 23, 28, 0.46), rgba(10, 23, 28, 0.58)), url("/assets/img/site-background.webp");
+  background-position: center 52%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 
   h1,
   h2,
@@ -16,6 +21,45 @@ body {
   h5,
   h6 {
     scroll-margin-top: 66px;
+  }
+}
+
+html[data-theme="dark"] body {
+  background-image: linear-gradient(rgba(5, 10, 14, 0.66), rgba(5, 10, 14, 0.76)), url("/assets/img/site-background.webp");
+}
+
+// Keep foreground content crisp while allowing the landscape to remain visible
+// around the page cards.
+.about-hero,
+.about-profile-card,
+.about-section,
+.about-publications,
+.phd-opportunity,
+.content-page-shell > .post-header,
+.content-hero,
+.content-section-card,
+.publication-hero,
+.publication-card,
+.patent-card,
+.award-card,
+.projects .card,
+.project-hero-card,
+.project-detail-section,
+.cv-page-shell {
+  backdrop-filter: blur(12px) saturate(112%);
+  -webkit-backdrop-filter: blur(12px) saturate(112%);
+}
+
+@media (max-width: 768px) {
+  body {
+    background-attachment: scroll;
+    background-position: 42% center;
+  }
+}
+
+@media print {
+  body {
+    background: var(--global-bg-color);
   }
 }
 
@@ -51,7 +95,7 @@ body.sticky-bottom-footer {
 // Shared typography and surfaces for all content pages except About.
 .content-page-shell {
   > .post-header {
-    background: linear-gradient(135deg, rgba(177, 78, 118, 0.11), rgba(177, 78, 118, 0.025) 72%);
+    background: linear-gradient(135deg, rgba(177, 78, 118, 0.11), rgba(177, 78, 118, 0.025) 72%), var(--global-card-bg-color);
     border: 1px solid var(--global-divider-color);
     border-radius: 1.35rem;
     box-shadow: 0 0.65rem 1.8rem rgba(0, 0, 0, 0.045);
@@ -98,7 +142,7 @@ body.sticky-bottom-footer {
 }
 
 .content-hero {
-  background: linear-gradient(135deg, rgba(177, 78, 118, 0.11), rgba(177, 78, 118, 0.025) 72%);
+  background: linear-gradient(135deg, rgba(177, 78, 118, 0.11), rgba(177, 78, 118, 0.025) 72%), var(--global-card-bg-color);
   border: 1px solid var(--global-divider-color);
   border-radius: 1.35rem;
   box-shadow: 0 0.65rem 1.8rem rgba(0, 0, 0, 0.045);
@@ -388,7 +432,7 @@ html[data-theme="dark"] #site-grid-spotlight .site-grid-spotlight-pattern {
   align-items: stretch;
   border: 1px solid var(--global-divider-color);
   border-radius: 1.35rem;
-  background: linear-gradient(135deg, rgba(177, 78, 118, 0.11), rgba(177, 78, 118, 0.025) 72%);
+  background: linear-gradient(135deg, rgba(177, 78, 118, 0.11), rgba(177, 78, 118, 0.025) 72%), var(--global-card-bg-color);
   box-shadow: 0 0.65rem 1.8rem rgba(0, 0, 0, 0.045);
   display: grid;
   gap: 1.5rem;
@@ -628,7 +672,7 @@ html[data-theme="dark"] #site-grid-spotlight .site-grid-spotlight-pattern {
 
 .phd-opportunity {
   align-items: center;
-  background: linear-gradient(135deg, rgba(177, 78, 118, 0.12), rgba(177, 78, 118, 0.035));
+  background: linear-gradient(135deg, rgba(177, 78, 118, 0.12), rgba(177, 78, 118, 0.035)), var(--global-card-bg-color);
   border: 1px solid rgba(177, 78, 118, 0.3);
   border-radius: 1.35rem;
   clear: both;
@@ -748,7 +792,7 @@ html[data-theme="dark"] #site-grid-spotlight .site-grid-spotlight-pattern {
 .project-hero-card {
   border: 1px solid var(--global-divider-color);
   border-radius: 1.15rem;
-  background: linear-gradient(135deg, rgba(177, 78, 118, 0.1), rgba(177, 78, 118, 0.02));
+  background: linear-gradient(135deg, rgba(177, 78, 118, 0.1), rgba(177, 78, 118, 0.02)), var(--global-card-bg-color);
   box-shadow: 0 0.65rem 1.8rem rgba(0, 0, 0, 0.045);
   margin: 0.75rem 0 1.25rem;
   padding: 1.55rem 1.75rem;
