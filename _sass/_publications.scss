@@ -153,7 +153,7 @@
   }
 }
 
-.patent-card--illustrated {
+.patent-card.refined.patent-card--illustrated {
   grid-template-columns: minmax(300px, 38%) minmax(0, 1fr);
   gap: 1.5rem;
   align-items: center;
@@ -606,7 +606,7 @@
     grid-template-columns: 1fr;
   }
 
-  .patent-card--illustrated {
+  .patent-card.refined.patent-card--illustrated {
     gap: 1rem;
     padding: 1rem;
 
