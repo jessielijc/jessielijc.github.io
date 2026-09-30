@@ -15,7 +15,7 @@ horizontal: true
   <h1>Projects</h1>
 </section>
 
-<div class="projects projects-vertical">
+<section class="projects-board projects projects-vertical">
   {% if site.enable_project_categories and page.display_categories %}
     {% for category in page.display_categories %}
       {% assign categorized_projects = site.projects | where: "category", category %}
@@ -54,4 +54,4 @@ horizontal: true
       </div>
     {% endif %}
   {% endif %}
-</div>
+</section>
