@@ -154,8 +154,8 @@
 }
 
 .patent-card.refined.patent-card--illustrated {
-  grid-template-columns: minmax(300px, 38%) minmax(0, 1fr);
-  gap: 1.5rem;
+  grid-template-columns: minmax(230px, 30%) minmax(0, 1fr);
+  gap: 1.25rem;
   align-items: center;
   padding: 1.25rem;
   position: relative;
@@ -169,7 +169,9 @@
     grid-column: 1;
     grid-row: 1 / span 2;
     margin: 0;
-    min-height: 240px;
+    max-width: 300px;
+    min-height: 180px;
+    width: 100%;
     overflow: hidden;
 
     img {
@@ -249,6 +251,9 @@
   color: var(--global-theme-color);
   background: rgba(177, 78, 118, 0.06);
   border: 1px solid rgba(177, 78, 118, 0.35);
+  font-size: 0.82rem;
+  letter-spacing: 0.045em;
+  padding: 0.28rem 0.68rem;
 }
 
 .patent-authors {
