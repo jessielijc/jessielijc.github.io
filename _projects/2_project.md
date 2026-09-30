@@ -2,7 +2,7 @@
 layout: page
 title: SplatSLAM
 description: Dense 3D reconstruction from monocular video via learning-based SLAM and Gaussian Splatting.
-img: https://raw.githubusercontent.com/SplatSLAM-Project/SplatSLAM/main/docs/assets/scene_comparison_table_en.png
+img: assets/img/projects/mast3r-slam.webp
 importance: 2
 category: featured
 github: https://github.com/SplatSLAM-Project/SplatSLAM
