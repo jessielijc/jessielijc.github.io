@@ -2,8 +2,6 @@
  * Content
  ******************************************************************************/
 
-@use "variables" as v;
-
 // Give the wider desktop card layout a modest, proportional type lift.
 // Mobile keeps the default 16px root size so compact layouts remain balanced.
 @media (min-width: 769px) {
@@ -82,7 +80,7 @@ body.sticky-bottom-footer {
 }
 
 .container {
-  max-width: v.$max-content-width;
+  max-width: 1120px;
 }
 
 // Profile
