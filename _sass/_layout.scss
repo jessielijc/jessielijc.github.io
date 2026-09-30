@@ -278,6 +278,7 @@ body.sticky-bottom-footer {
     border: 1px solid var(--global-divider-color);
     border-radius: 1.1rem;
     box-shadow: 0 0.4rem 1.3rem rgba(0, 0, 0, 0.04);
+    height: 230px;
     overflow: hidden;
     transition:
       border-color 0.2s ease,
@@ -293,7 +294,8 @@ body.sticky-bottom-footer {
     > .row {
       align-items: stretch;
       display: grid;
-      grid-template-columns: minmax(240px, 31%) minmax(0, 1fr);
+      grid-template-columns: 230px minmax(0, 1fr);
+      height: 100%;
     }
 
     > .row.project-no-image {
@@ -319,11 +321,19 @@ body.sticky-bottom-footer {
     height: 100%;
   }
 
+  .project-thumb-col {
+    height: 230px;
+    overflow: hidden;
+    width: 230px;
+  }
+
   .card-img {
+    aspect-ratio: 1 / 1;
     display: block;
     height: 100%;
-    min-height: 205px;
+    min-height: 0;
     object-fit: cover;
+    object-position: center;
     padding: 0;
     width: 100%;
   }
@@ -362,16 +372,29 @@ body.sticky-bottom-footer {
     padding: 1rem;
   }
 
+  .projects-vertical .card {
+    height: auto;
+  }
+
   .projects-vertical .card > .row {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
+    height: auto;
+  }
+
+  .projects-vertical .project-thumb-col {
+    aspect-ratio: 1 / 1;
+    height: auto;
+    width: 100%;
   }
 
   .projects-vertical .card-img {
-    height: 220px;
+    aspect-ratio: 1 / 1;
+    height: auto;
     min-height: 0;
   }
 
   .projects-vertical .card-body {
+    height: 220px;
     padding: 1.25rem 1.3rem 1.4rem;
   }
 }
