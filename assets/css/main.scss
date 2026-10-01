@@ -126,7 +126,7 @@
 }
 
 .projects-vertical .card {
-  height: 285px;
+  height: 285px !important;
   padding: 1.5rem;
 }
 
@@ -190,7 +190,7 @@
   }
 
   .projects-vertical .card {
-    height: auto;
+    height: auto !important;
     padding: 1.25rem;
   }
 
