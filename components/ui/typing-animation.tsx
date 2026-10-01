@@ -53,6 +53,13 @@ export function TypingAnimation({ children, secondaryText = "", className, delay
         <span className="about-typing-secondary" aria-hidden="true">
           {secondaryVisible}
           {!complete && <span className="about-typing-cursor" />}
+          {complete && (
+            <span className="about-greeting-sparkles" aria-hidden="true">
+              <span>✦</span>
+              <span>✧</span>
+              <span>✦</span>
+            </span>
+          )}
         </span>
       )}
       {!secondaryStarted && !complete && <span className="about-typing-cursor" aria-hidden="true" />}
