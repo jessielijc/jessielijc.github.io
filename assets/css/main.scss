@@ -230,3 +230,131 @@
     }
   }
 }
+
+// A single quiet lavender system across About, publications, projects, CV,
+// Life & Service, and project detail pages. Keep the scenic photograph, but
+// let the cards and page headers share the same surface hierarchy.
+body {
+  background-image: linear-gradient(115deg, rgba(68, 62, 86, 0.4), rgba(71, 65, 86, 0.5)), url("/assets/img/site-background.webp");
+}
+
+html[data-theme="dark"] body {
+  background-image: linear-gradient(115deg, rgba(22, 18, 31, 0.72), rgba(23, 20, 32, 0.82)), url("/assets/img/site-background.webp");
+}
+
+.navbar {
+  background-color: var(--site-nav-surface);
+  border-bottom-color: var(--global-divider-color);
+}
+
+:is(.about-page-shell > .post-header, .content-page-shell > .post-header, .content-hero, .project-hero-card, .publication-hero) {
+  background: var(--site-hero-surface);
+  border: 1px solid var(--global-divider-color);
+  border-radius: 1.35rem;
+  box-shadow: var(--site-shadow);
+  margin: 0.8rem 0 1.5rem;
+  padding: 1.75rem 1.9rem;
+}
+
+.about-page-shell > .post-header .post-title {
+  background: none;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  color: var(--global-text-color);
+  display: block;
+  font-size: clamp(2.25rem, 3.5vw, 3rem);
+  letter-spacing: -0.045em;
+  margin: 0;
+  padding: 0;
+  text-shadow: none;
+  width: auto;
+}
+
+.about-page-shell > .post-header .desc:empty {
+  display: none;
+}
+
+.about-publications .publication-hero {
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--global-divider-color);
+  border-radius: 0;
+  box-shadow: none;
+  margin: 0 0 1.3rem;
+  padding: 0 0 1rem;
+}
+
+:is(.about-hero, .about-section, .about-publications, .phd-opportunity, .content-section-card, .projects-board, .project-detail-section) {
+  background: var(--global-card-bg-color);
+  border: 1px solid var(--global-divider-color);
+  border-radius: 1.35rem;
+  box-shadow: var(--site-shadow);
+}
+
+:is(.about-profile-card, .about-card, .focus-item, .timeline-card, .patent-card.refined, .honor-card.refined, .projects-vertical .card, .publications ol.bibliography li, .cv-page-shell .cv > .card, .highlight-grid > div) {
+  background: var(--site-surface-raised);
+  border-color: var(--global-divider-color);
+  box-shadow: 0 0.45rem 1.35rem rgba(50, 38, 63, 0.07);
+}
+
+html[data-theme="dark"]
+  :is(.about-profile-card, .about-card, .focus-item, .timeline-card, .patent-card.refined, .honor-card.refined, .projects-vertical .card, .publications ol.bibliography li, .cv-page-shell .cv > .card, .highlight-grid > div) {
+  box-shadow: 0 0.45rem 1.35rem rgba(12, 8, 20, 0.18);
+}
+
+:is(.projects-vertical .card, .patent-card.refined, .honor-card.refined):hover {
+  border-color: var(--global-theme-color);
+  box-shadow: var(--site-shadow-hover);
+}
+
+.focus-item {
+  border-top-color: var(--global-theme-color);
+  border-top-width: 3px;
+}
+
+.phd-opportunity {
+  background: var(--site-hero-surface);
+}
+
+:is(.patent-index, .patent-status, .honor-year, .about-tags span, .patent-grid div, .patent-note, .award-certificate) {
+  background: var(--site-surface-soft);
+  border-color: var(--global-divider-color);
+}
+
+:is(.patent-type, .honor-type, .publications ol.bibliography li .abbr abbr) {
+  color: var(--site-on-accent) !important;
+}
+
+.publications ol.bibliography li .abbr abbr a {
+  color: var(--site-on-accent) !important;
+}
+
+.patent-btn:hover,
+.award-disclosure summary:hover {
+  color: var(--site-on-accent);
+}
+
+.cv-page-shell .cv :is(table, td, th, .list-group-item, .font-weight-light) {
+  color: var(--global-text-color);
+}
+
+.cv-page-shell .cv .text-muted {
+  color: var(--global-text-color-light) !important;
+}
+
+.cv-page-shell .cv .list-group-item {
+  background: transparent;
+}
+
+@media (max-width: 768px) {
+  :is(.about-page-shell > .post-header, .content-page-shell > .post-header, .content-hero, .project-hero-card, .publication-hero) {
+    padding: 1.4rem 1.3rem;
+  }
+}
+
+@media print {
+  body {
+    background-image: none;
+  }
+}
