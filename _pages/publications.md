@@ -15,4 +15,6 @@ nav_order: 2
   <h1>Publications, Patents & Awards</h1>
 </section>
 
-{% include publications_content.liquid %}
+<div class="publication-board">
+  {% include publications_content.liquid %}
+</div>
