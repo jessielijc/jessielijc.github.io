@@ -50,25 +50,6 @@
   --site-card-body-size: 1.16rem;
 }
 
-// Keep the page name legible over both bright and dark areas of the photo.
-.about-page-shell > .post-header .post-title {
-  display: inline-block;
-  width: fit-content;
-  color: #fff;
-  background: rgba(13, 25, 35, 0.78);
-  border: 1px solid rgba(255, 255, 255, 0.23);
-  border-left: 3px solid var(--global-theme-color);
-  border-radius: 0.9rem;
-  box-shadow: 0 0.55rem 1.5rem rgba(5, 13, 22, 0.24);
-  padding: 0.35em 0.65em 0.42em;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
-  backdrop-filter: blur(12px);
-
-  span {
-    color: inherit !important;
-  }
-}
-
 :is(
     .about-hero,
     .about-card,
@@ -234,7 +215,7 @@
 // Two coordinated palettes: warm pink/Jacarta by day and navy/Ube by night.
 // The scenic photograph stays visible behind the shared card hierarchy.
 body {
-  background-image: linear-gradient(115deg, rgba(58, 52, 91, 0.34), rgba(209, 131, 169, 0.34)), url("/assets/img/site-background.webp");
+  background-image: linear-gradient(115deg, rgba(58, 52, 91, 0.23), rgba(209, 131, 169, 0.22)), url("/assets/img/site-background.webp");
 }
 
 html[data-theme="dark"] body {
@@ -243,7 +224,42 @@ html[data-theme="dark"] body {
 
 .navbar {
   background-color: var(--site-nav-surface);
-  border-bottom-color: var(--global-divider-color);
+  border-bottom: 2px solid var(--site-decor-color);
+  min-height: 78px;
+  padding-block: 0.75rem;
+}
+
+.navbar .container {
+  max-width: 1440px;
+}
+
+.navbar.navbar-light .site-name {
+  color: var(--site-nav-text);
+  font-size: clamp(1.35rem, 2.1vw, 1.65rem);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 1.2;
+  margin-right: 2rem;
+}
+
+.navbar.navbar-light .navbar-nav .nav-item .nav-link {
+  font-size: 1.06rem;
+  font-weight: 650;
+  padding: 0.55rem 0.8rem;
+}
+
+.navbar .toggle-container button {
+  font-size: 1.15rem;
+}
+
+@media (max-width: 991px) {
+  .navbar .navbar-collapse {
+    padding: 0.75rem 0 0.35rem;
+  }
+
+  .navbar .navbar-nav .nav-item .nav-link {
+    padding-block: 0.7rem;
+  }
 }
 
 .navbar.navbar-light .navbar-brand,
@@ -255,6 +271,13 @@ html[data-theme="dark"] body {
 
 .navbar.navbar-light .navbar-brand span {
   color: inherit;
+}
+
+.navbar.navbar-light .navbar-nav .nav-item.active > .nav-link {
+  text-decoration: underline;
+  text-decoration-color: var(--site-decor-color);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.4em;
 }
 
 .navbar.navbar-light .navbar-nav .nav-item.active > .nav-link,
@@ -274,6 +297,35 @@ html[data-theme="dark"] body {
   color: var(--site-nav-text);
 }
 
+// Color marks hierarchy without coloring long paragraphs or reducing contrast.
+:is(.about-hero, .about-section, .about-publications, .phd-opportunity, .content-page-shell, .projects-board, .project-detail-section, .cv-page-shell) {
+  h1,
+  h2 {
+    color: var(--site-title-color);
+  }
+
+  h3 {
+    color: var(--site-subtitle-color);
+  }
+
+  strong,
+  b {
+    color: var(--site-emphasis-color);
+  }
+}
+
+:is(.about-eyebrow, .page-eyebrow, .eyebrow, .publication-hero .about-eyebrow) {
+  color: var(--site-kicker-color);
+}
+
+:is(.phd-opportunity, .content-hero, .project-hero-card, .publication-hero) :is(.about-eyebrow, .page-eyebrow, .eyebrow) {
+  color: var(--site-emphasis-color);
+}
+
+:is(.focus-item, .highlight-grid > div) {
+  border-top-color: var(--site-decor-color);
+}
+
 #light-toggle:hover .fa-half-sun-moon::before,
 #light-toggle:hover .fa-half-sun-moon::after {
   color: var(--site-nav-hover);
@@ -286,25 +338,6 @@ html[data-theme="dark"] body {
   box-shadow: var(--site-shadow);
   margin: 0.8rem 0 1.5rem;
   padding: 1.75rem 1.9rem;
-}
-
-.about-page-shell > .post-header .post-title {
-  background: none;
-  border: 0;
-  border-radius: 0;
-  box-shadow: none;
-  color: var(--global-text-color);
-  display: block;
-  font-size: clamp(2.25rem, 3.5vw, 3rem);
-  letter-spacing: -0.045em;
-  margin: 0;
-  padding: 0;
-  text-shadow: none;
-  width: auto;
-}
-
-.about-page-shell > .post-header .desc:empty {
-  display: none;
 }
 
 .about-publications .publication-hero {
@@ -358,8 +391,46 @@ html[data-theme="dark"]
 }
 
 .focus-item {
-  border-top-color: var(--global-theme-color);
+  border-top-color: var(--site-decor-color);
   border-top-width: 3px;
+}
+
+#about-title-loop h2.about-typing-title,
+#about-title-loop h2.about-title-fallback {
+  color: var(--site-title-color);
+}
+
+#about-title-loop .about-typing-secondary,
+#about-title-loop .about-title-fallback span {
+  color: var(--site-subtitle-color);
+}
+
+:is(.section-heading.refined, .about-section, .publication-board, .project-detail-section, .cv-page-shell) h2,
+:is(.project-hero-card, .content-hero, .publication-hero) h1 {
+  color: var(--site-title-color);
+}
+
+:is(.focus-item, .timeline-card, .projects-vertical .card, .patent-card.refined, .honor-card.refined, .highlight-grid > div) h3,
+.projects-vertical .card-title,
+.publications ol.bibliography li .title {
+  color: var(--site-subtitle-color);
+}
+
+:is(.patent-authors, .honor-description, .publications ol.bibliography li .author) strong {
+  color: var(--site-emphasis-color);
+}
+
+:is(.about-hero, .about-section, .about-publications, .content-section-card, .projects-board, .publication-board, .project-detail-section) {
+  background-image: linear-gradient(145deg, rgba(var(--site-wash-rgb), 0.12), transparent 55%);
+}
+
+:is(.about-profile-card, .focus-item, .timeline-card, .patent-card.refined, .honor-card.refined, .projects-vertical .card, .publications ol.bibliography li, .cv-page-shell .cv > .card) {
+  background-image: linear-gradient(145deg, rgba(var(--site-wash-rgb), 0.08), transparent 58%);
+}
+
+#research-interests,
+#publications {
+  scroll-margin-top: 96px;
 }
 
 .phd-opportunity {
