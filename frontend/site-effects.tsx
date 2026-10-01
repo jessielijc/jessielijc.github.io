@@ -1,10 +1,9 @@
-// A lightweight, canvas-drawn version of React Bits' Glow Cursor trail.
-// The site is Jekyll-rendered, so this island can run without mounting React.
+// A quiet, watercolor-like cursor ripple shared by every Jekyll page.
 const effectRoot = document.getElementById("site-grid-spotlight");
-const motionPreference = window.matchMedia("(prefers-reduced-motion: reduce)");
-const pointerPreference = window.matchMedia("(pointer: coarse)");
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+const coarsePointer = window.matchMedia("(pointer: coarse)");
 
-if (effectRoot && !motionPreference.matches && !pointerPreference.matches) {
+if (effectRoot && !reduceMotion.matches && !coarsePointer.matches) {
   const canvas = document.createElement("canvas");
   canvas.className = "site-glow-cursor";
   canvas.setAttribute("aria-hidden", "true");
@@ -13,18 +12,18 @@ if (effectRoot && !motionPreference.matches && !pointerPreference.matches) {
   const context = canvas.getContext("2d", { alpha: true });
 
   if (context) {
-    const pointCount = 25;
-    const points: Array<{ x: number; y: number }> = [];
-    const target = { x: 0, y: 0 };
+    type Ripple = { x: number; y: number; born: number; emphasis: number };
+    const ripples: Ripple[] = [];
+    const pointer = { x: 0, y: 0 };
+    const halo = { x: 0, y: 0 };
+    let rgb = "143, 121, 165";
     let frame = 0;
     let lastMove = 0;
-    let headColor = "#b509ac";
-    let tailColor = "#e8a0e1";
+    let lastRipple = 0;
+    let hasPointer = false;
 
-    const updateColors = () => {
-      const themeColor = getComputedStyle(document.documentElement).getPropertyValue("--global-theme-color").trim();
-      headColor = themeColor || "#b509ac";
-      tailColor = document.documentElement.dataset.theme === "dark" ? "#8fdded" : "#e8a0e1";
+    const updateColor = () => {
+      rgb = getComputedStyle(document.documentElement).getPropertyValue("--site-ripple-rgb").trim() || "143, 121, 165";
     };
 
     const resize = () => {
@@ -34,95 +33,103 @@ if (effectRoot && !motionPreference.matches && !pointerPreference.matches) {
       context.setTransform(ratio, 0, 0, ratio, 0, 0);
     };
 
-    const draw = (time: number) => {
+    const render = (time: number) => {
       frame = 0;
       context.clearRect(0, 0, window.innerWidth, window.innerHeight);
-
-      const idle = Math.max(0, time - lastMove - 650);
-      const opacity = Math.max(0, 1 - idle / 420);
-      if (opacity === 0 || document.hidden) {
-        points.length = 0;
+      if (document.hidden) {
+        ripples.length = 0;
+        hasPointer = false;
         return;
       }
 
-      const previousHead = { ...points[0] };
-      points[0].x += (target.x - points[0].x) * 0.32;
-      points[0].y += (target.y - points[0].y) * 0.32;
+      for (let index = ripples.length - 1; index >= 0; index--) {
+        const ripple = ripples[index];
+        const progress = Math.min(1, (time - ripple.born) / 840);
+        if (progress >= 1) {
+          ripples.splice(index, 1);
+          continue;
+        }
 
-      for (let index = points.length - 1; index > 1; index--) {
-        points[index] = points[index - 1];
-      }
-      points[1] = previousHead;
-
-      context.lineCap = "round";
-      context.lineJoin = "round";
-
-      for (let index = points.length - 1; index > 0; index--) {
-        const progress = 1 - index / pointCount;
-        const start = points[index];
-        const end = points[index - 1];
-        const strength = Math.pow(progress, 1.4) * opacity;
-        if (Math.hypot(end.x - start.x, end.y - start.y) < 0.05) continue;
-
-        context.strokeStyle = progress > 0.55 ? headColor : tailColor;
-        context.globalAlpha = strength * 0.24;
-        context.lineWidth = 11 + progress * 11;
-        context.shadowColor = context.strokeStyle;
-        context.shadowBlur = 15;
+        const radius = 18 + progress * 49;
+        const fade = Math.pow(1 - progress, 1.6) * ripple.emphasis;
+        const wash = context.createRadialGradient(ripple.x, ripple.y, 0, ripple.x, ripple.y, radius);
+        wash.addColorStop(0, `rgba(${rgb}, ${0.065 * fade})`);
+        wash.addColorStop(0.65, `rgba(${rgb}, ${0.025 * fade})`);
+        wash.addColorStop(1, `rgba(${rgb}, 0)`);
+        context.fillStyle = wash;
         context.beginPath();
-        context.moveTo(start.x, start.y);
-        context.lineTo(end.x, end.y);
-        context.stroke();
+        context.arc(ripple.x, ripple.y, radius, 0, Math.PI * 2);
+        context.fill();
 
-        context.globalAlpha = strength * 0.82;
-        context.lineWidth = 0.8 + progress * 4.2;
-        context.shadowBlur = 7;
         context.beginPath();
-        context.moveTo(start.x, start.y);
-        context.lineTo(end.x, end.y);
+        context.arc(ripple.x, ripple.y, radius * 0.78, 0, Math.PI * 2);
+        context.strokeStyle = `rgba(${rgb}, ${0.15 * fade})`;
+        context.lineWidth = 1.1;
         context.stroke();
       }
 
-      context.shadowBlur = 0;
-      context.globalAlpha = opacity;
-      const head = context.createRadialGradient(points[0].x, points[0].y, 0, points[0].x, points[0].y, 16);
-      head.addColorStop(0, "rgba(255, 255, 255, 0.92)");
-      head.addColorStop(0.18, headColor);
-      head.addColorStop(1, "transparent");
-      context.fillStyle = head;
-      context.beginPath();
-      context.arc(points[0].x, points[0].y, 16, 0, Math.PI * 2);
-      context.fill();
-      context.globalAlpha = 1;
+      const idle = Math.max(0, time - lastMove - 420);
+      const haloOpacity = Math.max(0, 1 - idle / 330);
+      if (hasPointer && haloOpacity > 0) {
+        halo.x += (pointer.x - halo.x) * 0.3;
+        halo.y += (pointer.y - halo.y) * 0.3;
+        const glow = context.createRadialGradient(halo.x, halo.y, 0, halo.x, halo.y, 39);
+        glow.addColorStop(0, `rgba(${rgb}, ${0.11 * haloOpacity})`);
+        glow.addColorStop(0.5, `rgba(${rgb}, ${0.045 * haloOpacity})`);
+        glow.addColorStop(1, `rgba(${rgb}, 0)`);
+        context.fillStyle = glow;
+        context.beginPath();
+        context.arc(halo.x, halo.y, 39, 0, Math.PI * 2);
+        context.fill();
+      }
 
-      frame = window.requestAnimationFrame(draw);
+      if (ripples.length || haloOpacity > 0) frame = window.requestAnimationFrame(render);
+      else hasPointer = false;
+    };
+
+    const schedule = () => {
+      if (!frame) frame = window.requestAnimationFrame(render);
+    };
+
+    const addRipple = (x: number, y: number, emphasis = 1) => {
+      ripples.push({ x, y, born: performance.now(), emphasis });
+      if (ripples.length > 6) ripples.shift();
+      lastRipple = performance.now();
+      schedule();
     };
 
     const move = (event: PointerEvent) => {
       if (event.pointerType === "touch") return;
-      target.x = event.clientX;
-      target.y = event.clientY;
+      pointer.x = event.clientX;
+      pointer.y = event.clientY;
       lastMove = performance.now();
 
-      if (!points.length) {
-        for (let index = 0; index < pointCount; index++) points.push({ ...target });
+      if (!hasPointer) {
+        halo.x = pointer.x;
+        halo.y = pointer.y;
+        hasPointer = true;
       }
-      if (!frame) frame = window.requestAnimationFrame(draw);
+
+      const newest = ripples[ripples.length - 1];
+      if (!newest || (Math.hypot(pointer.x - newest.x, pointer.y - newest.y) > 42 && lastMove - lastRipple > 65)) {
+        addRipple(pointer.x, pointer.y);
+      }
+      schedule();
     };
 
     const hide = () => {
-      lastMove = performance.now() - 650;
-      if (!frame && points.length) frame = window.requestAnimationFrame(draw);
+      lastMove = performance.now() - 420;
+      schedule();
     };
 
-    updateColors();
+    updateColor();
     resize();
     window.addEventListener("resize", resize, { passive: true });
     window.addEventListener("pointermove", move, { passive: true });
     window.addEventListener("pointerleave", hide);
     window.addEventListener("blur", hide);
     document.addEventListener("visibilitychange", hide);
-    new MutationObserver(updateColors).observe(document.documentElement, {
+    new MutationObserver(updateColor).observe(document.documentElement, {
       attributes: true,
       attributeFilter: ["data-theme"],
     });
