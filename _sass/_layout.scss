@@ -102,7 +102,7 @@ body.sticky-bottom-footer {
 // Shared typography and surfaces for all content pages except About.
 .content-page-shell {
   > .post-header {
-    background: linear-gradient(135deg, rgba(177, 78, 118, 0.11), rgba(177, 78, 118, 0.025) 72%), var(--global-card-bg-color);
+    background: linear-gradient(135deg, rgba(var(--site-wash-rgb), 0.11), rgba(var(--site-wash-rgb), 0.025) 72%), var(--global-card-bg-color);
     border: 1px solid var(--global-divider-color);
     border-radius: 1.35rem;
     box-shadow: 0 0.65rem 1.8rem rgba(0, 0, 0, 0.045);
@@ -149,7 +149,7 @@ body.sticky-bottom-footer {
 }
 
 .content-hero {
-  background: linear-gradient(135deg, rgba(177, 78, 118, 0.11), rgba(177, 78, 118, 0.025) 72%), var(--global-card-bg-color);
+  background: linear-gradient(135deg, rgba(var(--site-wash-rgb), 0.11), rgba(var(--site-wash-rgb), 0.025) 72%), var(--global-card-bg-color);
   border: 1px solid var(--global-divider-color);
   border-radius: 1.35rem;
   box-shadow: 0 0.65rem 1.8rem rgba(0, 0, 0, 0.045);
@@ -287,7 +287,7 @@ body.sticky-bottom-footer {
       transform 0.2s ease;
 
     &:hover {
-      border-color: rgba(177, 78, 118, 0.4);
+      border-color: rgba(var(--site-wash-rgb), 0.4);
       box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.075);
       transform: translateY(-2px);
     }
@@ -455,7 +455,7 @@ body > footer {
   align-items: stretch;
   border: 1px solid var(--global-divider-color);
   border-radius: 1.35rem;
-  background: linear-gradient(135deg, rgba(177, 78, 118, 0.11), rgba(177, 78, 118, 0.025) 72%), var(--global-card-bg-color);
+  background: linear-gradient(135deg, rgba(var(--site-wash-rgb), 0.11), rgba(var(--site-wash-rgb), 0.025) 72%), var(--global-card-bg-color);
   box-shadow: 0 0.65rem 1.8rem rgba(0, 0, 0, 0.045);
   display: grid;
   gap: 1.5rem;
@@ -559,10 +559,10 @@ body > footer {
   margin-top: 1rem;
 
   span {
-    border: 1px solid rgba(177, 78, 118, 0.35);
+    border: 1px solid rgba(var(--site-wash-rgb), 0.35);
     border-radius: 999px;
     color: var(--global-theme-color);
-    background: rgba(177, 78, 118, 0.06);
+    background: rgba(var(--site-wash-rgb), 0.06);
     font-size: 0.78rem;
     font-weight: 650;
     padding: 0.28rem 0.65rem;
@@ -701,8 +701,8 @@ body > footer {
 
 .phd-opportunity {
   align-items: center;
-  background: linear-gradient(135deg, rgba(177, 78, 118, 0.12), rgba(177, 78, 118, 0.035)), var(--global-card-bg-color);
-  border: 1px solid rgba(177, 78, 118, 0.3);
+  background: linear-gradient(135deg, rgba(var(--site-wash-rgb), 0.12), rgba(var(--site-wash-rgb), 0.035)), var(--global-card-bg-color);
+  border: 1px solid rgba(var(--site-wash-rgb), 0.3);
   border-radius: 1.35rem;
   clear: both;
   display: grid;
@@ -767,7 +767,7 @@ body > footer {
   &:hover {
     background: var(--global-theme-color);
     border-color: var(--global-theme-color);
-    color: #fff;
+    color: var(--site-on-accent);
     text-decoration: none;
   }
 }
@@ -821,7 +821,7 @@ body > footer {
 .project-hero-card {
   border: 1px solid var(--global-divider-color);
   border-radius: 1.15rem;
-  background: linear-gradient(135deg, rgba(177, 78, 118, 0.1), rgba(177, 78, 118, 0.02)), var(--global-card-bg-color);
+  background: linear-gradient(135deg, rgba(var(--site-wash-rgb), 0.1), rgba(var(--site-wash-rgb), 0.02)), var(--global-card-bg-color);
   box-shadow: 0 0.65rem 1.8rem rgba(0, 0, 0, 0.045);
   margin: 0.75rem 0 1.25rem;
   padding: 1.55rem 1.75rem;

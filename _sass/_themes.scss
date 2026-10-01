@@ -6,27 +6,31 @@
 
 :root {
   color-scheme: light;
-  --global-bg-color: #f1edf4;
-  --global-code-bg-color: #ece6f0;
-  --global-text-color: #302a3a;
-  --global-text-color-light: #615a6b;
-  --global-theme-color: #765985;
-  --global-hover-color: #5d426d;
-  --global-hover-text-color: #fffafd;
-  --global-footer-bg-color: #4a3e56;
-  --global-footer-text-color: #eee8f2;
-  --global-footer-link-color: #fffafd;
+  --global-bg-color: #faeff6;
+  --global-code-bg-color: #f5e0ec;
+  --global-text-color: #3a345b;
+  --global-text-color-light: #605269;
+  --global-theme-color: #71557a;
+  --global-hover-color: #4b1535;
+  --global-hover-text-color: #fff7fb;
+  --global-footer-bg-color: #3a345b;
+  --global-footer-text-color: #f3c8dd;
+  --global-footer-link-color: #fff7fb;
   --global-distill-app-color: #{v.$grey-color};
-  --global-divider-color: rgba(107, 88, 123, 0.22);
-  --global-card-bg-color: rgba(248, 245, 250, 0.96);
-  --site-surface-raised: rgba(255, 252, 255, 0.94);
-  --site-surface-soft: rgba(238, 231, 243, 0.82);
-  --site-hero-surface: linear-gradient(128deg, rgba(233, 224, 241, 0.97), rgba(250, 247, 251, 0.97) 68%);
-  --site-nav-surface: rgba(248, 245, 250, 0.96);
-  --site-shadow: 0 0.8rem 2.1rem rgba(50, 38, 63, 0.12);
-  --site-shadow-hover: 0 1rem 2.25rem rgba(50, 38, 63, 0.17);
-  --site-ripple-rgb: 143, 121, 165;
-  --site-on-accent: #fffafd;
+  --global-divider-color: rgba(113, 85, 122, 0.27);
+  --global-card-bg-color: rgba(255, 247, 251, 0.97);
+  --site-surface-raised: rgba(255, 253, 254, 0.97);
+  --site-surface-soft: rgba(243, 200, 221, 0.38);
+  --site-hero-surface: linear-gradient(125deg, rgba(243, 200, 221, 0.98), rgba(251, 226, 239, 0.97) 57%, rgba(255, 247, 251, 0.97));
+  --site-nav-surface: rgba(58, 52, 91, 0.97);
+  --site-nav-text: #fff7fb;
+  --site-nav-hover: #f3c8dd;
+  --site-shadow: 0 0.8rem 2.1rem rgba(75, 21, 53, 0.13);
+  --site-shadow-hover: 0 1rem 2.25rem rgba(75, 21, 53, 0.2);
+  --site-accent-rgb: 113, 85, 122;
+  --site-wash-rgb: 209, 131, 169;
+  --site-ripple-rgb: 209, 131, 169;
+  --site-on-accent: #fff7fb;
   --global-highlight-color: #{v.$red-color-dark};
   --global-back-to-top-bg-color: rgba(
     #{color.channel(v.$black-color, "red", v.$space: rgb)},
@@ -35,8 +39,8 @@
     0.4
   );
   --global-back-to-top-text-color: #{v.$white-color};
-  --global-newsletter-bg-color: #f8f5fa;
-  --global-newsletter-text-color: #302a3a;
+  --global-newsletter-bg-color: #fff7fb;
+  --global-newsletter-text-color: #3a345b;
 
   --global-tip-block: #42b983;
   --global-tip-block-bg: #e2f5ec;
@@ -84,27 +88,31 @@
 
 html[data-theme="dark"] {
   color-scheme: dark;
-  --global-bg-color: #211d2a;
-  --global-code-bg-color: #38313f;
-  --global-text-color: #f4eef6;
-  --global-text-color-light: #c7bdce;
-  --global-theme-color: #d1b8de;
-  --global-hover-color: #e5d0ee;
-  --global-hover-text-color: #2b2132;
-  --global-footer-bg-color: #211b29;
-  --global-footer-text-color: #d8ccde;
-  --global-footer-link-color: #f4eef6;
+  --global-bg-color: #0a1123;
+  --global-code-bg-color: #252d50;
+  --global-text-color: #f2f3fa;
+  --global-text-color-light: #c7cce4;
+  --global-theme-color: #b8bce6;
+  --global-hover-color: #d7daf2;
+  --global-hover-text-color: #0a1123;
+  --global-footer-bg-color: #0a1123;
+  --global-footer-text-color: #c7cce4;
+  --global-footer-link-color: #f2f3fa;
   --global-distill-app-color: #{v.$grey-color-light};
-  --global-divider-color: rgba(218, 200, 226, 0.22);
-  --global-card-bg-color: rgba(47, 41, 55, 0.96);
-  --site-surface-raised: rgba(59, 52, 68, 0.96);
-  --site-surface-soft: rgba(77, 67, 87, 0.64);
-  --site-hero-surface: linear-gradient(128deg, rgba(76, 65, 87, 0.97), rgba(47, 41, 55, 0.97) 70%);
-  --site-nav-surface: rgba(36, 30, 43, 0.97);
-  --site-shadow: 0 0.8rem 2.1rem rgba(12, 8, 20, 0.26);
-  --site-shadow-hover: 0 1rem 2.3rem rgba(12, 8, 20, 0.34);
-  --site-ripple-rgb: 209, 184, 222;
-  --site-on-accent: #2b2132;
+  --global-divider-color: rgba(149, 155, 181, 0.28);
+  --global-card-bg-color: rgba(23, 31, 58, 0.97);
+  --site-surface-raised: rgba(37, 45, 80, 0.97);
+  --site-surface-soft: rgba(58, 62, 108, 0.76);
+  --site-hero-surface: linear-gradient(125deg, rgba(58, 62, 108, 0.98), rgba(30, 39, 70, 0.97) 72%);
+  --site-nav-surface: rgba(10, 17, 35, 0.98);
+  --site-nav-text: #f2f3fa;
+  --site-nav-hover: #b8bce6;
+  --site-shadow: 0 0.8rem 2.1rem rgba(4, 8, 21, 0.33);
+  --site-shadow-hover: 0 1rem 2.3rem rgba(4, 8, 21, 0.46);
+  --site-accent-rgb: 131, 135, 195;
+  --site-wash-rgb: 131, 135, 195;
+  --site-ripple-rgb: 131, 135, 195;
+  --site-on-accent: #0a1123;
   --global-back-to-top-bg-color: rgba(
     #{color.channel(v.$white-color, "red", v.$space: rgb)},
     #{color.channel(v.$white-color, "green", v.$space: rgb)},
@@ -112,8 +120,8 @@ html[data-theme="dark"] {
     0.5
   );
   --global-back-to-top-text-color: #{v.$black-color};
-  --global-newsletter-bg-color: #3b3444;
-  --global-newsletter-text-color: #f4eef6;
+  --global-newsletter-bg-color: #252d50;
+  --global-newsletter-text-color: #f2f3fa;
 
   --global-tip-block: #42b983;
   --global-tip-block-bg: #215d42;
