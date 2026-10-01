@@ -433,6 +433,12 @@ html[data-theme="dark"]
   scroll-margin-top: 96px;
 }
 
+@media (max-width: 768px) {
+  .about-hero .about-hero-copy > p {
+    text-align: left;
+  }
+}
+
 .phd-opportunity {
   background: var(--site-hero-surface);
 }
