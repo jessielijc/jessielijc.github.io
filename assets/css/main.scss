@@ -231,20 +231,48 @@
   }
 }
 
-// A single quiet lavender system across About, publications, projects, CV,
-// Life & Service, and project detail pages. Keep the scenic photograph, but
-// let the cards and page headers share the same surface hierarchy.
+// Two coordinated palettes: warm pink/Jacarta by day and navy/Ube by night.
+// The scenic photograph stays visible behind the shared card hierarchy.
 body {
-  background-image: linear-gradient(115deg, rgba(68, 62, 86, 0.4), rgba(71, 65, 86, 0.5)), url("/assets/img/site-background.webp");
+  background-image: linear-gradient(115deg, rgba(58, 52, 91, 0.34), rgba(209, 131, 169, 0.34)), url("/assets/img/site-background.webp");
 }
 
 html[data-theme="dark"] body {
-  background-image: linear-gradient(115deg, rgba(22, 18, 31, 0.72), rgba(23, 20, 32, 0.82)), url("/assets/img/site-background.webp");
+  background-image: linear-gradient(115deg, rgba(10, 17, 35, 0.8), rgba(58, 62, 108, 0.79)), url("/assets/img/site-background.webp");
 }
 
 .navbar {
   background-color: var(--site-nav-surface);
   border-bottom-color: var(--global-divider-color);
+}
+
+.navbar.navbar-light .navbar-brand,
+.navbar.navbar-light .navbar-nav .nav-item .nav-link,
+#light-toggle,
+#search-toggle {
+  color: var(--site-nav-text);
+}
+
+.navbar.navbar-light .navbar-nav .nav-item.active > .nav-link,
+.navbar.navbar-light .navbar-nav .nav-item .nav-link:hover,
+.navbar.navbar-light .navbar-brand:hover,
+#light-toggle:hover,
+#search-toggle:hover {
+  color: var(--site-nav-hover);
+}
+
+.navbar-toggler .icon-bar {
+  background-color: var(--site-nav-text);
+}
+
+.fa-half-sun-moon::before,
+.fa-half-sun-moon::after {
+  color: var(--site-nav-text);
+}
+
+#light-toggle:hover .fa-half-sun-moon::before,
+#light-toggle:hover .fa-half-sun-moon::after {
+  color: var(--site-nav-hover);
 }
 
 :is(.about-page-shell > .post-header, .content-page-shell > .post-header, .content-hero, .project-hero-card, .publication-hero) {
@@ -307,12 +335,12 @@ html[data-theme="dark"] body {
 :is(.about-profile-card, .about-card, .focus-item, .timeline-card, .patent-card.refined, .honor-card.refined, .projects-vertical .card, .publications ol.bibliography li, .cv-page-shell .cv > .card, .highlight-grid > div) {
   background: var(--site-surface-raised);
   border-color: var(--global-divider-color);
-  box-shadow: 0 0.45rem 1.35rem rgba(50, 38, 63, 0.07);
+  box-shadow: 0 0.45rem 1.35rem rgba(var(--site-accent-rgb), 0.1);
 }
 
 html[data-theme="dark"]
   :is(.about-profile-card, .about-card, .focus-item, .timeline-card, .patent-card.refined, .honor-card.refined, .projects-vertical .card, .publications ol.bibliography li, .cv-page-shell .cv > .card, .highlight-grid > div) {
-  box-shadow: 0 0.45rem 1.35rem rgba(12, 8, 20, 0.18);
+  box-shadow: 0 0.45rem 1.35rem rgba(4, 8, 21, 0.25);
 }
 
 :is(.projects-vertical .card, .patent-card.refined, .honor-card.refined):hover {
@@ -327,6 +355,17 @@ html[data-theme="dark"]
 
 .phd-opportunity {
   background: var(--site-hero-surface);
+}
+
+.content-page-shell article > h2,
+.section-heading.refined,
+.about-section > h2 {
+  border-bottom-color: var(--global-divider-color);
+}
+
+.project-link-btn:hover,
+.phd-opportunity .phd-actions .phd-btn:hover {
+  color: var(--site-on-accent);
 }
 
 :is(.patent-index, .patent-status, .honor-year, .about-tags span, .patent-grid div, .patent-note, .award-certificate) {
@@ -353,6 +392,10 @@ html[data-theme="dark"]
 
 .cv-page-shell .cv .text-muted {
   color: var(--global-text-color-light) !important;
+}
+
+.cv-page-shell .cv .badge {
+  color: var(--site-on-accent) !important;
 }
 
 .cv-page-shell .cv .list-group-item {
