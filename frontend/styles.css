@@ -17,7 +17,7 @@
   min-height: 1.25em;
 }
 #about-title-loop .about-typing-secondary,
-#about-title-loop .about-title-fallback span {
+#about-title-loop .about-title-fallback > span {
   color: var(--global-text-color-light);
   display: inline-block;
   font-size: 0.62em;
