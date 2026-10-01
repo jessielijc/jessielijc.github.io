@@ -58,7 +58,7 @@
     background-size: 220px 220px;
     border-color: transparent;
     border-radius: 0.75rem;
-    color: #fff;
+    color: var(--site-on-accent);
     text-decoration: none;
     text-indent: 0.42rem;
 
@@ -121,7 +121,7 @@
   background-size: 220px 220px;
   border-color: transparent;
   border-radius: 0.75rem;
-  color: #fff;
+  color: var(--site-on-accent);
 }
 
 .award-disclosure summary.flow-button::after {
