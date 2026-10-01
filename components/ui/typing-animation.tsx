@@ -54,11 +54,10 @@ export function TypingAnimation({ children, secondaryText = "", className, delay
           {secondaryVisible}
           {!complete && <span className="about-typing-cursor" />}
           {complete && (
-            <span className="about-greeting-sparkles" aria-hidden="true">
-              <span>✦</span>
-              <span>✧</span>
-              <span>✦</span>
-            </span>
+            <svg className="about-greeting-sparkles" viewBox="0 0 32 28" fill="currentColor" aria-hidden="true" focusable="false">
+              <path d="M11 2 13.5 10.5 22 13l-8.5 2.5L11 24l-2.5-8.5L0 13l8.5-2.5L11 2Z" />
+              <path d="m26 2 1.15 3.85L31 7l-3.85 1.15L26 12l-1.15-3.85L21 7l3.85-1.15L26 2Z" />
+            </svg>
           )}
         </span>
       )}
