@@ -747,7 +747,8 @@
           }
         }
 
-        > .author-self {
+        > em {
+          border-bottom: 0;
           color: var(--site-emphasis-color);
           font-style: normal;
           font-weight: 700;
