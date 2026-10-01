@@ -253,6 +253,10 @@ html[data-theme="dark"] body {
   color: var(--site-nav-text);
 }
 
+.navbar.navbar-light .navbar-brand span {
+  color: inherit;
+}
+
 .navbar.navbar-light .navbar-nav .nav-item.active > .nav-link,
 .navbar.navbar-light .navbar-nav .nav-item .nav-link:hover,
 .navbar.navbar-light .navbar-brand:hover,
