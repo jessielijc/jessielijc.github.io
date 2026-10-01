@@ -17,12 +17,12 @@ social: false
       <h2 class="about-title-fallback">Hi, I'm Jessie <span>Nice to meet you.</span></h2>
     </div>
     <p>
-      Since 2023, I have been pursuing a B.Eng. in Robotics Engineering at the
+      Since 2023, I have been pursuing a <strong>B.Eng. in Robotics Engineering</strong> at the
       <a href="https://www.sustech.edu.cn/en/" target="_blank" rel="external noopener">Southern University of Science and Technology (SUSTech)</a>, where I conduct research with <a href="https://www.sustech.edu.cn/en/faculties/fuchenglong.html" target="_blank" rel="external noopener">Prof. Chenglong Fu</a> in the
       <a href="https://www.harlab.site/" target="_blank" rel="external noopener">Human Augmentation and Rehabilitation Laboratory (HAR Lab)</a>.
     </p>
     <p>
-      Since June 2026, I have also been a visiting research student at the
+      Since June 2026, I have also been a <strong>visiting research student</strong> at the
       <a href="https://www.nus.edu.sg/" target="_blank" rel="external noopener">National University of Singapore (NUS)</a>,
       where I conduct research under the supervision of <a href="https://cde.nus.edu.sg/ece/staff/liu-xingyu/" target="_blank" rel="external noopener">Prof. Xingyu Liu</a>.
     </p>
@@ -103,7 +103,7 @@ Remove this Liquid comment wrapper to restore the scene and its script.
     <p class="about-eyebrow">Let's Connect</p>
     <h2>Seeking Fall 2027 PhD Opportunities</h2>
     <p>
-      I am actively seeking PhD opportunities starting in Fall 2027, with research interests in dexterous robotic hands, embodied intelligence, computer vision, and UAV navigation algorithms. I would be delighted to connect with prospective supervisors and collaborators whose work aligns with these areas—please feel free to get in touch.
+      I am actively seeking PhD opportunities starting in Fall 2027, with research interests in <strong>dexterous robotic hands</strong>, <strong>embodied intelligence</strong>, <strong>computer vision</strong>, and <strong>UAV navigation algorithms</strong>. I would be delighted to connect with prospective supervisors and collaborators whose work aligns with these areas—please feel free to get in touch.
     </p>
   </div>
   <div class="phd-actions">
