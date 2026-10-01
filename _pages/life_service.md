@@ -18,7 +18,7 @@ nav_order: 9
 <section class="content-section-card">
   <p class="page-eyebrow">Community Engagement</p>
   <h2>Social Practice & Volunteering</h2>
-  <p>I actively participate in volunteer service through the <strong>SUSTech Red Cross</strong>, where I help organize and support campus and community activities. As a certified <strong>AHA HeartSaver</strong>, I am especially interested in first-aid education, emergency-response awareness, and public-service initiatives that make practical skills more accessible.</p>
+  <p>I actively participate in volunteer service through the SUSTech Red Cross, where I help organize and support campus and community activities. As a certified AHA HeartSaver, I am especially interested in first-aid education, emergency-response awareness, and public-service initiatives that make practical skills more accessible.</p>
   <p>These experiences have strengthened my communication, organization, and teamwork while continually reminding me that technology and engineering should ultimately serve real human needs.</p>
 </section>
 
