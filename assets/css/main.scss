@@ -44,14 +44,15 @@
 // Keep card typography consistent across every page while giving the wider
 // desktop layout a clearer visual hierarchy.
 :root {
-  --site-card-h1-size: clamp(2.25rem, 3.4vw, 2.6rem);
-  --site-card-h2-size: 1.85rem;
-  --site-card-h3-size: 1.15rem;
-  --site-card-body-size: 1.08rem;
+  --site-card-h1-size: clamp(2.35rem, 3.5vw, 2.75rem);
+  --site-card-h2-size: 2rem;
+  --site-card-h3-size: 1.25rem;
+  --site-card-body-size: 1.16rem;
 }
 
 :is(
     .about-hero,
+    .about-card,
     .about-section,
     .about-publications,
     .phd-opportunity,
@@ -66,6 +67,8 @@
     .projects .card,
     .project-hero-card,
     .project-detail-section,
+    .timeline-card,
+    .highlight-grid > div,
     .cv-page-shell
   ) {
   h1 {
@@ -96,11 +99,104 @@
   font-size: var(--site-card-body-size) !important;
 }
 
+// Increase vertical space throughout the card system without constraining
+// content whose height grows when the text wraps.
+:is(
+    .about-hero,
+    .about-section,
+    .about-publications,
+    .phd-opportunity,
+    .content-page-shell > .post-header,
+    .content-hero,
+    .content-section-card,
+    .projects-board,
+    .project-hero-card,
+    .project-detail-section
+  ) {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+:is(.focus-item, .about-card, .timeline-card, .highlight-grid > div) {
+  padding: 1.4rem 1.3rem;
+}
+
+.about-profile-card img {
+  height: 270px;
+}
+
+.projects-vertical .card {
+  height: 285px;
+  padding: 1.5rem;
+}
+
+.projects-vertical .card-body {
+  padding-block: 0.75rem;
+}
+
+.patent-card.refined,
+.patent-card.refined.patent-card--illustrated,
+.honor-card.refined,
+.publications ol.bibliography li {
+  padding: 1.5rem 1.6rem;
+}
+
+.patent-authors,
+.patent-grid span:not(.label),
+.honor-description,
+.honor-awards,
+.publications ol.bibliography li .author {
+  font-size: var(--site-card-body-size);
+}
+
+.publications ol.bibliography li .title {
+  font-size: var(--site-card-h3-size);
+}
+
+.cv-page-shell .cv > .card {
+  padding: 1.8rem 1.75rem !important;
+}
+
+.cv-page-shell .cv :is(td, th, .list-group-item) {
+  font-size: var(--site-card-body-size);
+}
+
+.cv-page-shell .cv .list-group-item {
+  padding-block: 1rem;
+}
+
 @media (max-width: 768px) {
   :root {
-    --site-card-h1-size: 2rem;
-    --site-card-h2-size: 1.55rem;
-    --site-card-h3-size: 1.08rem;
-    --site-card-body-size: 1rem;
+    --site-card-h1-size: 2.1rem;
+    --site-card-h2-size: 1.65rem;
+    --site-card-h3-size: 1.14rem;
+    --site-card-body-size: 1.05rem;
+  }
+
+  :is(
+      .about-hero,
+      .about-section,
+      .about-publications,
+      .phd-opportunity,
+      .content-page-shell > .post-header,
+      .content-hero,
+      .content-section-card,
+      .projects-board,
+      .project-hero-card,
+      .project-detail-section
+    ) {
+    padding-top: 1.6rem;
+    padding-bottom: 1.6rem;
+  }
+
+  .projects-vertical .card {
+    height: auto;
+    padding: 1.25rem;
+  }
+
+  .projects-vertical .card-body {
+    height: auto;
+    min-height: 0;
+    padding: 0.8rem 0.3rem 0.3rem;
   }
 }
