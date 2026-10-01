@@ -332,6 +332,11 @@ html[data-theme="dark"] body {
   margin-top: 0;
 }
 
+.publications h2.bibliography {
+  font-size: 1.3rem !important;
+  font-weight: 650 !important;
+}
+
 :is(.about-profile-card, .about-card, .focus-item, .timeline-card, .patent-card.refined, .honor-card.refined, .projects-vertical .card, .publications ol.bibliography li, .cv-page-shell .cv > .card, .highlight-grid > div) {
   background: var(--site-surface-raised);
   border-color: var(--global-divider-color);
