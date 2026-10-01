@@ -345,6 +345,13 @@ body.sticky-bottom-footer {
     width: 100%;
   }
 
+  // The first project screenshot includes white pixels above the actual scene.
+  // Crop that built-in margin without zooming the other project images.
+  .row.row-cols-1 > .col:first-child .project-thumb-col .card-img {
+    height: calc(100% + 2.5rem);
+    transform: translateY(-2.5rem);
+  }
+
   .card-body {
     align-items: flex-start;
     display: flex;
