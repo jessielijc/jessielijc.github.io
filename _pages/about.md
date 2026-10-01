@@ -9,10 +9,12 @@ selected_papers: false
 social: false
 ---
 
+<script>document.documentElement.classList.add("about-typing-enabled");</script>
+
 <section class="about-hero">
   <div class="about-hero-copy">
     <div id="about-title-loop" class="react-island about-intro-title">
-      <h2>Hi, I'm Jessie</h2>
+      <h2 class="about-title-fallback">Hi, I'm Jessie <span>Nice to meet you.</span></h2>
     </div>
     <p>
       Since 2023, I have been pursuing a B.Eng. in Robotics Engineering at the
@@ -72,8 +74,9 @@ Remove this Liquid comment wrapper to restore the scene and its script.
     <a href="#research-interests">Explore my research</a>
   </div>
 </section>
-<script type="module" src="{{ '/assets/react/about.js' | relative_url | bust_file_cache }}"></script>
 {% endcomment %}
+
+<script type="module" src="{{ '/assets/react/about.js' | relative_url | bust_file_cache }}" onerror="document.documentElement.classList.remove('about-typing-enabled')"></script>
 
 <section id="research-interests" class="about-section">
   <p class="about-eyebrow">Research Interests</p>
