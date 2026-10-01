@@ -416,6 +416,10 @@ html[data-theme="dark"]
   color: var(--site-subtitle-color);
 }
 
+.projects-vertical .card .card-body .card-text {
+  color: var(--global-text-color-light);
+}
+
 :is(.patent-authors, .honor-description, .publications ol.bibliography li .author) strong {
   color: var(--site-emphasis-color);
 }
