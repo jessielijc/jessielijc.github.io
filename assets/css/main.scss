@@ -421,6 +421,33 @@ html[data-theme="dark"]
   }
 }
 
+@media (max-width: 576px) {
+  .cv-page-shell .cv > .card:first-child .table-cv,
+  .cv-page-shell .cv > .card:first-child .table-cv tbody,
+  .cv-page-shell .cv > .card:first-child .table-cv tr,
+  .cv-page-shell .cv > .card:first-child .table-cv td {
+    display: block;
+    width: 100%;
+  }
+
+  .cv-page-shell .cv > .card:first-child .table-cv tr {
+    border-bottom: 1px solid var(--global-divider-color);
+    padding: 0.4rem 0;
+  }
+
+  .cv-page-shell .cv > .card:first-child .table-cv tr:last-child {
+    border-bottom: 0;
+  }
+
+  .cv-page-shell .cv > .card:first-child .table-cv td {
+    padding: 0.1rem 0 !important;
+  }
+
+  .cv-page-shell .cv > .card:first-child .table-cv td:first-child {
+    color: var(--global-text-color-light);
+  }
+}
+
 @media print {
   body {
     background-image: none;
