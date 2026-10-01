@@ -243,9 +243,10 @@ html[data-theme="dark"] body {
 }
 
 .navbar.navbar-light .navbar-nav .nav-item .nav-link {
-  font-size: 1.06rem;
+  font-size: 1.18rem;
   font-weight: 650;
   padding: 0.55rem 0.8rem;
+  text-transform: capitalize;
 }
 
 .navbar .toggle-container button {
@@ -406,19 +407,12 @@ html[data-theme="dark"]
 }
 
 #about-title-loop .about-greeting-sparkles {
-  color: var(--site-decor-color);
-  display: inline-flex;
-  gap: 0.06em;
-  align-items: center;
-  font-size: 0.82em;
-  line-height: 1;
-  margin-left: 0.36em;
-  vertical-align: 0.04em;
-}
-
-#about-title-loop .about-greeting-sparkles span:nth-child(2) {
-  font-size: 0.76em;
-  transform: translateY(-0.22em);
+  color: var(--site-sparkle-color);
+  display: inline-block;
+  height: 1.05em;
+  margin-left: 0.34em;
+  vertical-align: -0.14em;
+  width: 1.2em;
 }
 
 :is(.section-heading.refined, .about-section, .publication-board, .project-detail-section, .cv-page-shell) h2,
@@ -473,7 +467,7 @@ html[data-theme="dark"]
 
 .phd-opportunity {
   background: var(--global-card-bg-color);
-  border: 3px dashed var(--site-opportunity-border);
+  border: 9px dashed var(--site-opportunity-border);
 }
 
 .content-page-shell article > h2,
