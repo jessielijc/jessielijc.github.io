@@ -747,9 +747,10 @@
           }
         }
 
-        > em {
-          border-bottom: 1px solid;
+        > .author-self {
+          color: var(--site-emphasis-color);
           font-style: normal;
+          font-weight: 700;
         }
 
         > span.more-authors {

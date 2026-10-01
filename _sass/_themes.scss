@@ -38,6 +38,7 @@
   --site-emphasis-color: #4b1535;
   --site-decor-color: #d183a9;
   --site-link-bright: #a22d6d;
+  --site-opportunity-border: #8b6594;
   --global-highlight-color: #{v.$red-color-dark};
   --global-back-to-top-bg-color: rgba(
     #{color.channel(v.$black-color, "red", v.$space: rgb)},
@@ -127,6 +128,7 @@ html[data-theme="dark"] {
   --site-emphasis-color: #e0e3fa;
   --site-decor-color: #8387c3;
   --site-link-bright: #d9b8ee;
+  --site-opportunity-border: #9397d2;
   --global-back-to-top-bg-color: rgba(
     #{color.channel(v.$white-color, "red", v.$space: rgb)},
     #{color.channel(v.$white-color, "green", v.$space: rgb)},
