@@ -401,8 +401,24 @@ html[data-theme="dark"]
 }
 
 #about-title-loop .about-typing-secondary,
-#about-title-loop .about-title-fallback span {
+#about-title-loop .about-title-fallback > span {
   color: var(--site-subtitle-color);
+}
+
+#about-title-loop .about-greeting-sparkles {
+  color: var(--site-decor-color);
+  display: inline-flex;
+  gap: 0.06em;
+  align-items: center;
+  font-size: 0.82em;
+  line-height: 1;
+  margin-left: 0.36em;
+  vertical-align: 0.04em;
+}
+
+#about-title-loop .about-greeting-sparkles span:nth-child(2) {
+  font-size: 0.76em;
+  transform: translateY(-0.22em);
 }
 
 :is(.section-heading.refined, .about-section, .publication-board, .project-detail-section, .cv-page-shell) h2,
@@ -456,8 +472,8 @@ html[data-theme="dark"]
 }
 
 .phd-opportunity {
-  background: var(--site-callout-surface);
-  border-color: var(--site-decor-color);
+  background: var(--global-card-bg-color);
+  border: 3px dashed var(--site-opportunity-border);
 }
 
 .content-page-shell article > h2,
