@@ -55,7 +55,7 @@
 #about-spline .robotics-card {
   border: 1px solid var(--global-divider-color) !important;
   border-radius: 1.35rem !important;
-  background: linear-gradient(120deg, rgba(177, 78, 118, 0.085), transparent 65%), var(--global-card-bg-color);
+  background: linear-gradient(120deg, rgba(var(--site-wash-rgb), 0.085), transparent 65%), var(--global-card-bg-color);
   color: var(--global-text-color);
   box-shadow: 0 0.65rem 1.8rem rgba(0, 0, 0, 0.045);
 }
@@ -95,7 +95,7 @@
   min-width: 0;
   height: 350px;
   overflow: hidden;
-  background: radial-gradient(ellipse at center, rgba(177, 78, 118, 0.12), transparent 70%);
+  background: radial-gradient(ellipse at center, rgba(var(--site-wash-rgb), 0.12), transparent 70%);
 }
 #about-spline .scene-container {
   height: 100%;
@@ -105,7 +105,7 @@
   display: block;
 }
 #about-spline .scene-spotlight {
-  background: radial-gradient(circle, rgba(177, 78, 118, 0.12), transparent 72%);
+  background: radial-gradient(circle, rgba(var(--site-wash-rgb), 0.12), transparent 72%);
   transition: opacity 0.2s;
 }
 #about-spline .scene-status {
@@ -159,7 +159,7 @@
 #about-spline .loader {
   height: 22px;
   width: 22px;
-  border: 2px solid rgba(177, 78, 118, 0.2);
+  border: 2px solid rgba(var(--site-wash-rgb), 0.2);
   border-top-color: var(--global-theme-color);
   border-radius: 50%;
   animation: scene-spin 1s linear infinite;
