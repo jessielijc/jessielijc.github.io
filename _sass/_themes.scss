@@ -6,10 +6,10 @@
 
 :root {
   color-scheme: light;
-  --global-bg-color: #faeff6;
+  --global-bg-color: #fff0f7;
   --global-code-bg-color: #f5e0ec;
   --global-text-color: #3a345b;
-  --global-text-color-light: #605269;
+  --global-text-color-light: #66536d;
   --global-theme-color: #71557a;
   --global-hover-color: #4b1535;
   --global-hover-text-color: #fff7fb;
@@ -17,20 +17,25 @@
   --global-footer-text-color: #f3c8dd;
   --global-footer-link-color: #fff7fb;
   --global-distill-app-color: #{v.$grey-color};
-  --global-divider-color: rgba(113, 85, 122, 0.27);
-  --global-card-bg-color: rgba(255, 247, 251, 0.97);
-  --site-surface-raised: rgba(255, 253, 254, 0.97);
-  --site-surface-soft: rgba(243, 200, 221, 0.38);
-  --site-hero-surface: linear-gradient(125deg, rgba(243, 200, 221, 0.98), rgba(251, 226, 239, 0.97) 57%, rgba(255, 247, 251, 0.97));
-  --site-nav-surface: rgba(58, 52, 91, 0.97);
+  --global-divider-color: rgba(113, 85, 122, 0.35);
+  --global-card-bg-color: rgba(255, 248, 252, 0.97);
+  --site-surface-raised: rgba(255, 253, 254, 0.98);
+  --site-surface-soft: rgba(243, 200, 221, 0.63);
+  --site-hero-surface: linear-gradient(120deg, #f3c8dd 0%, #e9afcd 52%, #f9dce9 100%);
+  --site-nav-surface: rgba(58, 52, 91, 0.99);
   --site-nav-text: #fff7fb;
   --site-nav-hover: #f3c8dd;
   --site-shadow: 0 0.8rem 2.1rem rgba(75, 21, 53, 0.13);
   --site-shadow-hover: 0 1rem 2.25rem rgba(75, 21, 53, 0.2);
-  --site-accent-rgb: 113, 85, 122;
+  --site-accent-rgb: 209, 131, 169;
   --site-wash-rgb: 209, 131, 169;
   --site-ripple-rgb: 209, 131, 169;
   --site-on-accent: #fff7fb;
+  --site-title-color: #4b1535;
+  --site-subtitle-color: #71557a;
+  --site-kicker-color: #71557a;
+  --site-emphasis-color: #4b1535;
+  --site-decor-color: #d183a9;
   --global-highlight-color: #{v.$red-color-dark};
   --global-back-to-top-bg-color: rgba(
     #{color.channel(v.$black-color, "red", v.$space: rgb)},
@@ -92,27 +97,32 @@ html[data-theme="dark"] {
   --global-code-bg-color: #252d50;
   --global-text-color: #f2f3fa;
   --global-text-color-light: #c7cce4;
-  --global-theme-color: #b8bce6;
+  --global-theme-color: #c2c6ee;
   --global-hover-color: #d7daf2;
   --global-hover-text-color: #0a1123;
   --global-footer-bg-color: #0a1123;
   --global-footer-text-color: #c7cce4;
   --global-footer-link-color: #f2f3fa;
   --global-distill-app-color: #{v.$grey-color-light};
-  --global-divider-color: rgba(149, 155, 181, 0.28);
-  --global-card-bg-color: rgba(23, 31, 58, 0.97);
-  --site-surface-raised: rgba(37, 45, 80, 0.97);
-  --site-surface-soft: rgba(58, 62, 108, 0.76);
-  --site-hero-surface: linear-gradient(125deg, rgba(58, 62, 108, 0.98), rgba(30, 39, 70, 0.97) 72%);
+  --global-divider-color: rgba(149, 155, 181, 0.43);
+  --global-card-bg-color: rgba(25, 34, 65, 0.98);
+  --site-surface-raised: rgba(45, 53, 96, 0.98);
+  --site-surface-soft: rgba(131, 135, 195, 0.32);
+  --site-hero-surface: linear-gradient(120deg, #3a3e6c 0%, #50558d 58%, #373e70 100%);
   --site-nav-surface: rgba(10, 17, 35, 0.98);
   --site-nav-text: #f2f3fa;
-  --site-nav-hover: #b8bce6;
+  --site-nav-hover: #c2c6ee;
   --site-shadow: 0 0.8rem 2.1rem rgba(4, 8, 21, 0.33);
   --site-shadow-hover: 0 1rem 2.3rem rgba(4, 8, 21, 0.46);
   --site-accent-rgb: 131, 135, 195;
   --site-wash-rgb: 131, 135, 195;
   --site-ripple-rgb: 131, 135, 195;
   --site-on-accent: #0a1123;
+  --site-title-color: #e6e8fc;
+  --site-subtitle-color: #c2c6ee;
+  --site-kicker-color: #c2c6ee;
+  --site-emphasis-color: #e0e3fa;
+  --site-decor-color: #8387c3;
   --global-back-to-top-bg-color: rgba(
     #{color.channel(v.$white-color, "red", v.$space: rgb)},
     #{color.channel(v.$white-color, "green", v.$space: rgb)},
