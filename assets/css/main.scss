@@ -424,12 +424,24 @@ html[data-theme="dark"]
   color: var(--site-emphasis-color);
 }
 
-:is(.about-hero, .about-section, .about-publications, .content-section-card, .projects-board, .publication-board, .project-detail-section) {
-  background-image: linear-gradient(145deg, rgba(var(--site-wash-rgb), 0.12), transparent 55%);
+// Keep the board and its nested cards on separate, quiet surfaces. The more
+// saturated palette belongs to page headers, the contact callout, and details.
+.about-hero-copy a {
+  color: var(--site-link-bright);
+  font-weight: inherit;
+  text-decoration-color: var(--site-link-bright);
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.16em;
 }
 
-:is(.about-profile-card, .focus-item, .timeline-card, .patent-card.refined, .honor-card.refined, .projects-vertical .card, .publications ol.bibliography li, .cv-page-shell .cv > .card) {
-  background-image: linear-gradient(145deg, rgba(var(--site-wash-rgb), 0.08), transparent 58%);
+.about-hero-copy a:hover {
+  color: var(--global-hover-color);
+}
+
+:is(.about-hero-copy, .phd-copy, .content-section-card, .project-detail-section, .project-hero-card) p strong {
+  color: inherit;
+  font-weight: inherit;
 }
 
 #research-interests,
@@ -444,7 +456,8 @@ html[data-theme="dark"]
 }
 
 .phd-opportunity {
-  background: var(--site-hero-surface);
+  background: var(--site-callout-surface);
+  border-color: var(--site-decor-color);
 }
 
 .content-page-shell article > h2,
