@@ -14,7 +14,7 @@ social: false
 <section class="about-hero">
   <div class="about-hero-copy">
     <div id="about-title-loop" class="react-island about-intro-title">
-      <h2 class="about-title-fallback">Hi, I'm Jessie <span>Nice to meet you.</span></h2>
+      <h2 class="about-title-fallback">Hi, I'm Jessie <span>Nice to meet you.<span class="about-greeting-sparkles" aria-hidden="true"><span>✦</span><span>✧</span><span>✦</span></span></span></h2>
     </div>
     <p>
       Since 2023, I have been pursuing a B.Eng. in Robotics Engineering at the
