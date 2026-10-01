@@ -17,11 +17,12 @@
   --global-footer-text-color: #f3c8dd;
   --global-footer-link-color: #fff7fb;
   --global-distill-app-color: #{v.$grey-color};
-  --global-divider-color: rgba(113, 85, 122, 0.35);
-  --global-card-bg-color: rgba(255, 248, 252, 0.97);
-  --site-surface-raised: rgba(255, 253, 254, 0.98);
-  --site-surface-soft: rgba(243, 200, 221, 0.63);
-  --site-hero-surface: linear-gradient(120deg, #f3c8dd 0%, #e9afcd 52%, #f9dce9 100%);
+  --global-divider-color: rgba(113, 85, 122, 0.25);
+  --global-card-bg-color: rgba(248, 244, 250, 0.985);
+  --site-surface-raised: rgba(255, 253, 254, 0.99);
+  --site-surface-soft: rgba(243, 200, 221, 0.38);
+  --site-hero-surface: linear-gradient(120deg, #f3c8dd 0%, #f7dce9 100%);
+  --site-callout-surface: linear-gradient(125deg, #e7aac9 0%, #f3c8dd 58%, #fae4ef 100%);
   --site-nav-surface: rgba(58, 52, 91, 0.99);
   --site-nav-text: #fff7fb;
   --site-nav-hover: #f3c8dd;
@@ -36,6 +37,7 @@
   --site-kicker-color: #71557a;
   --site-emphasis-color: #4b1535;
   --site-decor-color: #d183a9;
+  --site-link-bright: #a22d6d;
   --global-highlight-color: #{v.$red-color-dark};
   --global-back-to-top-bg-color: rgba(
     #{color.channel(v.$black-color, "red", v.$space: rgb)},
@@ -104,11 +106,12 @@ html[data-theme="dark"] {
   --global-footer-text-color: #c7cce4;
   --global-footer-link-color: #f2f3fa;
   --global-distill-app-color: #{v.$grey-color-light};
-  --global-divider-color: rgba(149, 155, 181, 0.43);
-  --global-card-bg-color: rgba(25, 34, 65, 0.98);
-  --site-surface-raised: rgba(45, 53, 96, 0.98);
-  --site-surface-soft: rgba(131, 135, 195, 0.32);
-  --site-hero-surface: linear-gradient(120deg, #3a3e6c 0%, #50558d 58%, #373e70 100%);
+  --global-divider-color: rgba(149, 155, 181, 0.29);
+  --global-card-bg-color: rgba(23, 31, 60, 0.985);
+  --site-surface-raised: rgba(37, 47, 82, 0.985);
+  --site-surface-soft: rgba(131, 135, 195, 0.18);
+  --site-hero-surface: linear-gradient(120deg, #3a3e6c 0%, #474b7b 100%);
+  --site-callout-surface: linear-gradient(125deg, #454a80 0%, #343b6b 100%);
   --site-nav-surface: rgba(10, 17, 35, 0.98);
   --site-nav-text: #f2f3fa;
   --site-nav-hover: #c2c6ee;
@@ -123,6 +126,7 @@ html[data-theme="dark"] {
   --site-kicker-color: #c2c6ee;
   --site-emphasis-color: #e0e3fa;
   --site-decor-color: #8387c3;
+  --site-link-bright: #d9b8ee;
   --global-back-to-top-bg-color: rgba(
     #{color.channel(v.$white-color, "red", v.$space: rgb)},
     #{color.channel(v.$white-color, "green", v.$space: rgb)},
