@@ -12,6 +12,7 @@ nav_order: 2
 <!-- _pages/publications.md -->
 
 <section class="publication-hero">
+  <p class="page-eyebrow">Research Output</p>
   <h1>Publications, Patents & Awards</h1>
 </section>
 

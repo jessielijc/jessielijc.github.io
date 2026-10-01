@@ -12,6 +12,7 @@ horizontal: true
 ---
 
 <section class="project-hero-card">
+  <p class="page-eyebrow">Selected Course Projects</p>
   <h1>Projects</h1>
 </section>
 
