@@ -14,12 +14,12 @@ social: false
 <section class="about-hero">
   <div class="about-hero-copy">
     <div id="about-title-loop" class="react-island about-intro-title">
-      <h2 class="about-title-fallback">Hi, I'm Jessie <span>Nice to meet you.<span class="about-greeting-sparkles" aria-hidden="true"><span>✦</span><span>✧</span><span>✦</span></span></span></h2>
+      <h2 class="about-title-fallback">Hi, I'm Jessie <span>Nice to meet you.<svg class="about-greeting-sparkles" viewBox="0 0 32 28" fill="currentColor" aria-hidden="true" focusable="false"><path d="M11 2 13.5 10.5 22 13l-8.5 2.5L11 24l-2.5-8.5L0 13l8.5-2.5L11 2Z" /><path d="m26 2 1.15 3.85L31 7l-3.85 1.15L26 12l-1.15-3.85L21 7l3.85-1.15L26 2Z" /></svg></span></h2>
     </div>
     <p>
       Since 2023, I have been pursuing a B.Eng. in Robotics Engineering at the
       <a href="https://www.sustech.edu.cn/en/" target="_blank" rel="external noopener">Southern University of Science and Technology (SUSTech)</a>, where I conduct research with <a href="https://www.sustech.edu.cn/en/faculties/fuchenglong.html" target="_blank" rel="external noopener">Prof. Chenglong Fu</a> in the
-      <a href="https://www.harlab.site/" target="_blank" rel="external noopener">Human Augmentation and Rehabilitation Laboratory (HAR Lab)</a>.
+      <a href="https://www.harlab.site/" target="_blank" rel="external noopener">Human-Augmented and Rehabilitation Robotics Lab</a>.
     </p>
     <p>
       Since June 2026, I have also been a visiting research student at the
