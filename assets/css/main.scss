@@ -50,6 +50,21 @@
   --site-card-body-size: 1.16rem;
 }
 
+// Keep the page name legible over both bright and dark areas of the photo.
+.about-page-shell > .post-header .post-title {
+  display: inline-block;
+  width: fit-content;
+  color: #fff;
+  background: rgba(13, 25, 35, 0.78);
+  border: 1px solid rgba(255, 255, 255, 0.23);
+  border-left: 3px solid var(--global-theme-color);
+  border-radius: 0.9rem;
+  box-shadow: 0 0.55rem 1.5rem rgba(5, 13, 22, 0.24);
+  padding: 0.35em 0.65em 0.42em;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(12px);
+}
+
 :is(
     .about-hero,
     .about-card,
