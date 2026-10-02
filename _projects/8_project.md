@@ -7,6 +7,8 @@ importance: 4
 category: featured
 github: https://github.com/yuzhen-song/blood-pressure-monitor
 hide_title: true
+page_class: project-detail-page
+image_caption: The BEAT system corrects wrist-height effects during blood pressure measurement.
 ---
 
 <section class="project-hero-card">
@@ -32,19 +34,19 @@ hide_title: true
 <section class="project-detail-section">
   <p class="about-eyebrow">System Overview</p>
   <h2>A detachable sensing module and a complete measurement pipeline</h2>
-  <div class="project-showcase">
+  <figure class="project-showcase">
     <img src="{{ '/assets/img/blood-pressure-monitor/prototype.webp' | relative_url }}" alt="BEAT wrist module, pneumatic blood pressure hardware, ESP32 controllers, and desktop signal display">
-  </div>
-  <p class="project-caption">The wearable module integrates cuff pressure, barometric pressure, and inertial sensing. ESP-NOW sends the wrist reference data to the measurement controller while the desktop interface visualizes the oscillometric waveform.</p>
+    <figcaption>The wearable module integrates cuff pressure, barometric pressure, and inertial sensing. ESP-NOW sends the wrist reference data to the measurement controller while the desktop interface visualizes the oscillometric waveform.</figcaption>
+  </figure>
 </section>
 
 <section class="project-detail-section">
   <p class="about-eyebrow">The Core Problem</p>
   <h2>Correcting the pressure error caused by wrist height</h2>
-  <div class="project-showcase">
+  <figure class="project-showcase">
     <img src="{{ '/assets/img/blood-pressure-monitor/posture-compensation.webp' | relative_url }}" alt="Two-phase heart-level calibration and posture-independent wrist blood pressure measurement">
-  </div>
-  <p class="project-caption">The system first records a heart-level barometric reference. During measurement, elevation changes are converted into a hydrostatic pressure correction so the user is not constrained to a fixed arm posture.</p>
+    <figcaption>The system first records a heart-level barometric reference. During measurement, elevation changes are converted into a hydrostatic pressure correction so the user is not constrained to a fixed arm posture.</figcaption>
+  </figure>
 </section>
 
 <section class="project-detail-section technical-highlights">
@@ -69,10 +71,10 @@ hide_title: true
 <section class="project-detail-section">
   <p class="about-eyebrow">Signal Processing</p>
   <h2>Recovering the arterial pulse envelope</h2>
-  <div class="project-showcase">
+  <figure class="project-showcase">
     <img src="{{ '/assets/img/blood-pressure-monitor/signal-and-agreement.webp' | relative_url }}" alt="Raw cuff pressure, filtered pulsatile waveform, and oscillation envelope used for blood pressure estimation">
-  </div>
-  <p class="project-caption">The processing pipeline separates the cuff-pressure baseline from the pulsatile component, detects valid pulse peaks, and uses the oscillation envelope to locate DBP, MAP, and SBP.</p>
+    <figcaption>The processing pipeline separates the cuff-pressure baseline from the pulsatile component, detects valid pulse peaks, and uses the oscillation envelope to locate DBP, MAP, and SBP.</figcaption>
+  </figure>
 </section>
 
 <section class="project-detail-section technical-highlights">
@@ -92,19 +94,19 @@ hide_title: true
       <p>Overall diastolic mean absolute error decreased from 6.79 to 4.42 mmHg in the same preliminary evaluation.</p>
     </div>
   </div>
-  <div class="project-showcase mt-3">
+  <figure class="project-showcase mt-3">
     <img src="{{ '/assets/img/blood-pressure-monitor/posture-results.webp' | relative_url }}" alt="Systolic and diastolic pressure results above, at, and below heart level before and after compensation">
-  </div>
-  <p class="project-caption">The figure compares posture-affected readings, uncompensated BEAT measurements, and compensated results against the heart-level Omron reference. These results come from a small course-project feasibility study and are not evidence of clinical validation.</p>
+    <figcaption>The figure compares posture-affected readings, uncompensated BEAT measurements, and compensated results against the heart-level Omron reference. These results come from a small course-project feasibility study and are not evidence of clinical validation.</figcaption>
+  </figure>
 </section>
 
 <section class="project-detail-section">
   <p class="about-eyebrow">Implementation</p>
   <h2>Embedded control, wireless sensing, and a Python analysis interface</h2>
-  <div class="project-showcase">
+  <figure class="project-showcase">
     <img src="{{ '/assets/img/blood-pressure-monitor/system-workflow.webp' | relative_url }}" alt="BEAT hardware architecture and oscillometric blood pressure estimation workflow">
-  </div>
-  <p class="project-caption">ESP32 firmware controls cuff inflation, the solenoid valve, and sensor acquisition. The Python application handles serial collection, real-time visualization, offline analysis, and posture compensation.</p>
+    <figcaption>ESP32 firmware controls cuff inflation, the solenoid valve, and sensor acquisition. The Python application handles serial collection, real-time visualization, offline analysis, and posture compensation.</figcaption>
+  </figure>
 </section>
 
 <section class="project-detail-section">

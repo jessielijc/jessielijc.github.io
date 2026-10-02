@@ -6,6 +6,8 @@ img: https://github.com/user-attachments/assets/5477dbe0-95bc-4b8a-bb79-ef781a2c
 importance: 1
 category: featured
 hide_title: true
+page_class: project-detail-page
+image_caption: Gesture-controlled teleoperation in the ROS 2 simulation.
 github: https://github.com/jessielijc/ROS2-Autonomous-Robot-Project
 ---
 
@@ -25,30 +27,32 @@ github: https://github.com/jessielijc/ROS2-Autonomous-Robot-Project
   </div>
 </div>
 
-<div class="project-actions">
-  <a class="project-link-btn flow-button" href="https://github.com/jessielijc/ROS2-Autonomous-Robot-Project" target="_blank" rel="external nofollow noopener">GitHub Repository</a>
-</div>
-
-<div class="project-showcase">
-  <img src="https://github.com/user-attachments/assets/5477dbe0-95bc-4b8a-bb79-ef781a2c6e75" alt="Gesture-controlled teleoperation demo">
-</div>
-
-<div class="caption">Gesture-controlled manual teleoperation using MediaPipe hand tracking.</div>
+<section class="project-detail-section">
+  <p class="about-eyebrow">Featured Demonstration</p>
+  <h2>Gesture-controlled teleoperation</h2>
+  <figure class="project-showcase">
+    <img src="https://github.com/user-attachments/assets/5477dbe0-95bc-4b8a-bb79-ef781a2c6e75" alt="Gesture-controlled teleoperation demo">
+    <figcaption>MediaPipe hand tracking maps the operator's gestures to mobile-base commands in the ROS 2 simulation.</figcaption>
+  </figure>
+  <div class="project-actions">
+    <a class="project-link-btn flow-button" href="https://github.com/jessielijc/ROS2-Autonomous-Robot-Project" target="_blank" rel="external nofollow noopener">GitHub Repository</a>
+  </div>
+</section>
 
 <section class="about-section">
   <p class="about-eyebrow">System Overview</p>
   <h2>What the robot can do</h2>
   <div class="focus-list">
     <div class="focus-item">
-      <strong>Gesture-Controlled Autonomous Mission</strong>
+      <h3>Gesture-Controlled Autonomous Mission</h3>
       <span>A webcam and Google MediaPipe translate hand gestures into robot commands, including manual teleoperation, autonomous navigation triggers, and preemption of ongoing tasks.</span>
     </div>
     <div class="focus-item">
-      <strong>Voice-Controlled Interaction</strong>
+      <h3>Voice-Controlled Interaction</h3>
       <span>Offline voice recognition with Vosk enables Chinese voice commands for motion control, visual grasping, and autonomous navigation.</span>
     </div>
     <div class="focus-item">
-      <strong>Visual Search, Grasping, and Delivery</strong>
+      <h3>Visual Search, Grasping, and Delivery</h3>
       <span>OpenCV color segmentation and PID alignment guide the robot toward a target block, while MoveIt 2 executes the picking sequence and Nav2 handles delivery navigation.</span>
     </div>
   </div>
@@ -58,11 +62,11 @@ github: https://github.com/jessielijc/ROS2-Autonomous-Robot-Project
   <p class="about-eyebrow">Demo Gallery</p>
   <h2>Mission snapshots</h2>
   <div class="project-media-grid">
-    <img src="https://github.com/user-attachments/assets/73bf9947-ec95-4642-93f3-033f837b31bf" alt="Gazebo simulation environment">
-    <img src="https://github.com/user-attachments/assets/e1b800d1-e73f-4541-8011-f8e699462899" alt="RViz localization and navigation">
-    <img src="https://github.com/user-attachments/assets/7277bca9-2262-4c65-9b98-2fe7a9ba6442" alt="Navigation gesture command">
-    <img src="https://github.com/user-attachments/assets/a424cf2f-396a-4c98-9369-5544a95949d2" alt="Visual grasping demo">
-    <img src="https://github.com/user-attachments/assets/f320b372-5d2a-461a-8303-b5c3260d47f1" alt="Autonomous delivery mission">
+    <figure><img src="https://github.com/user-attachments/assets/73bf9947-ec95-4642-93f3-033f837b31bf" alt="Gazebo simulation environment"><figcaption>Gazebo scene with the mobile manipulator and its indoor mission environment.</figcaption></figure>
+    <figure><img src="https://github.com/user-attachments/assets/e1b800d1-e73f-4541-8011-f8e699462899" alt="RViz localization and navigation"><figcaption>RViz visualization used to initialize localization and monitor navigation.</figcaption></figure>
+    <figure><img src="https://github.com/user-attachments/assets/7277bca9-2262-4c65-9b98-2fe7a9ba6442" alt="Navigation gesture command"><figcaption>A hand gesture triggers the autonomous navigation mission.</figcaption></figure>
+    <figure><img src="https://github.com/user-attachments/assets/a424cf2f-396a-4c98-9369-5544a95949d2" alt="Visual grasping demo"><figcaption>Visual target search and alignment precede the arm's grasping sequence.</figcaption></figure>
+    <figure><img src="https://github.com/user-attachments/assets/f320b372-5d2a-461a-8303-b5c3260d47f1" alt="Autonomous delivery mission"><figcaption>Nav2 guides the robot through the delivery route after the target is grasped.</figcaption></figure>
   </div>
 </section>
 
