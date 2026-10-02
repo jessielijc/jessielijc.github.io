@@ -6,12 +6,26 @@
     const aboutLink = document.getElementById("nav-link-about");
     const publicationsItem = document.getElementById("nav-item-publications");
     const publicationsLink = document.getElementById("nav-link-publications");
+    const projectsSection = document.getElementById("projects");
+    const projectsItem = document.getElementById("nav-item-projects");
+    const projectsLink = document.getElementById("nav-link-projects");
 
-    if (!publicationsSection || !aboutItem || !aboutLink || !publicationsItem || !publicationsLink) return;
+    if (
+      !publicationsSection ||
+      !projectsSection ||
+      !aboutItem ||
+      !aboutLink ||
+      !publicationsItem ||
+      !publicationsLink ||
+      !projectsItem ||
+      !projectsLink
+    )
+      return;
 
     const navigationItems = [
       { name: "about", item: aboutItem, link: aboutLink },
       { name: "publications", item: publicationsItem, link: publicationsLink },
+      { name: "projects", item: projectsItem, link: projectsLink },
     ];
 
     const setCurrentSection = (currentSection) => {
@@ -29,8 +43,9 @@
 
     const updateCurrentSection = () => {
       const navbarHeight = navbar?.getBoundingClientRect().height ?? 0;
+      const projectsReached = projectsSection.getBoundingClientRect().top <= navbarHeight + 32;
       const publicationsReached = publicationsSection.getBoundingClientRect().top <= navbarHeight + 32;
-      setCurrentSection(publicationsReached ? "publications" : "about");
+      setCurrentSection(projectsReached ? "projects" : publicationsReached ? "publications" : "about");
     };
 
     let updateScheduled = false;
@@ -44,6 +59,7 @@
     };
 
     publicationsLink.addEventListener("click", () => setCurrentSection("publications"));
+    projectsLink.addEventListener("click", () => setCurrentSection("projects"));
     aboutLink.addEventListener("click", () => setCurrentSection("about"));
     window.addEventListener("hashchange", scheduleUpdate);
     window.addEventListener("resize", scheduleUpdate);
