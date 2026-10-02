@@ -4,7 +4,7 @@
 #about-title-loop {
   min-height: 2.5rem;
 }
-#about-title-loop h2 {
+#about-title-loop h1 {
   color: var(--global-text-color);
   margin: 0;
 }
