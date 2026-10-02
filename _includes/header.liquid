@@ -87,8 +87,8 @@
               {% else %}
                 {% assign parent_link = p.permalink | remove: 'index.html' %}
                 <li
-                  {% if p.title == 'publications' %}
-                    id="nav-item-publications"
+                  {% if p.title == 'publications' or p.title == 'projects' %}
+                    id="nav-item-{{ p.title }}"
                   {% endif %}
                   class="nav-item {% if page.url contains parent_link %}active{% endif %}"
                 >
@@ -101,16 +101,18 @@
                   {%- endif %}
                   {% if p.title == 'publications' %}
                     {% assign url = '/#publications' %}
+                  {% elsif p.title == 'projects' %}
+                    {% assign url = '/#projects' %}
                   {% endif %}
                   <a
-                    {% if p.title == 'publications' %}
-                      id="nav-link-publications"
+                    {% if p.title == 'publications' or p.title == 'projects' %}
+                      id="nav-link-{{ p.title }}"
                     {% endif %}
                     class="nav-link"
                     href="{{ url | relative_url }}"
                   >
                     {{- p.title }}
-                    {% if p.title == 'publications' %}
+                    {% if p.title == 'publications' or p.title == 'projects' %}
                       <span class="sr-only nav-current-marker">
                         {%- if page.url contains p.url %}(current){% endif -%}
                       </span>
