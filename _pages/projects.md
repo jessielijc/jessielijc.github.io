@@ -17,6 +17,7 @@ horizontal: true
 </section>
 
 <section class="projects-board projects projects-vertical">
+  <h2 class="sr-only">Selected Projects</h2>
   {% if site.enable_project_categories and page.display_categories %}
     {% for category in page.display_categories %}
       {% assign categorized_projects = site.projects | where: "category", category %}
