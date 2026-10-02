@@ -8,14 +8,14 @@ layout: default
 {% endif %}
 
 <div class="post about-page-shell">
-  <h1 class="sr-only">
+  <p class="sr-only">
     {% if site.title == 'blank' -%}
       {{- site.first_name }}
       {{ site.last_name -}}
     {%- else -%}
       {{- site.title -}}
     {%- endif %}
-  </h1>
+  </p>
 
   <article>
     {% if page.profile %}
