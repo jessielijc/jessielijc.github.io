@@ -48,6 +48,7 @@
   --site-card-h2-size: 2rem;
   --site-card-h3-size: 1.25rem;
   --site-card-body-size: 1.16rem;
+  --site-card-gap: 1.25rem;
 }
 
 :is(
@@ -406,8 +407,8 @@ html[data-theme="dark"]
   border-top-width: 3px;
 }
 
-#about-title-loop h2.about-typing-title,
-#about-title-loop h2.about-title-fallback {
+#about-title-loop h1.about-typing-title,
+#about-title-loop h1.about-title-fallback {
   color: var(--site-title-color);
 }
 
@@ -644,4 +645,104 @@ html[data-theme="dark"]
   body {
     background-image: none;
   }
+}
+
+// One semantic heading scale across About, research output, projects, CV, and life pages.
+:is(.about-page-shell, .content-page-shell, .cv-page-shell) h1:not(.sr-only) {
+  color: var(--site-title-color) !important;
+  font-family: inherit;
+  font-size: var(--site-card-h1-size) !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.035em;
+  line-height: 1.12 !important;
+}
+
+:is(.about-page-shell, .content-page-shell, .cv-page-shell) h2:not(.sr-only, .bibliography) {
+  color: var(--site-title-color) !important;
+  font-family: inherit;
+  font-size: var(--site-card-h2-size) !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.025em;
+  line-height: 1.22 !important;
+}
+
+:is(.about-page-shell, .content-page-shell, .cv-page-shell) h3:not(.sr-only) {
+  color: var(--site-subtitle-color) !important;
+  font-family: inherit;
+  font-size: var(--site-card-h3-size) !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.015em;
+  line-height: 1.4 !important;
+}
+
+.publications ol.bibliography li h3.title {
+  margin-top: 0;
+}
+
+.cv-page-shell .cv > .card > h2.card-title {
+  margin-bottom: 1rem;
+}
+
+.cv-page-shell .cv h3.title {
+  margin-bottom: 0.4rem;
+}
+
+// The same gap separates peer cards, regardless of their page or card type.
+:is(.focus-list, .patent-list.refined, .honors-list.refined, .award-gallery, .highlight-grid, .project-media-grid) {
+  gap: var(--site-card-gap);
+}
+
+.projects-vertical > .container > .row {
+  display: grid;
+  gap: var(--site-card-gap);
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.projects-vertical > .container > .row > .col {
+  margin: 0 !important;
+  padding: 0;
+}
+
+.publications ol.bibliography li {
+  margin-bottom: var(--site-card-gap);
+}
+
+.publications ol.bibliography li:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-card {
+  margin-bottom: var(--site-card-gap);
+}
+
+.timeline-card:last-child {
+  margin-bottom: 0;
+}
+
+.cv-page-shell .cv > .card + .card {
+  margin-top: var(--site-card-gap) !important;
+}
+
+.life-service-page > article > .content-section-card {
+  margin: 0;
+}
+
+.life-service-page > article > .content-hero {
+  margin-bottom: var(--site-card-gap);
+}
+
+.life-service-page > article > .content-section-card + .content-section-card {
+  margin-top: var(--site-card-gap);
+}
+
+.life-service-page > article > .content-section-card:last-child {
+  margin-bottom: 0;
+}
+
+.about-page-shell article > .clearfix > :is(.about-hero, .about-section, .phd-opportunity, .about-publications) {
+  margin: 0 0 var(--site-card-gap);
+}
+
+.about-page-shell article > .clearfix > .about-publications:last-child {
+  margin-bottom: 0;
 }
