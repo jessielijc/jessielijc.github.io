@@ -103,7 +103,7 @@ Remove this Liquid comment wrapper to restore the scene and its script.
     <p class="about-eyebrow">Let's Connect</p>
     <h2>Seeking Fall 2027 PhD Opportunities</h2>
     <p>
-      I am actively seeking PhD opportunities starting in Fall 2027, with research interests in dexterous robotic hands, embodied intelligence, computer vision, and UAV navigation algorithms. I would be delighted to connect with prospective supervisors and collaborators whose work aligns with these areas—please feel free to get in touch.
+      I am seeking PhD opportunities beginning in Fall 2027 and would welcome the chance to connect with prospective supervisors and collaborators. If our work aligns, please feel free to get in touch.
     </p>
   </div>
   <div class="phd-actions">
@@ -120,4 +120,22 @@ Remove this Liquid comment wrapper to restore the scene and its script.
 
 {% include publications_content.liquid %}
 
+</section>
+
+<section id="projects" class="about-publications about-projects">
+  <div class="publication-hero">
+    <p class="about-eyebrow">Selected Course Projects</p>
+    <h2>Projects</h2>
+  </div>
+
+  <div class="projects-board projects projects-vertical">
+    {% assign featured_projects = site.projects | where: "category", "featured" | sort: "importance" %}
+    <div class="container">
+      <div class="row row-cols-1">
+        {% for project in featured_projects %}
+          {% include projects_horizontal.liquid %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
 </section>
