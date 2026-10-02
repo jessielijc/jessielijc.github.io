@@ -525,6 +525,56 @@ html[data-theme="dark"]
   background: transparent;
 }
 
+// Give content pages the same single-board hierarchy as the About research section.
+:is(.projects-page, .publications-page, .life-service-page) > article,
+.cv-page-shell {
+  background: var(--global-card-bg-color);
+  border: 1px solid var(--global-divider-color);
+  border-radius: 1.35rem;
+  box-shadow: var(--site-shadow);
+  margin: 0.8rem 0 2rem;
+  padding: 1.75rem 1.9rem 2rem;
+}
+
+:is(.projects-page, .publications-page, .life-service-page) > article > :is(.project-hero-card, .publication-hero, .content-hero),
+.cv-page-shell > .post-header {
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--global-divider-color);
+  border-radius: 0;
+  box-shadow: none;
+  margin: 0 0 1.45rem;
+  padding: 0 0 1.15rem;
+}
+
+:is(.projects-page, .publications-page) > article > :is(.projects-board, .publication-board) {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
+}
+
+.life-service-page > article > .content-section-card:last-child {
+  margin-bottom: 0;
+}
+
+.cv-page-shell .cv > .card:first-child {
+  margin-top: 0 !important;
+}
+
+.publications ol.bibliography li .periodical {
+  display: inline;
+  color: var(--global-text-color-light);
+  font-size: 0.94rem;
+  line-height: 1.55;
+}
+
+.publications ol.bibliography li .periodical + .periodical::before {
+  content: " · ";
+}
+
 @media (max-width: 768px) {
   :is(.about-page-shell > .post-header, .content-page-shell > .post-header, .content-hero, .project-hero-card, .publication-hero) {
     padding: 1.4rem 1.3rem;
@@ -532,6 +582,34 @@ html[data-theme="dark"]
 
   .publication-board {
     padding: 1.3rem 1.2rem 1.5rem;
+  }
+
+  :is(.projects-page, .publications-page, .life-service-page) > article,
+  .cv-page-shell {
+    padding: 1.35rem 1.2rem 1.6rem;
+  }
+
+  :is(.projects-page, .publications-page, .life-service-page) > article > :is(.project-hero-card, .publication-hero, .content-hero),
+  .cv-page-shell > .post-header {
+    padding: 0 0 1rem;
+  }
+
+  :is(.projects-page, .publications-page) > article > :is(.projects-board, .publication-board) {
+    padding: 0;
+  }
+
+  .award-gallery {
+    grid-auto-flow: row;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem;
+    overflow: visible;
+    padding-bottom: 0;
+  }
+}
+
+@media (max-width: 440px) {
+  .award-gallery {
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 
