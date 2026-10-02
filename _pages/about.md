@@ -144,15 +144,12 @@ Remove this Liquid comment wrapper to restore the scene and its script.
         <p class="about-eyebrow">Around the World</p>
         <h3 id="home-visitor-map-title">Visitor Map</h3>
       </div>
-      <span class="visitor-live-label">Live</span>
+      <a class="visitor-map-button" href="https://info.flagcounter.com/HNVu" target="_blank" rel="external noopener">View visit statistics <span aria-hidden="true">→</span></a>
     </div>
-    <p>See where visitors to this page come from.</p>
+    <p>See where visitors to this page come from. Open the live report for visit counts, countries, and recent activity.</p>
     <div class="visitor-map-display">
       {% include visitor_map.liquid %}
     </div>
-    <div class="visitor-map-actions">
-      <p>Curious about the numbers and countries?</p>
-      <a class="visitor-map-button" href="{{ '/visitors/' | relative_url }}">Explore visitor insights <span aria-hidden="true">→</span></a>
-    </div>
+    <p class="visitor-map-note">The counter starts when this map is published; earlier visits and visits to other pages are not included.</p>
   </section>
 </section>
