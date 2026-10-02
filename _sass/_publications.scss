@@ -718,10 +718,36 @@
       margin-bottom: 1rem;
       padding: 1.15rem 1.25rem;
 
+      > .row {
+        align-items: center;
+        display: grid;
+        gap: 1.25rem;
+        grid-template-columns: minmax(230px, 30%) minmax(0, 1fr);
+        margin: 0;
+
+        > .abbr {
+          max-width: 300px;
+          min-width: 0;
+          padding: 0;
+          width: 100%;
+        }
+
+        > .col-sm-8 {
+          max-width: none;
+          min-width: 0;
+          padding: 0;
+          width: auto;
+        }
+      }
+
       .preview {
+        aspect-ratio: 16 / 10;
+        background: #fff;
+        border: 1px solid var(--global-divider-color);
         border-radius: 0.8rem;
         display: block;
         height: auto;
+        object-fit: contain;
         width: 100%;
       }
 
@@ -882,4 +908,10 @@
 .citation,
 .citation-number {
   color: var(--global-theme-color);
+}
+
+@media (max-width: 767px) {
+  .publications ol.bibliography li > .row {
+    grid-template-columns: minmax(0, 1fr);
+  }
 }
