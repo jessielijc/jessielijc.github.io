@@ -5,12 +5,13 @@ description: Fully autonomous mobile manipulation with gesture control, voice in
 img: https://github.com/user-attachments/assets/5477dbe0-95bc-4b8a-bb79-ef781a2c6e75
 importance: 1
 category: featured
+hide_title: true
 github: https://github.com/jessielijc/ROS2-Autonomous-Robot-Project
 ---
 
 <div class="project-hero-card">
   <p class="about-eyebrow">Autonomous Mobile Manipulation</p>
-  <h2>ROS 2 Omni-Bot: Gesture-Controlled, Voice-Interactive, and SLAM-enabled Mobile Arm</h2>
+  <h1>ROS 2 Omni-Bot: Gesture-Controlled, Voice-Interactive, and SLAM-enabled Mobile Arm</h1>
   <p>
     An end-to-end autonomous mobile manipulation system built on <strong>ROS 2 Humble</strong>, integrating a differential-drive base, a custom 3-DOF robotic arm, gesture control, offline voice interaction, visual target searching, grasping, and Nav2-based autonomous navigation.
   </p>

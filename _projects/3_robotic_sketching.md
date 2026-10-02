@@ -5,11 +5,12 @@ description: A closed-loop robotic drawing system combining computer vision, ana
 img: assets/img/robotic-sketching.png
 importance: 3
 category: featured
+hide_title: true
 ---
 
 <section class="project-hero-card">
   <p class="about-eyebrow">Robotic Manipulation · Computer Vision</p>
-  <h2>6-DOF Robotic Sketching & 3D Projection</h2>
+  <h1>6-DOF Robotic Sketching & 3D Projection</h1>
   <p>
     A complete closed-loop pipeline for high-precision robotic sketching, connecting digital image processing with physical execution on both planar and non-planar surfaces.
   </p>

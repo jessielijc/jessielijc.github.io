@@ -11,7 +11,7 @@ hide_title: true
 
 <section class="project-hero-card">
   <p class="about-eyebrow">Wearable Sensing · Embedded Systems · Signal Processing</p>
-  <h2>BEAT: Posture-Independent Wrist Blood Pressure Monitoring</h2>
+  <h1>BEAT: Posture-Independent Wrist Blood Pressure Monitoring</h1>
   <p>
     A wrist-worn blood pressure prototype that combines oscillometric sensing with barometric and inertial tracking to compensate for the hydrostatic error introduced when the wrist moves above or below heart level.
   </p>
