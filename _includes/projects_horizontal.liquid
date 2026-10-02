@@ -12,7 +12,7 @@
       {% if project.img %}
         <div class="project-thumb-col">
           <a class="project-card-link" href="{{ project_url }}" {{ project_link_attributes }}>
-            {% include figure.liquid loading="eager" path=project.img sizes="(min-width: 768px) 280px, 100vw" alt="project thumbnail" class="card-img" %}
+            {% include figure.liquid loading="eager" path=project.img sizes="(min-width: 768px) 280px, 100vw" alt=project.title caption=project.image_caption class="card-img" %}
           </a>
         </div>
       {% endif %}
