@@ -746,3 +746,125 @@ html[data-theme="dark"]
 .about-page-shell article > .clearfix > .about-publications:last-child {
   margin-bottom: 0;
 }
+
+// Each featured project reads as one publication-style board with a page title,
+// section titles, and smaller technical headings inside it.
+.project-detail-page > article {
+  background: var(--global-card-bg-color);
+  border: 1px solid var(--global-divider-color);
+  border-radius: 1.35rem;
+  box-shadow: var(--site-shadow);
+  display: grid;
+  gap: var(--site-card-gap);
+  margin: 0.8rem 0 2rem;
+  padding: 1.75rem 1.9rem 2rem;
+}
+
+.project-detail-page > article > :is(.project-hero-card, .project-detail-section, .about-section) {
+  margin: 0;
+}
+
+.project-detail-page > article > .project-hero-card {
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--global-divider-color);
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0 0 1.35rem;
+}
+
+.project-detail-page > article > :is(.project-detail-section, .about-section) {
+  background: var(--site-surface-raised);
+  border: 1px solid var(--global-divider-color);
+  border-radius: 1.1rem;
+  box-shadow: 0 0.45rem 1.35rem rgba(var(--site-accent-rgb), 0.1);
+  padding: 1.5rem 1.6rem;
+}
+
+.project-detail-page .focus-item h3 {
+  margin: 0 0 0.4rem;
+}
+
+.project-detail-page .project-showcase {
+  background: var(--site-surface-soft);
+  margin: 0;
+  padding: 0.8rem;
+}
+
+.project-detail-page .project-showcase img {
+  border-radius: 0.7rem;
+  max-height: 680px;
+  object-fit: contain;
+}
+
+.project-detail-page .project-showcase--diagram img {
+  max-height: none;
+}
+
+.project-detail-page .project-media-grid figure {
+  background: var(--site-surface-soft);
+  border: 1px solid var(--global-divider-color);
+  border-radius: 0.95rem;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0.7rem;
+}
+
+.project-detail-page .project-media-grid img {
+  aspect-ratio: 16 / 10;
+  height: auto;
+  object-fit: contain;
+}
+
+.project-detail-page :is(.project-showcase, .project-media-grid) figcaption {
+  color: var(--global-text-color-light);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0.7rem 0 0;
+  max-width: none;
+  padding: 0 0.2rem 0.1rem;
+  text-align: left;
+}
+
+.projects-vertical .project-thumb-col {
+  aspect-ratio: auto;
+  border: 0;
+  border-radius: 0;
+  overflow: visible;
+}
+
+.projects-vertical .project-thumb-col :is(.project-card-link, figure) {
+  height: auto;
+}
+
+.projects-vertical .project-thumb-col picture {
+  aspect-ratio: 16 / 10;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 0.8rem;
+  height: auto;
+  overflow: hidden;
+}
+
+.projects-vertical .project-thumb-col .card-img {
+  aspect-ratio: 16 / 10;
+  height: auto;
+}
+
+.projects-vertical .project-thumb-col figcaption {
+  color: var(--global-text-color-light);
+  font-size: 0.79rem;
+  line-height: 1.35;
+  margin-top: 0.45rem;
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .project-detail-page > article {
+    padding: 1.35rem 1.2rem 1.6rem;
+  }
+
+  .project-detail-page > article > :is(.project-detail-section, .about-section) {
+    padding: 1.25rem 1.1rem;
+  }
+}
