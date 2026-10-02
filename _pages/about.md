@@ -137,4 +137,22 @@ Remove this Liquid comment wrapper to restore the scene and its script.
       </div>
     </div>
   </div>
+
+  <section class="visitor-map-section" aria-labelledby="home-visitor-map-title">
+    <div class="visitor-section-heading">
+      <div>
+        <p class="about-eyebrow">Around the World</p>
+        <h3 id="home-visitor-map-title">Visitor Map</h3>
+      </div>
+      <span class="visitor-live-label">Live</span>
+    </div>
+    <p>See where visitors to this page come from.</p>
+    <div class="visitor-map-display">
+      {% include visitor_map.liquid %}
+    </div>
+    <div class="visitor-map-actions">
+      <p>Curious about the numbers and countries?</p>
+      <a class="visitor-map-button" href="{{ '/visitors/' | relative_url }}">Explore visitor insights <span aria-hidden="true">→</span></a>
+    </div>
+  </section>
 </section>
