@@ -146,10 +146,14 @@ Remove this Liquid comment wrapper to restore the scene and its script.
       </div>
       <a class="visitor-map-button" href="https://info.flagcounter.com/HNVu" target="_blank" rel="external noopener">View visit statistics <span aria-hidden="true">→</span></a>
     </div>
-    <p>See where visitors to this page come from. Open the live report for visit counts, countries, and recent activity.</p>
+    <p>Explore the world map below, then open the live report for visit counts and visitors' countries.</p>
     <div class="visitor-map-display">
-      {% include visitor_map.liquid %}
+      <img class="visitor-dotted-map" src="{{ '/assets/img/visitor-dotted-map.svg' | relative_url }}" alt="Decorative dotted world map" width="1290" height="540">
+      <div class="visitor-map-live">
+        <span>Live page views</span>
+        {% include visitor_map.liquid %}
+      </div>
     </div>
-    <p class="visitor-map-note">The counter starts when this map is published; earlier visits and visits to other pages are not included.</p>
+    <p class="visitor-map-note">Counting began when this visitor section was published; earlier visits and visits to other pages are not included.</p>
   </section>
 </section>
