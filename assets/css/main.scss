@@ -902,13 +902,40 @@ html[data-theme="dark"]
 }
 
 .visitor-map-display {
-  background: radial-gradient(circle, rgba(var(--site-accent-rgb), 0.2) 1px, transparent 1.5px) 0 0 / 18px 18px,
-    var(--site-surface-soft);
+  background: var(--site-surface-soft);
   border: 1px solid var(--global-divider-color);
   border-radius: 0.9rem;
   margin-top: 1.15rem;
-  padding: 1.1rem;
+  overflow: hidden;
+  padding: 1.1rem 1.25rem 0.85rem;
   text-align: center;
+}
+
+.visitor-dotted-map {
+  display: block;
+  height: auto;
+  margin: 0 auto;
+  max-width: 100%;
+  opacity: 0.82;
+  width: 100%;
+}
+
+html[data-theme="dark"] .visitor-dotted-map {
+  filter: brightness(1.4) saturate(0.85);
+  opacity: 0.94;
+}
+
+.visitor-map-live {
+  align-items: center;
+  border-top: 1px solid var(--global-divider-color);
+  color: var(--global-text-color-light);
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+  gap: 0.65rem;
+  justify-content: center;
+  margin-top: 0.85rem;
+  padding-top: 0.85rem;
 }
 
 .visitor-map-display a {
@@ -953,6 +980,6 @@ html[data-theme="dark"]
   }
 
   .visitor-map-display {
-    padding: 0.5rem;
+    padding: 0.7rem 0.7rem 0.8rem;
   }
 }
