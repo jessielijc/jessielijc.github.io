@@ -657,17 +657,11 @@ html[data-theme="dark"]
   line-height: 1.12 !important;
 }
 
-// The animated About greeting keeps its original compact scale within the hero.
+// Match the About greeting to the section heading scale at every breakpoint.
 #about-title-loop :is(h1.about-typing-title, h1.about-title-fallback) {
-  font-size: 1.65rem !important;
+  font-size: var(--site-card-h2-size) !important;
   letter-spacing: -0.025em;
   line-height: 1.25 !important;
-}
-
-@media (max-width: 575px) {
-  #about-title-loop :is(h1.about-typing-title, h1.about-title-fallback) {
-    font-size: clamp(1.25rem, 5.5vw, 1.55rem) !important;
-  }
 }
 
 :is(.about-page-shell, .content-page-shell, .cv-page-shell) h2:not(.sr-only, .bibliography) {
