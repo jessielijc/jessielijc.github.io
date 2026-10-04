@@ -43,6 +43,113 @@
   .cv b {
     font-weight: 700;
   }
+
+  .cv-header-row {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.85rem 1.5rem;
+    justify-content: space-between;
+  }
+
+  .cv-header-row .post-title {
+    margin-bottom: 0;
+  }
+
+  .cv-download-link {
+    align-items: center;
+    border: 1px solid var(--global-theme-color);
+    border-radius: 999px;
+    color: var(--global-theme-color);
+    display: inline-flex;
+    font-size: 0.95rem;
+    font-weight: 700;
+    gap: 0.55rem;
+    padding: 0.55rem 1rem;
+    text-decoration: none;
+    transition:
+      background-color 0.2s ease,
+      color 0.2s ease;
+
+    &:hover,
+    &:focus-visible {
+      background: var(--global-theme-color);
+      color: var(--global-card-bg-color);
+      text-decoration: none;
+    }
+  }
+
+  .cv-section .cv-entry + .cv-entry {
+    border-top: 1px solid var(--global-divider-color);
+    margin-top: 1.15rem;
+    padding-top: 1.15rem;
+  }
+
+  .cv-entry-heading {
+    align-items: baseline;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.2rem 1rem;
+    justify-content: space-between;
+  }
+
+  .cv-entry-heading h3,
+  .cv-entry > h3 {
+    margin: 0 0 0.3rem;
+  }
+
+  .cv-entry-heading span,
+  .cv-entry-meta {
+    color: var(--global-text-color-light);
+  }
+
+  .cv-entry-heading span {
+    flex-shrink: 0;
+    font-size: 0.95rem;
+    font-weight: 600;
+  }
+
+  .cv-entry p {
+    margin-bottom: 0.35rem;
+  }
+
+  .cv-entry ul {
+    margin: 0.45rem 0 0;
+    padding-left: 1.35rem;
+  }
+
+  .cv-group-label {
+    color: var(--global-theme-color);
+    font-size: 0.9rem !important;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    margin: 1.25rem 0 0.55rem;
+    text-transform: uppercase;
+  }
+
+  .cv-group-label + .cv-entry {
+    border-top: 0;
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  .cv-facts {
+    columns: 2;
+    column-gap: 2rem;
+    margin: 0;
+    padding-left: 1.3rem;
+  }
+
+  .cv-facts li {
+    break-inside: avoid;
+    margin-bottom: 0.35rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .cv-page-shell .cv-facts {
+    columns: 1;
+  }
 }
 
 div.container-link-button {
