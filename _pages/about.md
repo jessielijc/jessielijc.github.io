@@ -138,6 +138,8 @@ Remove this Liquid comment wrapper to restore the scene and its script.
     </div>
   </div>
 
+{% comment %}
+Visitor map and counter paused. Remove this Liquid comment wrapper to restore them.
   <section class="visitor-map-section" aria-labelledby="home-visitor-map-title">
     <div class="visitor-section-heading">
       <div>
@@ -156,4 +158,5 @@ Remove this Liquid comment wrapper to restore the scene and its script.
     </div>
     <p class="visitor-map-note">Counting began when this visitor section was published; earlier visits and visits to other pages are not included.</p>
   </section>
+  {% endcomment %}
 </section>
