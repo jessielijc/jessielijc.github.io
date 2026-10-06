@@ -432,6 +432,25 @@ html[data-theme="dark"]
   grid-row: 1;
 }
 
+.patent-card.refined .patent-type {
+  font-size: 0.78rem;
+  padding: 0.24rem 0.66rem;
+}
+
+.patent-card.refined .patent-status {
+  font-size: 0.94rem;
+  padding: 0.34rem 0.82rem;
+}
+
+.patent-card.refined .patent-grid div {
+  padding: 0.36rem 0.65rem;
+}
+
+.patent-card.refined .patent-grid span:not(.label) {
+  font-size: 0.96rem;
+  line-height: 1.25;
+}
+
 .focus-item {
   border-top-color: var(--site-decor-color);
   border-top-width: 3px;
