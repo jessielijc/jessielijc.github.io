@@ -744,6 +744,16 @@ html[data-theme="dark"]
   width: 100%;
 }
 
+.circular-gallery-ring.is-snapping {
+  transition: transform 550ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .circular-gallery-ring.is-snapping {
+    transition: none;
+  }
+}
+
 .circular-gallery-card {
   backface-visibility: hidden;
   background: var(--site-surface-raised);
