@@ -568,40 +568,130 @@ html[data-theme="dark"]
   margin-bottom: 0;
 }
 
-.life-service-overview {
+.life-service-hero {
+  align-items: end;
   display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  gap: var(--site-card-gap);
+  gap: 1.5rem;
+  grid-template-columns: minmax(0, 1fr) minmax(13rem, 17rem);
 }
 
-.life-service-overview > .content-section-card {
+.life-service-hero > div > p:not(.page-eyebrow) {
+  color: var(--global-text-color-light);
+  font-size: 1.05rem;
+  line-height: 1.65;
   margin: 0;
+  max-width: 42rem;
+}
+
+.life-service-quick-links {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.life-service-quick-links a {
+  align-items: center;
+  background: var(--site-surface-soft);
+  border: 1px solid var(--global-divider-color);
+  border-radius: 0.8rem;
+  color: var(--site-subtitle-color);
+  display: grid;
+  font-size: 0.9rem;
+  font-weight: 700;
+  gap: 0.7rem;
+  grid-template-columns: auto 1fr auto;
+  padding: 0.65rem 0.8rem;
+  text-decoration: none;
+  transition: background-color 180ms ease, border-color 180ms ease, transform 180ms ease;
+}
+
+.life-service-quick-links a span:first-child {
+  color: var(--global-theme-color);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+}
+
+.life-service-quick-links a:hover,
+.life-service-quick-links a:focus-visible {
+  background: var(--site-surface-raised);
+  border-color: var(--global-theme-color);
+  color: var(--global-theme-color);
+  transform: translateY(-2px);
+}
+
+#volunteering-title,
+#photo-journal-title {
+  scroll-margin-top: 7rem;
 }
 
 .volunteer-roles {
   display: grid;
-  gap: 0.85rem;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
 }
 
-.volunteer-roles > div {
+.volunteer-role-featured,
+.volunteer-role-supporting > div {
   background: var(--site-surface-soft);
   border: 1px solid var(--global-divider-color);
   border-radius: 0.9rem;
-  padding: 1rem 1.05rem;
+  padding: 1.25rem 1.3rem;
+  transition: border-color 180ms ease, transform 180ms ease;
+}
+
+.volunteer-role-featured:hover,
+.volunteer-role-supporting > div:hover {
+  border-color: var(--global-theme-color);
+  transform: translateY(-2px);
+}
+
+.volunteer-role-featured {
+  background: linear-gradient(140deg, rgba(var(--site-accent-rgb), 0.11), transparent 65%), var(--site-surface-soft);
+  display: flex;
+  flex-direction: column;
+}
+
+.volunteer-role-supporting {
+  display: grid;
+  gap: 1rem;
+  grid-template-rows: 1fr 1fr;
 }
 
 .volunteer-roles h3 {
   color: var(--site-subtitle-color);
-  font-size: 1.05rem;
   line-height: 1.35;
   margin: 0 0 0.55rem;
 }
 
 .volunteer-roles p {
-  font-size: 0.98rem;
   line-height: 1.55;
   margin: 0;
+}
+
+.volunteer-stats {
+  display: grid;
+  gap: 0.65rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: auto;
+  padding-top: 1.5rem;
+}
+
+.volunteer-stats > div {
+  border-top: 1px solid var(--global-divider-color);
+  display: grid;
+  gap: 0.15rem;
+  padding-top: 0.6rem;
+}
+
+.volunteer-stats strong {
+  color: var(--global-theme-color);
+  font-size: 1.45rem;
+  line-height: 1.2;
+}
+
+.volunteer-stats span {
+  color: var(--global-text-color-light);
+  font-size: 0.82rem;
+  line-height: 1.35;
 }
 
 .volunteer-gallery-intro {
@@ -740,27 +830,68 @@ html[data-theme="dark"]
   display: flex;
   justify-content: space-between;
   gap: 1rem;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
 }
 
 .life-service-gallery-intro h2 {
-  margin-bottom: 0;
+  margin-bottom: 0.55rem;
 }
 
-.life-service-gallery-intro > p {
+.life-service-gallery-intro p:not(.page-eyebrow) {
+  color: var(--global-text-color);
+  line-height: 1.6;
+  margin: 0;
+  max-width: 47rem;
+}
+
+.life-service-photo-count {
+  background: var(--site-surface-soft);
+  border: 1px solid var(--global-divider-color);
+  border-radius: 999px;
+  color: var(--site-subtitle-color);
+  flex: 0 0 auto;
+  font-size: 0.83rem;
+  font-weight: 700;
+  padding: 0.4rem 0.8rem;
+}
+
+.life-service-gallery-heading {
+  align-items: baseline;
+  border-top: 1px solid var(--global-divider-color);
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  margin-bottom: 1.1rem;
+  padding-top: 1.2rem;
+}
+
+.life-service-gallery-heading h3 {
+  color: var(--site-subtitle-color);
+  margin: 0;
+}
+
+.life-service-gallery-heading p {
   color: var(--global-text-color-light);
   font-size: 0.95rem;
   margin: 0;
 }
 
 .photo-carousel {
-  margin: 0 auto;
-  max-width: 25rem;
+  margin: 0;
+  width: 100%;
   user-select: none;
+}
+
+.photo-carousel:focus-visible {
+  outline: 3px solid var(--global-theme-color);
+  outline-offset: 5px;
 }
 
 .photo-carousel-viewport,
 .photo-carousel-fallback {
+  background: var(--site-surface-soft);
+  border: 1px solid var(--global-divider-color);
+  border-radius: 1.2rem;
   overflow: hidden;
   width: 100%;
 }
@@ -771,47 +902,66 @@ html[data-theme="dark"]
 }
 
 .photo-carousel-slide {
-  aspect-ratio: 1;
-  border-radius: 1.2rem;
-  box-shadow: var(--site-shadow);
   flex: 0 0 100%;
+  height: clamp(30rem, 54vw, 42rem);
   overflow: hidden;
+  position: relative;
+}
+
+.photo-carousel-slide .photo-carousel-backdrop {
+  filter: blur(28px) brightness(0.62) saturate(0.85);
+  inset: 0;
+  object-fit: cover;
+  opacity: 0.9;
+  position: absolute;
+  transform: scale(1.09);
+}
+
+.photo-carousel-slide .photo-carousel-image {
+  filter: drop-shadow(0 0.8rem 1.5rem rgba(0, 0, 0, 0.16));
+  object-fit: contain;
+  padding: clamp(0.75rem, 2vw, 1.5rem);
+  position: relative;
 }
 
 .photo-carousel-slide img,
 .photo-carousel-fallback img {
   display: block;
   height: 100%;
-  object-fit: cover;
   width: 100%;
 }
 
 .photo-carousel-fallback {
-  aspect-ratio: 1;
-  border-radius: 1.2rem;
-  margin: 0 auto;
-  max-width: 25rem;
+  height: clamp(30rem, 54vw, 42rem);
+}
+
+.photo-carousel-fallback img {
+  object-fit: contain;
+  padding: 1rem;
+}
+
+.photo-carousel-navigation {
+  margin-top: 0.9rem;
 }
 
 .photo-carousel-thumbnails {
   align-items: center;
   display: flex;
-  gap: 0.65rem;
-  margin-top: 0.8rem;
+  gap: 0.75rem;
   overflow-x: auto;
   overscroll-behavior-inline: contain;
-  padding: 0.35rem;
+  padding: 0.35rem 0.2rem 0.5rem;
   scrollbar-width: thin;
 }
 
 .photo-carousel-thumbnail {
-  aspect-ratio: 1;
+  aspect-ratio: 4 / 3;
   background: transparent;
   border: 2px solid transparent;
   border-radius: 0.65rem;
   cursor: pointer;
-  flex: 0 0 3.3rem;
-  opacity: 0.58;
+  flex: 0 0 5rem;
+  opacity: 0.62;
   overflow: hidden;
   padding: 0;
   transition: border-color 180ms ease, opacity 180ms ease, transform 180ms ease;
@@ -836,13 +986,107 @@ html[data-theme="dark"]
   outline-offset: 3px;
 }
 
+.photo-carousel-toolbar {
+  align-items: center;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  margin-top: 0.7rem;
+}
+
+.photo-carousel-counter {
+  color: var(--site-subtitle-color);
+  font-size: 0.95rem;
+  font-variant-numeric: tabular-nums;
+  font-weight: 800;
+}
+
+.photo-carousel-counter span {
+  color: var(--global-text-color-light);
+  font-weight: 500;
+}
+
+.photo-carousel-progress {
+  background: var(--site-surface-soft);
+  border-radius: 999px;
+  height: 3px;
+  overflow: hidden;
+}
+
+.photo-carousel-progress span {
+  background: var(--global-theme-color);
+  border-radius: inherit;
+  display: block;
+  height: 100%;
+  transition: width 350ms ease;
+}
+
+.photo-carousel-controls {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.photo-carousel-controls button {
+  background: var(--site-surface-soft);
+  border: 1px solid var(--global-divider-color);
+  border-radius: 999px;
+  color: var(--site-subtitle-color);
+  cursor: pointer;
+  font-size: 1.2rem;
+  height: 2.5rem;
+  line-height: 1;
+  transition: background-color 180ms ease, border-color 180ms ease, transform 180ms ease;
+  width: 2.5rem;
+}
+
+.photo-carousel-controls button:hover,
+.photo-carousel-controls button:focus-visible {
+  background: var(--site-surface-raised);
+  border-color: var(--global-theme-color);
+  color: var(--global-theme-color);
+  transform: translateY(-2px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .life-service-quick-links a,
+  .volunteer-role-featured,
+  .volunteer-role-supporting > div,
+  .photo-carousel-thumbnail,
+  .photo-carousel-progress span,
+  .photo-carousel-controls button {
+    transition: none;
+  }
+}
+
 @media (max-width: 900px) {
+  .life-service-hero {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .life-service-quick-links {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .volunteer-roles {
     grid-template-columns: minmax(0, 1fr);
+  }
+
+  .volunteer-role-supporting {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: auto;
   }
 }
 
 @media (max-width: 640px) {
+  .life-service-quick-links,
+  .volunteer-role-supporting {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .volunteer-stats {
+    padding-top: 1rem;
+  }
+
   .volunteer-gallery-intro {
     align-items: start;
     flex-direction: column;
@@ -873,7 +1117,26 @@ html[data-theme="dark"]
   .life-service-gallery-intro {
     align-items: start;
     flex-direction: column;
-    gap: 0.35rem;
+    gap: 0.8rem;
+  }
+
+  .life-service-gallery-heading {
+    align-items: start;
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+
+  .photo-carousel-slide,
+  .photo-carousel-fallback {
+    height: clamp(25rem, 100vw, 32rem);
+  }
+
+  .photo-carousel-thumbnail {
+    flex-basis: 4rem;
+  }
+
+  .photo-carousel-toolbar {
+    gap: 0.6rem;
   }
 }
 
