@@ -951,7 +951,11 @@ html[data-theme="dark"]
   overflow-x: auto;
   overscroll-behavior-inline: contain;
   padding: 0.35rem 0.2rem 0.5rem;
-  scrollbar-width: thin;
+  scrollbar-width: none;
+}
+
+.photo-carousel-thumbnails::-webkit-scrollbar {
+  display: none;
 }
 
 .photo-carousel-thumbnail {
