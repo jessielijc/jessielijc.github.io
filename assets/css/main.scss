@@ -409,6 +409,29 @@ html[data-theme="dark"]
   box-shadow: var(--site-shadow-hover);
 }
 
+.patent-card-link {
+  color: inherit;
+  display: block;
+  text-decoration: none;
+}
+
+.patent-card-link:visited,
+.patent-card-link:hover,
+.patent-card-link:focus {
+  color: inherit;
+  text-decoration: none;
+}
+
+.patent-card-link:focus-visible {
+  border-radius: 1rem;
+  outline: 3px solid var(--global-theme-color);
+  outline-offset: 3px;
+}
+
+.patent-card-link .patent-card.refined.patent-card--illustrated .patent-visual {
+  grid-row: 1;
+}
+
 .focus-item {
   border-top-color: var(--site-decor-color);
   border-top-width: 3px;
