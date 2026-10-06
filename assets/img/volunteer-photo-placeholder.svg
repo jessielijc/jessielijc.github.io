@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 420" fill="none">
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="320" y2="420" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#d6c2df"/>
+      <stop offset="0.52" stop-color="#f1d1dd"/>
+      <stop offset="1" stop-color="#b9c4df"/>
+    </linearGradient>
+    <linearGradient id="tile" x1="78" y1="116" x2="242" y2="306" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fff" stop-opacity=".78"/>
+      <stop offset="1" stop-color="#fff" stop-opacity=".36"/>
+    </linearGradient>
+  </defs>
+  <rect width="320" height="420" rx="24" fill="url(#background)"/>
+  <circle cx="30" cy="45" r="110" fill="#fff" opacity=".19"/>
+  <circle cx="307" cy="350" r="118" fill="#73557a" opacity=".09"/>
+  <path d="M12 335c73-65 131-50 194-8 44 29 77 23 112-4" stroke="#fff" stroke-opacity=".4" stroke-width="3"/>
+  <rect x="61" y="108" width="198" height="198" rx="35" fill="url(#tile)" stroke="#fff" stroke-opacity=".72" stroke-width="2"/>
+  <circle cx="160" cy="207" r="67" fill="#fff" opacity=".62"/>
+  <path d="M145 169h30v23h23v30h-23v23h-30v-23h-23v-30h23v-23Z" fill="#71557A"/>
+  <circle cx="74" cy="67" r="5" fill="#fff" opacity=".7"/>
+  <circle cx="251" cy="65" r="3" fill="#fff" opacity=".6"/>
+  <circle cx="277" cy="119" r="5" fill="#fff" opacity=".7"/>
+</svg>
