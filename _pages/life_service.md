@@ -35,11 +35,11 @@ nav_order: 9
     </div>
     <div class="volunteer-gallery-intro">
       <h3>Volunteering in Action</h3>
-      <p>Photo placeholders · Activity photos coming soon.</p>
+      <p>Moments from first-aid training and community outreach.</p>
     </div>
     <div id="volunteer-photo-gallery">
       <div class="volunteer-gallery-fallback">
-        <img src="{{ '/assets/img/volunteer-photo-placeholder.svg' | relative_url }}" alt="Placeholder illustration for volunteering photos" loading="lazy">
+        <img src="{{ '/assets/img/volunteering-01.jpg' | relative_url }}" alt="A Red Cross volunteer assists a student during a first-aid exercise" loading="lazy">
       </div>
     </div>
   </section>
