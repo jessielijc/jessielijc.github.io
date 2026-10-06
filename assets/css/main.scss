@@ -1128,7 +1128,16 @@ html[data-theme="dark"]
 
   .photo-carousel-slide,
   .photo-carousel-fallback {
-    height: clamp(25rem, 100vw, 32rem);
+    height: 22rem;
+  }
+
+  .life-service-gallery #life-photo-carousel {
+    margin-inline: -0.7rem;
+  }
+
+  .photo-carousel-slide .photo-carousel-image,
+  .photo-carousel-fallback img {
+    padding: 0.35rem;
   }
 
   .photo-carousel-thumbnail {
