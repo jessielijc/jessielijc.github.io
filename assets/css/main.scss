@@ -587,6 +587,10 @@ html[data-theme="dark"]
   padding: 0.72rem 2.15rem;
 }
 
+.award-disclosure summary.flow-button :is(.show-label, .hide-label) {
+  color: inherit;
+}
+
 .award-disclosure summary.flow-button:hover,
 .award-disclosure summary.flow-button:focus-visible {
   background-color: var(--global-theme-color);
