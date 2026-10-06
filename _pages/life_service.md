@@ -35,11 +35,11 @@ nav_order: 9
       <p class="page-eyebrow">Photography</p>
       <h2 id="photo-journal-title">Through My Lens</h2>
     </div>
-    <p>Preview images · My photos are coming soon.</p>
+    <p>Moments from my travels.</p>
   </div>
   <div id="life-photo-carousel">
     <div class="photo-carousel-fallback">
-      <img src="{{ '/assets/img/1.jpg' | relative_url }}" alt="Preview landscape of a winding mountain road" loading="lazy">
+      <img src="{{ '/assets/img/photography-01.jpg' | relative_url }}" alt="Riverfront skyline and boats" loading="lazy">
     </div>
   </div>
 </section>
