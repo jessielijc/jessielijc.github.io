@@ -51,6 +51,8 @@ const volunteerPhotos: CircularGalleryItem[] = [
 ];
 
 const photos: CarouselPhoto[] = [
+  { src: "/assets/img/photography-08.jpg", alt: "People on a beach at sunset" },
+  { src: "/assets/img/photography-09.jpg", alt: "Sunlight on the sea near a wooded island" },
   { src: "/assets/img/photography-01.jpg", alt: "Riverfront skyline and boats" },
   { src: "/assets/img/photography-02.jpg", alt: "A street lined with colorful shop signs" },
   { src: "/assets/img/photography-03.jpg", alt: "White heritage building with colorful shutters" },
@@ -58,8 +60,6 @@ const photos: CarouselPhoto[] = [
   { src: "/assets/img/photography-05.jpg", alt: "Waterfront skyline at night" },
   { src: "/assets/img/photography-06.jpg", alt: "Daytime view across a city riverfront" },
   { src: "/assets/img/photography-07.jpg", alt: "A warmly lit street at dusk" },
-  { src: "/assets/img/photography-08.jpg", alt: "People on a beach at sunset" },
-  { src: "/assets/img/photography-09.jpg", alt: "Sunlight on the sea near a wooded island" },
   { src: "/assets/img/photography-10.jpg", alt: "A tram crossing a busy street" },
   { src: "/assets/img/photography-11.jpg", alt: "Decorative castle turret against the sky" },
   { src: "/assets/img/photography-12.jpg", alt: "A city street beneath a blue high-rise" },
