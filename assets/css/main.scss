@@ -630,6 +630,8 @@ html[data-theme="dark"]
   --circular-gallery-radius: 17rem;
   --circular-gallery-card-width: 13.5rem;
   --circular-gallery-card-height: 17rem;
+  --circular-gallery-offset-x: -6.75rem;
+  --circular-gallery-offset-y: -8.5rem;
 
   margin: 1rem auto 0;
   max-width: 62rem;
@@ -660,8 +662,8 @@ html[data-theme="dark"]
   box-shadow: var(--site-shadow);
   height: var(--circular-gallery-card-height);
   left: 50%;
-  margin-left: calc(var(--circular-gallery-card-width) / -2);
-  margin-top: calc(var(--circular-gallery-card-height) / -2);
+  margin-left: var(--circular-gallery-offset-x);
+  margin-top: var(--circular-gallery-offset-y);
   overflow: hidden;
   position: absolute;
   top: 50%;
@@ -868,6 +870,8 @@ html[data-theme="dark"]
     --circular-gallery-radius: 9rem;
     --circular-gallery-card-width: 9.5rem;
     --circular-gallery-card-height: 12rem;
+    --circular-gallery-offset-x: -4.75rem;
+    --circular-gallery-offset-y: -6rem;
   }
 
   .circular-gallery-stage {
