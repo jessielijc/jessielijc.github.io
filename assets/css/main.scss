@@ -135,6 +135,13 @@
   padding-block: 0.75rem;
 }
 
+@media (min-width: 769px) and (max-width: 899px) {
+  .projects-vertical .card {
+    height: auto !important;
+    min-height: 330px;
+  }
+}
+
 .patent-card.refined,
 .patent-card.refined.patent-card--illustrated,
 .honor-card.refined,
