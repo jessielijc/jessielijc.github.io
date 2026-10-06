@@ -451,6 +451,15 @@ html[data-theme="dark"]
   line-height: 1.25;
 }
 
+@media (max-width: 440px) {
+  .patent-card.refined .patent-status {
+    font-size: 0.82rem;
+    letter-spacing: 0.01em;
+    padding: 0.28rem 0.45rem;
+    white-space: nowrap;
+  }
+}
+
 .focus-item {
   border-top-color: var(--site-decor-color);
   border-top-width: 3px;
