@@ -12,6 +12,7 @@ type CircularGalleryProps = {
 };
 
 export function CircularGallery({ items }: CircularGalleryProps) {
+  const galleryRef = useRef<HTMLDivElement>(null);
   const stageRef = useRef<HTMLDivElement>(null);
   const ringRef = useRef<HTMLDivElement>(null);
   const rotationRef = useRef(0);
@@ -22,8 +23,39 @@ export function CircularGallery({ items }: CircularGalleryProps) {
 
   const rotateBy = useCallback((degrees: number) => {
     rotationRef.current += degrees;
-    if (ringRef.current) ringRef.current.style.transform = `rotateY(${rotationRef.current}deg)`;
+    if (ringRef.current) {
+      ringRef.current.classList.remove("is-snapping");
+      ringRef.current.style.transform = `rotateY(${rotationRef.current}deg)`;
+    }
   }, []);
+
+  const stepBy = useCallback(
+    (steps: number) => {
+      if (items.length < 2) return;
+      rotationRef.current = (Math.round(rotationRef.current / anglePerItem) + steps) * anglePerItem;
+      if (ringRef.current) {
+        ringRef.current.classList.add("is-snapping");
+        ringRef.current.style.transform = `rotateY(${rotationRef.current}deg)`;
+      }
+    },
+    [anglePerItem, items.length]
+  );
+
+  useEffect(() => {
+    const gallery = galleryRef.current;
+    if (!gallery || items.length < 2) return;
+
+    const onWheel = (event: WheelEvent) => {
+      if (event.ctrlKey || event.metaKey) return;
+      event.preventDefault();
+      const multiplier =
+        event.deltaMode === WheelEvent.DOM_DELTA_LINE ? 16 : event.deltaMode === WheelEvent.DOM_DELTA_PAGE ? gallery.clientHeight : 1;
+      rotateBy(Math.max(-15, Math.min(15, event.deltaY * multiplier * 0.05)));
+    };
+
+    gallery.addEventListener("wheel", onWheel, { passive: false });
+    return () => gallery.removeEventListener("wheel", onWheel);
+  }, [items.length, rotateBy]);
 
   useEffect(() => {
     const stage = stageRef.current;
@@ -53,6 +85,7 @@ export function CircularGallery({ items }: CircularGalleryProps) {
 
   return (
     <div
+      ref={galleryRef}
       className="circular-gallery"
       role="region"
       aria-label="Volunteer photo gallery"
@@ -63,13 +96,7 @@ export function CircularGallery({ items }: CircularGalleryProps) {
         if (!event.currentTarget.contains(event.relatedTarget)) setIsPaused(false);
       }}
     >
-      <div
-        ref={stageRef}
-        className="circular-gallery-stage"
-        onWheel={(event) => {
-          if (!reducedMotion) rotateBy(Math.max(-15, Math.min(15, event.deltaY * 0.05)));
-        }}
-      >
+      <div ref={stageRef} className="circular-gallery-stage">
         <div ref={ringRef} className="circular-gallery-ring">
           {items.map((item, index) => (
             <div
@@ -88,10 +115,10 @@ export function CircularGallery({ items }: CircularGalleryProps) {
         </div>
       </div>
       <div className="circular-gallery-controls" aria-label="Volunteer gallery controls">
-        <button type="button" aria-label="Previous volunteer photo" onClick={() => rotateBy(anglePerItem)}>
+        <button type="button" aria-label="Previous volunteer photo" onClick={() => stepBy(1)}>
           <span aria-hidden="true">←</span> Previous
         </button>
-        <button type="button" aria-label="Next volunteer photo" onClick={() => rotateBy(-anglePerItem)}>
+        <button type="button" aria-label="Next volunteer photo" onClick={() => stepBy(-1)}>
           Next <span aria-hidden="true">→</span>
         </button>
       </div>
