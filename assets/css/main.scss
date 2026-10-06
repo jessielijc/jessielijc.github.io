@@ -362,6 +362,13 @@ html[data-theme="dark"] body {
   padding: 0 0 1rem;
 }
 
+// The Research Output kicker stands alone; its section headings supply the dividers.
+#publications > .publication-hero {
+  border-bottom: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
 :is(.about-hero, .about-section, .about-publications, .phd-opportunity, .content-section-card, .projects-board, .project-detail-section, .publication-board) {
   background: var(--global-card-bg-color);
   border: 1px solid var(--global-divider-color);
