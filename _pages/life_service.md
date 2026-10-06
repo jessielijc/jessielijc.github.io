@@ -72,7 +72,7 @@ nav_order: 9
   </div>
   <div id="life-photo-carousel">
     <div class="photo-carousel-fallback">
-      <img src="{{ '/assets/img/photography-01.jpg' | relative_url }}" alt="Riverfront skyline and boats" loading="lazy">
+      <img src="{{ '/assets/img/photography-08.jpg' | relative_url }}" alt="People on a beach at sunset" loading="lazy">
     </div>
   </div>
 </section>
