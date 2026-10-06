@@ -45,7 +45,7 @@ export function TypingAnimation({ children, secondaryText = "", className, delay
   const complete = visibleCharacters >= fullText.length;
 
   return (
-    <h1 className={cn("about-typing-title", className)} aria-label={fullText}>
+    <h2 className={cn("about-typing-title", className)} aria-label={fullText}>
       <span className="about-typing-primary" aria-hidden="true">
         {primaryVisible}
       </span>
@@ -62,6 +62,6 @@ export function TypingAnimation({ children, secondaryText = "", className, delay
         </span>
       )}
       {!secondaryStarted && !complete && <span className="about-typing-cursor" aria-hidden="true" />}
-    </h1>
+    </h2>
   );
 }
