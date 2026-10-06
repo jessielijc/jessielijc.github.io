@@ -376,6 +376,11 @@ html[data-theme="dark"] body {
   padding-bottom: 0;
 }
 
+// Match the Projects kicker-to-title spacing on the homepage.
+#publications > .scholarly-publications > .section-heading.refined:first-child {
+  margin-top: 0;
+}
+
 :is(.about-hero, .about-section, .about-publications, .phd-opportunity, .content-section-card, .projects-board, .project-detail-section, .publication-board) {
   background: var(--global-card-bg-color);
   border: 1px solid var(--global-divider-color);
