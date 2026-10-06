@@ -16,10 +16,32 @@ nav_order: 9
 </section>
 
 <div class="life-service-overview">
-  <section class="content-section-card">
+  <section class="content-section-card volunteer-section" aria-labelledby="volunteering-title">
     <p class="page-eyebrow">Community</p>
-    <h2>Volunteering</h2>
-    <p>With the SUSTech Red Cross, I support campus and community events and share practical first-aid skills as an AHA HeartSaver-certified volunteer.</p>
+    <h2 id="volunteering-title">Volunteering</h2>
+    <div class="volunteer-roles">
+      <div>
+        <h3>SUSTech Red Cross · Director, Organization Department</h3>
+        <p>Completed 144.5 volunteer hours; led 10+ major events and 10+ first-aid outreach sessions for over 100 people each; taught 5+ first-aid training sessions.</p>
+      </div>
+      <div>
+        <h3>Shenzhen Nanshan District Emergency Rescue Association · Instructor</h3>
+        <p>Established certification frameworks for first-aid instructors and responders.</p>
+      </div>
+      <div>
+        <h3>Campus First-Aid Responder</h3>
+        <p>Responded to 20+ medical emergencies, including seizures, fractures, and trauma.</p>
+      </div>
+    </div>
+    <div class="volunteer-gallery-intro">
+      <h3>Volunteering in Action</h3>
+      <p>Photo placeholders · Activity photos coming soon.</p>
+    </div>
+    <div id="volunteer-photo-gallery">
+      <div class="volunteer-gallery-fallback">
+        <img src="{{ '/assets/img/volunteer-photo-placeholder.svg' | relative_url }}" alt="Placeholder illustration for volunteering photos" loading="lazy">
+      </div>
+    </div>
   </section>
 
   <section class="content-section-card">
