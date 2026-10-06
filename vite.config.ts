@@ -10,6 +10,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         about: "frontend/about.tsx",
+        "life-service": "frontend/life-service.tsx",
         "site-effects": "frontend/site-effects.tsx",
       },
       output: { entryFileNames: "[name].js", chunkFileNames: "[name]-[hash].js", assetFileNames: "about.[ext]" },
