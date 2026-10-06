@@ -1,5 +1,5 @@
 import { motion, useMotionValue, useReducedMotion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export type CarouselPhoto = {
   src: string;
@@ -16,21 +16,22 @@ const SPRING = { type: "spring" as const, mass: 3, stiffness: 400, damping: 50 }
 
 export function ThumbnailCarousel({ photos }: ThumbnailCarouselProps) {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [paused, setPaused] = useState(false);
+  const carouselRef = useRef<HTMLDivElement>(null);
   const dragX = useMotionValue(0);
   const reducedMotion = useReducedMotion();
 
   useEffect(() => {
-    if (paused || reducedMotion || photos.length < 2) return;
+    if (reducedMotion || photos.length < 2) return;
 
     const interval = window.setInterval(() => {
-      if (dragX.get() === 0) {
+      const carousel = carouselRef.current;
+      if (dragX.get() === 0 && !carousel?.matches(":hover") && !carousel?.contains(document.activeElement)) {
         setActiveIndex((current) => (current + 1) % photos.length);
       }
     }, AUTO_DELAY);
 
     return () => window.clearInterval(interval);
-  }, [dragX, paused, photos.length, reducedMotion]);
+  }, [dragX, photos.length, reducedMotion]);
 
   if (photos.length === 0) return null;
 
@@ -45,17 +46,7 @@ export function ThumbnailCarousel({ photos }: ThumbnailCarouselProps) {
   };
 
   return (
-    <div
-      className="photo-carousel"
-      aria-roledescription="carousel"
-      aria-label="Travel photo preview"
-      onMouseEnter={() => setPaused(true)}
-      onMouseLeave={() => setPaused(false)}
-      onFocusCapture={() => setPaused(true)}
-      onBlurCapture={(event) => {
-        if (!event.currentTarget.contains(event.relatedTarget)) setPaused(false);
-      }}
-    >
+    <div ref={carouselRef} className="photo-carousel" aria-roledescription="carousel" aria-label="Travel photo preview">
       <div className="photo-carousel-viewport">
         <motion.div
           className="photo-carousel-track"
