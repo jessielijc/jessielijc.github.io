@@ -627,11 +627,11 @@ html[data-theme="dark"]
 }
 
 .circular-gallery {
-  --circular-gallery-radius: 17rem;
-  --circular-gallery-card-width: 13.5rem;
-  --circular-gallery-card-height: 17rem;
-  --circular-gallery-offset-x: -6.75rem;
-  --circular-gallery-offset-y: -8.5rem;
+  --circular-gallery-radius: 32rem;
+  --circular-gallery-card-width: 15rem;
+  --circular-gallery-card-height: 11rem;
+  --circular-gallery-offset-x: -7.5rem;
+  --circular-gallery-offset-y: -5.5rem;
 
   margin: 1rem auto 0;
   max-width: 62rem;
@@ -643,7 +643,7 @@ html[data-theme="dark"]
   border-radius: 1.1rem;
   height: 22rem;
   overflow: hidden;
-  perspective: 1100px;
+  perspective: 1800px;
 }
 
 .circular-gallery-ring {
@@ -678,22 +678,6 @@ html[data-theme="dark"]
   width: 100%;
 }
 
-.circular-gallery-card:nth-child(2) img {
-  filter: hue-rotate(13deg);
-}
-
-.circular-gallery-card:nth-child(3) img {
-  filter: hue-rotate(-15deg);
-}
-
-.circular-gallery-card:nth-child(4) img {
-  filter: hue-rotate(25deg);
-}
-
-.circular-gallery-card:nth-child(5) img {
-  filter: hue-rotate(-26deg);
-}
-
 .circular-gallery-caption {
   background: linear-gradient(transparent, rgba(27, 24, 47, 0.88));
   bottom: 0;
@@ -714,7 +698,6 @@ html[data-theme="dark"]
 .circular-gallery-caption .circular-gallery-title {
   font-size: 1rem;
   font-weight: 650;
-  margin-bottom: 0.15rem;
 }
 
 .circular-gallery-controls {
@@ -742,10 +725,10 @@ html[data-theme="dark"]
 
 .volunteer-gallery-fallback {
   border-radius: 1rem;
-  height: 17rem;
+  height: 11rem;
   margin: 1rem auto 0;
   overflow: hidden;
-  width: 13.5rem;
+  width: 15rem;
 }
 
 .life-service-page > article > .life-service-gallery {
@@ -867,15 +850,16 @@ html[data-theme="dark"]
   }
 
   .circular-gallery {
-    --circular-gallery-radius: 9rem;
-    --circular-gallery-card-width: 9.5rem;
-    --circular-gallery-card-height: 12rem;
-    --circular-gallery-offset-x: -4.75rem;
-    --circular-gallery-offset-y: -6rem;
+    --circular-gallery-radius: 22rem;
+    --circular-gallery-card-width: 10rem;
+    --circular-gallery-card-height: 8rem;
+    --circular-gallery-offset-x: -5rem;
+    --circular-gallery-offset-y: -4rem;
   }
 
   .circular-gallery-stage {
-    height: 17rem;
+    height: 16rem;
+    perspective: 1100px;
   }
 
   .circular-gallery-caption {
