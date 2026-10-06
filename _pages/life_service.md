@@ -2,7 +2,7 @@
 layout: page
 title: Life & Service
 permalink: /life-service/
-description: Social practice, volunteering, and personal interests beyond research.
+description: Volunteering, travel, and photography beyond research.
 hide_title: true
 page_class: life-service-page
 nav: true
@@ -12,19 +12,36 @@ nav_order: 9
 <section class="content-hero">
   <p class="page-eyebrow">Beyond Research</p>
   <h1>Life & Service</h1>
-  <p>Outside academics and research, I value social engagement, hands-on service, and creative exploration. These experiences keep me connected with people, communities, and the world beyond engineering.</p>
+  <p>Outside the lab, I enjoy serving my community and discovering new places through travel and photography.</p>
 </section>
 
-<section class="content-section-card">
-  <p class="page-eyebrow">Community Engagement</p>
-  <h2>Social Practice & Volunteering</h2>
-  <p>I actively participate in volunteer service through the SUSTech Red Cross, where I help organize and support campus and community activities. As a certified AHA HeartSaver, I am especially interested in first-aid education, emergency-response awareness, and public-service initiatives that make practical skills more accessible.</p>
-  <p>These experiences have strengthened my communication, organization, and teamwork while continually reminding me that technology and engineering should ultimately serve real human needs.</p>
+<div class="life-service-overview">
+  <section class="content-section-card">
+    <p class="page-eyebrow">Community</p>
+    <h2>Volunteering</h2>
+    <p>With the SUSTech Red Cross, I support campus and community events and share practical first-aid skills as an AHA HeartSaver-certified volunteer.</p>
+  </section>
+
+  <section class="content-section-card">
+    <p class="page-eyebrow">Hobbies</p>
+    <h2>Travel & Photography</h2>
+    <p>I love exploring new places, tasting local food, and photographing the moments that make each trip memorable.</p>
+  </section>
+</div>
+
+<section class="content-section-card life-service-gallery" aria-labelledby="photo-journal-title">
+  <div class="life-service-gallery-intro">
+    <div>
+      <p class="page-eyebrow">Photography</p>
+      <h2 id="photo-journal-title">Through My Lens</h2>
+    </div>
+    <p>Preview images · My photos are coming soon.</p>
+  </div>
+  <div id="life-photo-carousel">
+    <div class="photo-carousel-fallback">
+      <img src="{{ '/assets/img/1.jpg' | relative_url }}" alt="Preview landscape of a winding mountain road" loading="lazy">
+    </div>
+  </div>
 </section>
 
-<section class="content-section-card">
-  <p class="page-eyebrow">Creative Exploration</p>
-  <h2>Hobbies & Interests</h2>
-  <p>Photography is one of my favorite ways to observe and document life. I enjoy capturing everyday moments, landscapes, people, and details that are often overlooked. It encourages me to slow down, notice visual stories, and appreciate different perspectives.</p>
-  <p>I also enjoy exploring new places, learning practical skills, and participating in activities that bring together creativity, curiosity, and community engagement.</p>
-</section>
+<script type="module" src="{{ '/assets/react/life-service.js' | relative_url | bust_file_cache }}"></script>
