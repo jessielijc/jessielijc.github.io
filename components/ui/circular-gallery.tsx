@@ -75,14 +75,13 @@ export function CircularGallery({ items }: CircularGalleryProps) {
             <div
               className="circular-gallery-card"
               role="group"
-              aria-label={`${item.title} photo placeholder`}
-              key={item.title}
+              aria-label={item.title}
+              key={item.src}
               style={{ transform: `rotateY(${index * anglePerItem}deg) translateZ(var(--circular-gallery-radius))` }}
             >
-              <img src={item.src} alt={item.alt} loading="lazy" />
+              <img src={item.src} alt={item.alt} loading={index === 0 ? "eager" : "lazy"} decoding="async" />
               <div className="circular-gallery-caption">
                 <p className="circular-gallery-title">{item.title}</p>
-                <p>Photo coming soon</p>
               </div>
             </div>
           ))}
