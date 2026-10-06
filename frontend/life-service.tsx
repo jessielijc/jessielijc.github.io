@@ -3,11 +3,51 @@ import { CircularGallery, type CircularGalleryItem } from "@/components/ui/circu
 import { ThumbnailCarousel, type CarouselPhoto } from "@/components/ui/thumbnail-carousel";
 
 const volunteerPhotos: CircularGalleryItem[] = [
-  { title: "First-Aid Outreach", src: "/assets/img/volunteer-photo-placeholder.svg", alt: "Placeholder for first-aid outreach photos" },
-  { title: "Training Sessions", src: "/assets/img/volunteer-photo-placeholder.svg", alt: "Placeholder for first-aid training photos" },
-  { title: "Campus Response", src: "/assets/img/volunteer-photo-placeholder.svg", alt: "Placeholder for campus response photos" },
-  { title: "Community Events", src: "/assets/img/volunteer-photo-placeholder.svg", alt: "Placeholder for community event photos" },
-  { title: "Rescue Instruction", src: "/assets/img/volunteer-photo-placeholder.svg", alt: "Placeholder for rescue instruction photos" },
+  {
+    title: "Field first-aid training",
+    src: "/assets/img/volunteering-01.jpg",
+    alt: "A Red Cross volunteer assists a student during a first-aid exercise",
+  },
+  {
+    title: "Campus response team",
+    src: "/assets/img/volunteering-02.jpg",
+    alt: "Student Red Cross volunteers in red vests pose beside their response tent",
+  },
+  {
+    title: "Community outreach",
+    src: "/assets/img/volunteering-03.jpg",
+    alt: "Red Cross volunteers and medical staff gather at an outdoor outreach event",
+  },
+  { title: "CPR training", src: "/assets/img/volunteering-04.jpg", alt: "Two volunteers demonstrate CPR with a training manikin in a lecture hall" },
+  {
+    title: "Red Cross team training",
+    src: "/assets/img/volunteering-05.jpg",
+    alt: "SUSTech Red Cross students stand with their banner after a training session",
+  },
+  { title: "SUSTech Red Cross", src: "/assets/img/volunteering-06.jpg", alt: "SUSTech Red Cross student members gather on the campus stairs" },
+  { title: "Emergency education", src: "/assets/img/volunteering-07.jpg", alt: "A volunteer presents emergency response information to an audience" },
+  {
+    title: "Student volunteer forum",
+    src: "/assets/img/volunteering-08.jpg",
+    alt: "Participants gather in a lecture hall for a Red Cross student forum",
+  },
+  {
+    title: "Campus volunteer gathering",
+    src: "/assets/img/volunteering-09.jpg",
+    alt: "A large group of SUSTech Red Cross volunteers pose together on campus",
+  },
+  {
+    title: "World Red Cross Day",
+    src: "/assets/img/volunteering-10.jpg",
+    alt: "Red Cross student volunteers celebrate at a World Red Cross Day event",
+  },
+  { title: "First-aid outreach", src: "/assets/img/volunteering-11.jpg", alt: "Volunteers share first-aid information at an outdoor campus booth" },
+  { title: "Bandaging workshop", src: "/assets/img/volunteering-12.jpg", alt: "A volunteer observes participants practicing a head bandage" },
+  {
+    title: "First-aid training team",
+    src: "/assets/img/volunteering-13.jpg",
+    alt: "Red Cross volunteers and students pose after a first-aid training session",
+  },
 ];
 
 const photos: CarouselPhoto[] = [
