@@ -643,10 +643,12 @@ html[data-theme="dark"]
 .photo-carousel-thumbnails {
   align-items: center;
   display: flex;
-  justify-content: center;
   gap: 0.65rem;
   margin-top: 0.8rem;
-  padding: 0.35rem 0;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  padding: 0.35rem;
+  scrollbar-width: thin;
 }
 
 .photo-carousel-thumbnail {
