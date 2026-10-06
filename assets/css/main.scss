@@ -472,8 +472,8 @@ html[data-theme="dark"]
   border-top-width: 3px;
 }
 
-#about-title-loop h1.about-typing-title,
-#about-title-loop h1.about-title-fallback {
+#about-title-loop h2.about-typing-title,
+#about-title-loop h2.about-title-fallback {
   color: var(--site-title-color);
 }
 
@@ -573,6 +573,28 @@ html[data-theme="dark"]
 .patent-btn:hover,
 .award-disclosure summary:hover {
   color: var(--site-on-accent);
+}
+
+.award-disclosure summary.flow-button {
+  background-color: var(--global-theme-color);
+  background-image: none;
+  border: 2px solid var(--global-theme-color);
+  box-shadow: 0 0.4rem 1rem rgba(var(--site-wash-rgb), 0.22);
+  color: var(--site-on-accent);
+  font-size: 0.95rem;
+  font-weight: 800;
+  min-height: 3rem;
+  padding: 0.72rem 2.15rem;
+}
+
+.award-disclosure summary.flow-button:hover,
+.award-disclosure summary.flow-button:focus-visible {
+  background-color: var(--global-theme-color);
+  background-image: none;
+  border-color: var(--global-theme-color);
+  box-shadow: 0 0.55rem 1.2rem rgba(var(--site-wash-rgb), 0.3);
+  color: var(--site-on-accent);
+  transform: translateY(-2px);
 }
 
 .cv-page-shell .cv :is(table, td, th, .list-group-item, .font-weight-light) {
@@ -1317,8 +1339,8 @@ html[data-theme="dark"]
   line-height: 1.12 !important;
 }
 
-// Match the About greeting to the section heading scale at every breakpoint.
-#about-title-loop :is(h1.about-typing-title, h1.about-title-fallback) {
+// The About greeting is a second-level heading and shares that heading scale.
+#about-title-loop :is(h2.about-typing-title, h2.about-title-fallback) {
   font-size: var(--site-card-h2-size) !important;
   letter-spacing: -0.025em;
   line-height: 1.25 !important;
