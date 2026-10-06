@@ -1,5 +1,14 @@
 import { createRoot } from "react-dom/client";
+import { CircularGallery, type CircularGalleryItem } from "@/components/ui/circular-gallery";
 import { ThumbnailCarousel, type CarouselPhoto } from "@/components/ui/thumbnail-carousel";
+
+const volunteerPhotos: CircularGalleryItem[] = [
+  { title: "First-Aid Outreach", src: "/assets/img/volunteer-photo-placeholder.svg", alt: "Placeholder for first-aid outreach photos" },
+  { title: "Training Sessions", src: "/assets/img/volunteer-photo-placeholder.svg", alt: "Placeholder for first-aid training photos" },
+  { title: "Campus Response", src: "/assets/img/volunteer-photo-placeholder.svg", alt: "Placeholder for campus response photos" },
+  { title: "Community Events", src: "/assets/img/volunteer-photo-placeholder.svg", alt: "Placeholder for community event photos" },
+  { title: "Rescue Instruction", src: "/assets/img/volunteer-photo-placeholder.svg", alt: "Placeholder for rescue instruction photos" },
+];
 
 const photos: CarouselPhoto[] = [
   { src: "/assets/img/photography-01.jpg", alt: "Riverfront skyline and boats" },
@@ -25,3 +34,6 @@ const photos: CarouselPhoto[] = [
 
 const carouselRoot = document.getElementById("life-photo-carousel");
 if (carouselRoot) createRoot(carouselRoot).render(<ThumbnailCarousel photos={photos} />);
+
+const volunteerGalleryRoot = document.getElementById("volunteer-photo-gallery");
+if (volunteerGalleryRoot) createRoot(volunteerGalleryRoot).render(<CircularGallery items={volunteerPhotos} />);
