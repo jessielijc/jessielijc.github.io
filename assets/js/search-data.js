@@ -32,7 +32,7 @@ ninja.data = [{
           },
         },{id: "nav-life-amp-service",
           title: "Life &amp; Service",
-          description: "Social practice, volunteering, and personal interests beyond research.",
+          description: "Volunteering, travel, and photography beyond research.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/life-service/";
