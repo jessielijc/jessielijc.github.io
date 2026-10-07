@@ -9,6 +9,7 @@ nav: true
 nav_order: 9
 ---
 
+
 <section class="content-hero life-service-hero">
   <div>
     <p class="page-eyebrow">Beyond Research</p>
@@ -20,6 +21,7 @@ nav_order: 9
     <a href="#photo-journal-title"><span>02</span> Photography <span aria-hidden="true">↗</span></a>
   </nav>
 </section>
+
 
 <section class="content-section-card volunteer-section" aria-labelledby="volunteering-title">
   <p class="page-eyebrow">Community</p>
@@ -52,10 +54,11 @@ nav_order: 9
   </div>
   <div id="volunteer-photo-gallery">
     <div class="volunteer-gallery-fallback">
-      <img src="{{ '/assets/img/volunteering-01.jpg' | relative_url }}" alt="A Red Cross volunteer assists a student during a first-aid exercise" loading="lazy">
+      <img src="{{ '/assets/img/volunteering-02.jpg' | relative_url }}" alt="Student Red Cross volunteers pose beside their campus response tent" loading="lazy">
     </div>
   </div>
 </section>
+
 
 <section class="content-section-card life-service-gallery" aria-labelledby="photo-journal-title">
   <div class="life-service-gallery-intro">
@@ -77,4 +80,6 @@ nav_order: 9
   </div>
 </section>
 
+
 <script type="module" src="{{ '/assets/react/life-service.js' | relative_url | bust_file_cache }}"></script>
+
