@@ -4,11 +4,6 @@ import { ThumbnailCarousel, type CarouselPhoto } from "@/components/ui/thumbnail
 
 const volunteerPhotos: CircularGalleryItem[] = [
   {
-    title: "Field first-aid training",
-    src: "/assets/img/volunteering-01.jpg",
-    alt: "A Red Cross volunteer assists a student during a first-aid exercise",
-  },
-  {
     title: "Campus response team",
     src: "/assets/img/volunteering-02.jpg",
     alt: "Student Red Cross volunteers in red vests pose beside their response tent",
@@ -36,17 +31,32 @@ const volunteerPhotos: CircularGalleryItem[] = [
     src: "/assets/img/volunteering-09.jpg",
     alt: "A large group of SUSTech Red Cross volunteers pose together on campus",
   },
-  {
-    title: "World Red Cross Day",
-    src: "/assets/img/volunteering-10.jpg",
-    alt: "Red Cross student volunteers celebrate at a World Red Cross Day event",
-  },
   { title: "First-aid outreach", src: "/assets/img/volunteering-11.jpg", alt: "Volunteers share first-aid information at an outdoor campus booth" },
-  { title: "Bandaging workshop", src: "/assets/img/volunteering-12.jpg", alt: "A volunteer observes participants practicing a head bandage" },
+  { title: "World Red Cross Day", src: "/assets/img/volunteering-14.jpg", alt: "Red Cross volunteers and students celebrate at an outdoor event" },
   {
-    title: "First-aid training team",
-    src: "/assets/img/volunteering-13.jpg",
-    alt: "Red Cross volunteers and students pose after a first-aid training session",
+    title: "First-aid demonstration booth",
+    src: "/assets/img/volunteering-15.jpg",
+    alt: "Students visit a first-aid demonstration booth on campus",
+  },
+  {
+    title: "Red Cross Day volunteers",
+    src: "/assets/img/volunteering-16.jpg",
+    alt: "Student volunteers pose in front of a World Red Cross Day display",
+  },
+  {
+    title: "Red Cross Day gathering",
+    src: "/assets/img/volunteering-17.jpg",
+    alt: "Red Cross volunteers and students gather for a group photo outdoors",
+  },
+  {
+    title: "Stretcher preparation",
+    src: "/assets/img/volunteering-18.jpg",
+    alt: "First-aid volunteers prepare an orange stretcher for a response exercise",
+  },
+  {
+    title: "Emergency response drill",
+    src: "/assets/img/volunteering-19.jpg",
+    alt: "First-aid volunteers carry a stretcher during an outdoor drill",
   },
 ];
 
