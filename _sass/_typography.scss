@@ -4,6 +4,28 @@
 
 @use "variables" as v;
 
+:root {
+  --site-body-font: "DM Sans", "Segoe UI", Arial, sans-serif;
+  --site-heading-font: "Plus Jakarta Sans", "DM Sans", "Segoe UI", Arial, sans-serif;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+  font-family: var(--site-body-font);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--site-heading-font);
+}
+
 p,
 h1,
 h2,
