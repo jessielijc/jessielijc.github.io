@@ -74,13 +74,13 @@
   ) {
   h1 {
     font-size: var(--site-card-h1-size) !important;
-    font-weight: 800 !important;
+    font-weight: 700 !important;
     line-height: 1.12 !important;
   }
 
   h2 {
     font-size: var(--site-card-h2-size) !important;
-    font-weight: 800 !important;
+    font-weight: 700 !important;
     line-height: 1.22 !important;
   }
 
@@ -243,8 +243,9 @@ html[data-theme="dark"] body {
 
 .navbar.navbar-light .site-name {
   color: var(--site-nav-text);
+  font-family: var(--site-heading-font);
   font-size: clamp(1.35rem, 2.1vw, 1.65rem);
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: -0.035em;
   line-height: 1.2;
   margin-right: 2rem;
@@ -1341,9 +1342,9 @@ html[data-theme="dark"]
 // One semantic heading scale across About, research output, projects, CV, and life pages.
 :is(.about-page-shell, .content-page-shell, .cv-page-shell) h1:not(.sr-only) {
   color: var(--site-title-color) !important;
-  font-family: inherit;
+  font-family: var(--site-heading-font);
   font-size: var(--site-card-h1-size) !important;
-  font-weight: 800 !important;
+  font-weight: 700 !important;
   letter-spacing: -0.035em;
   line-height: 1.12 !important;
 }
@@ -1357,16 +1358,16 @@ html[data-theme="dark"]
 
 :is(.about-page-shell, .content-page-shell, .cv-page-shell) h2:not(.sr-only, .bibliography) {
   color: var(--site-title-color) !important;
-  font-family: inherit;
+  font-family: var(--site-heading-font);
   font-size: var(--site-card-h2-size) !important;
-  font-weight: 800 !important;
+  font-weight: 700 !important;
   letter-spacing: -0.025em;
   line-height: 1.22 !important;
 }
 
 :is(.about-page-shell, .content-page-shell, .cv-page-shell) h3:not(.sr-only) {
   color: var(--site-subtitle-color) !important;
-  font-family: inherit;
+  font-family: var(--site-heading-font);
   font-size: var(--site-card-h3-size) !important;
   font-weight: 700 !important;
   letter-spacing: -0.015em;
