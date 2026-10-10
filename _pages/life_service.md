@@ -80,6 +80,4 @@ nav_order: 9
   </div>
 </section>
 
-
 <script type="module" src="{{ '/assets/react/life-service.js' | relative_url | bust_file_cache }}"></script>
-
