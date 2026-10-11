@@ -6,8 +6,7 @@
 
 :root {
   --site-body-font: "DM Sans", "Segoe UI", Arial, sans-serif;
-  --site-heading-font: var(--site-body-font);
-  --site-display-font: "Fraunces", Georgia, serif;
+  --site-heading-font: "Plus Jakarta Sans", "DM Sans", "Segoe UI", Arial, sans-serif;
 }
 
 body,
@@ -19,10 +18,7 @@ textarea {
 }
 
 h1,
-h2 {
-  font-family: var(--site-display-font);
-}
-
+h2,
 h3,
 h4,
 h5,
