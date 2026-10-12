@@ -9,93 +9,85 @@ nav: true
 nav_order: 9
 ---
 
-<section class="content-hero life-service-hero">
-  <div class="life-service-hero-copy">
-    <p class="page-eyebrow">Beyond Research</p>
-    <h1>Life & Service</h1>
-    <p>Outside the lab, I enjoy serving my community and discovering new places through travel and photography.</p>
-    <nav class="life-service-quick-links" aria-label="Explore Life and Service">
-      <a href="#volunteering-title"><span>01</span> Volunteering <span aria-hidden="true">↗</span></a>
-      <a href="#photo-journal-title"><span>02</span> Photography <span aria-hidden="true">↗</span></a>
-    </nav>
+<section class="life-hero" aria-labelledby="life-title">
+  <img class="life-hero-image" src="{{ '/assets/img/photography-08.jpg' | relative_url }}" alt="People enjoying the beach at sunset" fetchpriority="high">
+  <div class="life-hero-content">
+    <p class="life-kicker">Beyond the lab <span aria-hidden="true">✳</span> Jiacan Li</p>
+    <h1 id="life-title">Life <em>&</em><br>Service<span class="life-title-dot">.</span></h1>
+    <p class="life-hero-intro">I make time for the people around me—and for the places that make me pause.</p>
   </div>
-  <div class="life-service-hero-art" aria-label="A glimpse of my travels and volunteer work">
-    <figure class="life-service-hero-photo life-service-hero-photo--travel">
-      <img src="{{ '/assets/img/photography-08.jpg' | relative_url }}" alt="People on a beach at sunset" fetchpriority="high">
-      <figcaption>Through my lens <span>↗</span></figcaption>
-    </figure>
-    <figure class="life-service-hero-photo life-service-hero-photo--service">
-      <img src="{{ '/assets/img/volunteering-02.jpg' | relative_url }}" alt="SUSTech Red Cross volunteers beside their response tent" loading="lazy">
-      <figcaption>In the community</figcaption>
-    </figure>
-    <span class="life-service-hero-spark" aria-hidden="true">✳</span>
-  </div>
+  <nav class="life-chapter-nav" aria-label="Explore this page">
+    <a href="#volunteering-title"><span>01 / SERVICE</span> Volunteering <span aria-hidden="true">↘</span></a>
+    <a href="#photo-journal-title"><span>02 / PLACES</span> Travel & Photography <span aria-hidden="true">↘</span></a>
+  </nav>
+  <span class="life-hero-side-note" aria-hidden="true">SCROLL TO EXPLORE · 2026</span>
 </section>
 
-<section class="content-section-card volunteer-section" aria-labelledby="volunteering-title">
-  <div class="life-service-section-heading">
+<section class="life-chapter life-service-chapter" aria-labelledby="volunteering-title">
+  <header class="life-chapter-header" data-life-reveal>
+    <p class="life-kicker">01 <span aria-hidden="true">/</span> SERVICE</p>
+    <h2 id="volunteering-title">Showing up<br><em>for others.</em></h2>
+    <p>First aid is a practical way to care for my community. I teach, organize, and respond when help is needed.</p>
+  </header>
+
+  <div class="life-service-feature" data-life-reveal>
+    <figure class="life-service-feature-photo">
+      <img src="{{ '/assets/img/volunteering-02.jpg' | relative_url }}" alt="SUSTech Red Cross volunteers beside their campus response tent" loading="lazy">
+      <figcaption>With the SUSTech Red Cross</figcaption>
+    </figure>
+    <div class="life-service-feature-copy">
+      <p class="life-overline">SUSTech Red Cross · Organization Department</p>
+      <h3>From the classroom<br>to the field.</h3>
+      <p>As director, I led first-aid outreach, training, and campus events.</p>
+      <div class="life-impact" aria-label="Volunteer service highlights">
+        <div><strong>144.5</strong><span>volunteer hours</span></div>
+        <div><strong>10+</strong><span>major events</span></div>
+        <div><strong>10+</strong><span>outreach sessions for 100+ people each</span></div>
+        <div><strong>5+</strong><span>training sessions taught</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="life-service-more" data-life-reveal>
+    <article>
+      <span class="life-service-more-index">01 / TEACH</span>
+      <h3>Shenzhen Nanshan District Emergency Rescue Association</h3>
+      <p>As an instructor, I helped establish certification frameworks for first-aid instructors and responders.</p>
+    </article>
+    <article>
+      <span class="life-service-more-index">02 / RESPOND</span>
+      <h3>Campus First-Aid Responder</h3>
+      <p>I responded to 20+ medical emergencies, including seizures, fractures, and trauma.</p>
+    </article>
+  </div>
+
+  <div class="life-service-gallery-lead" data-life-reveal>
     <div>
-      <p class="page-eyebrow">Community</p>
-      <h2 id="volunteering-title">Volunteering</h2>
+      <p class="life-kicker">FIELD NOTES / 01—15</p>
+      <h3>Moments in action</h3>
     </div>
-    <span aria-hidden="true">01 / Give back</span>
-  </div>
-  <div class="volunteer-roles">
-    <div class="volunteer-role-featured">
-      <div class="volunteer-featured-copy">
-        <span class="life-service-role-number" aria-hidden="true">01 / Lead</span>
-        <h3>SUSTech Red Cross · Director, Organization Department</h3>
-        <p>Led first-aid outreach, training, and large-scale events across campus.</p>
-      </div>
-      <div class="volunteer-stats" aria-label="Volunteer service highlights">
-        <div><strong>144.5 h</strong><span>Volunteer service</span></div>
-        <div><strong>10+</strong><span>Major events</span></div>
-        <div><strong>10+</strong><span>Outreach sessions · 100+ people each</span></div>
-        <div><strong>5+</strong><span>Trainings taught</span></div>
-      </div>
-    </div>
-    <div class="volunteer-role-supporting">
-      <div>
-        <span class="life-service-role-number" aria-hidden="true">02 / Teach</span>
-        <h3>Shenzhen Nanshan District Emergency Rescue Association · Instructor</h3>
-        <p>Established certification frameworks for first-aid instructors and responders.</p>
-      </div>
-      <div>
-        <span class="life-service-role-number" aria-hidden="true">03 / Respond</span>
-        <h3>Campus First-Aid Responder</h3>
-        <p>Responded to 20+ medical emergencies, including seizures, fractures, and trauma.</p>
-      </div>
-    </div>
-  </div>
-  <div class="volunteer-gallery-intro">
-    <h3>Volunteering in Action</h3>
-    <p>Moments from first-aid training and community outreach.</p>
+    <p>Turn the gallery to see training, outreach, and response work.</p>
   </div>
   <div id="volunteer-photo-gallery">
     <div class="volunteer-gallery-fallback">
-      <img src="{{ '/assets/img/volunteering-02.jpg' | relative_url }}" alt="Student Red Cross volunteers pose beside their campus response tent" loading="lazy">
+      <img src="{{ '/assets/img/volunteering-02.jpg' | relative_url }}" alt="SUSTech Red Cross volunteers beside their campus response tent" loading="lazy">
     </div>
   </div>
 </section>
 
-<section class="content-section-card life-service-gallery" aria-labelledby="photo-journal-title">
-  <div class="life-service-gallery-intro">
-    <div>
-      <p class="page-eyebrow">Hobbies</p>
-      <h2 id="photo-journal-title">Travel & Photography</h2>
-    </div>
-    <div class="life-service-gallery-note">
-      <p>I love exploring new places, tasting local food, and photographing the moments that make each trip memorable.</p>
-      <span class="life-service-photo-count">19 photographs · collected along the way</span>
-    </div>
-  </div>
-  <div class="life-service-gallery-heading">
-    <h3>Through My Lens</h3>
-    <p>Moments from my travels.</p>
+<section class="life-chapter life-photography-chapter" aria-labelledby="photo-journal-title">
+  <header class="life-photo-header" data-life-reveal>
+    <p class="life-kicker">02 <span aria-hidden="true">/</span> PLACES</p>
+    <h2 id="photo-journal-title">A little more<br><em>of the world.</em></h2>
+    <p>I love traveling, discovering local food, and bringing home photographs of the moments in between.</p>
+  </header>
+  <div class="life-photo-gallery-lead" data-life-reveal>
+    <span>THROUGH MY LENS</span>
+    <span>19 FRAMES · DRAG OR EXPLORE BELOW</span>
   </div>
   <div id="life-photo-carousel">
     <div class="photo-carousel-fallback">
-      <img src="{{ '/assets/img/photography-08.jpg' | relative_url }}" alt="People on a beach at sunset" loading="lazy">
+      <img src="{{ '/assets/img/photography-08.jpg' | relative_url }}" alt="People enjoying the beach at sunset" loading="lazy">
     </div>
   </div>
 </section>
