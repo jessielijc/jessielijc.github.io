@@ -72,7 +72,7 @@ nav_order: 9
 
   <div class="life-archive-heading" data-life-reveal>
     <div><p class="life-eyebrow">THE SERVICE ARCHIVE / 15 FRAMES</p><h3>Moments of care.</h3></div>
-    <p>A documentary contact sheet from training, outreach, and response work. Select a frame to see it in full.</p>
+    <p>Moments from first-aid training, outreach, and response. Select a print to see it in full.</p>
   </div>
   <div id="volunteer-photo-gallery">
     <div class="volunteer-gallery-fallback"><img src="{{ '/assets/img/volunteering-04.jpg' | relative_url }}" alt="First-aid training with a CPR manikin" loading="lazy"></div>
