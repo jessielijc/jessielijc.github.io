@@ -1727,10 +1727,11 @@ body:has(.life-service-page) > footer.fixed-bottom {
   background: var(--life-paper);
   color: var(--life-ink);
   display: grid;
-  grid-template-rows: 1fr auto;
-  min-height: min(47rem, calc(100svh - 4rem));
+  gap: clamp(2rem, 5vw, 5rem);
+  grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+  min-height: min(41rem, calc(100svh - 4rem));
   overflow: hidden;
-  padding: clamp(4rem, 6vw, 6rem) clamp(1.5rem, 6vw, 7rem) 1.5rem;
+  padding: clamp(2.5rem, 4vw, 4.5rem) clamp(1.5rem, 5vw, 6rem);
   position: relative;
 }
 
@@ -1750,17 +1751,16 @@ body:has(.life-service-page) > footer.fixed-bottom {
   border: 1px solid rgba(158, 100, 120, 0.17);
   border-radius: 50%;
   content: "";
-  height: min(48vw, 42rem);
+  height: min(36vw, 34rem);
   pointer-events: none;
   position: absolute;
-  right: -11rem;
-  top: -9rem;
-  width: min(48vw, 42rem);
+  right: 24%;
+  top: -16rem;
+  width: min(36vw, 34rem);
 }
 
 .life-intro-copy {
   align-self: center;
-  padding: 2rem 0 3rem;
   position: relative;
   width: 100%;
   z-index: 2;
@@ -1772,11 +1772,11 @@ body:has(.life-service-page) > footer.fixed-bottom {
 
 .life-service-page .life-intro h1 {
   color: var(--life-ink) !important;
-  font-size: clamp(4.5rem, 8.8vw, 9rem) !important;
+  font-size: clamp(4.25rem, 7vw, 7.75rem) !important;
   font-weight: 750 !important;
   letter-spacing: -0.085em !important;
   line-height: 0.94 !important;
-  margin: 2.1rem 0 2rem !important;
+  margin: 1.7rem 0 1.8rem !important;
   max-width: 13ch;
 }
 
@@ -1795,68 +1795,119 @@ body:has(.life-service-page) > footer.fixed-bottom {
 
 .life-intro-copy > p:not(.life-eyebrow) {
   color: #584e5d;
-  font-size: clamp(1.15rem, 1.7vw, 1.55rem);
-  line-height: 1.6;
-  margin: 0 0 clamp(2.5rem, 5vw, 4.5rem);
-  max-width: 42rem;
+  font-size: clamp(1.08rem, 1.35vw, 1.3rem);
+  line-height: 1.58;
+  margin: 0;
+  max-width: 34rem;
 }
 
 .life-intro-links {
   display: grid;
-  gap: clamp(1.5rem, 4vw, 4rem);
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  max-width: 68rem;
+  gap: 0.8rem;
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  min-height: min(32rem, 66svh);
+  position: relative;
+  z-index: 2;
 }
 
 .life-intro-links a {
-  align-items: end;
-  border-bottom: 1px solid rgba(74, 53, 82, 0.42);
-  border-top: 1px solid rgba(74, 53, 82, 0.42);
+  background: #dfd4df;
+  border: 1px solid rgba(74, 53, 82, 0.16);
   color: var(--life-ink);
   display: grid;
-  gap: 0.5rem 1rem;
-  grid-template-columns: 1fr auto;
-  padding: 1.15rem 0 1.3rem;
+  grid-template-rows: auto 1fr auto;
+  isolation: isolate;
+  min-height: 0;
+  overflow: hidden;
+  padding: clamp(1.25rem, 2vw, 2rem);
+  position: relative;
   text-decoration: none;
-  transition: border-color 200ms ease, color 200ms ease, transform 200ms ease;
+  transition: background 350ms ease, transform 350ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.life-intro-links a span:first-child {
-  font-size: 0.88rem;
+.life-intro-links a:last-child {
+  background: #e7c7cf;
+}
+
+.life-intro-links a::before {
+  color: rgba(74, 53, 82, 0.1);
+  content: attr(data-index);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(8rem, 16vw, 15rem);
+  line-height: 1;
+  position: absolute;
+  right: -0.025em;
+  top: -0.2em;
+  transform: rotate(-8deg);
+  transition: transform 550ms cubic-bezier(0.22, 1, 0.36, 1);
+  z-index: -1;
+}
+
+.life-intro-links a::after {
+  border: 1px solid rgba(74, 53, 82, 0.17);
+  border-radius: 50%;
+  content: "";
+  height: 15rem;
+  position: absolute;
+  right: -4rem;
+  top: -8rem;
+  transition: transform 550ms cubic-bezier(0.22, 1, 0.36, 1);
+  width: 15rem;
+  z-index: -1;
+}
+
+.life-intro-links a > span:first-child {
+  font-size: 0.9rem;
   font-weight: 800;
-  grid-column: 1 / -1;
   letter-spacing: 0.1em;
 }
 
 .life-intro-links a strong {
-  font-size: clamp(1.35rem, 2vw, 1.85rem);
-  font-weight: 700;
-  letter-spacing: -0.035em;
-  line-height: 1.2;
+  align-self: end;
+  font-size: clamp(2rem, 3.15vw, 3.45rem);
+  font-weight: 750;
+  letter-spacing: -0.065em;
+  line-height: 1.05;
 }
 
-.life-intro-links a span:last-child {
-  font-size: 1.6rem;
-  line-height: 1;
-}
-
-.life-intro-links a:hover,
-.life-intro-links a:focus-visible {
-  border-color: #9e6478;
-  color: #9e6478;
-  text-decoration: none;
-  transform: translateX(4px);
-}
-
-.life-intro-bottom {
+.life-intro-links a > span:last-child {
   align-items: center;
-  border-top: 1px solid rgba(41, 34, 53, 0.35);
+  border-top: 1px solid rgba(74, 53, 82, 0.27);
   display: flex;
   font-size: 0.9rem;
   font-weight: 800;
   justify-content: space-between;
   letter-spacing: 0.1em;
-  padding-top: 1.2rem;
+  line-height: 1;
+  margin-top: 1rem;
+  padding-top: 0.8rem;
+}
+
+.life-intro-links a > span:last-child span {
+  font-size: 1.4rem;
+  line-height: 0.8;
+}
+
+.life-intro-links a:hover,
+.life-intro-links a:focus-visible {
+  background: #e9dfe9;
+  text-decoration: none;
+  transform: translateY(-5px);
+}
+
+.life-intro-links a:last-child:hover,
+.life-intro-links a:last-child:focus-visible {
+  background: #f0d7dd;
+}
+
+.life-intro-links a:hover::before,
+.life-intro-links a:focus-visible::before {
+  transform: rotate(-4deg) translateY(0.1em);
+}
+
+.life-intro-links a:hover::after,
+.life-intro-links a:focus-visible::after {
+  transform: scale(1.2) translate(-1rem, 1rem);
 }
 
 .life-photos {
@@ -1996,100 +2047,12 @@ body:has(.life-service-page) > footer.fixed-bottom {
   padding: 0 clamp(1.5rem, 6vw, 7rem) clamp(5rem, 8vw, 9rem);
 }
 
-.life-service-transition {
-  align-items: center;
-  background: linear-gradient(180deg, #202034 0%, #3f344b 48%, var(--life-service-bridge-end) 100%);
-  color: #f8f3ef;
-  display: grid;
-  gap: clamp(1rem, 4vw, 4rem);
-  grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
-  margin-inline: calc(-1 * clamp(1.5rem, 6vw, 7rem));
-  min-height: clamp(30rem, 42vw, 42rem);
-  overflow: hidden;
-  padding: clamp(4rem, 6vw, 6rem) clamp(1.5rem, 6vw, 7rem) clamp(4rem, 7vw, 7rem);
-}
-
-.life-transition-copy {
-  align-self: start;
-  padding-top: clamp(0rem, 2vw, 2rem);
-  position: relative;
-  z-index: 1;
-}
-
-.life-transition-copy .life-eyebrow {
-  color: #e7c7cf;
-}
-
-.life-transition-title {
-  color: #fffaf5;
-  font-size: clamp(3.1rem, 5.4vw, 6.5rem);
-  font-weight: 750;
-  letter-spacing: -0.075em;
-  line-height: 1.02;
-  margin: 1.7rem 0 1.4rem;
-}
-
-.life-transition-title em {
-  color: #e7c7cf;
-  font-family: Georgia, "Times New Roman", serif;
-  font-weight: 400;
-}
-
-.life-transition-copy > p:last-child {
-  color: #eee6ef;
-  font-size: clamp(1.05rem, 1.35vw, 1.25rem);
-  line-height: 1.65;
-  max-width: 31rem;
-}
-
-.life-transition-art {
-  min-height: clamp(23rem, 35vw, 34rem);
-  position: relative;
-}
-
-.life-transition-photo {
-  box-shadow: 0 1.25rem 2.5rem rgba(19, 15, 31, 0.28);
-  overflow: hidden;
-  position: absolute;
-}
-
-.life-transition-photo img {
+.life-service::before {
+  background: linear-gradient(180deg, #202034 0%, #373047 38%, var(--life-service-bridge-end) 100%);
+  content: "";
   display: block;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 800ms cubic-bezier(0.22, 1, 0.36, 1);
-  width: 100%;
-}
-
-.life-transition-photo:hover img {
-  transform: scale(1.05);
-}
-
-.life-transition-photo-main {
-  height: 83%;
-  left: 2%;
-  top: 0;
-  transform: rotate(-3deg);
-  width: 69%;
-}
-
-.life-transition-photo-small {
-  border: 0.5rem solid #f8f0ed;
-  bottom: 4%;
-  height: 52%;
-  right: 0;
-  transform: rotate(5deg);
-  width: 52%;
-}
-
-.life-transition-art > span {
-  bottom: 0;
-  color: #342b44;
-  font-size: 0.88rem;
-  font-weight: 800;
-  letter-spacing: 0.12em;
-  position: absolute;
-  right: 0;
+  height: clamp(5rem, 11vw, 9rem);
+  margin-inline: calc(-1 * clamp(1.5rem, 6vw, 7rem));
 }
 
 .life-service-masthead {
@@ -2553,27 +2516,41 @@ html[data-theme="dark"] .life-intro h1 em {
   color: #e7c7cf;
 }
 
-html[data-theme="dark"] .life-intro-bottom {
-  border-color: rgba(255, 255, 255, 0.4);
+html[data-theme="dark"] .life-intro-links a {
+  background: #41445e;
+  border-color: rgba(248, 243, 239, 0.14);
 }
 
-html[data-theme="dark"] .life-intro-links a {
-  border-color: rgba(248, 243, 239, 0.48);
+html[data-theme="dark"] .life-intro-links a:last-child {
+  background: #55465f;
+}
+
+html[data-theme="dark"] .life-intro-links a::before {
+  color: rgba(231, 199, 207, 0.11);
+}
+
+html[data-theme="dark"] .life-intro-links a::after {
+  border-color: rgba(231, 199, 207, 0.2);
+}
+
+html[data-theme="dark"] .life-intro-links a > span:last-child {
+  border-color: rgba(248, 243, 239, 0.35);
 }
 
 html[data-theme="dark"] .life-intro-links a:hover,
 html[data-theme="dark"] .life-intro-links a:focus-visible {
-  border-color: #e7c7cf;
-  color: #e7c7cf;
+  background: #4d506d;
+  color: #f8f3ef;
+}
+
+html[data-theme="dark"] .life-intro-links a:last-child:hover,
+html[data-theme="dark"] .life-intro-links a:last-child:focus-visible {
+  background: #684e6a;
 }
 
 html[data-theme="dark"] .life-service {
   --life-service-bridge-end: #56506e;
   background: #24263c;
-  color: #f8f3ef;
-}
-
-html[data-theme="dark"] .life-transition-art > span {
   color: #f8f3ef;
 }
 
@@ -2627,22 +2604,15 @@ html[data-theme="dark"] .volunteer-archive-caption {
 
 @media (max-width: 900px) {
   .life-intro {
+    gap: 2.5rem;
+    grid-template-columns: 1fr;
     min-height: 0;
   }
 
-  .life-intro-copy {
-    padding-right: 0;
-  }
-
-  .life-service-transition {
-    gap: 1rem;
-    grid-template-columns: 1fr;
-  }
-
-  .life-transition-art {
-    margin-left: auto;
-    max-width: 40rem;
-    width: 100%;
+  .life-intro-links {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: auto;
+    min-height: 14rem;
   }
 
   .life-section-heading,
@@ -2677,16 +2647,13 @@ html[data-theme="dark"] .volunteer-archive-caption {
 
 @media (max-width: 650px) {
   .life-intro {
-    padding-top: 2.5rem;
-  }
-
-  .life-intro-copy {
-    padding: 1.5rem 0 2rem;
+    gap: 2rem;
+    padding: 3rem 1.5rem 2rem;
   }
 
   .life-service-page .life-intro h1 {
-    font-size: clamp(4rem, 13vw, 5.5rem) !important;
-    margin: 1.5rem 0 !important;
+    font-size: clamp(3.75rem, 12vw, 5.5rem) !important;
+    margin: 1.2rem 0 1.4rem !important;
   }
 
   .life-intro-copy > p:not(.life-eyebrow) {
@@ -2694,43 +2661,30 @@ html[data-theme="dark"] .volunteer-archive-caption {
   }
 
   .life-intro-links {
-    gap: 0.8rem;
+    gap: 0.7rem;
     grid-template-columns: 1fr;
+    min-height: 0;
   }
 
   .life-intro-links a {
-    padding: 1rem 0;
+    min-height: 9.5rem;
+    padding: 1rem 1.2rem;
   }
 
-  .life-intro-bottom {
-    flex-wrap: wrap;
-    gap: 0.5rem 1rem;
+  .life-intro-links a strong {
+    font-size: clamp(1.85rem, 7vw, 2.35rem);
+  }
+
+  .life-intro-links a::before {
+    font-size: 8rem;
   }
 
   .life-gallery-meta {
     flex-direction: column;
   }
 
-  .life-service-transition {
-    padding-bottom: 4.5rem;
-    padding-top: 3.5rem;
-  }
-
-  .life-transition-title {
-    font-size: clamp(2.9rem, 12vw, 4.7rem);
-  }
-
-  .life-transition-art {
-    min-height: 24rem;
-  }
-
-  .life-transition-photo-main {
-    left: 0;
-    width: 74%;
-  }
-
-  .life-transition-photo-small {
-    width: 55%;
+  .life-service::before {
+    height: 5.5rem;
   }
 
   .life-photos .photo-carousel-slide,
@@ -2766,8 +2720,9 @@ html[data-theme="dark"] .volunteer-archive-caption {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .life-transition-photo img,
   .life-intro-links a,
+  .life-intro-links a::before,
+  .life-intro-links a::after,
   .volunteer-archive-image img,
   .volunteer-archive-frame,
   .life-motion-ready .life-service-page [data-life-reveal] {
