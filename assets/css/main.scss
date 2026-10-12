@@ -2226,7 +2226,7 @@ body:has(.life-service-page) > footer.fixed-bottom {
   display: grid;
   gap: clamp(1rem, 1.6vw, 1.8rem);
   grid-auto-flow: dense;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .volunteer-archive-frame {
@@ -2237,11 +2237,6 @@ body:has(.life-service-page) > footer.fixed-bottom {
   min-width: 0;
   padding: 0;
   text-align: left;
-}
-
-.volunteer-archive-frame:first-child {
-  grid-column: span 2;
-  grid-row: span 2;
 }
 
 .volunteer-archive-image {
@@ -2258,10 +2253,6 @@ body:has(.life-service-page) > footer.fixed-bottom {
   object-fit: cover;
   transition: filter 350ms ease, transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
   width: 100%;
-}
-
-.volunteer-archive-frame:first-child .volunteer-archive-image img {
-  aspect-ratio: 1.46;
 }
 
 .volunteer-archive-frame:hover img,
@@ -2486,6 +2477,10 @@ html[data-theme="dark"] .volunteer-archive-frame {
   .life-service-roles article:hover {
     padding-top: 2rem;
   }
+
+  .volunteer-archive {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 650px) {
@@ -2552,15 +2547,6 @@ html[data-theme="dark"] .volunteer-archive-frame {
 
   .volunteer-archive {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .volunteer-archive-frame:first-child {
-    grid-column: span 2;
-    grid-row: auto;
-  }
-
-  .volunteer-archive-frame:first-child .volunteer-archive-image img {
-    aspect-ratio: 1.6;
   }
 
   .volunteer-archive-caption {
