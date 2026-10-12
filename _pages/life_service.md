@@ -14,12 +14,11 @@ nav_order: 9
     <p class="life-eyebrow">A PERSONAL FIELD JOURNAL <span>— JIACAN LI</span></p>
     <h1 id="life-title">Life beyond<br><em>the lab.</em></h1>
     <p>Travel and photography help me look closer. First-aid volunteering gives me a way to show up for others.</p>
-    <div class="life-intro-links">
-      <a href="#photo-journal-title"><span>01 / TRAVEL & PHOTOGRAPHY</span><strong>Explore the world</strong><span aria-hidden="true">↗</span></a>
-      <a href="#volunteering-title"><span>02 / VOLUNTEERING</span><strong>Show up for others</strong><span aria-hidden="true">↗</span></a>
-    </div>
   </div>
-  <div class="life-intro-bottom"><span>PHOTOGRAPHY & COMMUNITY</span><span>SCROLL TO EXPLORE ↓</span></div>
+  <nav class="life-intro-links" aria-label="Explore Life and Service">
+    <a href="#photo-journal-title" data-index="01"><span>01 / THROUGH MY LENS</span><strong>Photography</strong><span>EXPLORE <span aria-hidden="true">↗</span></span></a>
+    <a href="#volunteering-title" data-index="02"><span>02 / SHOWING UP</span><strong>Volunteering</strong><span>EXPLORE <span aria-hidden="true">↗</span></span></a>
+  </nav>
 </section>
 
 <section class="life-photos" aria-labelledby="photo-journal-title">
@@ -37,18 +36,6 @@ nav_order: 9
 </section>
 
 <section class="life-service" aria-labelledby="volunteering-title">
-  <div class="life-service-transition">
-    <div class="life-transition-copy" data-life-reveal>
-      <p class="life-eyebrow">FROM ONE CHAPTER TO THE NEXT</p>
-      <p class="life-transition-title">From places<br><em>to people.</em></p>
-      <p>The same curiosity that takes me to new places also brings me closer to the people around me.</p>
-    </div>
-    <div class="life-transition-art" aria-hidden="true">
-      <div class="life-transition-photo life-transition-photo-main"><img src="{{ '/assets/img/photography-08.jpg' | relative_url }}" alt="" loading="lazy"></div>
-      <div class="life-transition-photo life-transition-photo-small"><img src="{{ '/assets/img/photography-09.jpg' | relative_url }}" alt="" loading="lazy"></div>
-      <span>SCENES ALONG THE WAY / 2026</span>
-    </div>
-  </div>
   <div class="life-service-masthead" data-life-reveal>
     <p class="life-eyebrow">02 / VOLUNTEERING</p>
     <h2 id="volunteering-title">Care is<br><em>something we do.</em></h2>
