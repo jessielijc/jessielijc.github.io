@@ -1763,11 +1763,11 @@ html[data-theme="dark"] .visitor-dotted-map {
 }
 
 .life-hero h1 {
-  color: #fff7fb;
-  font-size: clamp(4.1rem, 10vw, 9.5rem);
-  font-weight: 800;
+  color: #fff7fb !important;
+  font-size: clamp(4.1rem, 10vw, 9.5rem) !important;
+  font-weight: 800 !important;
   letter-spacing: -0.075em;
-  line-height: 0.88;
+  line-height: 0.88 !important;
   margin: 0;
 }
 
@@ -1874,14 +1874,18 @@ html[data-theme="dark"] .visitor-dotted-map {
 
 .life-chapter-header h2,
 .life-photo-header h2 {
-  font-size: clamp(3rem, 6vw, 6rem);
+  font-size: clamp(3rem, 6vw, 6rem) !important;
   letter-spacing: -0.07em;
-  line-height: 0.98;
+  line-height: 0.98 !important;
   margin: 0;
 }
 
 .life-chapter-header h2 em {
   color: var(--global-theme-color);
+}
+
+.life-chapter-header h2 {
+  color: var(--site-title-color) !important;
 }
 
 .life-chapter-header > p:last-child,
@@ -1950,10 +1954,10 @@ html[data-theme="dark"] .visitor-dotted-map {
 }
 
 .life-service-feature h3 {
-  color: var(--site-subtitle-color);
-  font-size: clamp(2rem, 3.5vw, 3.35rem);
+  color: var(--site-subtitle-color) !important;
+  font-size: clamp(2rem, 3.5vw, 3.35rem) !important;
   letter-spacing: -0.055em;
-  line-height: 1.08;
+  line-height: 1.08 !important;
   margin: 0 0 1rem;
 }
 
@@ -2016,9 +2020,9 @@ html[data-theme="dark"] .visitor-dotted-map {
 }
 
 .life-service-more h3 {
-  color: var(--site-subtitle-color);
-  font-size: clamp(1.25rem, 1.8vw, 1.65rem);
-  line-height: 1.25;
+  color: var(--site-subtitle-color) !important;
+  font-size: clamp(1.25rem, 1.8vw, 1.65rem) !important;
+  line-height: 1.25 !important;
   margin: 0.9rem 0 0.6rem;
 }
 
@@ -2042,8 +2046,8 @@ html[data-theme="dark"] .visitor-dotted-map {
 }
 
 .life-service-gallery-lead h3 {
-  color: var(--site-subtitle-color);
-  font-size: clamp(1.65rem, 2.6vw, 2.4rem);
+  color: var(--site-subtitle-color) !important;
+  font-size: clamp(1.65rem, 2.6vw, 2.4rem) !important;
   letter-spacing: -0.045em;
   margin: 0;
 }
@@ -2087,7 +2091,7 @@ html[data-theme="dark"] .life-photography-chapter {
 }
 
 .life-photo-header h2 {
-  color: #fff7fb;
+  color: #fff7fb !important;
 }
 
 .life-photo-header h2 em {
@@ -2276,7 +2280,7 @@ html[data-theme="dark"] .life-photography-chapter {
   }
 
   .life-hero h1 {
-    font-size: clamp(4rem, 16vw, 6rem);
+    font-size: clamp(4rem, 16vw, 6rem) !important;
   }
 
   .life-chapter-nav {
