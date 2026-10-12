@@ -2222,21 +2222,117 @@ body:has(.life-service-page) > footer.fixed-bottom {
   margin: 0;
 }
 
+#volunteer-photo-gallery {
+  background: radial-gradient(circle at 1px 1px, rgba(106, 78, 91, 0.11) 0.8px, transparent 1px) 0 0 / 19px 19px, #e8dcd7;
+  border: 1px solid rgba(97, 65, 82, 0.2);
+  box-shadow: 0 18px 50px rgba(61, 46, 59, 0.11), inset 0 0 0 8px rgba(255, 255, 255, 0.12);
+  isolation: isolate;
+  overflow: hidden;
+  padding: clamp(4.5rem, 6vw, 6rem) clamp(1.2rem, 3.5vw, 3.5rem) clamp(2.5rem, 4vw, 4rem);
+  position: relative;
+}
+
+#volunteer-photo-gallery::before,
+#volunteer-photo-gallery::after {
+  color: #704b60;
+  font-size: 0.64rem;
+  font-weight: 800;
+  letter-spacing: 0.19em;
+  pointer-events: none;
+  position: absolute;
+  top: 1.8rem;
+}
+
+#volunteer-photo-gallery::before {
+  content: "FIELD NOTES  /  SUSTECH RED CROSS";
+  left: clamp(1.2rem, 3.5vw, 3.5rem);
+}
+
+#volunteer-photo-gallery::after {
+  content: "15 PRINTS  ✳";
+  right: clamp(1.2rem, 3.5vw, 3.5rem);
+}
+
 .volunteer-archive {
   display: grid;
-  gap: clamp(1rem, 1.6vw, 1.8rem);
-  grid-auto-flow: dense;
+  gap: clamp(2.3rem, 4vw, 4rem) clamp(1.15rem, 2.5vw, 3rem);
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .volunteer-archive-frame {
-  background: transparent;
-  border: 0;
-  color: #292235;
+  --print-tilt: -1.3deg;
+  --print-shift: 0.35rem;
+  background: #fffaf5;
+  border: 1px solid rgba(82, 60, 68, 0.14);
+  box-shadow: 0 2px 2px rgba(44, 30, 43, 0.07), 0 12px 24px rgba(44, 30, 43, 0.17);
+  color: #463344;
   cursor: pointer;
   min-width: 0;
-  padding: 0;
+  padding: clamp(0.38rem, 0.65vw, 0.65rem);
+  position: relative;
   text-align: left;
+  transform: translateY(var(--print-shift)) rotate(var(--print-tilt));
+  transition: box-shadow 260ms ease, transform 350ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.volunteer-archive-frame:nth-child(5n + 2) {
+  --print-tilt: 1.5deg;
+  --print-shift: -0.35rem;
+}
+
+.volunteer-archive-frame:nth-child(5n + 3) {
+  --print-tilt: -0.4deg;
+  --print-shift: 0.8rem;
+}
+
+.volunteer-archive-frame:nth-child(5n + 4) {
+  --print-tilt: 1.1deg;
+  --print-shift: 0.15rem;
+}
+
+.volunteer-archive-frame:nth-child(5n) {
+  --print-tilt: -1.7deg;
+  --print-shift: -0.25rem;
+}
+
+.volunteer-archive-frame:nth-child(3n + 1)::before {
+  background: rgba(222, 172, 180, 0.78);
+  box-shadow: 0 1px 2px rgba(68, 43, 60, 0.12);
+  content: "";
+  height: 1.1rem;
+  left: calc(50% - 2rem);
+  pointer-events: none;
+  position: absolute;
+  top: -0.55rem;
+  transform: rotate(-3deg);
+  width: 4rem;
+  z-index: 2;
+}
+
+.volunteer-archive-frame:nth-child(3n + 2)::before {
+  background: rgba(211, 204, 229, 0.86);
+  box-shadow: 0 1px 2px rgba(68, 43, 60, 0.12);
+  content: "";
+  height: 1.05rem;
+  left: 0.7rem;
+  pointer-events: none;
+  position: absolute;
+  top: -0.38rem;
+  transform: rotate(-34deg);
+  width: 3rem;
+  z-index: 2;
+}
+
+.volunteer-archive-frame:hover,
+.volunteer-archive-frame:focus-visible {
+  box-shadow: 0 5px 7px rgba(44, 30, 43, 0.1), 0 20px 34px rgba(44, 30, 43, 0.22);
+  transform: translateY(-0.55rem) rotate(0deg) scale(1.025);
+  z-index: 3;
+}
+
+.volunteer-archive-frame:focus-visible {
+  outline: 3px solid #824f72;
+  outline-offset: 4px;
 }
 
 .volunteer-archive-image {
@@ -2247,7 +2343,7 @@ body:has(.life-service-page) > footer.fixed-bottom {
 }
 
 .volunteer-archive-image img {
-  aspect-ratio: 1.42;
+  aspect-ratio: 1.3;
   display: block;
   height: auto;
   object-fit: cover;
@@ -2264,12 +2360,13 @@ body:has(.life-service-page) > footer.fixed-bottom {
 .volunteer-archive-caption {
   align-items: start;
   display: flex;
-  font-size: 0.76rem;
-  font-weight: 700;
-  gap: 1rem;
+  font-size: 0.74rem;
+  font-weight: 650;
+  gap: 0.35rem;
   justify-content: space-between;
   line-height: 1.4;
-  padding: 0.7rem 0 0.35rem;
+  min-height: 3.45rem;
+  padding: 0.7rem 0.25rem 0.35rem;
 }
 
 .volunteer-archive-caption span:last-child {
@@ -2440,8 +2537,15 @@ html[data-theme="dark"] .life-service-roles article {
   border-color: rgba(255, 255, 255, 0.34);
 }
 
-html[data-theme="dark"] .volunteer-archive-frame {
-  color: #f8f3ef;
+html[data-theme="dark"] #volunteer-photo-gallery {
+  background: radial-gradient(circle at 1px 1px, rgba(231, 199, 207, 0.11) 0.8px, transparent 1px) 0 0 / 19px 19px, #38364c;
+  border-color: rgba(231, 199, 207, 0.24);
+  box-shadow: 0 22px 55px rgba(8, 9, 24, 0.24), inset 0 0 0 8px rgba(255, 255, 255, 0.035);
+}
+
+html[data-theme="dark"] #volunteer-photo-gallery::before,
+html[data-theme="dark"] #volunteer-photo-gallery::after {
+  color: #f0d8dc;
 }
 
 @media (max-width: 900px) {
@@ -2480,6 +2584,10 @@ html[data-theme="dark"] .volunteer-archive-frame {
 
   .volunteer-archive {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  #volunteer-photo-gallery::after {
+    display: none;
   }
 }
 
@@ -2546,11 +2654,18 @@ html[data-theme="dark"] .volunteer-archive-frame {
   }
 
   .volunteer-archive {
+    column-gap: 0.8rem;
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 2rem;
+  }
+
+  #volunteer-photo-gallery {
+    padding: 4.2rem 1rem 2rem;
   }
 
   .volunteer-archive-caption {
-    font-size: 0.68rem;
+    font-size: 0.65rem;
+    min-height: 3.9rem;
   }
 
   .life-outro {
@@ -2564,6 +2679,7 @@ html[data-theme="dark"] .volunteer-archive-frame {
   .life-intro-photo img,
   .life-intro-links a,
   .volunteer-archive-image img,
+  .volunteer-archive-frame,
   .life-motion-ready .life-service-page [data-life-reveal] {
     transition: none;
   }
