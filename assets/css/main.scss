@@ -2548,6 +2548,10 @@ html[data-theme="dark"] #volunteer-photo-gallery::after {
   color: #f0d8dc;
 }
 
+html[data-theme="dark"] .volunteer-archive-caption {
+  color: #463344 !important;
+}
+
 @media (max-width: 900px) {
   .life-intro {
     grid-template-columns: 1fr 0.85fr;
