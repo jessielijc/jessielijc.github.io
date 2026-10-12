@@ -1,8 +1,20 @@
 import { createRoot } from "react-dom/client";
-import { CircularGallery, type CircularGalleryItem } from "@/components/ui/circular-gallery";
+import { VolunteerArchive, type VolunteerPhoto } from "@/components/ui/volunteer-archive";
 import { ThumbnailCarousel, type CarouselPhoto } from "@/components/ui/thumbnail-carousel";
 
-const volunteerPhotos: CircularGalleryItem[] = [
+const volunteerPhotos: VolunteerPhoto[] = [
+  { title: "CPR training", src: "/assets/img/volunteering-04.jpg", alt: "Two volunteers demonstrate CPR with a training manikin in a lecture hall" },
+  {
+    title: "Stretcher preparation",
+    src: "/assets/img/volunteering-18.jpg",
+    alt: "First-aid volunteers prepare an orange stretcher for a response exercise",
+  },
+  {
+    title: "Emergency response drill",
+    src: "/assets/img/volunteering-19.jpg",
+    alt: "First-aid volunteers carry a stretcher during an outdoor drill",
+  },
+  { title: "Emergency education", src: "/assets/img/volunteering-07.jpg", alt: "A volunteer presents emergency response information to an audience" },
   {
     title: "Campus response team",
     src: "/assets/img/volunteering-02.jpg",
@@ -13,14 +25,12 @@ const volunteerPhotos: CircularGalleryItem[] = [
     src: "/assets/img/volunteering-03.jpg",
     alt: "Red Cross volunteers and medical staff gather at an outdoor outreach event",
   },
-  { title: "CPR training", src: "/assets/img/volunteering-04.jpg", alt: "Two volunteers demonstrate CPR with a training manikin in a lecture hall" },
   {
     title: "Red Cross team training",
     src: "/assets/img/volunteering-05.jpg",
     alt: "SUSTech Red Cross students stand with their banner after a training session",
   },
   { title: "SUSTech Red Cross", src: "/assets/img/volunteering-06.jpg", alt: "SUSTech Red Cross student members gather on the campus stairs" },
-  { title: "Emergency education", src: "/assets/img/volunteering-07.jpg", alt: "A volunteer presents emergency response information to an audience" },
   {
     title: "Student volunteer forum",
     src: "/assets/img/volunteering-08.jpg",
@@ -47,16 +57,6 @@ const volunteerPhotos: CircularGalleryItem[] = [
     title: "Red Cross Day gathering",
     src: "/assets/img/volunteering-17.jpg",
     alt: "Red Cross volunteers and students gather for a group photo outdoors",
-  },
-  {
-    title: "Stretcher preparation",
-    src: "/assets/img/volunteering-18.jpg",
-    alt: "First-aid volunteers prepare an orange stretcher for a response exercise",
-  },
-  {
-    title: "Emergency response drill",
-    src: "/assets/img/volunteering-19.jpg",
-    alt: "First-aid volunteers carry a stretcher during an outdoor drill",
   },
 ];
 
@@ -86,7 +86,7 @@ const carouselRoot = document.getElementById("life-photo-carousel");
 if (carouselRoot) createRoot(carouselRoot).render(<ThumbnailCarousel photos={photos} />);
 
 const volunteerGalleryRoot = document.getElementById("volunteer-photo-gallery");
-if (volunteerGalleryRoot) createRoot(volunteerGalleryRoot).render(<CircularGallery items={volunteerPhotos} />);
+if (volunteerGalleryRoot) createRoot(volunteerGalleryRoot).render(<VolunteerArchive photos={volunteerPhotos} />);
 
 const revealTargets = document.querySelectorAll<HTMLElement>("[data-life-reveal]");
 if (revealTargets.length && "IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
