@@ -9,87 +9,76 @@ nav: true
 nav_order: 9
 ---
 
-<section class="life-hero" aria-labelledby="life-title">
-  <img class="life-hero-image" src="{{ '/assets/img/photography-08.jpg' | relative_url }}" alt="People enjoying the beach at sunset" fetchpriority="high">
-  <div class="life-hero-content">
-    <p class="life-kicker">Beyond the lab <span aria-hidden="true">✳</span> Jiacan Li</p>
-    <h1 id="life-title">Life <em>&</em><br>Service<span class="life-title-dot">.</span></h1>
-    <p class="life-hero-intro">I make time for the people around me—and for the places that make me pause.</p>
+<section class="life-intro" aria-labelledby="life-title">
+  <div class="life-intro-copy" data-life-reveal>
+    <p class="life-eyebrow">A PERSONAL FIELD JOURNAL <span>— JIACAN LI</span></p>
+    <h1 id="life-title">Life happens<br><em>out there.</em></h1>
+    <p>Beyond robotics, I spend my time exploring new places and showing up for my community.</p>
+    <div class="life-intro-links">
+      <a href="#photo-journal-title">Explore my photographs <span aria-hidden="true">↗</span></a>
+      <a href="#volunteering-title">See my service work <span aria-hidden="true">↗</span></a>
+    </div>
   </div>
-  <nav class="life-chapter-nav" aria-label="Explore this page">
-    <a href="#volunteering-title"><span>01 / SERVICE</span> Volunteering <span aria-hidden="true">↘</span></a>
-    <a href="#photo-journal-title"><span>02 / PLACES</span> Travel & Photography <span aria-hidden="true">↘</span></a>
-  </nav>
-  <span class="life-hero-side-note" aria-hidden="true">SCROLL TO EXPLORE · 2026</span>
+  <div class="life-intro-art" aria-hidden="true">
+    <div class="life-intro-photo life-intro-photo-main"><img src="{{ '/assets/img/photography-08.jpg' | relative_url }}" alt="" fetchpriority="high"></div>
+    <div class="life-intro-photo life-intro-photo-small"><img src="{{ '/assets/img/photography-09.jpg' | relative_url }}" alt="" loading="lazy"></div>
+    <span class="life-intro-stamp">LOOK CLOSER<br>↗</span>
+    <span class="life-intro-side">PLACES & PEOPLE / 2026</span>
+  </div>
+  <div class="life-intro-bottom"><span>01 — THROUGH MY LENS</span><span>02 — IN THE COMMUNITY</span><span>SCROLL TO EXPLORE ↓</span></div>
 </section>
 
-<section class="life-chapter life-service-chapter" aria-labelledby="volunteering-title">
-  <header class="life-chapter-header" data-life-reveal>
-    <p class="life-kicker">01 <span aria-hidden="true">/</span> SERVICE</p>
-    <h2 id="volunteering-title">Showing up<br><em>for others.</em></h2>
-    <p>First aid is a practical way to care for my community. I teach, organize, and respond when help is needed.</p>
-  </header>
-
-  <div class="life-service-feature" data-life-reveal>
-    <figure class="life-service-feature-photo">
-      <img src="{{ '/assets/img/volunteering-02.jpg' | relative_url }}" alt="SUSTech Red Cross volunteers beside their campus response tent" loading="lazy">
-      <figcaption>With the SUSTech Red Cross</figcaption>
-    </figure>
-    <div class="life-service-feature-copy">
-      <p class="life-overline">SUSTech Red Cross · Organization Department</p>
-      <h3>From the classroom<br>to the field.</h3>
-      <p>As director, I led first-aid outreach, training, and campus events.</p>
-      <div class="life-impact" aria-label="Volunteer service highlights">
-        <div><strong>144.5</strong><span>volunteer hours</span></div>
-        <div><strong>10+</strong><span>major events</span></div>
-        <div><strong>10+</strong><span>outreach sessions for 100+ people each</span></div>
-        <div><strong>5+</strong><span>training sessions taught</span></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="life-service-more" data-life-reveal>
-    <article>
-      <span class="life-service-more-index">01 / TEACH</span>
-      <h3>Shenzhen Nanshan District Emergency Rescue Association</h3>
-      <p>As an instructor, I helped establish certification frameworks for first-aid instructors and responders.</p>
-    </article>
-    <article>
-      <span class="life-service-more-index">02 / RESPOND</span>
-      <h3>Campus First-Aid Responder</h3>
-      <p>I responded to 20+ medical emergencies, including seizures, fractures, and trauma.</p>
-    </article>
-  </div>
-
-  <div class="life-service-gallery-lead" data-life-reveal>
+<section class="life-photos" aria-labelledby="photo-journal-title">
+  <div class="life-section-heading" data-life-reveal>
     <div>
-      <p class="life-kicker">FIELD NOTES / 01—15</p>
-      <h3>Moments in action</h3>
+      <p class="life-eyebrow">01 / TRAVEL & PHOTOGRAPHY</p>
+      <h2 id="photo-journal-title">Somewhere,<br><em>something beautiful.</em></h2>
     </div>
-    <p>Turn the gallery to see training, outreach, and response work.</p>
+    <p>I travel for the places, the food, and the little moments in between. These are the scenes I brought home.</p>
+  </div>
+  <div class="life-gallery-meta"><span>THROUGH MY LENS</span><span>19 FRAMES · DRAG, SWIPE OR CHOOSE A FRAME</span></div>
+  <div id="life-photo-carousel">
+    <div class="photo-carousel-fallback"><img src="{{ '/assets/img/photography-08.jpg' | relative_url }}" alt="People enjoying the beach at sunset" loading="lazy"></div>
+  </div>
+</section>
+
+<section class="life-service" aria-labelledby="volunteering-title">
+  <div class="life-service-masthead" data-life-reveal>
+    <p class="life-eyebrow">02 / VOLUNTEERING</p>
+    <h2 id="volunteering-title">Care is<br><em>something we do.</em></h2>
+    <p>First aid gives me a practical way to support the people around me: teaching it, organizing it, and responding when it matters.</p>
+    <span class="life-service-asterisk" aria-hidden="true">✳</span>
+  </div>
+
+  <div class="life-service-story" data-life-reveal>
+    <div class="life-service-story-lead">
+      <p class="life-eyebrow">SUSTECH RED CROSS</p>
+      <h3>From learning<br>to <em>action.</em></h3>
+      <p>As Director of the Organization Department, I organized first-aid outreach, training, and campus events.</p>
+    </div>
+    <div class="life-service-numbers" aria-label="Volunteer service highlights">
+      <div><strong>144.5</strong><span>volunteer service hours</span></div>
+      <div><strong>10+</strong><span>large events and outreach sessions</span></div>
+      <div><strong>5+</strong><span>first-aid sessions taught</span></div>
+      <div><strong>20+</strong><span>campus emergencies answered</span></div>
+    </div>
+  </div>
+
+  <div class="life-service-roles" data-life-reveal>
+    <article><span>01 / ORGANIZE</span><h3>SUSTech Red Cross</h3><p>Led campus events and first-aid outreach, including 10+ sessions for audiences of over 100 people.</p></article>
+    <article><span>02 / TEACH</span><h3>Nanshan Emergency Rescue Association</h3><p>Helped establish certification frameworks for first-aid instructors and responders.</p></article>
+    <article><span>03 / RESPOND</span><h3>Campus First-Aid Responder</h3><p>Responded to more than 20 medical emergencies, including seizures, fractures, and trauma.</p></article>
+  </div>
+
+  <div class="life-archive-heading" data-life-reveal>
+    <div><p class="life-eyebrow">THE SERVICE ARCHIVE / 15 FRAMES</p><h3>Moments of care.</h3></div>
+    <p>A documentary contact sheet from training, outreach, and response work. Select a frame to see it in full.</p>
   </div>
   <div id="volunteer-photo-gallery">
-    <div class="volunteer-gallery-fallback">
-      <img src="{{ '/assets/img/volunteering-02.jpg' | relative_url }}" alt="SUSTech Red Cross volunteers beside their campus response tent" loading="lazy">
-    </div>
+    <div class="volunteer-gallery-fallback"><img src="{{ '/assets/img/volunteering-04.jpg' | relative_url }}" alt="First-aid training with a CPR manikin" loading="lazy"></div>
   </div>
 </section>
 
-<section class="life-chapter life-photography-chapter" aria-labelledby="photo-journal-title">
-  <header class="life-photo-header" data-life-reveal>
-    <p class="life-kicker">02 <span aria-hidden="true">/</span> PLACES</p>
-    <h2 id="photo-journal-title">A little more<br><em>of the world.</em></h2>
-    <p>I love traveling, discovering local food, and bringing home photographs of the moments in between.</p>
-  </header>
-  <div class="life-photo-gallery-lead" data-life-reveal>
-    <span>THROUGH MY LENS</span>
-    <span>19 FRAMES · DRAG OR EXPLORE BELOW</span>
-  </div>
-  <div id="life-photo-carousel">
-    <div class="photo-carousel-fallback">
-      <img src="{{ '/assets/img/photography-08.jpg' | relative_url }}" alt="People enjoying the beach at sunset" loading="lazy">
-    </div>
-  </div>
-</section>
+<div class="life-outro"><span>THE PLACES WE SEE. THE PEOPLE WE MEET.</span><a href="#life-title">BACK TO THE TOP ↑</a></div>
 
 <script type="module" src="{{ '/assets/react/life-service.js' | relative_url | bust_file_cache }}"></script>
