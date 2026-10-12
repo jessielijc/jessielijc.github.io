@@ -1680,9 +1680,14 @@ html[data-theme="dark"] .visitor-dotted-map {
 
 // Life & Service is an editorial photo journal; only the shared navigation stays in the site shell.
 body:has(.life-service-page) > .container.mt-5 {
+  margin-top: 0 !important;
   max-width: none;
   padding: 0;
   width: 100%;
+}
+
+body:has(.life-service-page) > footer.fixed-bottom {
+  display: none;
 }
 
 .life-service-page {
@@ -2582,4 +2587,3 @@ html[data-theme="dark"] .volunteer-archive-frame {
     transform: none;
   }
 }
-
