@@ -2375,6 +2375,10 @@ body:has(.life-service-page) > footer.fixed-bottom {
   transition: transform 200ms ease;
 }
 
+#volunteer-photo-gallery .volunteer-archive-caption span {
+  color: #463344 !important;
+}
+
 .volunteer-archive-frame:hover .volunteer-archive-caption span:last-child {
   transform: translate(3px, -3px);
 }
