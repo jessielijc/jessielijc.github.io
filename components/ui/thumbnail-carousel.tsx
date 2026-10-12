@@ -1,5 +1,6 @@
 import { motion, useMotionValue, useReducedMotion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 
 export type CarouselPhoto = {
   src: string;
@@ -16,8 +17,11 @@ const SPRING = { type: "spring" as const, mass: 3, stiffness: 400, damping: 50 }
 
 export function ThumbnailCarousel({ photos }: ThumbnailCarouselProps) {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isLightboxOpen, setLightboxOpen] = useState(false);
   const carouselRef = useRef<HTMLDivElement>(null);
   const thumbnailStripRef = useRef<HTMLDivElement>(null);
+  const openButtonRef = useRef<HTMLButtonElement>(null);
+  const closeButtonRef = useRef<HTMLButtonElement>(null);
   const dragX = useMotionValue(0);
   const reducedMotion = useReducedMotion();
 
@@ -46,6 +50,24 @@ export function ThumbnailCarousel({ photos }: ThumbnailCarouselProps) {
       behavior: reducedMotion ? "instant" : "smooth",
     });
   }, [activeIndex, reducedMotion]);
+
+  useEffect(() => {
+    if (!isLightboxOpen) return;
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    closeButtonRef.current?.focus();
+    const handleEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setLightboxOpen(false);
+    };
+    window.addEventListener("keydown", handleEscape);
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener("keydown", handleEscape);
+      openButtonRef.current?.focus();
+    };
+  }, [isLightboxOpen]);
 
   if (photos.length === 0) return null;
 
@@ -103,7 +125,14 @@ export function ThumbnailCarousel({ photos }: ThumbnailCarouselProps) {
             </motion.div>
           ))}
         </motion.div>
+        <button ref={openButtonRef} className="photo-carousel-open" type="button" onClick={() => setLightboxOpen(true)}>
+          View photo ↗
+        </button>
       </div>
+
+      <p className="photo-carousel-current-caption" aria-live="polite">
+        {photos[activeIndex].alt}
+      </p>
 
       {photos.length > 1 && (
         <div className="photo-carousel-navigation">
@@ -139,6 +168,36 @@ export function ThumbnailCarousel({ photos }: ThumbnailCarouselProps) {
           </div>
         </div>
       )}
+
+      {isLightboxOpen &&
+        createPortal(
+          <div
+            className="photo-lightbox"
+            role="dialog"
+            aria-modal="true"
+            aria-label="Photograph preview"
+            onClick={() => setLightboxOpen(false)}
+            onKeyDown={(event) => {
+              if (event.key === "Tab") {
+                event.preventDefault();
+                closeButtonRef.current?.focus();
+              }
+            }}
+          >
+            <button
+              ref={closeButtonRef}
+              className="photo-lightbox-close"
+              type="button"
+              aria-label="Close photograph"
+              onClick={() => setLightboxOpen(false)}
+            >
+              ×
+            </button>
+            <img src={photos[activeIndex].src} alt={photos[activeIndex].alt} onClick={(event) => event.stopPropagation()} />
+            <p>{photos[activeIndex].alt}</p>
+          </div>,
+          document.body
+        )}
     </div>
   );
 }
