@@ -87,3 +87,19 @@ if (carouselRoot) createRoot(carouselRoot).render(<ThumbnailCarousel photos={pho
 
 const volunteerGalleryRoot = document.getElementById("volunteer-photo-gallery");
 if (volunteerGalleryRoot) createRoot(volunteerGalleryRoot).render(<CircularGallery items={volunteerPhotos} />);
+
+const revealTargets = document.querySelectorAll<HTMLElement>("[data-life-reveal]");
+if (revealTargets.length && "IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  document.documentElement.classList.add("life-motion-ready");
+  const revealObserver = new IntersectionObserver(
+    (entries, observer) => {
+      for (const entry of entries) {
+        if (!entry.isIntersecting) continue;
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      }
+    },
+    { rootMargin: "0px 0px -8% 0px", threshold: 0.08 }
+  );
+  revealTargets.forEach((target) => revealObserver.observe(target));
+}
