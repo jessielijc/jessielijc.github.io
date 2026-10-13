@@ -58,12 +58,40 @@
       });
     };
 
-    publicationsLink.addEventListener("click", () => setCurrentSection("publications"));
-    projectsLink.addEventListener("click", () => setCurrentSection("projects"));
+    const scrollToSection = (section) => {
+      const offset = Number.parseFloat(window.getComputedStyle(section).scrollMarginTop) || 0;
+      window.scrollTo({ top: window.scrollY + section.getBoundingClientRect().top - offset, behavior: "instant" });
+      scheduleUpdate();
+    };
+
+    const navigateToSection = (event, section, name) => {
+      if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+      event.preventDefault();
+
+      if (window.location.hash !== `#${name}`) window.history.pushState(null, "", `#${name}`);
+
+      // A same-page anchor does not close Bootstrap's expanded mobile menu.
+      const mobileMenu = document.getElementById("navbarNav");
+      if (mobileMenu?.classList.contains("show")) document.querySelector(".navbar-toggler")?.click();
+
+      window.requestAnimationFrame(() => scrollToSection(section));
+      setCurrentSection(name);
+    };
+
+    const alignHash = () => {
+      const section = window.location.hash === "#projects" ? projectsSection : window.location.hash === "#publications" ? publicationsSection : null;
+      if (section) window.requestAnimationFrame(() => scrollToSection(section));
+      else scheduleUpdate();
+    };
+
+    publicationsLink.addEventListener("click", (event) => navigateToSection(event, publicationsSection, "publications"));
+    projectsLink.addEventListener("click", (event) => navigateToSection(event, projectsSection, "projects"));
     aboutLink.addEventListener("click", () => setCurrentSection("about"));
-    window.addEventListener("hashchange", scheduleUpdate);
+    window.addEventListener("hashchange", alignHash);
     window.addEventListener("resize", scheduleUpdate);
     window.addEventListener("scroll", scheduleUpdate, { passive: true });
+    if (document.readyState === "complete") alignHash();
+    else window.addEventListener("load", alignHash, { once: true });
 
     updateCurrentSection();
   };
