@@ -72,7 +72,18 @@
 
       // A same-page anchor does not close Bootstrap's expanded mobile menu.
       const mobileMenu = document.getElementById("navbarNav");
-      if (mobileMenu?.classList.contains("show")) document.querySelector(".navbar-toggler")?.click();
+      const mobileToggle = document.querySelector(".navbar-toggler");
+      if (mobileMenu?.classList.contains("show")) mobileToggle?.click();
+      else if (mobileMenu?.classList.contains("collapsing") && mobileToggle?.getAttribute("aria-expanded") === "true") {
+        // Wait for the opening animation before asking Bootstrap to close it.
+        const observer = new MutationObserver(() => {
+          if (mobileMenu.classList.contains("show")) {
+            observer.disconnect();
+            mobileToggle.click();
+          } else if (!mobileMenu.classList.contains("collapsing")) observer.disconnect();
+        });
+        observer.observe(mobileMenu, { attributes: true, attributeFilter: ["class"] });
+      }
 
       window.requestAnimationFrame(() => scrollToSection(section));
       setCurrentSection(name);
