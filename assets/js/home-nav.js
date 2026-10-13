@@ -43,7 +43,10 @@
 
     const updateCurrentSection = () => {
       const navbarHeight = navbar?.getBoundingClientRect().height ?? 0;
-      const projectsReached = projectsSection.getBoundingClientRect().top <= navbarHeight + 32;
+      const projectsTop = projectsSection.getBoundingClientRect().top;
+      const atPageEnd = window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 2;
+      // A tall viewport can reach the document end before Projects reaches the navbar.
+      const projectsReached = projectsTop <= navbarHeight + 32 || (atPageEnd && projectsTop < window.innerHeight);
       const publicationsReached = publicationsSection.getBoundingClientRect().top <= navbarHeight + 32;
       setCurrentSection(projectsReached ? "projects" : publicationsReached ? "publications" : "about");
     };
