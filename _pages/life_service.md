@@ -9,23 +9,13 @@ nav: true
 nav_order: 9
 ---
 
-<section class="life-intro" aria-labelledby="life-title">
-  <div class="life-intro-copy" data-life-reveal>
-    <p class="life-eyebrow">A PERSONAL FIELD JOURNAL <span>— JIACAN LI</span></p>
-    <h1 id="life-title">Life beyond<br><em>the lab.</em></h1>
-    <p>Travel and photography help me look closer. First-aid volunteering gives me a way to show up for others.</p>
-  </div>
-  <nav class="life-intro-links" aria-label="Explore Life and Service">
-    <a href="#photo-journal-title" data-index="01"><span>01 / THROUGH MY LENS</span><strong>Photography</strong><span>EXPLORE <span aria-hidden="true">↗</span></span></a>
-    <a href="#volunteering-title" data-index="02"><span>02 / SHOWING UP</span><strong>Volunteering</strong><span>EXPLORE <span aria-hidden="true">↗</span></span></a>
-  </nav>
-</section>
+<h1 class="sr-only">Life &amp; Service</h1>
 
 <section class="life-photos" aria-labelledby="photo-journal-title">
   <div class="life-section-heading" data-life-reveal>
     <div>
       <p class="life-eyebrow">01 / TRAVEL & PHOTOGRAPHY</p>
-      <h2 id="photo-journal-title">Somewhere,<br><em>something beautiful.</em></h2>
+      <h2 id="photo-journal-title">Photography<span aria-hidden="true">.</span></h2>
     </div>
     <p>I travel for the places, the food, and the little moments in between. These are the scenes I brought home.</p>
   </div>
@@ -38,9 +28,8 @@ nav_order: 9
 <section class="life-service" aria-labelledby="volunteering-title">
   <div class="life-service-masthead" data-life-reveal>
     <p class="life-eyebrow">02 / VOLUNTEERING</p>
-    <h2 id="volunteering-title">Care is<br><em>something we do.</em></h2>
+    <h2 id="volunteering-title">Volunteering<span aria-hidden="true">.</span></h2>
     <p>First aid gives me a practical way to support the people around me: teaching it, organizing it, and responding when it matters.</p>
-    <span class="life-service-asterisk" aria-hidden="true">✳</span>
   </div>
 
   <div class="life-service-story" data-life-reveal>
@@ -71,7 +60,5 @@ nav_order: 9
     <div class="volunteer-gallery-fallback"><img src="{{ '/assets/img/volunteering-04.jpg' | relative_url }}" alt="First-aid training with a CPR manikin" loading="lazy"></div>
   </div>
 </section>
-
-<div class="life-outro"><span>THE PLACES WE SEE. THE PEOPLE WE MEET.</span><a href="#life-title">BACK TO THE TOP ↑</a></div>
 
 <script type="module" src="{{ '/assets/react/life-service.js' | relative_url | bust_file_cache }}"></script>
