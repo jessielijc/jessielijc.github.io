@@ -1717,202 +1717,19 @@ body:has(.life-service-page) > footer.fixed-bottom {
   text-transform: uppercase;
 }
 
-.life-intro {
-  background: transparent;
-  color: var(--life-ink);
-  display: grid;
-  gap: clamp(2rem, 4vw, 4rem);
-  grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
-  min-height: 29rem;
-  overflow: hidden;
-  padding: clamp(1.5rem, 3vw, 3rem) clamp(0.25rem, 1vw, 1rem) clamp(3rem, 5vw, 5rem);
-  position: relative;
-}
-
-.life-intro::before {
-  border: 1px solid var(--life-rule);
-  border-radius: 50%;
-  content: "";
-  height: 26rem;
-  left: -13rem;
-  pointer-events: none;
-  position: absolute;
-  top: -13rem;
-  width: 26rem;
-}
-
-.life-intro::after {
-  border: 1px solid rgba(var(--site-wash-rgb), 0.18);
-  border-radius: 50%;
-  content: "";
-  height: min(36vw, 34rem);
-  pointer-events: none;
-  position: absolute;
-  right: 24%;
-  top: -16rem;
-  width: min(36vw, 34rem);
-}
-
-.life-intro-copy {
-  align-self: center;
-  position: relative;
-  width: 100%;
-  z-index: 2;
-}
-
-.life-intro-copy .life-eyebrow span {
-  color: var(--life-accent);
-}
-
-.life-service-page .life-intro h1 {
-  color: var(--life-ink) !important;
-  font-size: clamp(3.7rem, 6vw, 6.5rem) !important;
-  font-weight: 750 !important;
-  letter-spacing: -0.085em !important;
-  line-height: 0.94 !important;
-  margin: 1.7rem 0 1.8rem !important;
-  max-width: 13ch;
-}
-
-.life-intro h1 em,
-.life-section-heading h2 em,
-.life-service-masthead h2 em,
-.life-service-story-lead h3 em {
-  font-family: Georgia, "Times New Roman", serif;
-  font-weight: 400;
-  letter-spacing: -0.065em;
-}
-
-.life-intro h1 em {
-  color: var(--life-accent);
-}
-
-.life-intro-copy > p:not(.life-eyebrow) {
-  color: var(--life-muted);
-  font-size: clamp(1.08rem, 1.35vw, 1.3rem);
-  line-height: 1.58;
-  margin: 0;
-  max-width: 34rem;
-}
-
-.life-intro-links {
-  display: grid;
-  align-content: center;
-  grid-template-rows: repeat(2, auto);
-  min-height: 0;
-  position: relative;
-  z-index: 2;
-}
-
-.life-intro-links a {
-  background: transparent;
-  border: 0;
-  border-top: 1px solid var(--life-rule);
-  color: var(--life-ink);
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  isolation: isolate;
-  min-height: 11rem;
-  overflow: hidden;
-  padding: 1.4rem 1rem 1.1rem;
-  position: relative;
-  text-decoration: none;
-  transition: background 350ms ease, padding 350ms cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.life-intro-links a:last-child {
-  border-bottom: 1px solid var(--life-rule);
-}
-
-.life-intro-links a::before {
-  color: rgba(var(--site-wash-rgb), 0.14);
-  content: attr(data-index);
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(8rem, 16vw, 15rem);
-  line-height: 1;
-  position: absolute;
-  right: -0.025em;
-  top: -0.2em;
-  transform: rotate(-8deg);
-  transition: transform 550ms cubic-bezier(0.22, 1, 0.36, 1);
-  z-index: -1;
-}
-
-.life-intro-links a::after {
-  border: 1px solid var(--life-rule);
-  border-radius: 50%;
-  content: "";
-  height: 15rem;
-  position: absolute;
-  right: -4rem;
-  top: -8rem;
-  transition: transform 550ms cubic-bezier(0.22, 1, 0.36, 1);
-  width: 15rem;
-  z-index: -1;
-}
-
-.life-intro-links a > span:first-child {
-  font-size: 0.9rem;
-  font-weight: 800;
-  letter-spacing: 0.1em;
-}
-
-.life-intro-links a strong {
-  align-self: end;
-  font-size: clamp(2rem, 3.15vw, 3.45rem);
-  font-weight: 750;
-  letter-spacing: -0.065em;
-  line-height: 1.05;
-}
-
-.life-intro-links a > span:last-child {
-  align-items: center;
-  border-top: 1px solid var(--life-rule);
-  display: flex;
-  font-size: 0.9rem;
-  font-weight: 800;
-  justify-content: space-between;
-  letter-spacing: 0.1em;
-  line-height: 1;
-  margin-top: 1rem;
-  padding-top: 0.8rem;
-}
-
-.life-intro-links a > span:last-child span {
-  font-size: 1.4rem;
-  line-height: 0.8;
-}
-
-.life-intro-links a:hover,
-.life-intro-links a:focus-visible {
-  background: var(--site-surface-soft);
-  text-decoration: none;
-  padding-left: 1.5rem;
-}
-
-.life-intro-links a:hover::before,
-.life-intro-links a:focus-visible::before {
-  transform: rotate(-4deg) translateY(0.1em);
-}
-
-.life-intro-links a:hover::after,
-.life-intro-links a:focus-visible::after {
-  transform: scale(1.2) translate(-1rem, 1rem);
-}
-
 .life-photos {
   background: transparent;
-  border-top: 1px solid var(--life-rule);
   color: var(--global-text-color);
-  padding: clamp(3rem, 5vw, 5rem) clamp(0.25rem, 1vw, 1rem);
+  padding: clamp(1rem, 2vw, 2rem) clamp(0.25rem, 1vw, 1rem)
+    clamp(3.5rem, 6vw, 6rem);
 }
 
 .life-section-heading {
-  align-items: end;
+  align-items: center;
   display: grid;
-  gap: 3rem;
-  grid-template-columns: minmax(0, 1.7fr) minmax(15rem, 0.6fr);
-  margin-bottom: clamp(3rem, 5vw, 5rem);
+  gap: 2rem 4rem;
+  grid-template-columns: minmax(0, 1.6fr) minmax(15rem, 0.65fr);
+  margin-bottom: clamp(2rem, 3vw, 3rem);
 }
 
 .life-photos .life-eyebrow,
@@ -1922,14 +1739,14 @@ body:has(.life-service-page) > footer.fixed-bottom {
 
 .life-service-page .life-section-heading h2 {
   color: var(--life-ink) !important;
-  font-size: clamp(3.2rem, 5.5vw, 5.8rem) !important;
-  font-weight: 750 !important;
-  letter-spacing: -0.075em !important;
-  line-height: 1.02 !important;
-  margin: 1.7rem 0 0 !important;
+  font-size: clamp(4.5rem, 8vw, 8rem) !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.085em !important;
+  line-height: 0.95 !important;
+  margin: 0.6rem 0 0 !important;
 }
 
-.life-section-heading h2 em {
+.life-section-heading h2 span {
   color: var(--life-accent);
 }
 
@@ -2033,20 +1850,29 @@ body:has(.life-service-page) > footer.fixed-bottom {
 
 .life-service {
   background: transparent;
-  border-top: 1px solid var(--life-rule);
   color: var(--global-text-color);
-  padding: clamp(3rem, 5vw, 5rem) clamp(0.25rem, 1vw, 1rem) clamp(3rem, 5vw, 5rem);
+  padding: clamp(3.5rem, 6vw, 6rem) clamp(0.25rem, 1vw, 1rem)
+    clamp(2rem, 4vw, 4rem);
+  position: relative;
+}
+
+.life-service::before {
+  background: var(--life-rule);
+  content: "";
+  height: 1px;
+  left: clamp(0.25rem, 1vw, 1rem);
+  position: absolute;
+  right: clamp(0.25rem, 1vw, 1rem);
+  top: 0;
 }
 
 .life-service-masthead {
   background: transparent;
   display: grid;
-  gap: 0 3rem;
-  grid-template-columns: minmax(0, 1.55fr) minmax(16rem, 0.6fr);
-  margin: 0 0 clamp(3rem, 5vw, 5rem);
+  gap: 1rem 4rem;
+  grid-template-columns: minmax(0, 1.6fr) minmax(15rem, 0.65fr);
+  margin: 0 0 clamp(2.5rem, 4vw, 4rem);
   overflow: hidden;
-  padding: 0 0 clamp(2.5rem, 4vw, 4rem);
-  position: relative;
 }
 
 .life-service-masthead .life-eyebrow {
@@ -2055,36 +1881,23 @@ body:has(.life-service-page) > footer.fixed-bottom {
 
 .life-service-page .life-service-masthead h2 {
   color: var(--life-ink) !important;
-  font-size: clamp(3.2rem, 5.5vw, 5.8rem) !important;
-  font-weight: 750 !important;
-  letter-spacing: -0.08em !important;
-  line-height: 0.98 !important;
-  margin: 2.2rem 0 0 !important;
-  position: relative;
-  z-index: 1;
+  font-size: clamp(4.5rem, 8vw, 8rem) !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.085em !important;
+  line-height: 0.95 !important;
+  margin: 0.6rem 0 0 !important;
 }
 
-.life-service-masthead h2 em {
+.life-service-masthead h2 span {
   color: var(--life-accent);
 }
 
 .life-service-masthead > p:not(.life-eyebrow) {
-  align-self: end;
-  font-size: 1.15rem;
+  align-self: center;
+  color: var(--life-muted);
+  font-size: 1.08rem;
   line-height: 1.65;
-  margin: 0 0 0.4rem;
-  position: relative;
-  z-index: 1;
-}
-
-.life-service-asterisk {
-  color: rgba(var(--site-wash-rgb), 0.16);
-  font-size: clamp(10rem, 25vw, 25rem);
-  line-height: 1;
-  position: absolute;
-  right: -1.5rem;
-  top: -6rem;
-  transform: rotate(18deg);
+  margin: 0;
 }
 
 .life-service-story {
@@ -2100,7 +1913,7 @@ body:has(.life-service-page) > footer.fixed-bottom {
 
 .life-service-page .life-service-story-lead h3 {
   color: var(--life-ink) !important;
-  font-size: clamp(2.8rem, 4.3vw, 5rem) !important;
+  font-size: clamp(2rem, 3vw, 3rem) !important;
   font-weight: 750 !important;
   letter-spacing: -0.07em !important;
   line-height: 1.05 !important;
@@ -2212,7 +2025,7 @@ body:has(.life-service-page) > footer.fixed-bottom {
 
 .life-service-page .life-archive-heading h3 {
   color: var(--life-ink) !important;
-  font-size: clamp(2.9rem, 5vw, 5.6rem) !important;
+  font-size: clamp(2rem, 3vw, 3rem) !important;
   font-weight: 750 !important;
   letter-spacing: -0.075em !important;
   line-height: 1.06 !important;
@@ -2227,13 +2040,21 @@ body:has(.life-service-page) > footer.fixed-bottom {
 }
 
 #volunteer-photo-gallery {
-  background: radial-gradient(circle at 1px 1px, rgba(var(--site-wash-rgb), 0.2) 0.8px, transparent 1px) 0 0 / 19px 19px, var(--site-surface-soft);
+  background:
+    radial-gradient(
+        circle at 1px 1px,
+        rgba(var(--site-wash-rgb), 0.2) 0.8px,
+        transparent 1px
+      )
+      0 0 / 19px 19px,
+    var(--site-surface-soft);
   border: 1px solid var(--life-rule);
   border-radius: 0.8rem;
   box-shadow: inset 0 0 0 8px rgba(var(--site-wash-rgb), 0.04);
   isolation: isolate;
   overflow: hidden;
-  padding: clamp(4.5rem, 6vw, 6rem) clamp(1.2rem, 3.5vw, 3.5rem) clamp(2.5rem, 4vw, 4rem);
+  padding: clamp(4.5rem, 6vw, 6rem) clamp(1.2rem, 3.5vw, 3.5rem)
+    clamp(2.5rem, 4vw, 4rem);
   position: relative;
 }
 
@@ -2269,7 +2090,9 @@ body:has(.life-service-page) > footer.fixed-bottom {
   --print-shift: 0.35rem;
   background: #fffaf5;
   border: 1px solid rgba(82, 60, 68, 0.14);
-  box-shadow: 0 2px 2px rgba(44, 30, 43, 0.07), 0 12px 24px rgba(44, 30, 43, 0.17);
+  box-shadow:
+    0 2px 2px rgba(44, 30, 43, 0.07),
+    0 12px 24px rgba(44, 30, 43, 0.17);
   color: #463344;
   cursor: pointer;
   min-width: 0;
@@ -2277,7 +2100,9 @@ body:has(.life-service-page) > footer.fixed-bottom {
   position: relative;
   text-align: left;
   transform: translateY(var(--print-shift)) rotate(var(--print-tilt));
-  transition: box-shadow 260ms ease, transform 350ms cubic-bezier(0.22, 1, 0.36, 1);
+  transition:
+    box-shadow 260ms ease,
+    transform 350ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .volunteer-archive-frame:nth-child(5n + 2) {
@@ -2330,7 +2155,9 @@ body:has(.life-service-page) > footer.fixed-bottom {
 
 .volunteer-archive-frame:hover,
 .volunteer-archive-frame:focus-visible {
-  box-shadow: 0 5px 7px rgba(44, 30, 43, 0.1), 0 20px 34px rgba(44, 30, 43, 0.22);
+  box-shadow:
+    0 5px 7px rgba(44, 30, 43, 0.1),
+    0 20px 34px rgba(44, 30, 43, 0.22);
   transform: translateY(-0.55rem) rotate(0deg) scale(1.025);
   z-index: 3;
 }
@@ -2352,7 +2179,9 @@ body:has(.life-service-page) > footer.fixed-bottom {
   display: block;
   height: auto;
   object-fit: cover;
-  transition: filter 350ms ease, transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+  transition:
+    filter 350ms ease,
+    transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
   width: 100%;
 }
 
@@ -2455,32 +2284,12 @@ body:has(.life-service-page) > footer.fixed-bottom {
   margin: 0;
 }
 
-.life-outro {
-  align-items: center;
-  background: transparent;
-  border-top: 1px solid var(--life-rule);
-  color: var(--life-accent);
-  display: flex;
-  font-size: 0.9rem;
-  font-weight: 800;
-  justify-content: space-between;
-  letter-spacing: 0.14em;
-  padding: 1.8rem clamp(0.25rem, 1vw, 1rem) 0.25rem;
-}
-
-.life-outro a {
-  color: var(--life-ink);
-  text-decoration: none;
-}
-
-.life-outro a:hover {
-  color: var(--global-theme-color);
-}
-
 .life-motion-ready .life-service-page [data-life-reveal] {
   opacity: 0;
   transform: translateY(1.5rem);
-  transition: opacity 700ms ease, transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+  transition:
+    opacity 700ms ease,
+    transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .life-motion-ready .life-service-page [data-life-reveal].is-visible {
@@ -2489,23 +2298,6 @@ body:has(.life-service-page) > footer.fixed-bottom {
 }
 
 @media (max-width: 900px) {
-  .life-intro {
-    gap: 2.5rem;
-    grid-template-columns: 1fr;
-    min-height: 0;
-  }
-
-  .life-intro-links {
-    gap: 1.5rem;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    grid-template-rows: auto;
-    min-height: 0;
-  }
-
-  .life-intro-links a {
-    border-bottom: 1px solid var(--life-rule);
-  }
-
   .life-section-heading,
   .life-service-masthead,
   .life-service-story,
@@ -2537,42 +2329,8 @@ body:has(.life-service-page) > footer.fixed-bottom {
 }
 
 @media (max-width: 650px) {
-  .life-intro {
-    gap: 2rem;
-    padding: 1.5rem 0.1rem 2.8rem;
-  }
-
-  .life-service-page .life-intro h1 {
-    font-size: clamp(3.75rem, 12vw, 5.5rem) !important;
-    margin: 1.2rem 0 1.4rem !important;
-  }
-
-  .life-intro-copy > p:not(.life-eyebrow) {
-    font-size: 1.08rem;
-  }
-
-  .life-intro-links {
-    gap: 0;
-    grid-template-columns: 1fr;
-    min-height: 0;
-  }
-
-  .life-intro-links a {
-    border-bottom: 0;
-    min-height: 8.5rem;
-    padding: 1rem 0.6rem;
-  }
-
-  .life-intro-links a:last-child {
-    border-bottom: 1px solid var(--life-rule);
-  }
-
-  .life-intro-links a strong {
-    font-size: clamp(1.85rem, 7vw, 2.35rem);
-  }
-
-  .life-intro-links a::before {
-    font-size: 8rem;
+  .life-service-page :is(.life-section-heading h2, .life-service-masthead h2) {
+    font-size: clamp(2.55rem, 10vw, 4.5rem) !important;
   }
 
   .life-gallery-meta {
@@ -2603,18 +2361,9 @@ body:has(.life-service-page) > footer.fixed-bottom {
     font-size: 0.88rem;
     min-height: 5.2rem;
   }
-
-  .life-outro {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 1rem;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .life-intro-links a,
-  .life-intro-links a::before,
-  .life-intro-links a::after,
   .volunteer-archive-image img,
   .volunteer-archive-frame,
   .life-motion-ready .life-service-page [data-life-reveal] {
