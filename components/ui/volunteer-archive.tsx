@@ -73,9 +73,7 @@ export function VolunteerArchive({ photos }: { photos: VolunteerPhoto[] }) {
           </button>
         ))}
         <div className="volunteer-archive-ending">
-          <span className="volunteer-archive-ending-art" aria-hidden="true">
-            ✳
-          </span>
+          <img className="volunteer-archive-ending-art" src="/assets/img/volunteer-to-be-continued.png" alt="" loading="lazy" />
           <span className="volunteer-archive-ending-caption">To be continued…</span>
         </div>
       </div>
