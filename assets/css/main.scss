@@ -2329,7 +2329,8 @@ body:has(.life-service-page) > footer.fixed-bottom {
 }
 
 @media (max-width: 650px) {
-  .life-service-page :is(.life-section-heading h2, .life-service-masthead h2) {
+  .life-service-page .life-section-heading h2,
+  .life-service-page .life-service-masthead h2 {
     font-size: clamp(2.55rem, 10vw, 4.5rem) !important;
   }
 
