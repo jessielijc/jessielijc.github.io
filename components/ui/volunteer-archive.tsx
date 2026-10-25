@@ -72,6 +72,12 @@ export function VolunteerArchive({ photos }: { photos: VolunteerPhoto[] }) {
             </span>
           </button>
         ))}
+        <div className="volunteer-archive-ending">
+          <span className="volunteer-archive-ending-art" aria-hidden="true">
+            ✳
+          </span>
+          <span className="volunteer-archive-ending-caption">To be continued…</span>
+        </div>
       </div>
       {active !== null &&
         createPortal(
