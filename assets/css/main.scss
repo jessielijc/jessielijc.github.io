@@ -1679,36 +1679,29 @@ html[data-theme="dark"] .visitor-dotted-map {
 }
 */
 
-// Life & Service is an editorial photo journal; only the shared navigation stays in the site shell.
-body:has(.life-service-page) > .container.mt-5 {
-  margin-top: 0 !important;
-  max-width: none;
-  padding: 0;
-  width: 100%;
-}
-
+// Life & Service shares the site's single-board shell, with editorial sections inside it.
 body:has(.life-service-page) > footer.fixed-bottom {
   display: none;
 }
 
 .life-service-page {
-  --life-ink: #292235;
-  --life-paper: #f5f0ec;
-  --life-pink: #e7c7cf;
-  --life-plum: #4a3552;
-  margin: 0;
-  max-width: none;
-  padding: 0;
+  --life-ink: var(--site-title-color);
+  --life-muted: var(--global-text-color-light);
+  --life-accent: var(--site-subtitle-color);
+  --life-rule: var(--global-divider-color);
 }
 
 .life-service-page > article {
-  background: transparent;
-  border: 0;
-  border-radius: 0;
-  box-shadow: none;
+  background: var(--global-card-bg-color);
+  border: 1px solid var(--global-divider-color);
+  border-radius: 1.35rem;
+  box-shadow: var(--site-shadow);
   display: block;
-  margin: 0;
-  padding: 0;
+  margin: 0.8rem 0 2rem;
+  overflow: hidden;
+  padding: clamp(1.5rem, 3.1vw, 2.8rem);
+  backdrop-filter: blur(12px) saturate(112%);
+  -webkit-backdrop-filter: blur(12px) saturate(112%);
 }
 
 .life-service-page :is(#photo-journal-title, #volunteering-title) {
@@ -1725,19 +1718,19 @@ body:has(.life-service-page) > footer.fixed-bottom {
 }
 
 .life-intro {
-  background: var(--life-paper);
+  background: transparent;
   color: var(--life-ink);
   display: grid;
-  gap: clamp(2rem, 5vw, 5rem);
+  gap: clamp(2rem, 4vw, 4rem);
   grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
-  min-height: min(41rem, calc(100svh - 4rem));
+  min-height: 29rem;
   overflow: hidden;
-  padding: clamp(2.5rem, 4vw, 4.5rem) clamp(1.5rem, 5vw, 6rem);
+  padding: clamp(1.5rem, 3vw, 3rem) clamp(0.25rem, 1vw, 1rem) clamp(3rem, 5vw, 5rem);
   position: relative;
 }
 
 .life-intro::before {
-  border: 1px solid rgba(74, 53, 82, 0.14);
+  border: 1px solid var(--life-rule);
   border-radius: 50%;
   content: "";
   height: 26rem;
@@ -1749,7 +1742,7 @@ body:has(.life-service-page) > footer.fixed-bottom {
 }
 
 .life-intro::after {
-  border: 1px solid rgba(158, 100, 120, 0.17);
+  border: 1px solid rgba(var(--site-wash-rgb), 0.18);
   border-radius: 50%;
   content: "";
   height: min(36vw, 34rem);
@@ -1768,12 +1761,12 @@ body:has(.life-service-page) > footer.fixed-bottom {
 }
 
 .life-intro-copy .life-eyebrow span {
-  color: #b47082;
+  color: var(--life-accent);
 }
 
 .life-service-page .life-intro h1 {
   color: var(--life-ink) !important;
-  font-size: clamp(4.25rem, 7vw, 7.75rem) !important;
+  font-size: clamp(3.7rem, 6vw, 6.5rem) !important;
   font-weight: 750 !important;
   letter-spacing: -0.085em !important;
   line-height: 0.94 !important;
@@ -1791,11 +1784,11 @@ body:has(.life-service-page) > footer.fixed-bottom {
 }
 
 .life-intro h1 em {
-  color: #9e6478;
+  color: var(--life-accent);
 }
 
 .life-intro-copy > p:not(.life-eyebrow) {
-  color: #584e5d;
+  color: var(--life-muted);
   font-size: clamp(1.08rem, 1.35vw, 1.3rem);
   line-height: 1.58;
   margin: 0;
@@ -1804,34 +1797,35 @@ body:has(.life-service-page) > footer.fixed-bottom {
 
 .life-intro-links {
   display: grid;
-  gap: 0.8rem;
-  grid-template-rows: repeat(2, minmax(0, 1fr));
-  min-height: min(32rem, 66svh);
+  align-content: center;
+  grid-template-rows: repeat(2, auto);
+  min-height: 0;
   position: relative;
   z-index: 2;
 }
 
 .life-intro-links a {
-  background: #dfd4df;
-  border: 1px solid rgba(74, 53, 82, 0.16);
+  background: transparent;
+  border: 0;
+  border-top: 1px solid var(--life-rule);
   color: var(--life-ink);
   display: grid;
   grid-template-rows: auto 1fr auto;
   isolation: isolate;
-  min-height: 0;
+  min-height: 11rem;
   overflow: hidden;
-  padding: clamp(1.25rem, 2vw, 2rem);
+  padding: 1.4rem 1rem 1.1rem;
   position: relative;
   text-decoration: none;
-  transition: background 350ms ease, transform 350ms cubic-bezier(0.22, 1, 0.36, 1);
+  transition: background 350ms ease, padding 350ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .life-intro-links a:last-child {
-  background: #e7c7cf;
+  border-bottom: 1px solid var(--life-rule);
 }
 
 .life-intro-links a::before {
-  color: rgba(74, 53, 82, 0.1);
+  color: rgba(var(--site-wash-rgb), 0.14);
   content: attr(data-index);
   font-family: Georgia, "Times New Roman", serif;
   font-size: clamp(8rem, 16vw, 15rem);
@@ -1845,7 +1839,7 @@ body:has(.life-service-page) > footer.fixed-bottom {
 }
 
 .life-intro-links a::after {
-  border: 1px solid rgba(74, 53, 82, 0.17);
+  border: 1px solid var(--life-rule);
   border-radius: 50%;
   content: "";
   height: 15rem;
@@ -1873,7 +1867,7 @@ body:has(.life-service-page) > footer.fixed-bottom {
 
 .life-intro-links a > span:last-child {
   align-items: center;
-  border-top: 1px solid rgba(74, 53, 82, 0.27);
+  border-top: 1px solid var(--life-rule);
   display: flex;
   font-size: 0.9rem;
   font-weight: 800;
@@ -1891,14 +1885,9 @@ body:has(.life-service-page) > footer.fixed-bottom {
 
 .life-intro-links a:hover,
 .life-intro-links a:focus-visible {
-  background: #e9dfe9;
+  background: var(--site-surface-soft);
   text-decoration: none;
-  transform: translateY(-5px);
-}
-
-.life-intro-links a:last-child:hover,
-.life-intro-links a:last-child:focus-visible {
-  background: #f0d7dd;
+  padding-left: 1.5rem;
 }
 
 .life-intro-links a:hover::before,
@@ -1912,9 +1901,10 @@ body:has(.life-service-page) > footer.fixed-bottom {
 }
 
 .life-photos {
-  background: #202034;
-  color: #f8f3ef;
-  padding: clamp(4rem, 7vw, 7.5rem) clamp(1.5rem, 6vw, 7rem) clamp(4rem, 7vw, 7rem);
+  background: transparent;
+  border-top: 1px solid var(--life-rule);
+  color: var(--global-text-color);
+  padding: clamp(3rem, 5vw, 5rem) clamp(0.25rem, 1vw, 1rem);
 }
 
 .life-section-heading {
@@ -1927,12 +1917,12 @@ body:has(.life-service-page) > footer.fixed-bottom {
 
 .life-photos .life-eyebrow,
 .life-gallery-meta {
-  color: #e2b7c2;
+  color: var(--life-accent);
 }
 
 .life-service-page .life-section-heading h2 {
-  color: #f8f3ef !important;
-  font-size: clamp(3.5rem, 6.5vw, 7rem) !important;
+  color: var(--life-ink) !important;
+  font-size: clamp(3.2rem, 5.5vw, 5.8rem) !important;
   font-weight: 750 !important;
   letter-spacing: -0.075em !important;
   line-height: 1.02 !important;
@@ -1940,18 +1930,18 @@ body:has(.life-service-page) > footer.fixed-bottom {
 }
 
 .life-section-heading h2 em {
-  color: #e2b7c2;
+  color: var(--life-accent);
 }
 
 .life-section-heading > p {
-  color: #d5cfd9;
+  color: var(--life-muted);
   font-size: 1.08rem;
   line-height: 1.65;
   margin: 0;
 }
 
 .life-gallery-meta {
-  border-top: 1px solid rgba(248, 243, 239, 0.35);
+  border-top: 1px solid var(--life-rule);
   display: flex;
   flex-wrap: wrap;
   font-size: 0.9rem;
@@ -1965,23 +1955,23 @@ body:has(.life-service-page) > footer.fixed-bottom {
 .life-photos .photo-carousel-slide,
 .life-photos .photo-carousel-fallback {
   background: #101220;
-  border-radius: 0;
+  border-radius: 0.7rem;
   height: clamp(25rem, 52vw, 49rem);
   overflow: hidden;
 }
 
 .life-photos .photo-carousel-viewport {
-  border-radius: 0;
+  border-radius: 0.7rem;
   overflow: hidden;
   position: relative;
 }
 
 .life-photos .photo-carousel-open {
-  background: #f8f3ef;
+  background: var(--site-surface-raised);
   border: 0;
   border-radius: 0;
   bottom: 1.25rem;
-  color: #292235;
+  color: var(--life-ink);
   cursor: pointer;
   font-size: 0.92rem;
   font-weight: 800;
@@ -1994,12 +1984,12 @@ body:has(.life-service-page) > footer.fixed-bottom {
 
 .life-photos .photo-carousel-open:hover,
 .life-photos .photo-carousel-open:focus-visible {
-  background: #e2b7c2;
+  background: var(--site-surface-soft);
 }
 
 .life-photos .photo-carousel-current-caption,
 .life-photos .photo-carousel-counter {
-  color: #f8f3ef;
+  color: var(--global-text-color);
 }
 
 .life-photos .photo-carousel-current-caption {
@@ -2008,62 +1998,54 @@ body:has(.life-service-page) > footer.fixed-bottom {
 }
 
 .life-photos .photo-carousel-counter span {
-  color: #d0aeba;
+  color: var(--life-accent);
 }
 
 .life-photos .photo-carousel-thumbnail {
-  background: #3c3b52;
-  border-color: transparent;
-  border-radius: 0;
+  background: var(--site-surface-soft);
+  border-color: var(--life-rule);
+  border-radius: 0.35rem;
 }
 
 .life-photos .photo-carousel-thumbnail.is-active,
 .life-photos .photo-carousel-thumbnail:hover {
-  border-color: #e2b7c2;
+  border-color: var(--global-theme-color);
 }
 
 .life-photos .photo-carousel-controls button {
-  background: transparent;
-  border: 1px solid #aca1b8;
-  color: #f8f3ef;
+  background: var(--site-surface-raised);
+  border: 1px solid var(--life-rule);
+  color: var(--life-ink);
 }
 
 .life-photos .photo-carousel-controls button:hover {
-  background: #e2b7c2;
-  color: #202034;
+  background: var(--site-surface-soft);
+  color: var(--life-ink);
 }
 
 .life-photos .photo-carousel-progress {
-  background: #514a5f;
+  background: var(--site-surface-soft);
 }
 
 .life-photos .photo-carousel-progress span {
-  background: #e2b7c2;
+  background: var(--global-theme-color);
 }
 
 .life-service {
-  --life-service-bridge-end: #e7c7cf;
-  background: #f4eee8;
-  color: #292235;
-  padding: 0 clamp(1.5rem, 6vw, 7rem) clamp(5rem, 8vw, 9rem);
-}
-
-.life-service::before {
-  background: linear-gradient(180deg, #202034 0%, #373047 38%, var(--life-service-bridge-end) 100%);
-  content: "";
-  display: block;
-  height: clamp(5rem, 11vw, 9rem);
-  margin-inline: calc(-1 * clamp(1.5rem, 6vw, 7rem));
+  background: transparent;
+  border-top: 1px solid var(--life-rule);
+  color: var(--global-text-color);
+  padding: clamp(3rem, 5vw, 5rem) clamp(0.25rem, 1vw, 1rem) clamp(3rem, 5vw, 5rem);
 }
 
 .life-service-masthead {
-  background: #e7c7cf;
+  background: transparent;
   display: grid;
   gap: 0 3rem;
   grid-template-columns: minmax(0, 1.55fr) minmax(16rem, 0.6fr);
-  margin: 0 calc(-1 * clamp(1.5rem, 6vw, 7rem)) clamp(4rem, 7vw, 7rem);
+  margin: 0 0 clamp(3rem, 5vw, 5rem);
   overflow: hidden;
-  padding: clamp(4rem, 7vw, 7rem) clamp(1.5rem, 6vw, 7rem);
+  padding: 0 0 clamp(2.5rem, 4vw, 4rem);
   position: relative;
 }
 
@@ -2072,8 +2054,8 @@ body:has(.life-service-page) > footer.fixed-bottom {
 }
 
 .life-service-page .life-service-masthead h2 {
-  color: #292235 !important;
-  font-size: clamp(3.7rem, 7vw, 7.5rem) !important;
+  color: var(--life-ink) !important;
+  font-size: clamp(3.2rem, 5.5vw, 5.8rem) !important;
   font-weight: 750 !important;
   letter-spacing: -0.08em !important;
   line-height: 0.98 !important;
@@ -2083,7 +2065,7 @@ body:has(.life-service-page) > footer.fixed-bottom {
 }
 
 .life-service-masthead h2 em {
-  color: #75485e;
+  color: var(--life-accent);
 }
 
 .life-service-masthead > p:not(.life-eyebrow) {
@@ -2096,7 +2078,7 @@ body:has(.life-service-page) > footer.fixed-bottom {
 }
 
 .life-service-asterisk {
-  color: rgba(117, 72, 94, 0.14);
+  color: rgba(var(--site-wash-rgb), 0.16);
   font-size: clamp(10rem, 25vw, 25rem);
   line-height: 1;
   position: absolute;
@@ -2113,11 +2095,11 @@ body:has(.life-service-page) > footer.fixed-bottom {
 }
 
 .life-service-story-lead .life-eyebrow {
-  color: #9c5c70;
+  color: var(--life-accent);
 }
 
 .life-service-page .life-service-story-lead h3 {
-  color: #292235 !important;
+  color: var(--life-ink) !important;
   font-size: clamp(2.8rem, 4.3vw, 5rem) !important;
   font-weight: 750 !important;
   letter-spacing: -0.07em !important;
@@ -2126,24 +2108,24 @@ body:has(.life-service-page) > footer.fixed-bottom {
 }
 
 .life-service-story-lead h3 em {
-  color: #9c5c70;
+  color: var(--life-accent);
 }
 
 .life-service-story-lead > p:last-child {
-  color: #625564;
+  color: var(--life-muted);
   font-size: 1.05rem;
   line-height: 1.7;
   max-width: 29rem;
 }
 
 .life-service-numbers {
-  border-top: 1px solid rgba(41, 34, 53, 0.35);
+  border-top: 1px solid var(--life-rule);
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
 
 .life-service-numbers > div {
-  border-bottom: 1px solid rgba(41, 34, 53, 0.35);
+  border-bottom: 1px solid var(--life-rule);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -2152,11 +2134,11 @@ body:has(.life-service-page) > footer.fixed-bottom {
 }
 
 .life-service-numbers > div:nth-child(odd) {
-  border-right: 1px solid rgba(41, 34, 53, 0.35);
+  border-right: 1px solid var(--life-rule);
 }
 
 .life-service-numbers strong {
-  color: #75485e;
+  color: var(--life-accent);
   font-family: Georgia, "Times New Roman", serif;
   font-size: clamp(2.6rem, 4vw, 4.4rem);
   font-weight: 400;
@@ -2171,7 +2153,7 @@ body:has(.life-service-page) > footer.fixed-bottom {
 }
 
 .life-service-roles {
-  border-top: 1px solid rgba(41, 34, 53, 0.4);
+  border-top: 1px solid var(--life-rule);
   display: grid;
   gap: 0;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -2179,14 +2161,14 @@ body:has(.life-service-page) > footer.fixed-bottom {
 }
 
 .life-service-roles article {
-  border-bottom: 1px solid rgba(41, 34, 53, 0.4);
+  border-bottom: 1px solid var(--life-rule);
   min-width: 0;
   padding: 2rem 2rem 1rem 0;
   transition: padding 200ms ease;
 }
 
 .life-service-roles article + article {
-  border-left: 1px solid rgba(41, 34, 53, 0.4);
+  border-left: 1px solid var(--life-rule);
   padding-left: 2rem;
 }
 
@@ -2195,14 +2177,14 @@ body:has(.life-service-page) > footer.fixed-bottom {
 }
 
 .life-service-roles article > span {
-  color: #9c5c70;
+  color: var(--life-accent);
   font-size: 0.9rem;
   font-weight: 800;
   letter-spacing: 0.1em;
 }
 
 .life-service-page .life-service-roles h3 {
-  color: #292235 !important;
+  color: var(--life-ink) !important;
   font-size: clamp(1.4rem, 1.8vw, 2rem) !important;
   font-weight: 700 !important;
   letter-spacing: -0.045em !important;
@@ -2211,7 +2193,7 @@ body:has(.life-service-page) > footer.fixed-bottom {
 }
 
 .life-service-roles p {
-  color: #625564;
+  color: var(--life-muted);
   font-size: 0.95rem;
   line-height: 1.65;
 }
@@ -2225,11 +2207,11 @@ body:has(.life-service-page) > footer.fixed-bottom {
 }
 
 .life-archive-heading .life-eyebrow {
-  color: #9c5c70;
+  color: var(--life-accent);
 }
 
 .life-service-page .life-archive-heading h3 {
-  color: #292235 !important;
+  color: var(--life-ink) !important;
   font-size: clamp(2.9rem, 5vw, 5.6rem) !important;
   font-weight: 750 !important;
   letter-spacing: -0.075em !important;
@@ -2238,16 +2220,17 @@ body:has(.life-service-page) > footer.fixed-bottom {
 }
 
 .life-archive-heading > p {
-  color: #625564;
+  color: var(--life-muted);
   font-size: 1.05rem;
   line-height: 1.6;
   margin: 0;
 }
 
 #volunteer-photo-gallery {
-  background: radial-gradient(circle at 1px 1px, rgba(106, 78, 91, 0.11) 0.8px, transparent 1px) 0 0 / 19px 19px, #e8dcd7;
-  border: 1px solid rgba(97, 65, 82, 0.2);
-  box-shadow: 0 18px 50px rgba(61, 46, 59, 0.11), inset 0 0 0 8px rgba(255, 255, 255, 0.12);
+  background: radial-gradient(circle at 1px 1px, rgba(var(--site-wash-rgb), 0.2) 0.8px, transparent 1px) 0 0 / 19px 19px, var(--site-surface-soft);
+  border: 1px solid var(--life-rule);
+  border-radius: 0.8rem;
+  box-shadow: inset 0 0 0 8px rgba(var(--site-wash-rgb), 0.04);
   isolation: isolate;
   overflow: hidden;
   padding: clamp(4.5rem, 6vw, 6rem) clamp(1.2rem, 3.5vw, 3.5rem) clamp(2.5rem, 4vw, 4rem);
@@ -2256,7 +2239,7 @@ body:has(.life-service-page) > footer.fixed-bottom {
 
 #volunteer-photo-gallery::before,
 #volunteer-photo-gallery::after {
-  color: #704b60;
+  color: var(--life-accent);
   font-size: 0.88rem;
   font-weight: 800;
   letter-spacing: 0.1em;
@@ -2474,23 +2457,24 @@ body:has(.life-service-page) > footer.fixed-bottom {
 
 .life-outro {
   align-items: center;
-  background: #4a3552;
-  color: #f8f3ef;
+  background: transparent;
+  border-top: 1px solid var(--life-rule);
+  color: var(--life-accent);
   display: flex;
   font-size: 0.9rem;
   font-weight: 800;
   justify-content: space-between;
   letter-spacing: 0.14em;
-  padding: 2rem clamp(1.5rem, 6vw, 7rem);
+  padding: 1.8rem clamp(0.25rem, 1vw, 1rem) 0.25rem;
 }
 
 .life-outro a {
-  color: #f8f3ef;
+  color: var(--life-ink);
   text-decoration: none;
 }
 
 .life-outro a:hover {
-  color: #e7c7cf;
+  color: var(--global-theme-color);
 }
 
 .life-motion-ready .life-service-page [data-life-reveal] {
@@ -2504,105 +2488,6 @@ body:has(.life-service-page) > footer.fixed-bottom {
   transform: translateY(0);
 }
 
-html[data-theme="dark"] .life-service-page {
-  --life-paper: #202237;
-  --life-ink: #f7f0f4;
-}
-
-html[data-theme="dark"] .life-intro-copy > p:not(.life-eyebrow) {
-  color: #ded4e4;
-}
-
-html[data-theme="dark"] .life-intro h1 em {
-  color: #e7c7cf;
-}
-
-html[data-theme="dark"] .life-intro-links a {
-  background: #41445e;
-  border-color: rgba(248, 243, 239, 0.14);
-}
-
-html[data-theme="dark"] .life-intro-links a:last-child {
-  background: #55465f;
-}
-
-html[data-theme="dark"] .life-intro-links a::before {
-  color: rgba(231, 199, 207, 0.11);
-}
-
-html[data-theme="dark"] .life-intro-links a::after {
-  border-color: rgba(231, 199, 207, 0.2);
-}
-
-html[data-theme="dark"] .life-intro-links a > span:last-child {
-  border-color: rgba(248, 243, 239, 0.35);
-}
-
-html[data-theme="dark"] .life-intro-links a:hover,
-html[data-theme="dark"] .life-intro-links a:focus-visible {
-  background: #4d506d;
-  color: #f8f3ef;
-}
-
-html[data-theme="dark"] .life-intro-links a:last-child:hover,
-html[data-theme="dark"] .life-intro-links a:last-child:focus-visible {
-  background: #684e6a;
-}
-
-html[data-theme="dark"] .life-service {
-  --life-service-bridge-end: #56506e;
-  background: #24263c;
-  color: #f8f3ef;
-}
-
-html[data-theme="dark"] .life-service-masthead {
-  background: #56506e;
-}
-
-html[data-theme="dark"] .life-service-page .life-service-masthead h2,
-html[data-theme="dark"] .life-service-page .life-service-story-lead h3,
-html[data-theme="dark"] .life-service-page .life-service-roles h3,
-html[data-theme="dark"] .life-service-page .life-archive-heading h3 {
-  color: #f8f3ef !important;
-}
-
-html[data-theme="dark"] .life-service-masthead h2 em,
-html[data-theme="dark"] .life-service-story-lead h3 em,
-html[data-theme="dark"] .life-service-numbers strong,
-html[data-theme="dark"] .life-service-story-lead .life-eyebrow,
-html[data-theme="dark"] .life-service-roles article > span,
-html[data-theme="dark"] .life-archive-heading .life-eyebrow {
-  color: #e7c7cf;
-}
-
-html[data-theme="dark"] .life-service-story-lead > p:last-child,
-html[data-theme="dark"] .life-service-roles p,
-html[data-theme="dark"] .life-archive-heading > p {
-  color: #d9d4e2;
-}
-
-html[data-theme="dark"] .life-service-numbers,
-html[data-theme="dark"] .life-service-numbers > div,
-html[data-theme="dark"] .life-service-roles,
-html[data-theme="dark"] .life-service-roles article {
-  border-color: rgba(255, 255, 255, 0.34);
-}
-
-html[data-theme="dark"] #volunteer-photo-gallery {
-  background: radial-gradient(circle at 1px 1px, rgba(231, 199, 207, 0.11) 0.8px, transparent 1px) 0 0 / 19px 19px, #38364c;
-  border-color: rgba(231, 199, 207, 0.24);
-  box-shadow: 0 22px 55px rgba(8, 9, 24, 0.24), inset 0 0 0 8px rgba(255, 255, 255, 0.035);
-}
-
-html[data-theme="dark"] #volunteer-photo-gallery::before,
-html[data-theme="dark"] #volunteer-photo-gallery::after {
-  color: #f0d8dc;
-}
-
-html[data-theme="dark"] .volunteer-archive-caption {
-  color: #463344 !important;
-}
-
 @media (max-width: 900px) {
   .life-intro {
     gap: 2.5rem;
@@ -2611,9 +2496,14 @@ html[data-theme="dark"] .volunteer-archive-caption {
   }
 
   .life-intro-links {
+    gap: 1.5rem;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-template-rows: auto;
-    min-height: 14rem;
+    min-height: 0;
+  }
+
+  .life-intro-links a {
+    border-bottom: 1px solid var(--life-rule);
   }
 
   .life-section-heading,
@@ -2649,7 +2539,7 @@ html[data-theme="dark"] .volunteer-archive-caption {
 @media (max-width: 650px) {
   .life-intro {
     gap: 2rem;
-    padding: 3rem 1.5rem 2rem;
+    padding: 1.5rem 0.1rem 2.8rem;
   }
 
   .life-service-page .life-intro h1 {
@@ -2662,14 +2552,19 @@ html[data-theme="dark"] .volunteer-archive-caption {
   }
 
   .life-intro-links {
-    gap: 0.7rem;
+    gap: 0;
     grid-template-columns: 1fr;
     min-height: 0;
   }
 
   .life-intro-links a {
-    min-height: 9.5rem;
-    padding: 1rem 1.2rem;
+    border-bottom: 0;
+    min-height: 8.5rem;
+    padding: 1rem 0.6rem;
+  }
+
+  .life-intro-links a:last-child {
+    border-bottom: 1px solid var(--life-rule);
   }
 
   .life-intro-links a strong {
@@ -2682,10 +2577,6 @@ html[data-theme="dark"] .volunteer-archive-caption {
 
   .life-gallery-meta {
     flex-direction: column;
-  }
-
-  .life-service::before {
-    height: 5.5rem;
   }
 
   .life-photos .photo-carousel-slide,
