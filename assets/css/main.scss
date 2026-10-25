@@ -1720,8 +1720,19 @@ body:has(.life-service-page) > footer.fixed-bottom {
 .life-photos {
   background: transparent;
   color: var(--global-text-color);
-  padding: clamp(1rem, 2vw, 2rem) clamp(0.25rem, 1vw, 1rem)
-    clamp(3.5rem, 6vw, 6rem);
+  padding: clamp(3.5rem, 6vw, 6rem) clamp(0.25rem, 1vw, 1rem)
+    clamp(2rem, 4vw, 4rem);
+  position: relative;
+}
+
+.life-photos::before {
+  background: var(--life-rule);
+  content: "";
+  height: 1px;
+  left: clamp(0.25rem, 1vw, 1rem);
+  position: absolute;
+  right: clamp(0.25rem, 1vw, 1rem);
+  top: 0;
 }
 
 .life-section-heading {
@@ -1851,19 +1862,8 @@ body:has(.life-service-page) > footer.fixed-bottom {
 .life-service {
   background: transparent;
   color: var(--global-text-color);
-  padding: clamp(3.5rem, 6vw, 6rem) clamp(0.25rem, 1vw, 1rem)
-    clamp(2rem, 4vw, 4rem);
-  position: relative;
-}
-
-.life-service::before {
-  background: var(--life-rule);
-  content: "";
-  height: 1px;
-  left: clamp(0.25rem, 1vw, 1rem);
-  position: absolute;
-  right: clamp(0.25rem, 1vw, 1rem);
-  top: 0;
+  padding: clamp(1rem, 2vw, 2rem) clamp(0.25rem, 1vw, 1rem)
+    clamp(3.5rem, 6vw, 6rem);
 }
 
 .life-service-masthead {
