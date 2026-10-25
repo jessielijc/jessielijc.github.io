@@ -11,23 +11,9 @@ nav_order: 9
 
 <h1 class="sr-only">Life &amp; Service</h1>
 
-<section class="life-photos" aria-labelledby="photo-journal-title">
-  <div class="life-section-heading" data-life-reveal>
-    <div>
-      <p class="life-eyebrow">01 / TRAVEL & PHOTOGRAPHY</p>
-      <h2 id="photo-journal-title">Photography<span aria-hidden="true">.</span></h2>
-    </div>
-    <p>I travel for the places, the food, and the little moments in between. These are the scenes I brought home.</p>
-  </div>
-  <div class="life-gallery-meta"><span>THROUGH MY LENS</span><span>19 FRAMES · DRAG, SWIPE OR CHOOSE A FRAME</span></div>
-  <div id="life-photo-carousel">
-    <div class="photo-carousel-fallback"><img src="{{ '/assets/img/photography-08.jpg' | relative_url }}" alt="People enjoying the beach at sunset" loading="lazy"></div>
-  </div>
-</section>
-
 <section class="life-service" aria-labelledby="volunteering-title">
   <div class="life-service-masthead" data-life-reveal>
-    <p class="life-eyebrow">02 / VOLUNTEERING</p>
+    <p class="life-eyebrow">01 / VOLUNTEERING</p>
     <h2 id="volunteering-title">Volunteering<span aria-hidden="true">.</span></h2>
     <p>First aid gives me a practical way to support the people around me: teaching it, organizing it, and responding when it matters.</p>
   </div>
@@ -58,6 +44,20 @@ nav_order: 9
   </div>
   <div id="volunteer-photo-gallery">
     <div class="volunteer-gallery-fallback"><img src="{{ '/assets/img/volunteering-04.jpg' | relative_url }}" alt="First-aid training with a CPR manikin" loading="lazy"></div>
+  </div>
+</section>
+
+<section class="life-photos" aria-labelledby="photo-journal-title">
+  <div class="life-section-heading" data-life-reveal>
+    <div>
+      <p class="life-eyebrow">02 / TRAVEL & PHOTOGRAPHY</p>
+      <h2 id="photo-journal-title">Photography<span aria-hidden="true">.</span></h2>
+    </div>
+    <p>I travel for the places, the food, and the little moments in between. These are the scenes I brought home.</p>
+  </div>
+  <div class="life-gallery-meta"><span>THROUGH MY LENS</span><span>19 FRAMES · DRAG, SWIPE OR CHOOSE A FRAME</span></div>
+  <div id="life-photo-carousel">
+    <div class="photo-carousel-fallback"><img src="{{ '/assets/img/photography-08.jpg' | relative_url }}" alt="People enjoying the beach at sunset" loading="lazy"></div>
   </div>
 </section>
 
