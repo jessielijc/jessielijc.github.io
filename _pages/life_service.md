@@ -35,9 +35,29 @@ nav_order: 9
     </div>
 
     <div class="life-role-list" aria-label="Volunteer roles" data-life-reveal>
-      <article><span>01 / ORGANIZE</span><h3>SUSTech Red Cross</h3><p>Led campus events and first-aid outreach, including 10+ sessions for audiences of over 100 people.</p></article>
-      <article><span>02 / TEACH</span><h3>Nanshan Emergency Rescue Association</h3><p>Helped establish certification frameworks for first-aid instructors and responders.</p></article>
-      <article><span>03 / RESPOND</span><h3>Campus First-Aid Responder</h3><p>Responded to more than 20 medical emergencies, including seizures, fractures, and trauma.</p></article>
+      <article>
+        <span>01 / ORGANIZE</span>
+        <h3>SUSTech Red Cross <small>Director, Organization Department</small></h3>
+        <p>Organized and taught 5+ first-aid and emergency response sessions; led 10+ large-scale events and competitions, including carnivals and forums.</p>
+      </article>
+      <article>
+        <span>02 / TEACH</span>
+        <h3>Shenzhen Nanshan District Emergency Rescue Association <small>Instructor</small></h3>
+        <p>Established certification standards and procedures, and trained first-aid instructors and responders.</p>
+      </article>
+      <article>
+        <span>03 / RESPOND</span>
+        <h3>Campus First-Aid Responder</h3>
+        <p>Provided first aid in 20+ emergencies, including seizures and traumatic injuries such as fractures.</p>
+      </article>
+    </div>
+
+    <div class="life-certifications" aria-label="First-aid certifications" data-life-reveal>
+      <p class="life-detail-label">CERTIFICATIONS</p>
+      <ul>
+        <li>AHA Heartsaver®</li>
+        <li>Certified First Aider <span>Red Cross Society of China</span></li>
+      </ul>
     </div>
 
     <div class="life-gallery-heading" data-life-reveal>
