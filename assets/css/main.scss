@@ -168,8 +168,8 @@
 }
 
 .projects-vertical .card {
-  height: 285px !important;
-  padding: 1.5rem;
+  height: 245px !important;
+  padding: 1.2rem;
 }
 
 .projects-vertical .card-body {
@@ -179,7 +179,7 @@
 @media (min-width: 769px) and (max-width: 899px) {
   .projects-vertical .card {
     height: auto !important;
-    min-height: 350px;
+    min-height: 265px;
   }
 }
 
