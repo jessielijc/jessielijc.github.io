@@ -2,17 +2,12 @@
   "basics": {
     "name": "Jiacan Li",
     "label": "Robotics Engineering Student",
-    "image": "",
     "email": "lijc2023@mail.sustech.edu.cn",
-    "phone": "(+86) 18913575577",
     "url": "https://jessielijc.github.io",
-    "summary": "Undergraduate student majoring in Robotics Engineering at SUSTech. Research interests primarily lie in Reinforcement Learning, Embodied AI, and Autonomous UAV Navigation, with extensive experience in exoskeleton control systems and multimodal human-robot interaction.",
+    "summary": "Research interests: dexterous manipulation, robot learning, 3D perception, and autonomous navigation.",
     "location": {
-      "address": "Southern University of Science and Technology",
-      "postalCode": "518055",
       "city": "Shenzhen",
-      "countryCode": "CN",
-      "region": "Guangdong"
+      "countryCode": "CN"
     },
     "profiles": [
       {
@@ -24,113 +19,195 @@
   },
   "education": [
     {
-      "institution": "Southern University of Science and Technology (SUSTech)",
-      "url": "https://www.sustech.edu.cn/en/",
+      "institution": "Southern University of Science and Technology",
       "area": "Robotics Engineering",
       "studyType": "B.Eng.",
-      "startDate": "2023-09-01",
-      "score": "GPA: 3.79/4.0 (Weighted Avg: 90.64/100)",
-      "courses": ["Robot Operating System (99)", "Robot Modeling and Control (95)", "Machine Learning for Engineering (97)", "Mechanical Design (97)"]
+      "startDate": "2023-09",
+      "score": "Overall GPA 3.79/4.0; weighted average 91.37/100; major GPA 3.81/4.0",
+      "courses": [
+        "Robot Operating System (99)",
+        "Robot Modeling and Control (95)",
+        "Computer Vision (94)",
+        "Machine Learning for Engineering (97)",
+        "Robotic Actuation System (94)",
+        "Mechanical Design (97)",
+        "Finite Element Theory and Its Engineering Applications (97)"
+      ]
+    },
+    {
+      "institution": "National University of Singapore",
+      "area": "Electrical and Computer Engineering",
+      "studyType": "Visiting Research Student",
+      "startDate": "2026-06"
+    }
+  ],
+  "publications": [
+    {
+      "name": "Kinematic-Guided Control Enables Generalizable and Real-Time-Verifiable Exoskeleton Control for Real-World Deployment",
+      "publisher": "Science Advances",
+      "releaseDate": "2026",
+      "summary": "Manuscript under review; co-first author."
     }
   ],
   "work": [
     {
-      "name": "Stroke Rehabilitation Exoskeletons",
-      "position": "Research Experience",
-      "startDate": "2026-01-01",
-      "summary": "Designed and developed a lower-limb exoskeleton system specifically tailored for stroke patients’ gait rehabilitation.",
+      "name": "National University of Singapore",
+      "position": "Visuotactile Friction Mapping for Dexterous Grasping",
+      "startDate": "2026-06",
+      "summary": "Advisor: Xingyu Liu",
       "highlights": [
-        "Developed and deployed a deep learning-based gait prediction framework predicting real-time kinematic states.",
-        "Patent: Co-inventor of An Exoskeleton Control Method... (Published, Student 5th Author)."
+        "Built an Isaac Lab platform with an xArm, LEAP Hand, and GelSight Mini sensors.",
+        "Developed a UIPC-based tactile simulation pipeline; reduced gel-mesh element count by 25.9%.",
+        "Reconstructed spatially varying friction maps from tactile image sequences for reinforcement-learning-based grasp control."
       ]
     },
     {
-      "name": "Deep Learning-Based Unified Exoskeleton Control",
-      "position": "Research Experience",
-      "startDate": "2025-05-01",
-      "summary": "Developed a novel data-driven unified control framework utilizing deep neural networks to forecast human motion intentions.",
+      "name": "Southern University of Science and Technology",
+      "position": "Unified Exoskeleton Control for Multi-Terrain Assistance",
+      "startDate": "2025-05",
+      "endDate": "2026-08",
+      "summary": "Advisor: Chenglong Fu",
       "highlights": [
-        "Deployed a lightweight model on embedded hardware for real-time inference.",
-        "Patent: Co-inventor of Control Method, Device, Electronic Equipment... (Published, Student 2nd Author)."
+        "Developed neural-network-based assistance from wearer kinematics across level ground, ramps, and stairs.",
+        "Deployed a lightweight model on embedded hardware for real-time inference."
       ]
     },
     {
-      "name": "Human-in-the-Loop Bayesian Optimization",
-      "position": "Research Experience",
-      "startDate": "2024-11-01",
-      "endDate": "2025-02-01",
-      "summary": "Developed a human-in-the-loop Bayesian optimization algorithm to personalize assistive torque profiles in real time based on human metabolic cost."
+      "name": "Southern University of Science and Technology",
+      "position": "Gait Estimation for Post-Stroke Rehabilitation",
+      "startDate": "2026-01",
+      "endDate": "2026-04",
+      "summary": "Advisor: Chenglong Fu",
+      "highlights": ["Estimated affected-limb kinematics in real time from contralateral limb motion for exoskeleton-assisted rehabilitation."]
+    },
+    {
+      "name": "Southern University of Science and Technology",
+      "position": "Adaptive Resistance Control for Exercise Exoskeletons",
+      "startDate": "2025-01",
+      "endDate": "2025-03",
+      "summary": "Advisor: Chenglong Fu",
+      "highlights": ["Applied human-in-the-loop Bayesian optimization to personalize resistance levels."]
     }
   ],
   "projects": [
     {
-      "name": "Autonomous Navigation & Inspection System",
-      "startDate": "2026-03-01",
-      "summary": "R&D Internship at AIHISUN Ltd.",
-      "highlights": [
-        "Collaborated with the R&D team to develop a multi-sensor fusion pipeline (Depth Camera, LiDAR, IMU) for autonomous navigation in GPS-denied confined spaces."
-      ]
+      "name": "SplatSLAM: Monocular 3D Reconstruction",
+      "startDate": "2026-06",
+      "summary": "Recovered camera trajectories and dense point clouds from smartphone video with MASt3R-SLAM; refined geometry and initialized 3D Gaussian Splatting."
     },
     {
-      "name": "ROS2-Based Mobile Manipulator with Multimodal HRI",
-      "startDate": "2026-01-01",
-      "summary": "Designed a differential mobile chassis equipped with a 3-DOF robotic arm.",
-      "highlights": [
-        "Implemented autonomous mapping and navigation via SLAM Toolbox and Nav2.",
-        "Developed an HRI system integrating Vosk and MediaPipe to coordinate and execute complex task sequences."
-      ]
+      "name": "ROS 2-Based Mobile Manipulator with Multimodal HRI",
+      "startDate": "2026-01",
+      "summary": "Built a ROS 2/Gazebo pick-and-deliver system with OpenCV, MoveIt 2, Nav2, MediaPipe, and Vosk."
+    },
+    {
+      "name": "6-DOF Robotic Arm Automated Drawing System",
+      "startDate": "2025-05",
+      "summary": "Converted images into drawing trajectories, derived inverse kinematics, validated motion in Simscape Multibody, and designed a compliant pen holder."
+    },
+    {
+      "name": "Agricultural Robot (ROBOCON 2024)",
+      "startDate": "2024-07",
+      "summary": "Designed a rice-harvesting gripper and integrated hardware with serial connections and custom PCBs."
     }
   ],
   "awards": [
     {
-      "title": "National First Prize (Operation Challenge)",
-      "date": "2024-01-01",
-      "awarder": "ROBOCON China Championship",
-      "summary": "Also won National Second Prize and Two National Third Prizes."
+      "title": "Outstanding Student Award",
+      "date": "2024, 2026"
     },
     {
-      "title": "National Bronze Award & Provincial Gold Award",
-      "date": "2025-01-01",
-      "awarder": "China Int'l College Students Innovation Competition"
+      "title": "Special Funds for the Cultivation of Guangdong College Students’ Scientific and Technological Innovation",
+      "date": "2025",
+      "summary": "Climbing Program; CNY 20,000; project leader."
     },
     {
-      "title": "Second Prize Scholarship (Top 8%)",
-      "date": "2025-01-01",
-      "awarder": "SUSTech (Awarded Twice: 2024, 2025)"
+      "title": "China International College Students’ Innovation Competition",
+      "date": "2025",
+      "summary": "National Bronze Award and Provincial Gold Award."
+    },
+    {
+      "title": "Second Prize Scholarship",
+      "date": "2024, 2025",
+      "summary": "Top 8%; awarded twice."
+    },
+    {
+      "title": "Outstanding Student Leader Award",
+      "date": "2025"
+    },
+    {
+      "title": "ROBOCON China Championship",
+      "date": "2024",
+      "summary": "National First Prize, National Second Prize, and two National Third Prizes."
+    },
+    {
+      "title": "Outstanding Volunteer",
+      "date": "2024",
+      "summary": "Top 3%."
     }
   ],
   "skills": [
     {
-      "name": "Technical",
-      "level": "Advanced",
-      "keywords": ["Python", "MATLAB", "C++", "PyTorch", "ROS / ROS 2"]
+      "name": "Programming",
+      "keywords": ["Python", "C++", "MATLAB"]
     },
     {
-      "name": "Academic Tools",
-      "level": "Proficient",
-      "keywords": ["Solidworks", "AutoCAD", "Arduino", "OriginPro", "LaTeX"]
+      "name": "Robotics & Simulation",
+      "keywords": ["ROS 2", "MuJoCo", "NVIDIA Isaac Lab", "Gazebo"]
+    },
+    {
+      "name": "Machine Learning",
+      "keywords": ["PyTorch"]
+    },
+    {
+      "name": "Computer Vision & Visualization",
+      "keywords": ["OpenCV", "RViz2"]
+    },
+    {
+      "name": "Embedded Systems",
+      "keywords": ["STM32", "Arduino"]
+    },
+    {
+      "name": "CAD & CAE",
+      "keywords": ["SolidWorks", "AutoCAD", "Abaqus"]
     }
   ],
   "certificates": [
     {
-      "name": "AHA HeartSaver®",
-      "date": "2024-01-01",
-      "issuer": "American Heart Association"
+      "name": "AHA Heartsaver®"
     },
     {
-      "name": "Red Cross Instructor",
-      "date": "2024-01-01",
-      "issuer": "SUSTech Red Cross"
+      "name": "Certified First Aider",
+      "issuer": "Red Cross Society of China"
     }
   ],
   "languages": [
     {
       "language": "English",
-      "fluency": "TOEFL 97 (R26, L25, S22, W24), CET-4 & 6"
+      "fluency": "TOEFL iBT 5.5/6 (comparable score: 110/120)"
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "SUSTech Red Cross",
+      "position": "Director, Organization Department",
+      "summary": "Completed 144.5 volunteer hours; taught 5+ first-aid sessions and led 10+ large-scale events."
     },
     {
-      "language": "Chinese",
-      "fluency": "Native speaker"
+      "organization": "Shenzhen Nanshan District Emergency Rescue Association",
+      "position": "Instructor",
+      "summary": "Established certification standards and trained first-aid instructors and responders."
+    },
+    {
+      "organization": "Campus First Aid",
+      "position": "Responder",
+      "summary": "Provided first aid in 20+ emergencies, including seizures and traumatic injuries."
+    }
+  ],
+  "interests": [
+    {
+      "name": "Go (board game)",
+      "keywords": ["Amateur 1-kyu"]
     }
   ]
 }
