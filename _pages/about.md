@@ -39,7 +39,11 @@ social: false
       fetchpriority="high"
     >
     <div class="profile-details">
-      <p class="profile-email"><a href="mailto:lijc2023@mail.sustech.edu.cn">lijc2023@mail.sustech.edu.cn</a></p>
+      <a class="profile-email" href="mailto:lijc2023@mail.sustech.edu.cn">lijc2023@mail.sustech.edu.cn</a>
+      <div class="profile-link-row">
+        <a href="https://github.com/jessielijc" target="_blank" rel="external noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+        <a href="{{ '/assets/pdf/Jiacan_Li_CV.pdf' | relative_url }}" download="Jiacan_Li_CV.pdf">CV <span aria-hidden="true">↓</span></a>
+      </div>
     </div>
   </aside>
 </section>
