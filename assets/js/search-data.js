@@ -385,7 +385,7 @@ ninja.data = [{
           description: "",
           section: "News",},{id: "projects-ros-2-omni-bot",
           title: 'ROS 2 Omni-Bot',
-          description: "Fully autonomous mobile manipulation with gesture control, voice interaction, SLAM, navigation, and visual grasping.",
+          description: "ROS 2 mobile manipulation in simulation, combining gesture-controlled teleoperation, voice interaction, SLAM, autonomous navigation, and visual grasping.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
             },},{id: "projects-splatslam",
@@ -400,7 +400,7 @@ ninja.data = [{
               window.location.href = "/projects/3_project/";
             },},{id: "projects-6-dof-robotic-sketching-amp-3d-projection",
           title: '6-DOF Robotic Sketching &amp;amp; 3D Projection',
-          description: "A closed-loop robotic drawing system combining computer vision, analytical inverse kinematics, and compliant hardware for planar and 3D surfaces.",
+          description: "A physical six-axis arm draws on planar and 3D surfaces using computer vision, analytical inverse kinematics, and compliant hardware.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/3_robotic_sketching/";
             },},{id: "projects-project-4",
