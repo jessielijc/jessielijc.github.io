@@ -65,26 +65,6 @@ description: "Dexterous manipulation, robot learning, 3D perception, and autonom
   </div>
 </section>
 
-<section class="card cv-section" id="selected-projects" aria-labelledby="cv-projects-title">
-  <h2 class="card-title" id="cv-projects-title">Selected Projects</h2>
-  <div class="cv-entry">
-    <div class="cv-entry-heading"><h3>SplatSLAM: Monocular 3D Reconstruction</h3><span>Jun 2026</span></div>
-    <p>Used MASt3R-SLAM to recover camera trajectories and dense point clouds from smartphone video, refined the geometry in CloudCompare, and initialized 3D Gaussian Splatting for interactive novel-view synthesis.</p>
-  </div>
-  <div class="cv-entry">
-    <div class="cv-entry-heading"><h3>ROS 2-Based Mobile Manipulator with Multimodal HRI</h3><span>Jan 2026</span></div>
-    <p>Built a ROS 2/Gazebo system for autonomous pick-and-deliver tasks with OpenCV, MoveIt 2, and Nav2; added gesture and voice interaction using MediaPipe and Vosk.</p>
-  </div>
-  <div class="cv-entry">
-    <div class="cv-entry-heading"><h3>6-DOF Robotic Arm Automated Drawing System</h3><span>May 2025</span></div>
-    <p>Converted images into drawing paths, solved inverse kinematics for planar and cylindrical surfaces, validated motion in Simscape Multibody, and designed a compliant pen holder.</p>
-  </div>
-  <div class="cv-entry">
-    <div class="cv-entry-heading"><h3>Agricultural Robot (ROBOCON 2024)</h3><span>Jul 2024</span></div>
-    <p>Designed a rice-harvesting gripper and integrated robot hardware with soldered serial connections and custom printed circuit boards.</p>
-  </div>
-</section>
-
 <section class="card cv-section" id="honors" aria-labelledby="cv-honors-title">
   <h2 class="card-title" id="cv-honors-title">Grants, Awards &amp; Honors</h2>
   <div class="cv-entry"><div class="cv-entry-heading"><h3>Outstanding Student Award</h3><span>2024, 2026</span></div></div>
