@@ -25,7 +25,7 @@ ninja.data = [{
           },
         },{id: "nav-cv",
           title: "CV",
-          description: "Dexterous manipulation, robot learning, 3D perception, and autonomous navigation.",
+          description: "Dexterous manipulation, robot learning, 3D perception, and autonomous navigation. Download the PDF for my complete CV.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/cv/";
