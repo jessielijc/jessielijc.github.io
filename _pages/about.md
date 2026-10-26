@@ -85,7 +85,6 @@ Remove this Liquid comment wrapper to restore the scene and its script.
 <script type="module" src="{{ '/assets/react/about.js' | relative_url | bust_file_cache }}" onerror="document.documentElement.classList.remove('about-typing-enabled')"></script>
 
 <section id="research-interests" class="about-section">
-  <p class="about-eyebrow">Research Interests</p>
   <h2>What I work on</h2>
   <p class="section-intro">I study dexterous manipulation, robot learning, 3D perception, and autonomous navigation to help robots act more effectively in the physical world.</p>
   <div class="focus-list">
@@ -103,7 +102,6 @@ Remove this Liquid comment wrapper to restore the scene and its script.
     </div>
   </div>
   <div class="research-opportunity">
-    <p class="about-eyebrow">Let's Connect</p>
     <h3>Seeking Fall 2027 PhD Opportunities</h3>
     <p>
       I am seeking PhD opportunities beginning in Fall 2027 and would welcome the chance to connect with prospective supervisors and collaborators. If our work aligns, please feel free to get in touch.
