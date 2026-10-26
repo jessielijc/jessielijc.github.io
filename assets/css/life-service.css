@@ -195,9 +195,10 @@
   font-size: clamp(1.25rem, 1.6vw, 1.65rem) !important;
   font-weight: 700 !important;
   grid-column: 2;
-  letter-spacing: -0.025em !important;
+  letter-spacing: normal !important;
   line-height: 1.2 !important;
   margin: 0 !important;
+  word-spacing: 0.08em;
 }
 
 .life-role-list p {
