@@ -28,6 +28,11 @@ social: false
       <a href="https://www.nus.edu.sg/" target="_blank" rel="external noopener">National University of Singapore (NUS)</a>,
       where I conduct research under the supervision of <a href="https://cde.nus.edu.sg/ece/staff/liu-xingyu/" target="_blank" rel="external noopener">Prof. Xingyu Liu</a>.
     </p>
+    <nav class="about-contact-links" aria-label="Contact and profile links">
+      <a href="mailto:lijc2023@mail.sustech.edu.cn" aria-label="Email Jiacan Li"><i class="fa-regular fa-envelope" aria-hidden="true"></i><span>Email</span></a>
+      <a href="https://github.com/jessielijc" target="_blank" rel="external noopener noreferrer" aria-label="Jiacan Li on GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i><span>GitHub</span></a>
+      <a href="{{ '/assets/pdf/Jiacan_Li_CV.pdf' | relative_url }}" download="Jiacan_Li_CV.pdf" aria-label="Download Jiacan Li's CV"><i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i><span>CV</span></a>
+    </nav>
   </div>
   <aside class="about-profile-card">
     <img
@@ -38,13 +43,6 @@ social: false
       decoding="async"
       fetchpriority="high"
     >
-    <div class="profile-details">
-      <a class="profile-email" href="mailto:lijc2023@mail.sustech.edu.cn">lijc2023@mail.sustech.edu.cn</a>
-      <div class="profile-link-row">
-        <a href="https://github.com/jessielijc" target="_blank" rel="external noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
-        <a href="{{ '/assets/pdf/Jiacan_Li_CV.pdf' | relative_url }}" download="Jiacan_Li_CV.pdf">CV <span aria-hidden="true">↓</span></a>
-      </div>
-    </div>
   </aside>
 </section>
 
