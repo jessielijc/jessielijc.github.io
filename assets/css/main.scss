@@ -126,6 +126,49 @@
   height: 270px;
 }
 
+.about-profile-card .profile-details {
+  padding: 0.85rem 0.45rem 0.1rem;
+
+  .profile-email {
+    color: var(--site-subtitle-color);
+    display: block;
+    font-size: clamp(0.85rem, 1.1vw, 1rem);
+    font-weight: 700;
+    line-height: 1.4;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .profile-link-row {
+    display: grid;
+    gap: 0.55rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-top: 0.75rem;
+
+    a {
+      align-items: center;
+      background: var(--site-surface-soft);
+      border: 1px solid var(--global-divider-color);
+      border-radius: 0.6rem;
+      color: var(--site-subtitle-color);
+      display: inline-flex;
+      font-size: 0.88rem;
+      font-weight: 700;
+      gap: 0.4rem;
+      justify-content: center;
+      min-height: 2.4rem;
+      text-decoration: none;
+      transition: border-color 180ms ease, transform 180ms ease;
+    }
+
+    a:hover,
+    a:focus-visible {
+      border-color: var(--global-theme-color);
+      transform: translateY(-2px);
+    }
+  }
+}
+
 .projects-vertical .card {
   height: 285px !important;
   padding: 1.5rem;
