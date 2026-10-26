@@ -123,46 +123,44 @@
 }
 
 .about-profile-card img {
-  height: 270px;
+  height: 320px;
 }
 
-.about-profile-card .profile-details {
-  padding: 0.85rem 0.45rem 0.1rem;
+.about-profile-card {
+  align-self: start;
+  padding-bottom: 0.55rem;
+}
 
-  .profile-email {
+.about-hero-copy .about-contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.6rem;
+
+  a {
+    align-items: center;
+    background: var(--site-surface-soft);
+    border: 1px solid var(--global-divider-color);
+    border-radius: 999px;
     color: var(--site-subtitle-color);
-    display: block;
-    font-size: clamp(0.85rem, 1.1vw, 1rem);
+    display: inline-flex;
+    font-size: 0.95rem;
     font-weight: 700;
-    line-height: 1.4;
-    text-align: center;
+    gap: 0.65rem;
+    justify-content: center;
+    min-height: 3rem;
+    min-width: 7.3rem;
+    padding: 0.55rem 1rem;
     text-decoration: none;
-  }
+    transition: background-color 180ms ease, border-color 180ms ease, transform 180ms ease;
 
-  .profile-link-row {
-    display: grid;
-    gap: 0.55rem;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    margin-top: 0.75rem;
-
-    a {
-      align-items: center;
-      background: var(--site-surface-soft);
-      border: 1px solid var(--global-divider-color);
-      border-radius: 0.6rem;
-      color: var(--site-subtitle-color);
-      display: inline-flex;
-      font-size: 0.88rem;
-      font-weight: 700;
-      gap: 0.4rem;
-      justify-content: center;
-      min-height: 2.4rem;
-      text-decoration: none;
-      transition: border-color 180ms ease, transform 180ms ease;
+    i {
+      font-size: 1.15rem;
     }
 
-    a:hover,
-    a:focus-visible {
+    &:hover,
+    &:focus-visible {
+      background: var(--site-surface-raised);
       border-color: var(--global-theme-color);
       transform: translateY(-2px);
     }
