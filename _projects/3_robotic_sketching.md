@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 6-DOF Robotic Sketching & 3D Projection
-description: A closed-loop robotic drawing system combining computer vision, analytical inverse kinematics, and compliant hardware for planar and 3D surfaces.
+description: A physical six-axis arm draws on planar and 3D surfaces using computer vision, analytical inverse kinematics, and compliant hardware.
 img: assets/img/robotic-sketching.png
 importance: 3
 category: featured

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: ROS 2 Omni-Bot
-description: Fully autonomous mobile manipulation with gesture control, voice interaction, SLAM, navigation, and visual grasping.
+description: ROS 2 mobile manipulation in simulation, combining gesture-controlled teleoperation, voice interaction, SLAM, autonomous navigation, and visual grasping.
 img: https://github.com/user-attachments/assets/5477dbe0-95bc-4b8a-bb79-ef781a2c6e75
 importance: 1
 category: featured
