@@ -83,11 +83,11 @@ Remove this Liquid comment wrapper to restore the scene and its script.
 <section id="research-interests" class="about-section">
   <p class="about-eyebrow">Research Interests</p>
   <h2>What I work on</h2>
-  <p class="section-intro">My research focuses on intelligent robotic systems that interact naturally and effectively with people and the physical world.</p>
+  <p class="section-intro">I study dexterous manipulation, robot learning, 3D perception, and autonomous navigation to help robots act more effectively in the physical world.</p>
   <div class="focus-list">
     <div class="focus-item">
-      <h3>Tactile Sensing for Dexterous Grasping</h3>
-      <span>Investigating how tactile feedback influences dexterous-hand grasping and developing more stable, adaptive, and generalizable grasping strategies.</span>
+      <h3>Visuotactile Perception for Dexterous Grasping</h3>
+      <span>Mapping surface friction from tactile images to guide more adaptive grasp planning and control.</span>
     </div>
     <div class="focus-item">
       <h3>Exoskeleton Control for Rehabilitation</h3>
@@ -95,7 +95,7 @@ Remove this Liquid comment wrapper to restore the scene and its script.
     </div>
     <div class="focus-item">
       <h3>Autonomous Navigation in GPS-denied Environments</h3>
-      <span>Multi-sensor fusion pipelines involving LiDAR, depth camera, and IMU for robust robotic navigation.</span>
+      <span>Perception and planning for reliable navigation in complex environments.</span>
     </div>
   </div>
 </section>
