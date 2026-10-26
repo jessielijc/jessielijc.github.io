@@ -1,0 +1,540 @@
+/* Life & Service: an editorial spread inside the site's existing board. */
+.life-service-page > article {
+  padding: 0;
+}
+
+.life-service-page :is(#volunteering-title, #photo-journal-title) {
+  scroll-margin-top: 6rem;
+}
+
+.life-edition {
+  --life-ink: var(--site-title-color);
+  --life-muted: var(--global-text-color-light);
+  --life-accent: var(--site-subtitle-color);
+  --life-rule: var(--global-divider-color);
+  color: var(--global-text-color);
+  overflow: hidden;
+}
+
+.life-chapter {
+  padding: clamp(2rem, 5vw, 5rem);
+  position: relative;
+}
+
+.life-chapter-service {
+  background: radial-gradient(circle at 96% 2%, rgba(var(--site-wash-rgb), 0.16), transparent 28rem), var(--global-card-bg-color);
+}
+
+.life-chapter-photography {
+  background: radial-gradient(circle at 4% 10%, rgba(var(--site-wash-rgb), 0.14), transparent 30rem), var(--site-surface-soft);
+  border-top: 1px solid var(--life-rule);
+}
+
+.life-chapter-header {
+  isolation: isolate;
+  margin-bottom: clamp(3rem, 6vw, 6rem);
+  position: relative;
+}
+
+.life-chapter-header::after {
+  border: 1px solid rgba(var(--site-wash-rgb), 0.25);
+  border-radius: 50%;
+  content: "";
+  height: clamp(12rem, 25vw, 25rem);
+  pointer-events: none;
+  position: absolute;
+  right: -6rem;
+  top: -9rem;
+  width: clamp(12rem, 25vw, 25rem);
+  z-index: -1;
+}
+
+.life-chapter-photography .life-chapter-header::after {
+  right: 4%;
+  top: -4rem;
+}
+
+.life-chapter-index,
+.life-detail-label,
+.life-gallery-meta {
+  color: var(--life-accent);
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: 0.11em;
+  line-height: 1.5;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.life-chapter-index {
+  align-items: center;
+  display: flex;
+  gap: 0.8rem;
+  margin-bottom: clamp(1.75rem, 3vw, 3rem);
+}
+
+.life-chapter-index span {
+  background: currentColor;
+  height: 1px;
+  opacity: 0.6;
+  width: 3.5rem;
+}
+
+.life-chapter-lead {
+  align-items: end;
+  display: grid;
+  gap: 1.5rem clamp(2rem, 6vw, 6rem);
+  grid-template-columns: minmax(0, 1.6fr) minmax(16rem, 0.75fr);
+}
+
+.life-service-page .life-chapter-lead h2 {
+  color: var(--life-ink) !important;
+  font-size: clamp(3.3rem, 6.8vw, 6.8rem) !important;
+  font-weight: 750 !important;
+  letter-spacing: -0.075em !important;
+  line-height: 0.98 !important;
+  margin: 0 !important;
+}
+
+.life-chapter-lead h2 span {
+  color: var(--life-accent);
+}
+
+.life-chapter-lead > p {
+  border-left: 2px solid var(--life-accent);
+  color: var(--life-muted);
+  font-size: clamp(1.08rem, 1.3vw, 1.28rem);
+  line-height: 1.6;
+  margin: 0 0 0.15rem;
+  max-width: 30rem;
+  padding-left: 1.3rem;
+}
+
+.life-impact {
+  border-block: 1px solid var(--life-rule);
+  display: grid;
+  gap: clamp(2rem, 4vw, 4rem);
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.45fr);
+  padding-block: clamp(2rem, 3.5vw, 3.5rem);
+}
+
+.life-impact-intro > p:last-child {
+  color: var(--life-ink);
+  font-size: clamp(1.3rem, 2vw, 1.9rem);
+  font-weight: 600;
+  letter-spacing: -0.035em;
+  line-height: 1.4;
+  margin: 0.8rem 0 0;
+  max-width: 27rem;
+}
+
+.life-impact-numbers {
+  display: grid;
+  gap: 1.4rem 1.8rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin: 0;
+}
+
+.life-impact-numbers div {
+  align-content: end;
+  border-left: 1px solid var(--life-rule);
+  min-width: 0;
+  padding-left: 1rem;
+}
+
+.life-impact-numbers dt {
+  color: var(--life-accent);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2rem, 3.2vw, 3.5rem);
+  font-weight: 400;
+  letter-spacing: -0.06em;
+  line-height: 1.05;
+}
+
+.life-impact-numbers dd {
+  color: var(--life-muted);
+  font-size: 0.98rem;
+  font-weight: 650;
+  line-height: 1.4;
+  margin: 0.65rem 0 0;
+}
+
+.life-role-list {
+  margin: clamp(3rem, 6vw, 6rem) 0 clamp(5rem, 8vw, 8rem);
+}
+
+.life-role-list article {
+  align-items: start;
+  border-bottom: 1px solid var(--life-rule);
+  display: grid;
+  gap: 1rem 2rem;
+  grid-template-columns: minmax(7rem, 0.35fr) minmax(14rem, 0.95fr) minmax(15rem, 1fr);
+  padding: clamp(1.25rem, 2.5vw, 2.3rem) 0;
+  transition:
+    background-color 250ms ease,
+    padding 250ms ease;
+}
+
+.life-role-list article:first-child {
+  border-top: 1px solid var(--life-rule);
+}
+
+.life-role-list article:hover {
+  background: rgba(var(--site-wash-rgb), 0.06);
+  padding-inline: 1rem;
+}
+
+.life-role-list article > span {
+  color: var(--life-accent);
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  line-height: 1.55;
+}
+
+.life-service-page .life-role-list h3 {
+  color: var(--life-ink) !important;
+  font-size: clamp(1.25rem, 1.7vw, 1.75rem) !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.04em !important;
+  line-height: 1.2 !important;
+  margin: 0 !important;
+}
+
+.life-role-list p {
+  color: var(--life-muted);
+  font-size: 1.02rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.life-gallery-heading {
+  align-items: end;
+  display: flex;
+  gap: 1.5rem 3rem;
+  justify-content: space-between;
+  margin-bottom: 1.7rem;
+}
+
+.life-service-page .life-gallery-heading h3 {
+  color: var(--life-ink) !important;
+  font-size: clamp(2rem, 3.2vw, 3.25rem) !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.065em !important;
+  line-height: 1.08 !important;
+  margin: 0.5rem 0 0 !important;
+}
+
+.life-gallery-heading > p {
+  color: var(--life-muted);
+  font-size: 1.05rem;
+  line-height: 1.55;
+  margin: 0;
+  max-width: 26rem;
+}
+
+#volunteer-photo-gallery {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  isolation: auto;
+  overflow: visible;
+  padding: 0;
+}
+
+#volunteer-photo-gallery::before,
+#volunteer-photo-gallery::after {
+  content: none;
+}
+
+.volunteer-archive {
+  display: grid;
+  gap: clamp(0.65rem, 1.2vw, 1.2rem);
+  grid-auto-flow: row dense;
+  grid-auto-rows: clamp(10rem, 16vw, 17rem);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.volunteer-archive-frame,
+.volunteer-archive-ending {
+  background: #33283a;
+  border: 0;
+  border-radius: 0.55rem;
+  box-shadow: none;
+  color: #fff;
+  min-height: 0;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  transform: none;
+}
+
+.volunteer-archive-frame {
+  cursor: pointer;
+  text-align: left;
+  transition:
+    box-shadow 250ms ease,
+    transform 350ms ease;
+}
+
+.volunteer-archive-frame:first-child {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.volunteer-archive-frame:nth-child(3n + 1)::before,
+.volunteer-archive-frame:nth-child(3n + 2)::before {
+  content: none;
+}
+
+.volunteer-archive-frame:hover,
+.volunteer-archive-frame:focus-visible {
+  box-shadow: 0 1.2rem 2.2rem rgba(36, 20, 42, 0.24);
+  transform: translateY(-0.25rem);
+  z-index: 2;
+}
+
+.volunteer-archive-frame:focus-visible {
+  outline: 3px solid var(--global-theme-color);
+  outline-offset: 3px;
+}
+
+.volunteer-archive-image,
+.volunteer-archive-image img {
+  height: 100%;
+  width: 100%;
+}
+
+.volunteer-archive-image img {
+  aspect-ratio: auto;
+  object-fit: cover;
+  transition: transform 550ms ease;
+}
+
+.volunteer-archive-frame:first-child img {
+  object-position: center;
+}
+
+.volunteer-archive-frame:hover img,
+.volunteer-archive-frame:focus-visible img {
+  filter: none;
+  transform: scale(1.055);
+}
+
+.volunteer-archive-frame::after,
+.volunteer-archive-ending::after {
+  background: linear-gradient(transparent 34%, rgba(16, 13, 24, 0.82));
+  content: "";
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+}
+
+.volunteer-archive-caption {
+  align-items: end;
+  bottom: 0;
+  color: #fff;
+  font-size: clamp(0.94rem, 1.1vw, 1.12rem);
+  font-weight: 700;
+  gap: 0.5rem;
+  left: 0;
+  line-height: 1.35;
+  min-height: 0;
+  padding: 1.15rem;
+  position: absolute;
+  right: 0;
+  z-index: 1;
+}
+
+.volunteer-archive-frame:first-child .volunteer-archive-caption {
+  font-size: clamp(1.15rem, 1.6vw, 1.55rem);
+  padding: 1.5rem;
+}
+
+#volunteer-photo-gallery .volunteer-archive-caption span,
+#volunteer-photo-gallery .volunteer-archive-ending-caption {
+  color: #fff !important;
+}
+
+.volunteer-archive-caption span:last-child {
+  flex: none;
+  font-size: 1.15rem;
+  line-height: 1;
+}
+
+.volunteer-archive-ending {
+  align-self: stretch;
+  grid-column: span 2;
+}
+
+.volunteer-archive-ending-art {
+  aspect-ratio: auto;
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.volunteer-archive-ending-caption {
+  bottom: 0;
+  font-size: clamp(1.15rem, 1.6vw, 1.55rem);
+  font-weight: 750;
+  left: 0;
+  line-height: 1.2;
+  min-height: 0;
+  padding: 1.5rem;
+  position: absolute;
+  right: 0;
+  z-index: 1;
+}
+
+.life-chapter-photography .life-chapter-header {
+  margin-bottom: clamp(2.5rem, 5vw, 5rem);
+}
+
+.life-gallery-meta {
+  border-top: 1px solid var(--life-rule);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem 1.5rem;
+  justify-content: space-between;
+  padding: 1.1rem 0;
+}
+
+.life-chapter-photography .photo-carousel-viewport,
+.life-chapter-photography .photo-carousel-slide,
+.life-chapter-photography .photo-carousel-fallback {
+  border-radius: 0.6rem;
+  overflow: hidden;
+}
+
+.life-chapter-photography .photo-carousel-slide,
+.life-chapter-photography .photo-carousel-fallback {
+  height: clamp(25rem, 53vw, 50rem);
+}
+
+.life-chapter-photography .photo-carousel-current-caption,
+.life-chapter-photography .photo-carousel-counter {
+  color: var(--global-text-color);
+}
+
+.life-chapter-photography .photo-carousel-thumbnail {
+  background: var(--site-surface-raised);
+  border-color: var(--life-rule);
+}
+
+.life-chapter-photography .photo-carousel-thumbnail.is-active,
+.life-chapter-photography .photo-carousel-thumbnail:hover {
+  border-color: var(--global-theme-color);
+}
+
+.life-chapter-photography .photo-carousel-controls button {
+  background: var(--site-surface-raised);
+  border: 1px solid var(--life-rule);
+  color: var(--life-ink);
+}
+
+.life-chapter-photography .photo-carousel-progress {
+  background: var(--site-surface-raised);
+}
+
+.life-chapter-photography .photo-carousel-progress span {
+  background: var(--global-theme-color);
+}
+
+@media (max-width: 1000px) {
+  .life-impact {
+    grid-template-columns: 1fr;
+  }
+
+  .life-impact-numbers {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .life-role-list article {
+    grid-template-columns: minmax(7rem, 0.35fr) minmax(0, 1fr);
+  }
+
+  .life-role-list p {
+    grid-column: 2;
+  }
+}
+
+@media (max-width: 760px) {
+  .life-chapter-lead {
+    align-items: start;
+    grid-template-columns: 1fr;
+  }
+
+  .life-chapter-lead > p {
+    max-width: 38rem;
+  }
+
+  .life-impact-numbers {
+    gap: 1.7rem 0;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .volunteer-archive {
+    grid-auto-rows: clamp(10rem, 27vw, 15rem);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .life-gallery-heading {
+    align-items: start;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 520px) {
+  .life-chapter {
+    padding: 1.5rem 1rem 3rem;
+  }
+
+  .life-service-page .life-chapter-lead h2 {
+    font-size: clamp(2.8rem, 11vw, 4.5rem) !important;
+  }
+
+  .life-role-list article {
+    gap: 0.4rem;
+    grid-template-columns: 1fr;
+  }
+
+  .life-role-list p {
+    grid-column: 1;
+  }
+
+  .volunteer-archive {
+    grid-auto-rows: auto;
+    grid-template-columns: 1fr;
+  }
+
+  .volunteer-archive-frame,
+  .volunteer-archive-ending {
+    aspect-ratio: 1.34;
+  }
+
+  .volunteer-archive-frame:first-child,
+  .volunteer-archive-ending {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .life-chapter-photography .photo-carousel-slide,
+  .life-chapter-photography .photo-carousel-fallback {
+    height: clamp(20rem, 75vw, 30rem);
+  }
+
+  .life-gallery-meta {
+    flex-direction: column;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .volunteer-archive-frame,
+  .volunteer-archive-image img,
+  .life-motion-ready .life-service-page [data-life-reveal] {
+    transition: none;
+  }
+}
