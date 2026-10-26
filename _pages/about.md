@@ -98,19 +98,12 @@ Remove this Liquid comment wrapper to restore the scene and its script.
       <span>Perception and planning for reliable navigation in complex environments.</span>
     </div>
   </div>
-</section>
-
-<section class="phd-opportunity">
-  <div class="phd-copy">
+  <div class="research-opportunity">
     <p class="about-eyebrow">Let's Connect</p>
-    <h2>Seeking Fall 2027 PhD Opportunities</h2>
+    <h3>Seeking Fall 2027 PhD Opportunities</h3>
     <p>
       I am seeking PhD opportunities beginning in Fall 2027 and would welcome the chance to connect with prospective supervisors and collaborators. If our work aligns, please feel free to get in touch.
     </p>
-  </div>
-  <div class="phd-actions">
-    <a class="phd-btn flow-button" href="{{ '/assets/pdf/Jiacan_Li_CV.pdf' | relative_url }}" download="Jiacan_Li_CV.pdf">Download CV</a>
-    <a class="phd-btn flow-button" href="mailto:lijc2023@mail.sustech.edu.cn">Email Me</a>
   </div>
 </section>
 
