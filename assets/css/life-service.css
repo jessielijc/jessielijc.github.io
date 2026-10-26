@@ -233,162 +233,6 @@
   max-width: 26rem;
 }
 
-#volunteer-photo-gallery {
-  background: transparent;
-  border: 0;
-  border-radius: 0;
-  box-shadow: none;
-  isolation: auto;
-  overflow: visible;
-  padding: 0;
-}
-
-#volunteer-photo-gallery::before,
-#volunteer-photo-gallery::after {
-  content: none;
-}
-
-.volunteer-archive {
-  display: grid;
-  gap: clamp(0.65rem, 1.2vw, 1.2rem);
-  grid-auto-flow: row dense;
-  grid-auto-rows: clamp(10rem, 16vw, 17rem);
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-}
-
-.volunteer-archive-frame,
-.volunteer-archive-ending {
-  background: #33283a;
-  border: 0;
-  border-radius: 0.55rem;
-  box-shadow: none;
-  color: #fff;
-  min-height: 0;
-  overflow: hidden;
-  padding: 0;
-  position: relative;
-  transform: none;
-}
-
-.volunteer-archive-frame {
-  cursor: pointer;
-  text-align: left;
-  transition:
-    box-shadow 250ms ease,
-    transform 350ms ease;
-}
-
-.volunteer-archive-frame:first-child {
-  grid-column: span 2;
-  grid-row: span 2;
-}
-
-.volunteer-archive-frame:nth-child(3n + 1)::before,
-.volunteer-archive-frame:nth-child(3n + 2)::before {
-  content: none;
-}
-
-.volunteer-archive-frame:hover,
-.volunteer-archive-frame:focus-visible {
-  box-shadow: 0 1.2rem 2.2rem rgba(36, 20, 42, 0.24);
-  transform: translateY(-0.25rem);
-  z-index: 2;
-}
-
-.volunteer-archive-frame:focus-visible {
-  outline: 3px solid var(--global-theme-color);
-  outline-offset: 3px;
-}
-
-.volunteer-archive-image,
-.volunteer-archive-image img {
-  height: 100%;
-  width: 100%;
-}
-
-.volunteer-archive-image img {
-  aspect-ratio: auto;
-  object-fit: cover;
-  transition: transform 550ms ease;
-}
-
-.volunteer-archive-frame:first-child img {
-  object-position: center;
-}
-
-.volunteer-archive-frame:hover img,
-.volunteer-archive-frame:focus-visible img {
-  filter: none;
-  transform: scale(1.055);
-}
-
-.volunteer-archive-frame::after,
-.volunteer-archive-ending::after {
-  background: linear-gradient(transparent 34%, rgba(16, 13, 24, 0.82));
-  content: "";
-  inset: 0;
-  pointer-events: none;
-  position: absolute;
-}
-
-.volunteer-archive-caption {
-  align-items: end;
-  bottom: 0;
-  color: #fff;
-  font-size: clamp(0.94rem, 1.1vw, 1.12rem);
-  font-weight: 700;
-  gap: 0.5rem;
-  left: 0;
-  line-height: 1.35;
-  min-height: 0;
-  padding: 1.15rem;
-  position: absolute;
-  right: 0;
-  z-index: 1;
-}
-
-.volunteer-archive-frame:first-child .volunteer-archive-caption {
-  font-size: clamp(1.15rem, 1.6vw, 1.55rem);
-  padding: 1.5rem;
-}
-
-#volunteer-photo-gallery .volunteer-archive-caption span,
-#volunteer-photo-gallery .volunteer-archive-ending-caption {
-  color: #fff !important;
-}
-
-.volunteer-archive-caption span:last-child {
-  flex: none;
-  font-size: 1.15rem;
-  line-height: 1;
-}
-
-.volunteer-archive-ending {
-  align-self: stretch;
-  grid-column: span 2;
-}
-
-.volunteer-archive-ending-art {
-  aspect-ratio: auto;
-  display: block;
-  height: 100%;
-  object-fit: cover;
-  width: 100%;
-}
-
-.volunteer-archive-ending-caption {
-  bottom: 0;
-  font-size: clamp(1.15rem, 1.6vw, 1.55rem);
-  font-weight: 750;
-  left: 0;
-  line-height: 1.2;
-  min-height: 0;
-  padding: 1.5rem;
-  position: absolute;
-  right: 0;
-  z-index: 1;
-}
-
 .life-chapter-photography .life-chapter-header {
   margin-bottom: clamp(2.5rem, 5vw, 5rem);
 }
@@ -476,11 +320,6 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .volunteer-archive {
-    grid-auto-rows: clamp(10rem, 27vw, 15rem);
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
   .life-gallery-heading {
     align-items: start;
     flex-direction: column;
@@ -505,22 +344,6 @@
     grid-column: 1;
   }
 
-  .volunteer-archive {
-    grid-auto-rows: auto;
-    grid-template-columns: 1fr;
-  }
-
-  .volunteer-archive-frame,
-  .volunteer-archive-ending {
-    aspect-ratio: 1.34;
-  }
-
-  .volunteer-archive-frame:first-child,
-  .volunteer-archive-ending {
-    grid-column: auto;
-    grid-row: auto;
-  }
-
   .life-chapter-photography .photo-carousel-slide,
   .life-chapter-photography .photo-carousel-fallback {
     height: clamp(20rem, 75vw, 30rem);
@@ -532,8 +355,6 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .volunteer-archive-frame,
-  .volunteer-archive-image img,
   .life-motion-ready .life-service-page [data-life-reveal] {
     transition: none;
   }
