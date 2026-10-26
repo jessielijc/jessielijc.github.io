@@ -163,7 +163,7 @@
 }
 
 .life-role-list {
-  margin: clamp(2.5rem, 4vw, 4rem) 0 clamp(3rem, 5vw, 5rem);
+  margin: clamp(2.5rem, 4vw, 4rem) 0 0;
 }
 
 .life-role-list article {
@@ -201,6 +201,17 @@
   word-spacing: 0.08em;
 }
 
+.life-service-page .life-role-list h3 small {
+  color: var(--life-accent);
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1.4;
+  margin-top: 0.35rem;
+  word-spacing: normal;
+}
+
 .life-role-list p {
   color: var(--life-muted);
   font-size: 1.02rem;
@@ -208,6 +219,42 @@
   line-height: 1.55;
   margin: 0;
   max-width: 52rem;
+}
+
+.life-certifications {
+  align-items: start;
+  border-bottom: 1px solid var(--life-rule);
+  display: grid;
+  gap: 1rem clamp(1.5rem, 3vw, 3rem);
+  grid-template-columns: clamp(9rem, 16vw, 13rem) minmax(0, 1fr);
+  margin-bottom: clamp(3rem, 5vw, 5rem);
+  padding: clamp(1.3rem, 2vw, 1.9rem) 0;
+}
+
+.life-certifications ul {
+  display: grid;
+  gap: 1rem 1.5rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.life-certifications li {
+  border-left: 2px solid var(--life-accent);
+  color: var(--life-ink);
+  font-size: 1.03rem;
+  font-weight: 700;
+  line-height: 1.4;
+  padding-left: 1rem;
+}
+
+.life-certifications li span {
+  color: var(--life-muted);
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-top: 0.2rem;
 }
 
 .life-gallery-heading {
@@ -343,6 +390,14 @@
 
   .life-role-list article {
     gap: 0.45rem;
+    grid-template-columns: 1fr;
+  }
+
+  .life-certifications {
+    grid-template-columns: 1fr;
+  }
+
+  .life-certifications ul {
     grid-template-columns: 1fr;
   }
 
