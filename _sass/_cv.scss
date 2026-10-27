@@ -79,34 +79,6 @@
     }
   }
 
-  .cv-related-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.7rem;
-    margin: 0.5rem 0 1.4rem;
-  }
-
-  .cv-related-links a {
-    align-items: center;
-    border: 1px solid var(--global-divider-color);
-    border-radius: 999px;
-    color: var(--global-theme-color);
-    display: inline-flex;
-    font-size: 0.95rem;
-    font-weight: 700;
-    gap: 0.65rem;
-    padding: 0.55rem 0.9rem;
-    text-decoration: none;
-
-    &:hover,
-    &:focus-visible {
-      background: var(--global-theme-color);
-      border-color: var(--global-theme-color);
-      color: var(--global-card-bg-color);
-      text-decoration: none;
-    }
-  }
-
   .cv-section .cv-entry + .cv-entry {
     border-top: 1px solid var(--global-divider-color);
     margin-top: 1.15rem;
