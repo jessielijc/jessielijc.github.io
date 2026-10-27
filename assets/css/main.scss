@@ -1745,13 +1745,8 @@ html[data-theme="dark"] .visitor-dotted-map {
 */
 
 .homepage-visitor-map {
-  background: var(--site-surface-raised);
-  border: 1px solid var(--global-divider-color);
-  border-radius: 1.1rem;
-  box-shadow: 0 0.45rem 1.35rem rgba(var(--site-accent-rgb), 0.1);
   margin: var(--site-card-gap) auto 0;
   max-width: 760px;
-  padding: 1.25rem;
 }
 
 .homepage-visitor-map-heading {
@@ -1790,14 +1785,9 @@ html[data-theme="dark"] .visitor-dotted-map {
 
 .homepage-visitor-map-visual {
   align-items: center;
-  background: #f8f5fa;
-  border: 1px solid var(--global-divider-color);
-  border-radius: 0.9rem;
   display: flex;
   justify-content: center;
   margin-top: 1.15rem;
-  overflow: hidden;
-  padding: 0.5rem;
   text-align: center;
 }
 
@@ -1810,7 +1800,13 @@ html[data-theme="dark"] .visitor-dotted-map {
   display: block;
   filter: hue-rotate(150deg);
   height: auto;
+  mix-blend-mode: multiply;
   width: 100%;
+}
+
+html[data-theme="dark"] .homepage-visitor-map-image-link img {
+  filter: hue-rotate(150deg) invert(1);
+  mix-blend-mode: screen;
 }
 
 .homepage-visitor-map-note {
@@ -1821,11 +1817,7 @@ html[data-theme="dark"] .visitor-dotted-map {
 
 @media (max-width: 768px) {
   .homepage-visitor-map {
-    padding: 1.1rem;
-  }
-
-  .homepage-visitor-map-visual {
-    padding: 0.4rem;
+    padding-inline: 0.2rem;
   }
 }
 
