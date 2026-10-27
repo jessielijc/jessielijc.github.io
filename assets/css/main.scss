@@ -1801,12 +1801,15 @@ html[data-theme="dark"] .visitor-dotted-map {
   text-align: center;
 }
 
-.homepage-visitor-map-visual :is(a, img, svg, canvas, iframe) {
-  max-width: 100%;
+.homepage-visitor-map-image-link {
+  display: block;
+  width: min(100%, 835px);
 }
 
-.homepage-visitor-map-visual :is(img, svg, canvas) {
+.homepage-visitor-map-image-link img {
+  display: block;
   height: auto;
+  width: 100%;
 }
 
 .homepage-visitor-map-note {
