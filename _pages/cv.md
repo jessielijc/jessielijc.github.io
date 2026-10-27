@@ -69,18 +69,3 @@ description: "Dexterous manipulation, robot learning, 3D perception, and autonom
   <div class="cv-entry"><div class="cv-entry-heading"><h3>ROBOCON China Championship</h3><span>2024</span></div><p class="cv-entry-meta">National First Prize (Operation Challenge); National Second Prize (Theme Contest); two National Third Prizes (Biomimetic Legged Robot).</p></div>
   <div class="cv-entry"><div class="cv-entry-heading"><h3>Outstanding Volunteer</h3><span>2024</span></div><p class="cv-entry-meta">Top 3%</p></div>
 </section>
-
-<section class="card cv-section" id="skills" aria-labelledby="cv-skills-title">
-  <h2 class="card-title" id="cv-skills-title">Skills &amp; Additional Information</h2>
-  <ul class="cv-facts">
-    <li><strong>Programming:</strong> Python, C++, MATLAB</li>
-    <li><strong>Robotics &amp; Simulation:</strong> ROS 2, MuJoCo, NVIDIA Isaac Lab, Gazebo</li>
-    <li><strong>Machine Learning:</strong> PyTorch</li>
-    <li><strong>Computer Vision &amp; Visualization:</strong> OpenCV, RViz2</li>
-    <li><strong>Embedded Systems:</strong> STM32, Arduino</li>
-    <li><strong>CAD &amp; CAE:</strong> SolidWorks, AutoCAD, Abaqus</li>
-    <li><strong>English Proficiency:</strong> TOEFL iBT 5.5/6 (comparable score: 110/120)</li>
-    <li><strong>Certifications:</strong> AHA Heartsaver®, Certified First Aider (Red Cross Society of China)</li>
-    <li><strong>Interests:</strong> Go (board game), amateur 1-kyu</li>
-  </ul>
-</section>
