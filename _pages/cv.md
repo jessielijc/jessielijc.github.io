@@ -20,16 +20,10 @@ description: "Dexterous manipulation, robot learning, 3D perception, and autonom
   <div class="cv-entry">
     <div class="cv-entry-heading"><h3>Southern University of Science and Technology</h3><span>Sep 2023 – Present</span></div>
     <p class="cv-entry-meta">B.Eng. in Robotics Engineering · Shenzhen, China</p>
-    <p>Department of Mechanical and Energy Engineering</p>
-    <ul>
-      <li>Overall GPA: 3.79/4.0 (weighted average: 91.37/100); major GPA: 3.81/4.0.</li>
-      <li>Selected courses (scores out of 100): Robot Operating System (99), Robot Modeling and Control (95), Computer Vision (94), Machine Learning for Engineering (97), Robotic Actuation System (94), Mechanical Design (97), and Finite Element Theory and Its Engineering Applications (97).</li>
-    </ul>
   </div>
   <div class="cv-entry">
     <div class="cv-entry-heading"><h3>National University of Singapore</h3><span>Jun 2026 – Present</span></div>
     <p class="cv-entry-meta">Visiting Research Student · Singapore</p>
-    <p>Department of Electrical and Computer Engineering</p>
   </div>
 </section>
 
