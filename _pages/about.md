@@ -161,11 +161,11 @@ Visitor map and counter paused. Remove this Liquid comment wrapper to restore th
         <p class="about-eyebrow">Around the World</p>
         <h3 id="homepage-visitor-map-title">Visitor Map</h3>
       </div>
-      <a class="homepage-visitor-map-link" href="https://mapmyvisitors.com/web/1c945" target="_blank" rel="external noopener noreferrer">View visitor statistics <span aria-hidden="true">↗</span></a>
+      <a class="homepage-visitor-map-link" href="https://mapmyvisitors.com/web/1c946" target="_blank" rel="external noopener noreferrer">View visitor statistics <span aria-hidden="true">↗</span></a>
     </div>
     <div class="homepage-visitor-map-visual" aria-label="Map showing approximate visitor locations">
-      <a class="homepage-visitor-map-image-link" href="https://mapmyvisitors.com/web/1c945" target="_blank" rel="external noopener noreferrer" aria-label="Open visitor map statistics">
-        <img src="https://mapmyvisitors.com/map.png?cl=d6e0d8&amp;w=600&amp;t=n&amp;d=LMzYINGwA98w1bVRqpf1Au3h44dTB3hN3ZyFPy2espo&amp;co=f7f9f6&amp;ct=415a49" alt="Live world map of approximate visitor locations" width="600" height="294" decoding="async">
+      <a class="homepage-visitor-map-image-link" href="https://mapmyvisitors.com/web/1c946" target="_blank" rel="external noopener noreferrer" aria-label="Open visitor map statistics">
+        <img src="https://mapmyvisitors.com/map.png?cl=d6e0d8&amp;w=600&amp;t=n&amp;d=IOAZwjK6Eg-Sy4y7foyUnjGiHxKX6dmWCtmnX76-Zk4&amp;co=f7f9f6&amp;ct=415a49" alt="Live world map of approximate visitor locations" width="600" height="294" decoding="async">
       </a>
     </div>
     <p class="homepage-visitor-map-note">Locations are approximate. <a href="https://mapmyvisitors.com/b/policy" target="_blank" rel="external noopener noreferrer">How visitor data is used</a></p>
