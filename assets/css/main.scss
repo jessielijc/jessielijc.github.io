@@ -1805,7 +1805,7 @@ html[data-theme="dark"] .visitor-dotted-map {
 }
 
 html[data-theme="dark"] .homepage-visitor-map-image-link img {
-  filter: hue-rotate(150deg) invert(1) brightness(3);
+  filter: invert(1) brightness(3);
   mix-blend-mode: screen;
 }
 
