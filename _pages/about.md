@@ -154,4 +154,19 @@ Visitor map and counter paused. Remove this Liquid comment wrapper to restore th
     <p class="visitor-map-note">Counting began when this visitor section was published; earlier visits and visits to other pages are not included.</p>
   </section>
   {% endcomment %}
+
+  <section class="homepage-visitor-map" aria-labelledby="homepage-visitor-map-title">
+    <div class="homepage-visitor-map-heading">
+      <div>
+        <p class="about-eyebrow">Around the World</p>
+        <h3 id="homepage-visitor-map-title">Visitor Map</h3>
+      </div>
+      <a class="homepage-visitor-map-link" href="https://mapmyvisitors.com/web/1c942" target="_blank" rel="external noopener noreferrer">View visitor statistics <span aria-hidden="true">↗</span></a>
+    </div>
+    <div class="homepage-visitor-map-visual" aria-label="Map showing approximate visitor locations">
+      <script type="text/javascript" id="mapmyvisitors" src="https://mapmyvisitors.com/map.js?cl=d6e0d8&amp;w=835&amp;t=n&amp;d=uIuiPphcecVVwAwuaT_A5UfQoYDL6dh00Zza_TxiznI&amp;co=f7f9f6&amp;cmo=597260&amp;cmn=1f6644&amp;ct=415a49"></script>
+      <noscript><a href="https://mapmyvisitors.com/web/1c942">View visitor statistics</a></noscript>
+    </div>
+    <p class="homepage-visitor-map-note">Locations are approximate. <a href="https://mapmyvisitors.com/b/policy" target="_blank" rel="external noopener noreferrer">How visitor data is used</a></p>
+  </section>
 </section>
