@@ -10,11 +10,6 @@ cv_pdf: assets/pdf/Jiacan_Li_CV.pdf
 description: "Dexterous manipulation, robot learning, 3D perception, and autonomous navigation. Download the PDF for my complete CV."
 ---
 
-<nav class="cv-related-links" aria-label="Related sections">
-  <a href="{{ '/' | relative_url }}#publications">Publications &amp; Patents <span aria-hidden="true">↗</span></a>
-  <a href="{{ '/life-service/' | relative_url }}#volunteering-title">Leadership &amp; Service <span aria-hidden="true">↗</span></a>
-</nav>
-
 <section class="card cv-section" id="education" aria-labelledby="cv-education-title">
   <h2 class="card-title" id="cv-education-title">Education</h2>
   <div class="cv-entry">
