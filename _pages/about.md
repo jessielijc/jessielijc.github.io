@@ -156,6 +156,28 @@ Visitor map and counter paused. Remove this Liquid comment wrapper to restore th
   {% endcomment %}
 
   <section class="homepage-visitor-map" aria-label="Visitor map">
+    <svg aria-hidden="true" focusable="false" width="0" height="0" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <filter id="visitor-map-purple" color-interpolation-filters="sRGB">
+          <feColorMatrix in="SourceGraphic" type="hueRotate" values="150" result="map-base" />
+          <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  4 -4 0 0 -0.08" result="red-points" />
+          <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -4 4 0 0 -0.08" result="green-points" />
+          <feComposite in="red-points" in2="green-points" operator="arithmetic" k2="1" k3="1" result="point-mask" />
+          <feFlood flood-color="#46345f" result="point-color" />
+          <feComposite in="point-color" in2="point-mask" operator="in" result="purple-points" />
+          <feComposite in="purple-points" in2="map-base" operator="over" />
+        </filter>
+        <filter id="visitor-map-purple-dark" color-interpolation-filters="sRGB">
+          <feColorMatrix in="SourceGraphic" type="matrix" values="-3 0 0 0 3  0 -3 0 0 3  0 0 -3 0 3  0 0 0 1 0" result="map-base" />
+          <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  4 -4 0 0 -0.08" result="red-points" />
+          <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -4 4 0 0 -0.08" result="green-points" />
+          <feComposite in="red-points" in2="green-points" operator="arithmetic" k2="1" k3="1" result="point-mask" />
+          <feFlood flood-color="#a88ac7" result="point-color" />
+          <feComposite in="point-color" in2="point-mask" operator="in" result="purple-points" />
+          <feComposite in="purple-points" in2="map-base" operator="over" />
+        </filter>
+      </defs>
+    </svg>
     <div class="homepage-visitor-map-visual" aria-label="Map showing approximate visitor locations">
       <a class="homepage-visitor-map-image-link" href="https://mapmyvisitors.com/web/1c946" target="_blank" rel="external noopener noreferrer" aria-label="Open visitor map statistics">
         <img src="https://mapmyvisitors.com/map.png?cl=d6e0d8&amp;w=600&amp;t=n&amp;d=IOAZwjK6Eg-Sy4y7foyUnjGiHxKX6dmWCtmnX76-Zk4&amp;co=ffffff&amp;ct=415a49" alt="Live world map of approximate visitor locations" width="600" height="294" decoding="async">
