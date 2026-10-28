@@ -1763,14 +1763,14 @@ html[data-theme="dark"] .visitor-dotted-map {
 
 .homepage-visitor-map-image-link img {
   display: block;
-  filter: grayscale(1) sepia(1) saturate(4) hue-rotate(225deg) contrast(1.15);
+  filter: url("#visitor-map-purple");
   height: auto;
   mix-blend-mode: multiply;
   width: 100%;
 }
 
 html[data-theme="dark"] .homepage-visitor-map-image-link img {
-  filter: invert(1) brightness(3);
+  filter: url("#visitor-map-purple-dark");
   mix-blend-mode: screen;
 }
 
