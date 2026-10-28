@@ -1763,7 +1763,7 @@ html[data-theme="dark"] .visitor-dotted-map {
 
 .homepage-visitor-map-image-link img {
   display: block;
-  filter: hue-rotate(150deg);
+  filter: grayscale(1) sepia(1) saturate(4) hue-rotate(225deg) contrast(1.15);
   height: auto;
   mix-blend-mode: multiply;
   width: 100%;
