@@ -17,6 +17,7 @@ github: https://github.com/SplatSLAM-Project/SplatSLAM
 .splatslam-page .splat-jump a {border:1px solid var(--global-divider-color);border-radius:999px;color:var(--global-text-color);font-size:.9rem;padding:.4rem .8rem;text-decoration:none}
 .splatslam-page .splat-jump a:hover,.splatslam-page .splat-jump a:focus-visible {background:var(--site-surface-soft);border-color:var(--global-theme-color)}
 .splatslam-page .splat-video-grid,.splatslam-page .splat-model-grid {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
+.splatslam-page .splat-video-grid {grid-template-columns:minmax(0,1fr);max-width:800px;margin-inline:auto}
 .splatslam-page .splat-video-grid figure {margin:0;min-width:0}
 .splatslam-page .splat-video-grid iframe {aspect-ratio:16/9;background:#242037;border:0;border-radius:.85rem;display:block;width:100%}
 .splatslam-page figcaption,.splatslam-page .splat-model-copy {color:var(--global-text-color-light);font-size:.95rem;line-height:1.5;margin:.65rem 0 0}
@@ -59,10 +60,9 @@ github: https://github.com/SplatSLAM-Project/SplatSLAM
 
 <section class="project-detail-section" aria-labelledby="splat-video-title">
   <p class="about-eyebrow">Novel-view rendering</p>
-  <h2 id="splat-video-title">Scenes in motion</h2>
+  <h2 id="splat-video-title">Scene in motion</h2>
   <div class="splat-video-grid">
-    <figure><iframe src="https://drive.google.com/file/d/1cTGS4e1WadRVLa-rQGBm9sIkoHfepd4w/preview" title="SplatSLAM reconstruction video, first scene" loading="lazy" allow="autoplay; fullscreen" allowfullscreen></iframe><figcaption>View synthesis from a compact capture sequence.</figcaption></figure>
-    <figure><iframe src="https://drive.google.com/file/d/1_Jk0D-Ieay6yEj4jdbtbB0-NqtJbIWxC/preview" title="SplatSLAM reconstruction video after point-cloud refinement" loading="lazy" allow="autoplay; fullscreen" allowfullscreen></iframe><figcaption>A second scene reconstructed after point-cloud refinement.</figcaption></figure>
+    <figure><iframe src="https://drive.google.com/file/d/1_Jk0D-Ieay6yEj4jdbtbB0-NqtJbIWxC/preview" title="SplatSLAM reconstruction video after point-cloud refinement" loading="lazy" allow="autoplay; fullscreen" allowfullscreen></iframe><figcaption>Novel-view rendering after point-cloud refinement.</figcaption></figure>
   </div>
 </section>
 
