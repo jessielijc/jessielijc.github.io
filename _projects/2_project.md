@@ -6,59 +6,115 @@ img: assets/img/projects/splat-slam.png
 importance: 2
 category: featured
 hide_title: true
-page_class: project-detail-page
-image_caption: From monocular video to a rendered 3D scene.
+page_class: project-detail-page splatslam-page
 github: https://github.com/SplatSLAM-Project/SplatSLAM
 ---
 
-<section class="project-hero-card">
-  <p class="about-eyebrow">3D Reconstruction · Visual SLAM</p>
-  <h1>SplatSLAM: From Monocular Video to a 3D Scene</h1>
-  <p>
-    This course project connects MASt3R-SLAM camera tracking and point-cloud reconstruction with 3D Gaussian Splatting. A conversion and refinement pipeline turns monocular video into a scene that can be rendered from new viewpoints.
-  </p>
-  <div class="about-tags">
-    <span>MASt3R-SLAM</span>
-    <span>Point-Cloud Refinement</span>
-    <span>3D Gaussian Splatting</span>
-    <span>Novel-View Rendering</span>
-  </div>
+<style>
+.splatslam-page > article {gap:1.4rem}
+.splatslam-page .splat-authors {color:var(--global-text-color-light);font-size:1.03rem;margin:.4rem 0 1.1rem}
+.splatslam-page .splat-jump {display:flex;flex-wrap:wrap;gap:.55rem;margin:1.3rem 0 0}
+.splatslam-page .splat-jump a {border:1px solid var(--global-divider-color);border-radius:999px;color:var(--global-text-color);font-size:.9rem;padding:.4rem .8rem;text-decoration:none}
+.splatslam-page .splat-jump a:hover,.splatslam-page .splat-jump a:focus-visible {background:var(--site-surface-soft);border-color:var(--global-theme-color)}
+.splatslam-page .splat-video-grid,.splatslam-page .splat-model-grid {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
+.splatslam-page .splat-video-grid figure {margin:0;min-width:0}
+.splatslam-page .splat-video-grid iframe {aspect-ratio:16/9;background:#242037;border:0;border-radius:.85rem;display:block;width:100%}
+.splatslam-page figcaption,.splatslam-page .splat-model-copy {color:var(--global-text-color-light);font-size:.95rem;line-height:1.5;margin:.65rem 0 0}
+.splatslam-page .splat-process {display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.75rem;margin-top:1.2rem}
+.splatslam-page .splat-process > div {background:var(--site-surface-soft);border:1px solid var(--global-divider-color);border-radius:.9rem;padding:1rem}
+.splatslam-page .splat-process strong {color:var(--global-theme-color);display:block;font-size:.85rem;letter-spacing:.08em;margin-bottom:.45rem}
+.splatslam-page .splat-process h3 {font-size:1.1rem;line-height:1.3;margin:0 0 .35rem}
+.splatslam-page .splat-process p {font-size:.94rem;line-height:1.5;margin:0}
+.splatslam-page .splat-findings {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin:1.2rem 0 0}
+.splatslam-page .splat-findings > div {border-left:3px solid var(--global-theme-color);padding:.1rem .85rem}
+.splatslam-page .splat-findings h3 {font-size:1.08rem;margin:0 0 .4rem}
+.splatslam-page .splat-findings p {font-size:.94rem;line-height:1.5;margin:0}
+.splatslam-page .splat-model-card {background:var(--site-surface-soft);border:1px solid var(--global-divider-color);border-radius:1rem;min-width:0;overflow:hidden}
+.splatslam-page .splat-model-stage {aspect-ratio:16/10;background:radial-gradient(circle at 48% 35%,#514060,#201c2e 72%);position:relative}
+.splatslam-page .splat-model-stage iframe {border:0;height:100%;left:0;position:absolute;top:0;width:100%}
+.splatslam-page .splat-load {align-items:center;background:transparent;border:0;color:#fff;cursor:pointer;display:flex;flex-direction:column;gap:.5rem;height:100%;justify-content:center;padding:1.5rem;position:absolute;text-align:center;width:100%}
+.splatslam-page .splat-load::before {border:2px solid currentColor;border-radius:50%;content:'↻';display:grid;font-size:2rem;height:3.5rem;place-items:center;width:3.5rem}
+.splatslam-page .splat-load:hover,.splatslam-page .splat-load:focus-visible {background:rgba(255,255,255,.09)}
+.splatslam-page .splat-model-info {padding:1rem 1.1rem 1.1rem}
+.splatslam-page .splat-model-info h3 {font-size:1.12rem;margin:0}
+.splatslam-page .splat-model-copy {margin:.4rem 0 .6rem}
+.splatslam-page .splat-model-info a {font-size:.88rem}
+.splatslam-page [id^=splat-] {scroll-margin-top:5rem}
+@media(max-width:850px){.splatslam-page .splat-process{grid-template-columns:repeat(2,minmax(0,1fr))}.splatslam-page .splat-findings{grid-template-columns:1fr}}
+@media(max-width:620px){.splatslam-page .splat-video-grid,.splatslam-page .splat-model-grid,.splatslam-page .splat-process{grid-template-columns:1fr}}
+</style>
+
+<section class="project-hero-card" id="splat-overview">
+  <p class="about-eyebrow">Computer Vision · 3D Reconstruction</p>
+  <h1>SplatSLAM</h1>
+  <p class="splat-authors">Dense 3D Reconstruction from Monocular Video via Learning-based SLAM and Gaussian Splatting<br>Jiacan Li · Yuzhen Song · Yiming Ma</p>
+  <p>A smartphone video becomes a navigable 3D scene: MASt3R-SLAM estimates camera motion and dense geometry, a refinement step removes stray points, and 3D Gaussian Splatting renders new viewpoints.</p>
   <div class="project-actions">
-    <a class="project-link-btn flow-button" href="https://github.com/SplatSLAM-Project/SplatSLAM" target="_blank" rel="external nofollow noopener">View repository</a>
-    <a class="project-link-btn flow-button" href="https://sites.google.com/view/splatslam/home" target="_blank" rel="external nofollow noopener">Original project page</a>
+    <a class="project-link-btn flow-button" href="https://github.com/SplatSLAM-Project/SplatSLAM" target="_blank" rel="noopener noreferrer">Code &amp; dataset ↗</a>
+    <a class="project-link-btn flow-button" href="https://drive.google.com/file/d/1Fg8_7HWAk7t0ciAeOv62hdd0CVTGvlS3/view" target="_blank" rel="noopener noreferrer">Project paper ↗</a>
+    <a class="project-link-btn flow-button" href="https://sites.google.com/view/splatslam/home" target="_blank" rel="noopener noreferrer">Original project site ↗</a>
+  </div>
+  <nav class="splat-jump" aria-label="SplatSLAM page sections"><a href="#splat-method">Method</a><a href="#splat-results">Results</a><a href="#splat-demos">Interactive 3D demos</a></nav>
+</section>
+
+<section class="project-detail-section" aria-labelledby="splat-video-title">
+  <p class="about-eyebrow">Novel-view rendering</p>
+  <h2 id="splat-video-title">Scenes in motion</h2>
+  <div class="splat-video-grid">
+    <figure><iframe src="https://drive.google.com/file/d/1cTGS4e1WadRVLa-rQGBm9sIkoHfepd4w/preview" title="SplatSLAM reconstruction video, first scene" loading="lazy" allow="autoplay; fullscreen" allowfullscreen></iframe><figcaption>View synthesis from a compact capture sequence.</figcaption></figure>
+    <figure><iframe src="https://drive.google.com/file/d/1_Jk0D-Ieay6yEj4jdbtbB0-NqtJbIWxC/preview" title="SplatSLAM reconstruction video after point-cloud refinement" loading="lazy" allow="autoplay; fullscreen" allowfullscreen></iframe><figcaption>A second scene reconstructed after point-cloud refinement.</figcaption></figure>
   </div>
 </section>
 
-<section class="project-detail-section">
-  <p class="about-eyebrow">End-to-End Pipeline</p>
-  <h2>From video frames to a rendered scene</h2>
-  <figure class="project-showcase project-showcase--diagram">
-    <img src="{{ '/assets/img/projects/splat-slam.png' | relative_url }}" alt="SplatSLAM pipeline from video frames and camera geometry to Gaussian optimization and a rendered 3D scene">
-    <figcaption>The pipeline extracts frames, estimates camera poses and geometry, refines the point cloud, and trains 3D Gaussians for novel-view rendering.</figcaption>
-  </figure>
-</section>
-
-<section class="project-detail-section technical-highlights">
-  <p class="about-eyebrow">Technical Approach</p>
-  <h2>Three connected stages</h2>
-  <div class="highlight-grid">
-    <div>
-      <h3>Camera Tracking</h3>
-      <p>MASt3R-SLAM estimates camera trajectories and a colored point cloud from RGB frames.</p>
-    </div>
-    <div>
-      <h3>Geometry Refinement</h3>
-      <p>Project-specific scripts convert poses into a 3DGS-compatible format and use statistical outlier removal to reduce isolated points.</p>
-    </div>
-    <div>
-      <h3>Scene Rendering</h3>
-      <p>The refined points initialize 3D Gaussians, which are optimized to render views beyond the original camera frames.</p>
-    </div>
+<section class="project-detail-section" id="splat-method">
+  <p class="about-eyebrow">Method</p>
+  <h2>From RGB frames to a 3D scene</h2>
+  <figure class="project-showcase project-showcase--diagram"><img src="{{ '/assets/img/projects/splat-slam.png' | relative_url }}" alt="SplatSLAM pipeline from monocular video and camera poses to a rendered Gaussian scene" loading="lazy"><figcaption>Tracking, geometry refinement, and Gaussian optimization form one reconstruction pipeline.</figcaption></figure>
+  <div class="splat-process">
+    <div><strong>01 / CAPTURE</strong><h3>Video frames</h3><p>Sample and standardize frames from monocular smartphone footage.</p></div>
+    <div><strong>02 / TRACK</strong><h3>MASt3R-SLAM</h3><p>Estimate camera trajectories and a dense, colored point cloud.</p></div>
+    <div><strong>03 / REFINE</strong><h3>Point-cloud cleanup</h3><p>Remove outliers and downsample geometry before training.</p></div>
+    <div><strong>04 / RENDER</strong><h3>3D Gaussians</h3><p>Optimize a scene representation for interactive novel views.</p></div>
   </div>
 </section>
 
-<section class="project-detail-section">
-  <p class="about-eyebrow">Experiment Notes</p>
-  <h2>Reconstruction quality depends on capture and training</h2>
-  <p>The repository reports that point-cloud denoising reduced visible floating artifacts with little change in PSNR. In a self-captured scene, shorter 3DGS training produced cleaner novel views than longer runs that overfit the input frames. These observations guided the project's capture and refinement workflow.</p>
+<section class="project-detail-section" id="splat-results">
+  <p class="about-eyebrow">Experiments</p>
+  <h2>What the comparisons show</h2>
+  <p>The project evaluates camera tracking on indoor benchmarks and reconstruction on campus scenes with different textures and camera paths.</p>
+  <div class="splat-findings">
+    <div><h3>Tracking</h3><p>Dense visual matching supports camera localization from RGB video without a depth sensor.</p></div>
+    <div><h3>Scene texture</h3><p>Textured rooms reconstruct more completely; blank walls leave sparse or floating geometry.</p></div>
+    <div><h3>Capture coverage</h3><p>A walkthrough gives better unseen views than a short stationary rotation, even when the latter scores well on its training frames.</p></div>
+  </div>
 </section>
+
+<section class="project-detail-section" id="splat-demos">
+  <p class="about-eyebrow">Interactive gallery</p>
+  <h2>Explore the 3D reconstructions</h2>
+  <p>Select a scene to load its Sketchfab viewer. Drag to rotate, scroll to zoom, or open the model in a new tab. Viewers load on demand so this page stays responsive.</p>
+  <div class="splat-model-grid">
+    <div class="splat-model-card"><div class="splat-model-stage"><button class="splat-load" type="button" data-model="556f95d2d32645e0b144cdb9038f934b" aria-label="Load raw point cloud 3D demo">Explore raw point cloud in 3D</button></div><div class="splat-model-info"><h3>Raw point cloud</h3><p class="splat-model-copy">The geometry produced by MASt3R-SLAM before scene rendering.</p><a href="https://sketchfab.com/models/556f95d2d32645e0b144cdb9038f934b" target="_blank" rel="noopener noreferrer">Open on Sketchfab ↗</a></div></div>
+    <div class="splat-model-card"><div class="splat-model-stage"><button class="splat-load" type="button" data-model="a2e3aa48facd46de8a9e1d70bd4858be" aria-label="Load 360 degree meeting room 3D demo">Explore 360° meeting room</button></div><div class="splat-model-info"><h3>Meeting room · 360°</h3><p class="splat-model-copy">A rotational capture of an indoor meeting room.</p><a href="https://sketchfab.com/models/a2e3aa48facd46de8a9e1d70bd4858be" target="_blank" rel="noopener noreferrer">Open on Sketchfab ↗</a></div></div>
+    <div class="splat-model-card"><div class="splat-model-stage"><button class="splat-load" type="button" data-model="35db1e88d8ba4204b576b6774a51308e" aria-label="Load meeting room 3D demo">Explore meeting room</button></div><div class="splat-model-info"><h3>Meeting room · walkthrough</h3><p class="splat-model-copy">A second room capture with broader camera movement.</p><a href="https://sketchfab.com/models/35db1e88d8ba4204b576b6774a51308e" target="_blank" rel="noopener noreferrer">Open on Sketchfab ↗</a></div></div>
+    <div class="splat-model-card"><div class="splat-model-stage"><button class="splat-load" type="button" data-model="fd0c1cbb08ef47e8b6b8e5704b4a71d8" aria-label="Load tea room 3D demo">Explore tea room</button></div><div class="splat-model-info"><h3>Tea room</h3><p class="splat-model-copy">A texture-rich scene for comparing geometric completeness.</p><a href="https://sketchfab.com/models/fd0c1cbb08ef47e8b6b8e5704b4a71d8" target="_blank" rel="noopener noreferrer">Open on Sketchfab ↗</a></div></div>
+    <div class="splat-model-card"><div class="splat-model-stage"><button class="splat-load" type="button" data-model="26dffeeeb1e748d386671aeb205f9081" aria-label="Load corner 3D demo">Explore low-texture corner</button></div><div class="splat-model-info"><h3>Low-texture corner</h3><p class="splat-model-copy">A difficult scene that exposes sparse points and reconstruction artifacts.</p><a href="https://sketchfab.com/models/26dffeeeb1e748d386671aeb205f9081" target="_blank" rel="noopener noreferrer">Open on Sketchfab ↗</a></div></div>
+    <div class="splat-model-card"><div class="splat-model-stage"><button class="splat-load" type="button" data-model="2bd98d5914124023a06100404945fe2f" aria-label="Load SUSTech classroom 3D demo">Explore SUSTech classroom</button></div><div class="splat-model-info"><h3>SUSTech classroom</h3><p class="splat-model-copy">The final interactive point-cloud demo from the original project page.</p><a href="https://sketchfab.com/models/2bd98d5914124023a06100404945fe2f" target="_blank" rel="noopener noreferrer">Open on Sketchfab ↗</a></div></div>
+  </div>
+  <p class="splat-model-copy">Project by Jiacan Li, Yuzhen Song, and Yiming Ma. Interactive models are hosted by Sketchfab; videos are hosted by Google Drive.</p>
+</section>
+
+<script>
+document.querySelectorAll('.splatslam-page .splat-load').forEach(function(button) {
+  button.addEventListener('click', function() {
+    var id = button.getAttribute('data-model');
+    if (!/^[a-f0-9]{32}$/.test(id)) return;
+    var viewer = document.createElement('iframe');
+    viewer.title = button.getAttribute('aria-label').replace('Load ', '');
+    viewer.src = 'https://sketchfab.com/models/' + id + '/embed?ui_hint=0&ui_theme=dark';
+    viewer.allow = 'autoplay; fullscreen; xr-spatial-tracking';
+    viewer.allowFullscreen = true;
+    button.replaceWith(viewer);
+  });
+});
+</script>
