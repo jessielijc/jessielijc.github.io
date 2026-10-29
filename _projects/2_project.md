@@ -30,6 +30,14 @@ github: https://github.com/SplatSLAM-Project/SplatSLAM
 .splatslam-page .splat-findings > div {border-left:3px solid var(--global-theme-color);padding:.1rem .85rem}
 .splatslam-page .splat-findings h3 {font-size:1.08rem;margin:0 0 .4rem}
 .splatslam-page .splat-findings p {font-size:.94rem;line-height:1.5;margin:0}
+.splatslam-page .splat-figure-group {margin-top:1.7rem}
+.splatslam-page .splat-figure-group h3 {font-size:1.15rem;margin:0 0:.8rem}
+.splatslam-page .splat-figure-grid {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
+.splatslam-page .splat-figure-grid figure {background:var(--site-surface-soft);border:1px solid var(--global-divider-color);border-radius:.9rem;margin:0;min-width:0;padding:.7rem}
+.splatslam-page .splat-figure-grid figure.splat-figure-wide {grid-column:1/-1}
+.splatslam-page .splat-figure-grid a {align-items:center;background:#fff;border-radius:.55rem;display:flex;justify-content:center;min-height:10rem;overflow:hidden}
+.splatslam-page .splat-figure-grid img {display:block;height:auto;max-height:32rem;object-fit:contain;width:100%}
+.splatslam-page .splat-figure-grid figcaption {margin:.6rem .2rem .1rem}
 .splatslam-page .splat-model-card {background:var(--site-surface-soft);border:1px solid var(--global-divider-color);border-radius:1rem;min-width:0;overflow:hidden}
 .splatslam-page .splat-model-stage {aspect-ratio:16/10;background:radial-gradient(circle at 48% 35%,#514060,#201c2e 72%);position:relative}
 .splatslam-page .splat-model-stage iframe {border:0;height:100%;left:0;position:absolute;top:0;width:100%}
@@ -42,7 +50,7 @@ github: https://github.com/SplatSLAM-Project/SplatSLAM
 .splatslam-page .splat-model-info a {font-size:.88rem}
 .splatslam-page [id^=splat-] {scroll-margin-top:5rem}
 @media(max-width:850px){.splatslam-page .splat-process{grid-template-columns:repeat(2,minmax(0,1fr))}.splatslam-page .splat-findings{grid-template-columns:1fr}}
-@media(max-width:620px){.splatslam-page .splat-video-grid,.splatslam-page .splat-model-grid,.splatslam-page .splat-process{grid-template-columns:1fr}}
+@media(max-width:620px){.splatslam-page .splat-video-grid,.splatslam-page .splat-model-grid,.splatslam-page .splat-process,.splatslam-page .splat-figure-grid{grid-template-columns:1fr}}
 </style>
 
 <section class="project-hero-card" id="splat-overview">
@@ -69,7 +77,7 @@ github: https://github.com/SplatSLAM-Project/SplatSLAM
 <section class="project-detail-section" id="splat-method">
   <p class="about-eyebrow">Method</p>
   <h2>From RGB frames to a 3D scene</h2>
-  <figure class="project-showcase project-showcase--diagram"><img src="{{ '/assets/img/projects/splat-slam.png' | relative_url }}" alt="SplatSLAM pipeline from monocular video and camera poses to a rendered Gaussian scene" loading="lazy"><figcaption>Tracking, geometry refinement, and Gaussian optimization form one reconstruction pipeline.</figcaption></figure>
+  <figure class="project-showcase project-showcase--diagram"><a href="{{ '/assets/img/projects/splatslam-pipeline-original.png' | relative_url }}" target="_blank" rel="noopener"><img src="{{ '/assets/img/projects/splatslam-pipeline-original.png' | relative_url }}" alt="Original SplatSLAM diagram showing video input, SLAM geometry, point-cloud cleanup, and 3D Gaussian rendering" loading="lazy"></a><figcaption>The original project overview connects video capture, SLAM geometry, point-cloud refinement, and a rendered 3D scene. Select the image to view it full size.</figcaption></figure>
   <div class="splat-process">
     <div><strong>01 / CAPTURE</strong><h3>Video frames</h3><p>Sample and standardize frames from monocular smartphone footage.</p></div>
     <div><strong>02 / TRACK</strong><h3>MASt3R-SLAM</h3><p>Estimate camera trajectories and a dense, colored point cloud.</p></div>
@@ -86,6 +94,51 @@ github: https://github.com/SplatSLAM-Project/SplatSLAM
     <div><h3>Tracking</h3><p>Dense visual matching supports camera localization from RGB video without a depth sensor.</p></div>
     <div><h3>Scene texture</h3><p>Textured rooms reconstruct more completely; blank walls leave sparse or floating geometry.</p></div>
     <div><h3>Capture coverage</h3><p>A walkthrough gives better unseen views than a short stationary rotation, even when the latter scores well on its training frames.</p></div>
+  </div>
+  <div class="splat-figure-group">
+    <h3>01 / Camera tracking</h3>
+    <div class="splat-figure-grid">
+      <figure><a href="{{ '/assets/img/projects/splatslam-slam-reconstruction.png' | relative_url }}" target="_blank" rel="noopener"><img src="{{ '/assets/img/projects/splatslam-slam-reconstruction.png' | relative_url }}" alt="MASt3R-SLAM point-cloud reconstruction with camera views" loading="lazy"></a><figcaption>SLAM reconstruction with estimated camera views.</figcaption></figure>
+      <figure><a href="{{ '/assets/img/projects/splatslam-trajectory-accuracy.png' | relative_url }}" target="_blank" rel="noopener"><img src="{{ '/assets/img/projects/splatslam-trajectory-accuracy.png' | relative_url }}" alt="Bar chart of camera trajectory error on two TUM-RGBD sequences" loading="lazy"></a><figcaption>Trajectory accuracy on two TUM-RGBD sequences.</figcaption></figure>
+    </div>
+  </div>
+  <div class="splat-figure-group">
+    <h3>02 / Scenes and visual texture</h3>
+    <div class="splat-figure-grid">
+      <figure><a href="{{ '/assets/img/projects/splatslam-scene-results-table.png' | relative_url }}" target="_blank" rel="noopener"><img src="{{ '/assets/img/projects/splatslam-scene-results-table.png' | relative_url }}" alt="Table comparing 3DGS training results across captured scenes" loading="lazy"></a><figcaption>Training settings and quality across scenes.</figcaption></figure>
+      <figure><a href="{{ '/assets/img/projects/splatslam-scene-difficulty.png' | relative_url }}" target="_blank" rel="noopener"><img src="{{ '/assets/img/projects/splatslam-scene-difficulty.png' | relative_url }}" alt="Charts comparing point-cloud density and reconstruction difficulty across scenes" loading="lazy"></a><figcaption>Scene texture changes point density and reconstruction difficulty.</figcaption></figure>
+    </div>
+  </div>
+  <div class="splat-figure-group">
+    <h3>03 / Training and rendering</h3>
+    <div class="splat-figure-grid">
+      <figure><a href="{{ '/assets/img/projects/splatslam-training-iterations.png' | relative_url }}" target="_blank" rel="noopener"><img src="{{ '/assets/img/projects/splatslam-training-iterations.png' | relative_url }}" alt="Table of PSNR and L1 loss across Gaussian Splatting training iterations" loading="lazy"></a><figcaption>Quality measurements across training iterations.</figcaption></figure>
+      <figure><a href="{{ '/assets/img/projects/splatslam-convergence-curves.png' | relative_url }}" target="_blank" rel="noopener"><img src="{{ '/assets/img/projects/splatslam-convergence-curves.png' | relative_url }}" alt="PSNR and L1 convergence curves during training" loading="lazy"></a><figcaption>PSNR and L1 curves show the progression of optimization.</figcaption></figure>
+      <figure class="splat-figure-wide"><a href="{{ '/assets/img/projects/splatslam-render-evolution-a.png' | relative_url }}" target="_blank" rel="noopener"><img src="{{ '/assets/img/projects/splatslam-render-evolution-a.png' | relative_url }}" alt="First sequence of rendered views at successive training stages" loading="lazy"></a><figcaption>Rendered views at successive training stages · sequence A.</figcaption></figure>
+      <figure class="splat-figure-wide"><a href="{{ '/assets/img/projects/splatslam-render-evolution-b.png' | relative_url }}" target="_blank" rel="noopener"><img src="{{ '/assets/img/projects/splatslam-render-evolution-b.png' | relative_url }}" alt="Second sequence of rendered views at successive training stages" loading="lazy"></a><figcaption>Rendered views at successive training stages · sequence B.</figcaption></figure>
+    </div>
+  </div>
+  <div class="splat-figure-group">
+    <h3>04 / Point-cloud cleanup</h3>
+    <div class="splat-figure-grid">
+      <figure><a href="{{ '/assets/img/projects/splatslam-denoising-psnr.png' | relative_url }}" target="_blank" rel="noopener"><img src="{{ '/assets/img/projects/splatslam-denoising-psnr.png' | relative_url }}" alt="PSNR charts comparing reconstruction with and without point-cloud denoising" loading="lazy"></a><figcaption>Denoising has a small effect on PSNR across the compared runs.</figcaption></figure>
+      <figure><a href="{{ '/assets/img/projects/splatslam-denoising-visual.png' | relative_url }}" target="_blank" rel="noopener"><img src="{{ '/assets/img/projects/splatslam-denoising-visual.png' | relative_url }}" alt="Visual comparison of rendered frames with and without point-cloud denoising" loading="lazy"></a><figcaption>Side-by-side frames show the visible effect of removing floaters.</figcaption></figure>
+    </div>
+  </div>
+  <div class="splat-figure-group">
+    <h3>05 / Capture path</h3>
+    <div class="splat-figure-grid">
+      <figure class="splat-figure-wide"><a href="{{ '/assets/img/projects/splatslam-capture-comparison.png' | relative_url }}" target="_blank" rel="noopener"><img src="{{ '/assets/img/projects/splatslam-capture-comparison.png' | relative_url }}" alt="PSNR comparison between stationary rotation and a full walkthrough capture" loading="lazy"></a><figcaption>A stationary rotation and a walkthrough produce different coverage, even when the stationary capture scores higher on its training frames.</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="project-detail-section">
+  <p class="about-eyebrow">Execution</p>
+  <h2>Running the reconstruction</h2>
+  <div class="splat-figure-grid">
+    <figure><a href="{{ '/assets/img/projects/splatslam-runtime-viewer.png' | relative_url }}" target="_blank" rel="noopener"><img src="{{ '/assets/img/projects/splatslam-runtime-viewer.png' | relative_url }}" alt="SplatSLAM software interface displaying a live 3D point cloud" loading="lazy"></a><figcaption>Point-cloud visualization in the reconstruction workflow.</figcaption></figure>
+    <figure><a href="{{ '/assets/img/projects/splatslam-runtime-scene.png' | relative_url }}" target="_blank" rel="noopener"><img src="{{ '/assets/img/projects/splatslam-runtime-scene.png' | relative_url }}" alt="Input video and corresponding reconstructed 3D scene" loading="lazy"></a><figcaption>Input image and reconstructed 3D scene shown together.</figcaption></figure>
   </div>
 </section>
 
