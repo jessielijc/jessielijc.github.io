@@ -39,11 +39,8 @@ github: https://github.com/SplatSLAM-Project/SplatSLAM
 .splatslam-page .splat-figure-grid img {display:block;height:auto;max-height:32rem;object-fit:contain;width:100%}
 .splatslam-page .splat-figure-grid figcaption {margin:.6rem .2rem .1rem}
 .splatslam-page .splat-model-card {background:var(--site-surface-soft);border:1px solid var(--global-divider-color);border-radius:1rem;min-width:0;overflow:hidden}
-.splatslam-page .splat-model-stage {aspect-ratio:16/10;background:radial-gradient(circle at 48% 35%,#514060,#201c2e 72%);position:relative}
+.splatslam-page .splat-model-stage {aspect-ratio:16/10;background:#fff;position:relative}
 .splatslam-page .splat-model-stage iframe {border:0;height:100%;left:0;position:absolute;top:0;width:100%}
-.splatslam-page .splat-load {align-items:center;background:transparent;border:0;color:#fff;cursor:pointer;display:flex;flex-direction:column;gap:.5rem;height:100%;justify-content:center;padding:1.5rem;position:absolute;text-align:center;width:100%}
-.splatslam-page .splat-load::before {border:2px solid currentColor;border-radius:50%;content:'↻';display:grid;font-size:2rem;height:3.5rem;place-items:center;width:3.5rem}
-.splatslam-page .splat-load:hover,.splatslam-page .splat-load:focus-visible {background:rgba(255,255,255,.09)}
 .splatslam-page .splat-model-info {padding:1rem 1.1rem 1.1rem}
 .splatslam-page .splat-model-info h3 {font-size:1.12rem;margin:0}
 .splatslam-page .splat-model-copy {margin:.4rem 0 .6rem}
@@ -65,7 +62,6 @@ github: https://github.com/SplatSLAM-Project/SplatSLAM
   </div>
   <nav class="splat-jump" aria-label="SplatSLAM page sections"><a href="#splat-method">Method</a><a href="#splat-results">Results</a><a href="#splat-demos">Interactive 3D demos</a></nav>
 </section>
-
 <section class="project-detail-section" aria-labelledby="splat-video-title">
   <p class="about-eyebrow">Novel-view rendering</p>
   <h2 id="splat-video-title">Scene in motion</h2>
@@ -145,29 +141,14 @@ github: https://github.com/SplatSLAM-Project/SplatSLAM
 <section class="project-detail-section" id="splat-demos">
   <p class="about-eyebrow">Interactive gallery</p>
   <h2>Explore the 3D reconstructions</h2>
-  <p>Select a scene to load its Sketchfab viewer. Drag to rotate, scroll to zoom, or open the model in a new tab. Viewers load on demand so this page stays responsive.</p>
+  <p>Choose a scene to explore in 3D. Drag to rotate, scroll to zoom, or open the model on Sketchfab.</p>
   <div class="splat-model-grid">
-    <div class="splat-model-card"><div class="splat-model-stage"><button class="splat-load" type="button" data-model="556f95d2d32645e0b144cdb9038f934b" aria-label="Load raw point cloud 3D demo">Explore raw point cloud in 3D</button></div><div class="splat-model-info"><h3>Raw point cloud</h3><p class="splat-model-copy">The geometry produced by MASt3R-SLAM before scene rendering.</p><a href="https://sketchfab.com/models/556f95d2d32645e0b144cdb9038f934b" target="_blank" rel="noopener noreferrer">Open on Sketchfab ↗</a></div></div>
-    <div class="splat-model-card"><div class="splat-model-stage"><button class="splat-load" type="button" data-model="a2e3aa48facd46de8a9e1d70bd4858be" aria-label="Load 360 degree meeting room 3D demo">Explore 360° meeting room</button></div><div class="splat-model-info"><h3>Meeting room · 360°</h3><p class="splat-model-copy">A rotational capture of an indoor meeting room.</p><a href="https://sketchfab.com/models/a2e3aa48facd46de8a9e1d70bd4858be" target="_blank" rel="noopener noreferrer">Open on Sketchfab ↗</a></div></div>
-    <div class="splat-model-card"><div class="splat-model-stage"><button class="splat-load" type="button" data-model="35db1e88d8ba4204b576b6774a51308e" aria-label="Load meeting room 3D demo">Explore meeting room</button></div><div class="splat-model-info"><h3>Meeting room · walkthrough</h3><p class="splat-model-copy">A second room capture with broader camera movement.</p><a href="https://sketchfab.com/models/35db1e88d8ba4204b576b6774a51308e" target="_blank" rel="noopener noreferrer">Open on Sketchfab ↗</a></div></div>
-    <div class="splat-model-card"><div class="splat-model-stage"><button class="splat-load" type="button" data-model="fd0c1cbb08ef47e8b6b8e5704b4a71d8" aria-label="Load tea room 3D demo">Explore tea room</button></div><div class="splat-model-info"><h3>Tea room</h3><p class="splat-model-copy">A texture-rich scene for comparing geometric completeness.</p><a href="https://sketchfab.com/models/fd0c1cbb08ef47e8b6b8e5704b4a71d8" target="_blank" rel="noopener noreferrer">Open on Sketchfab ↗</a></div></div>
-    <div class="splat-model-card"><div class="splat-model-stage"><button class="splat-load" type="button" data-model="26dffeeeb1e748d386671aeb205f9081" aria-label="Load corner 3D demo">Explore low-texture corner</button></div><div class="splat-model-info"><h3>Low-texture corner</h3><p class="splat-model-copy">A difficult scene that exposes sparse points and reconstruction artifacts.</p><a href="https://sketchfab.com/models/26dffeeeb1e748d386671aeb205f9081" target="_blank" rel="noopener noreferrer">Open on Sketchfab ↗</a></div></div>
-    <div class="splat-model-card"><div class="splat-model-stage"><button class="splat-load" type="button" data-model="2bd98d5914124023a06100404945fe2f" aria-label="Load SUSTech classroom 3D demo">Explore SUSTech classroom</button></div><div class="splat-model-info"><h3>SUSTech classroom</h3><p class="splat-model-copy">The final interactive point-cloud demo from the original project page.</p><a href="https://sketchfab.com/models/2bd98d5914124023a06100404945fe2f" target="_blank" rel="noopener noreferrer">Open on Sketchfab ↗</a></div></div>
+    <div class="splat-model-card"><div class="splat-model-stage"><iframe title="Raw point cloud 3D demo" src="https://sketchfab.com/models/556f95d2d32645e0b144cdb9038f934b/embed" loading="lazy" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen></iframe></div><div class="splat-model-info"><h3>Raw point cloud</h3><p class="splat-model-copy">The geometry produced by MASt3R-SLAM before scene rendering.</p><a href="https://sketchfab.com/models/556f95d2d32645e0b144cdb9038f934b" target="_blank" rel="noopener noreferrer">Open on Sketchfab ↗</a></div></div>
+    <div class="splat-model-card"><div class="splat-model-stage"><iframe title="Meeting room 360 degree 3D demo" src="https://sketchfab.com/models/a2e3aa48facd46de8a9e1d70bd4858be/embed" loading="lazy" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen></iframe></div><div class="splat-model-info"><h3>Meeting room · 360°</h3><p class="splat-model-copy">A rotational capture of an indoor meeting room.</p><a href="https://sketchfab.com/models/a2e3aa48facd46de8a9e1d70bd4858be" target="_blank" rel="noopener noreferrer">Open on Sketchfab ↗</a></div></div>
+    <div class="splat-model-card"><div class="splat-model-stage"><iframe title="Meeting room walkthrough 3D demo" src="https://sketchfab.com/models/35db1e88d8ba4204b576b6774a51308e/embed" loading="lazy" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen></iframe></div><div class="splat-model-info"><h3>Meeting room · walkthrough</h3><p class="splat-model-copy">A second room capture with broader camera movement.</p><a href="https://sketchfab.com/models/35db1e88d8ba4204b576b6774a51308e" target="_blank" rel="noopener noreferrer">Open on Sketchfab ↗</a></div></div>
+    <div class="splat-model-card"><div class="splat-model-stage"><iframe title="Tea room 3D demo" src="https://sketchfab.com/models/fd0c1cbb08ef47e8b6b8e5704b4a71d8/embed" loading="lazy" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen></iframe></div><div class="splat-model-info"><h3>Tea room</h3><p class="splat-model-copy">A texture-rich scene for comparing geometric completeness.</p><a href="https://sketchfab.com/models/fd0c1cbb08ef47e8b6b8e5704b4a71d8" target="_blank" rel="noopener noreferrer">Open on Sketchfab ↗</a></div></div>
+    <div class="splat-model-card"><div class="splat-model-stage"><iframe title="Low-texture corner 3D demo" src="https://sketchfab.com/models/26dffeeeb1e748d386671aeb205f9081/embed" loading="lazy" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen></iframe></div><div class="splat-model-info"><h3>Low-texture corner</h3><p class="splat-model-copy">A difficult scene that exposes sparse points and reconstruction artifacts.</p><a href="https://sketchfab.com/models/26dffeeeb1e748d386671aeb205f9081" target="_blank" rel="noopener noreferrer">Open on Sketchfab ↗</a></div></div>
+    <div class="splat-model-card"><div class="splat-model-stage"><iframe title="SUSTech classroom 3D demo" src="https://sketchfab.com/models/2bd98d5914124023a06100404945fe2f/embed" loading="lazy" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen></iframe></div><div class="splat-model-info"><h3>SUSTech classroom</h3><p class="splat-model-copy">The final interactive point-cloud demo from the original project page.</p><a href="https://sketchfab.com/models/2bd98d5914124023a06100404945fe2f" target="_blank" rel="noopener noreferrer">Open on Sketchfab ↗</a></div></div>
   </div>
   <p class="splat-model-copy">Project by Jiacan Li, Yuzhen Song, and Yiming Ma. Interactive models are hosted by Sketchfab; videos are hosted by Google Drive.</p>
 </section>
-
-<script>
-document.querySelectorAll('.splatslam-page .splat-load').forEach(function(button) {
-  button.addEventListener('click', function() {
-    var id = button.getAttribute('data-model');
-    if (!/^[a-f0-9]{32}$/.test(id)) return;
-    var viewer = document.createElement('iframe');
-    viewer.title = button.getAttribute('aria-label').replace('Load ', '');
-    viewer.src = 'https://sketchfab.com/models/' + id + '/embed?ui_hint=0&ui_theme=dark';
-    viewer.allow = 'autoplay; fullscreen; xr-spatial-tracking';
-    viewer.allowFullscreen = true;
-    button.replaceWith(viewer);
-  });
-});
-</script>
