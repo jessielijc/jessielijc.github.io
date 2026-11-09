@@ -161,7 +161,6 @@ Remove this Liquid comment wrapper to restore the scene and its script.
       </div>
     </article>
   </div>
-</section>
 
 {% comment %}
 Visitor map and counter paused. Remove this Liquid comment wrapper to restore them.
@@ -214,3 +213,4 @@ Visitor map and counter paused. Remove this Liquid comment wrapper to restore th
       </a>
     </div>
   </section>
+</section>
