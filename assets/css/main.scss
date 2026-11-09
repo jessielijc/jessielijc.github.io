@@ -1850,6 +1850,7 @@ html[data-theme="dark"] .visitor-dotted-map {
 }
 
 .homepage-visitor-map-image-link img {
+  clip-path: inset(3px round 8px);
   display: block;
   filter: url("#visitor-map-purple");
   height: auto;
