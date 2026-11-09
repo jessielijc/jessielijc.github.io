@@ -133,6 +133,32 @@ Remove this Liquid comment wrapper to restore the scene and its script.
     </div>
   </div>
 
+</section>
+
+<section id="education" class="about-section about-education" aria-labelledby="education-title">
+  <h2 id="education-title">Education</h2>
+  <div class="education-list">
+    <article class="education-entry">
+      <img class="education-logo education-logo-sustech" src="{{ '/assets/img/sustech-education-logo.png' | relative_url }}" alt="SUSTech emblem" width="190" height="190" loading="lazy" decoding="async">
+      <div class="education-details">
+        <h3>Southern University of Science and Technology</h3>
+        <p>Department of Mechanical and Energy Engineering</p>
+        <p>B.Eng. in Robotics Engineering</p>
+        <p class="education-date">Sep 2023 – Present</p>
+      </div>
+    </article>
+    <article class="education-entry">
+      <img class="education-logo education-logo-nus" src="{{ '/assets/img/nus-education-logo.jpg' | relative_url }}" alt="National University of Singapore logo" width="240" height="110" loading="lazy" decoding="async">
+      <div class="education-details">
+        <h3>National University of Singapore</h3>
+        <p>Department of Electrical and Computer Engineering</p>
+        <p>Visiting Research Student</p>
+        <p class="education-date">Jun 2026 – Present</p>
+      </div>
+    </article>
+  </div>
+</section>
+
 {% comment %}
 Visitor map and counter paused. Remove this Liquid comment wrapper to restore them.
   <section class="visitor-map-section" aria-labelledby="home-visitor-map-title">
@@ -184,4 +210,3 @@ Visitor map and counter paused. Remove this Liquid comment wrapper to restore th
       </a>
     </div>
   </section>
-</section>
