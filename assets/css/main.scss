@@ -1831,8 +1831,10 @@ html[data-theme="dark"] .visitor-dotted-map {
 }
 
 .homepage-visitor-map {
-  margin: var(--site-card-gap) auto 0;
-  max-width: 760px;
+  border-top: 1px solid var(--global-divider-color);
+  margin: 0.65rem 0 0;
+  max-width: none;
+  padding: 1.5rem 0 0;
 }
 
 .homepage-visitor-map-visual {
@@ -1862,7 +1864,7 @@ html[data-theme="dark"] .homepage-visitor-map-image-link img {
 
 @media (max-width: 768px) {
   .homepage-visitor-map {
-    padding-inline: 0.2rem;
+    padding: 1.25rem 0 0;
   }
 }
 
