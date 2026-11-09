@@ -139,7 +139,9 @@ Remove this Liquid comment wrapper to restore the scene and its script.
   <h2 id="education-title">Education</h2>
   <div class="education-list">
     <article class="education-entry">
-      <img class="education-logo education-logo-sustech" src="{{ '/assets/img/sustech-education-logo.png' | relative_url }}" alt="SUSTech emblem" width="190" height="190" loading="lazy" decoding="async">
+      <div class="education-logo-frame">
+        <img class="education-logo education-logo-sustech" src="{{ '/assets/img/sustech-education-logo.png' | relative_url }}" alt="SUSTech emblem" width="190" height="190" loading="lazy" decoding="async">
+      </div>
       <div class="education-details">
         <h3>Southern University of Science and Technology</h3>
         <p>Department of Mechanical and Energy Engineering</p>
@@ -148,7 +150,9 @@ Remove this Liquid comment wrapper to restore the scene and its script.
       </div>
     </article>
     <article class="education-entry">
-      <img class="education-logo education-logo-nus" src="{{ '/assets/img/nus-education-logo.jpg' | relative_url }}" alt="National University of Singapore logo" width="240" height="110" loading="lazy" decoding="async">
+      <div class="education-logo-frame">
+        <img class="education-logo education-logo-nus" src="{{ '/assets/img/nus-education-logo-vertical.jpg' | relative_url }}" alt="National University of Singapore logo" width="180" height="242" loading="lazy" decoding="async">
+      </div>
       <div class="education-details">
         <h3>National University of Singapore</h3>
         <p>Department of Electrical and Computer Engineering</p>
