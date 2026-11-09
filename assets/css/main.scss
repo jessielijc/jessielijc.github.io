@@ -1744,6 +1744,73 @@ html[data-theme="dark"] .visitor-dotted-map {
 }
 */
 
+.about-education {
+  .education-list {
+    display: grid;
+  }
+
+  .education-entry {
+    align-items: center;
+    display: grid;
+    gap: 1.75rem;
+    grid-template-columns: 150px minmax(0, 1fr);
+    padding: 1.15rem 0;
+  }
+
+  .education-entry + .education-entry {
+    border-top: 1px solid var(--global-divider-color);
+  }
+
+  .education-logo {
+    display: block;
+    height: auto;
+    margin: auto;
+    object-fit: contain;
+  }
+
+  .education-logo-sustech {
+    width: 112px;
+  }
+
+  .education-logo-nus {
+    width: 150px;
+  }
+
+  .education-details h3 {
+    color: var(--site-subtitle-color);
+    font-size: var(--site-card-h3-size);
+    font-weight: 700;
+    line-height: 1.35;
+    margin: 0 0 0.45rem;
+  }
+
+  .education-details p {
+    color: var(--global-text-color);
+    line-height: 1.5;
+    margin: 0 0 0.2rem;
+  }
+
+  .education-details .education-date {
+    color: var(--global-text-color-light);
+    margin: 0.45rem 0 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-education {
+    .education-entry {
+      align-items: start;
+      gap: 1rem;
+      grid-template-columns: 72px minmax(0, 1fr);
+    }
+
+    .education-logo-sustech,
+    .education-logo-nus {
+      width: 72px;
+    }
+  }
+}
+
 .homepage-visitor-map {
   margin: var(--site-card-gap) auto 0;
   max-width: 760px;
